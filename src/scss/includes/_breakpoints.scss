@@ -1,0 +1,22 @@
+$mobile: 541px;
+$tablet: 1025px;
+
+@mixin media($point) {
+	@if $point== tablet {
+		@media (max-width: $tablet) {
+			@content;
+		}
+	} @else if $point==mobile {
+		@media (max-width: $mobile) {
+			@content;
+		}
+	}
+}
+
+.btn {
+	position: relative;
+	height: 2.786rem;
+	overflow: hidden;
+	width: fit-content;
+	padding: 0.82rem 2.35rem 0.82rem 1.1rem;
+}
