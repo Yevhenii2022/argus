@@ -1,0 +1,29 @@
+.projects-part {
+    padding: 7.5rem 0;
+
+    &__title {
+        position: relative;
+        margin-bottom: 2.5rem;
+
+        &::after {
+            counter-increment: section;
+            content: "0.0" counter(section);
+            position: absolute;
+            top: 0.5rem;
+            right: -2.5rem;
+            font-size: 0.688rem;
+            line-height: 0.75rem;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 43rem);
+        gap: 4rem 1rem;
+        margin-bottom: 3.125rem;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+}

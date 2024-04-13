@@ -1,0 +1,103 @@
+.contact {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+    height: 66.563rem;
+    margin-bottom: 7.5rem;
+    border-radius: 1.25rem;
+
+    &__wrapper {
+        padding: 2.5rem 0;
+    }
+
+    &__top {
+        position: relative;
+        margin-bottom: 10.25rem;
+
+        &::after {
+            counter-increment: section;
+            content: "0.0" counter(section);
+            position: absolute;
+            top: 0;
+            right: 50%;
+            font-size: 0.688rem;
+            line-height: 0.75rem;
+            color: $white;
+        }
+    }
+
+    &__desc {
+        color: $white;
+        max-width: 23rem;
+    }
+
+    &__button {
+        position: absolute;
+        top: 41.3%;
+        right: 22%;
+    }
+
+    &__link {
+        position: relative;
+
+        &:before {
+            content: "";
+            background: $white;
+            width: 7.375rem;
+            height: 7.375rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        span {
+            width: 4.25rem;
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+    &__title {
+        p {
+            &:nth-child(2) {
+                text-align: right;
+            }
+        }
+
+        & > * {
+            font-size: 5.625rem;
+            text-transform: uppercase;
+            line-height: 1;
+            position: relative;
+            color: $white;
+        }
+
+        strong {
+            font-family: $medium;
+            color: $white;
+        }
+
+        em {
+            font-family: $italic;
+            color: $white;
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        left: 1.5rem;
+        bottom: 2.5rem;
+    }
+
+    &__text {
+        color: $white;
+        max-width: 23rem;
+        position: relative;
+    }
+}

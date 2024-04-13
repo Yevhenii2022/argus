@@ -1,4 +1,5 @@
 <?php
+
 /**
  * pointer_theme functions and definitions
  *
@@ -46,13 +47,6 @@ function pointer_theme_setup()
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support('post-thumbnails');
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__('Primary', 'pointer_theme'),
-		)
-	);
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -122,11 +116,14 @@ add_action('after_setup_theme', 'pointer_theme_content_width', 0);
  */
 function pointer_theme_scripts()
 {
-	wp_enqueue_style('pointer_theme-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_style_add_data('pointer_theme-style', 'rtl', 'replace');
+	//Libraries
+	wp_enqueue_script('pointer_theme-swiper-scripts', get_template_directory_uri() . '/src/js/libraries/swiper-bundle.min.js', array('jquery'), true);
 	wp_enqueue_style('pointer_theme-swiper-styles', get_template_directory_uri() . '/src/css/swiper-bundle.min.css', array(), _S_VERSION);
 
-	wp_enqueue_script('pointer_theme-swiper-scripts', get_template_directory_uri() . '/src/js/libraries/swiper-bundle.min.js', array('jquery'), true);
+
+	wp_enqueue_style('pointer_theme-reset', get_template_directory_uri() . '/src/css/reset.css', array(), _S_VERSION);
+	wp_enqueue_style('pointer_theme-style', get_stylesheet_uri(), array(), _S_VERSION);
+
 	wp_enqueue_script('pointer_theme-scripts', get_template_directory_uri() . '/assets/scripts.js', array('jquery'), true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -184,5 +181,9 @@ require get_template_directory() . '/inc/custom-post-type.php';
 /**
  * Register string traslation Polylang (uncomment if you use Polylang)
  */
-// require get_template_directory() . '/inc/translates-registration.php';
+require get_template_directory() . '/inc/translates-registration.php';
 
+/**
+ * Language switcher
+ */
+require get_template_directory() . '/inc/lang-switcher.php';

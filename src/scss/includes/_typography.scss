@@ -1,0 +1,106 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    font-family: $regular;
+    color: $black;
+}
+
+* {
+    font-family: $regular;
+    color: $black;
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+p {
+    font-family: $regular;
+    color: $black;
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+h1 {
+    font-family: $regular;
+    text-transform: uppercase;
+
+    span {
+        display: block;
+        font-family: $italic;
+    }
+}
+
+.title {
+    width: fit-content;
+
+    p {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 3.75rem;
+        color: $black;
+    }
+
+    em {
+        font-size: 3.75rem;
+        text-transform: uppercase;
+        font-family: $italic;
+        font-weight: 300;
+        color: $black;
+    }
+
+    strong {
+        font-size: 3.75rem;
+        font-weight: 550;
+        text-transform: uppercase;
+        font-family: $medium;
+        color: $black;
+    }
+}

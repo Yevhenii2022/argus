@@ -14,25 +14,5 @@ function my_acf_op_init()
                 'redirect' => false
             )
         );
-
-        // Add header sub page.
-        acf_add_options_sub_page(
-            array(
-                'page_title' => __('Header'),
-                'menu_title' => __('Header'),
-                'parent' => 'theme-general-settings',
-                'parent_slug' => 'theme-general-settings',
-            )
-        );
-
-        // Add footer sub page.
-        acf_add_options_sub_page(
-            array(
-                'page_title' => __('Footer'),
-                'menu_title' => __('Footer'),
-                'parent' => 'theme-general-settings',
-                'parent_slug' => 'theme-general-settings',
-            )
-        );
     }
 }

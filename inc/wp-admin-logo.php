@@ -4,11 +4,11 @@
 
     <style type="text/css">
         #login h1 a {
-            background-image: url(https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png);
+            background-image: url('/wp-content/themes/pointer-theme/src/img/logo.svg');
             display: block;
             width: 272px;
             height: 92px;
-            background-size: auto;
+            background-size: contain;
         }
     </style>
 <?php }

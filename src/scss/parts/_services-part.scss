@@ -1,0 +1,198 @@
+.services {
+    background: $white;
+    border-radius: 1.25rem;
+    padding: 7.5rem 0;
+    position: relative;
+
+    &__title {
+        position: relative;
+        margin: 2.5rem 0;
+
+        p,
+        em,
+        strong,
+        span {
+            color: $light;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            right: -1rem;
+            top: 0.5rem;
+            position: absolute;
+            width: 0.563rem;
+            height: 0.688rem;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='11' fill='none'%3E%3Cpath fill='%23F8F8F8' d='M4.245 11H0l4.755-5.5L0 0h4.245L9 5.5 4.245 11Z'/%3E%3C/svg%3E");
+        }
+
+        &::after {
+            counter-increment: section;
+            content: "0.0" counter(section);
+            position: absolute;
+            top: 0.5rem;
+            right: -2.5rem;
+            font-size: 0.688rem;
+            line-height: 0.75rem;
+            color: $light;
+        }
+    }
+
+    &__cover {
+        width: 50%;
+        position: absolute;
+        z-index: 9;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100vh;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: $red;
+            width: 50%;
+            display: block;
+            height: 100vh;
+            clip-path: polygon(
+                100% 0%,
+                0% 0%,
+                0% 100%,
+                100% 100%,
+                100% 0%,
+                30.278% 73.118%,
+                51.043% 49.933%,
+                30.278% 26.747%,
+                48.818% 26.747%,
+                69.583% 49.933%,
+                48.818% 73.118%,
+                30.278% 73.118%
+            );
+            // clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &-inner {
+            h2 {
+                max-width: 10.875rem;
+                font-family: $medium;
+                position: absolute;
+                top: 50%;
+                left: 6%;
+                transform: translate(-50%, -50%);
+                font-weight: 500;
+                color: $light;
+                line-height: 1.668rem;
+                font-size: 1.688rem;
+                margin-left: 1.5rem;
+            }
+        }
+
+        &-text {
+            max-width: 25.688rem;
+            font-family: $regular;
+            position: absolute;
+            font-weight: 400;
+            line-height: 1.05rem;
+            font-size: 0.875rem;
+            color: $light;
+            bottom: 6%;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            p,
+            span,
+            strong {
+                font-family: $regular;
+                font-weight: 400;
+                line-height: 1.05rem;
+                font-size: 0.875rem;
+                color: $light;
+            }
+        }
+
+        &-link {
+            display: block;
+            margin-left: 1.5rem;
+            margin-bottom: 2.5rem;
+            position: absolute;
+            z-index: 8;
+            font-size: 0.688rem;
+            line-height: 0.684rem;
+            color: $light;
+            font-family: $regular;
+            font-weight: 400;
+            bottom: 0;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.1rem;
+
+            &::after {
+                transition: transform 0.3s ease;
+                content: "";
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M4.664 5.29a.625.625 0 1 1 0-1.25h6.667c.345 0 .625.279.625.624v6.667a.625.625 0 1 1-1.25 0V6.173l-5.6 5.6a.625.625 0 0 1-.884-.884l5.6-5.6H4.664Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+                width: 1rem;
+                height: 1rem;
+            }
+
+            // &:hover::after {
+            //     transform: translateX(0.2rem) translateY(-0.1rem);
+            // }
+        }
+    }
+
+    &__arrow--prev {
+        &::before {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='61' height='61' fill='none'%3E%3Ccircle cx='30.5' cy='30.5' r='30' stroke='%23fff'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m27.47 23.708-7.842 7.842m0 0 7.749 7.75m-7.75-7.75 21.04-.126'/%3E%3C/svg%3E");
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 3.813rem;
+            height: 3.813rem;
+            background-position: center;
+            cursor: pointer;
+        }
+    }
+
+    &__arrow--next {
+        &::before {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='61' height='61' fill='none'%3E%3Ccircle cx='30.5' cy='30.5' r='30' stroke='%23fff' transform='rotate(-180 30.5 30.5)'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m33.53 37.292 7.842-7.842m0 0-7.749-7.75m7.75 7.75-21.04.126'/%3E%3C/svg%3E");
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 3.813rem;
+            height: 3.813rem;
+            background-position: center;
+            cursor: pointer;
+        }
+    }
+
+    &__navigation {
+        margin-bottom: 2.5rem;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        z-index: 8;
+        margin-right: 1.5rem;
+        left: 38.9%;
+    }
+}

@@ -19,8 +19,9 @@
   "devDependencies": {
     "@wordpress/scripts": "^19.2.2",
     "dir-archiver": "^1.1.1",
-    "node-sass": "^7.0.1",
+    "node-sass": "^7.0.3",
     "rtlcss": "^3.5.0",
+    "sass-loader": "^14.0.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
@@ -45,7 +46,7 @@
     "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock",
     "build": "webpack",
-	  "start": "webpack --watch"
+    "start": "webpack --watch"
   },
   "main": "index.js"
 }

@@ -1,0 +1,117 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $bg;
+    z-index: 10;
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+    }
+
+    &__logo {
+        width: 6.063rem;
+        height: 2.081rem;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 3.875rem;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 10.5rem;
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        span {
+            font-size: 0.688rem;
+            line-height: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        &-img {
+            display: inline-block;
+            width: 0.75rem;
+            height: 0.75rem;
+            position: relative;
+            transition: $transition;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                background: rgba(24, 24, 24, 0.05);
+                border-radius: 2rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &:hover .header__phone-img {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    a {
+        font-size: 0.688rem;
+        line-height: 0.75rem;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .menu-item-has-children {
+        position: relative;
+        padding-right: 0.875rem;
+
+        &::after {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none'%3E%3Cpath fill='%23181818' fill-rule='evenodd' d='M2.67 4.169a.469.469 0 0 1 .663 0L6 6.837 8.67 4.17a.469.469 0 0 1 .663.662l-3 3a.469.469 0 0 1-.663 0l-3-3a.469.469 0 0 1 0-.662Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            width: 0.75rem;
+            height: 0.75rem;
+            transition: $transition;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .sub-menu {
+            position: absolute;
+            top: 100%;
+
+            // temporarily
+            display: none;
+        }
+    }
+}

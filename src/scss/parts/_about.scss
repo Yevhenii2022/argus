@@ -1,0 +1,156 @@
+.about {
+    padding-bottom: 5rem;
+    height: 74.337rem;
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+
+        &-video {
+            width: 39.313rem;
+            height: 29.375rem;
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+            position: relative;
+            width: 46.688rem;
+
+            &::before {
+                counter-increment: section;
+                content: "0.0" counter(section);
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 0.688rem;
+                line-height: 0.75rem;
+            }
+        }
+
+        &-desc {
+            max-width: 21.25rem;
+            width: 100%;
+            text-align: right;
+        }
+
+        &-logo {
+            width: 2.563rem;
+            height: 2.081rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-link {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__middle {
+        position: relative;
+        margin-bottom: 7.5rem;
+
+        &-title {
+            p {
+                &:nth-child(2) {
+                    text-align: right;
+                }
+            }
+
+            & > * {
+                font-size: 5.625rem;
+                text-transform: uppercase;
+                line-height: 1;
+                position: relative;
+            }
+
+            strong {
+                font-family: $medium;
+            }
+
+            em {
+                font-family: $italic;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-number {
+            font-size: 5.625rem;
+            font-family: $medium;
+        }
+
+        &-title {
+            font-size: 0.688rem;
+            line-height: 0.75rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-family: $medium;
+        }
+
+        &-text {
+            opacity: 0.3;
+            max-width: 11.563rem;
+        }
+    }
+}
+
+#about-svg {
+    path {
+        stroke-dasharray: 4300;
+        stroke-dashoffset: 4300;
+    }
+
+    &.animate {
+        path {
+            animation: draw 5s ease forwards;
+        }
+    }
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

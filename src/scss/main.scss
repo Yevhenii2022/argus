@@ -1,6 +1,25 @@
+/*
+Theme Name: Pointer theme
+Author: cursor: pointer ;
+Version: 1.0.1
+*/
+
 @import "includes/includes";
+@import "pages/pages";
 @import "parts/parts";
 
 html {
-    font-size: 0.8vw;
+    font-size: 1.111vw;
+}
+
+body {
+    background: $bg;
+    counter-reset: section;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
