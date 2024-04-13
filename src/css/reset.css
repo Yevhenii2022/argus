@@ -78,7 +78,8 @@ body {
 }
 
 ol,
-ul {
+ul,
+li {
 	list-style: none;
 }
 
@@ -98,12 +99,12 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: "";
+	content: '';
 }
 
 blockquote,
 q {
-	quotes: """";
+	quotes: '' '';
 }
 
 img {
@@ -118,6 +119,11 @@ a {
 	text-decoration: none;
 	font: inherit;
 	color: inherit;
+}
+
+input,
+textarea {
+	border: none;
 }
 
 a,
