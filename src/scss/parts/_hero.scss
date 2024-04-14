@@ -1,11 +1,12 @@
 .hero {
-	margin-bottom: 7.5rem;
-
 	&__wrapper {
-		width: 100%;
-		height: 52.125rem;
-		margin-top: 5rem;
-		border-radius: 1.25rem;
+		margin: 5rem 0 7.5rem 0;
+		padding: 5.714rem 0;
+		height: 100dvh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border-radius: 1.429rem;
 		background: $light;
 		background-size: cover;
 		background-position: bottom;
@@ -13,32 +14,49 @@
 	}
 
 	&__title {
-		font-size: 3.75rem;
-		padding-top: 5rem;
+		margin-bottom: 1.143rem;
 		text-align: center;
-		margin-bottom: 1rem;
 	}
 
 	&__desc {
-		max-width: 17.813rem;
+		width: 18.6rem;
 		text-align: center;
-		margin: 0 auto 2.5rem;
+		margin: 0 auto 2.857rem;
 	}
 
 	&__button {
-		margin: 0 auto 14.25rem;
+		margin: 0 auto;
 	}
 
-	&__content {
+	&__inner {
+		margin-bottom: 8.857rem;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		position: relative;
-		margin-bottom: 7.75rem;
+		justify-content: center;
+		align-items: flex-end;
 	}
 
 	&__text {
-		width: 23rem;
+		margin: 0 auto;
+		width: 27.2rem;
 		text-align: center;
+	}
+
+	&__phone {
+		width: fit-content;
+		svg {
+			width: 3.071rem;
+			height: 3.071rem;
+			transition: $transition;
+
+			@include media(mobile) {
+				width: 2.214rem;
+				height: 2.214rem;
+			}
+
+			&:hover,
+			&:focus {
+				transform: scale(1.19);
+			}
+		}
 	}
 }

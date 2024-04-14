@@ -10,7 +10,6 @@
  * @package pointer_theme
  */
 
-$phone = get_field('phone', 'option');
 ?>
 
 <!doctype html>
@@ -50,14 +49,20 @@ $phone = get_field('phone', 'option');
 					</div>
 
 					<div class="header__right">
-						<?php if ($phone): ?>
-							<a href="tel:<?= $phone ?>" class="header__phone">
+						<?php
+						$phone = get_field('phone', 'options');
+						$number = $phone['phone_number'] ?? '';
+						$cleanedNumber = preg_replace('/\s+/', '', $number);
+						$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
+						?>
+						<?php if ($number) : ?>
+							<a href="tel:+<?= $cleanedNumber ?>" class="header__phone">
 								<div class="header__phone-img">
 									<img src="<?= get_template_directory_uri() . '/src/img/call.svg' ?>" alt="Phone">
 								</div>
 
 								<span>
-									<?= $phone ?>
+									<?= $number ?>
 								</span>
 							</a>
 						<?php endif; ?>
