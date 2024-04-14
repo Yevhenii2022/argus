@@ -1,17 +1,15 @@
 .button {
-	padding: 0.938rem 2.688rem 0.938rem 1.813rem;
-	font-size: 0.688rem;
+	padding: 1rem 3.1rem 1rem 1.95rem;
+	font-size: 0.786rem;
 	line-height: 1;
 	text-transform: uppercase;
-	color: $light;
+	color: $white;
 	background: $red;
 	transition: $transition;
 	white-space: nowrap;
-	border-radius: 5rem;
-	display: block;
+	border-radius: 5.714rem;
 	width: fit-content;
 	position: relative;
-	overflow: hidden;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
@@ -23,44 +21,51 @@
 
 	&:after {
 		content: '';
-		display: inline-block;
-		width: 0.313rem;
-		height: 0.313rem;
-		background: $light;
+		width: 0.357rem;
+		height: 0.357rem;
+		background: $white;
 		border-radius: 50%;
 		position: absolute;
 		top: 50%;
-		right: 1.3rem;
+		right: 2rem;
 		transform: translateY(-70%);
 		transition: $transition;
 	}
 
 	&:before {
 		content: '';
-		display: inline-block;
-		width: 0.313rem;
-		height: 0.313rem;
-		background: $light;
+		width: 0.357rem;
+		height: 0.357rem;
+		background: $white;
 		border-radius: 50%;
 		position: absolute;
 		top: 50%;
-		left: 1.3rem;
-		transform: translateY(-70%) translateX(-2rem);
+		left: 2.5rem;
+		opacity: 0;
+		transform: translateY(-70%) translateX(-0.5rem);
+		transition: $transition;
+	}
+
+	p {
 		transition: $transition;
 	}
 
 	&:hover,
 	&:focus {
 		outline: none !important;
-		padding: 0.938rem 1.813rem 0.938rem 2.688rem;
+		p {
+			transform: translateX(12%);
+		}
 	}
 
 	&:hover.button::before {
-		transform: translateY(-70%) translateX(0);
+		transform: translateY(-70%) translateX(-0.5rem);
+		opacity: 1;
 	}
 
 	&:hover.button::after {
-		transform: translateY(-70%) translateX(2rem);
+		transform: translateY(-70%) translateX(0.5rem);
+		opacity: 0;
 	}
 }
 

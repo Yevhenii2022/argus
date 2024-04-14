@@ -1,13 +1,13 @@
 <?php
 $title = get_field('hero_title');
-$subtitle = get_field('hero_subtitle');
+$subtitle = get_field('hero_subtitle') ?? '';
 $desc = get_field('hero_desc');
 $text = get_field('hero_text');
 $bg = get_field('hero_bg');
 ?>
 
 <section class="hero">
-    <?php if ($bg): ?>
+    <?php if ($bg) : ?>
         <style>
             .hero__wrapper {
                 background-image: url(<?= $bg ?>);
@@ -17,19 +17,14 @@ $bg = get_field('hero_bg');
 
     <div class="container">
         <div class="hero__wrapper">
-            <?php if ($title || $subtitle): ?>
-                <h1 class="hero__title">
-                    <?= $title ?>
-
-                    <?php if ($subtitle): ?>
-                        <span>
-                            <?= $subtitle ?>
-                        </span>
-                    <?php endif; ?>
-                </h1>
+            <?php if ($title || $subtitle) : ?>
+                <h1 class="main__title main__title--sm"><?= $title ?></h1>
+                <?php if ($subtitle) : ?>
+                    <h1 class="main__title main__title--sm main__title--italic"><?= $subtitle ?></h1>
+                <?php endif; ?>
             <?php endif; ?>
 
-            <?php if ($desc): ?>
+            <?php if ($desc) : ?>
                 <p class="hero__desc">
                     <?= $desc ?>
                 </p>
@@ -37,11 +32,11 @@ $bg = get_field('hero_bg');
 
 
             <a href="<?= get_home_url() . '/services' ?>" class="hero__button button">
-                <?php pll_e('look_services_button') ?>
+                <p><?php pll_e('look_services_button') ?></p>
             </a>
 
             <div class="hero__content">
-                <?php if ($text): ?>
+                <?php if ($text) : ?>
                     <p class="hero__text">
                         <?= $text ?>
                     </p>
