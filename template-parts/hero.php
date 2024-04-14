@@ -27,7 +27,9 @@ $bg = get_field('hero_bg');
                 <?php endif; ?>
 
                 <a href="<?= get_home_url() . '/services' ?>" class="hero__button button">
-                    <p><?php pll_e('look_services_button') ?></p>
+                    <div class="button__wrapper">
+                        <p><?php pll_e('look_services_button') ?></p>
+                    </div>
                 </a>
             </div>
 
