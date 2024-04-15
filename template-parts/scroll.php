@@ -1,7 +1,5 @@
 <div class="scroll">
-    <span class="scroll__text">
-        <?php pll_e('more_info'); ?>
-    </span>
+    <p><?php pll_e('more_info'); ?></p>
 
     <div class="scroll__animate">
         <div class="scroll__animate-wrapper"></div>
