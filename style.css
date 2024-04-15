@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -215,6 +215,167 @@ button {
 }
 .link:hover span:after {
   transform: translateX(100%);
+}
+
+.about-banner {
+  margin-top: 5.857rem;
+  padding-top: 5.714rem;
+  position: relative;
+  min-height: 68rem;
+}
+.about-banner__bg {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  mix-blend-mode: soft-light;
+}
+.about-banner__title {
+  text-align: center;
+}
+.about-banner__subtitle {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  text-align: center;
+  line-height: 77%;
+}
+.about-banner__description {
+  margin: 1.143rem auto 0 auto;
+  text-align: center;
+  width: 18rem;
+}
+.about-banner__slider {
+  position: absolute;
+  transform: translate(17%, 70%);
+}
+@media (max-width: 541px) {
+  .about-banner__slider {
+    margin-right: -1.714rem;
+    margin-top: 4.286rem;
+    position: static;
+  }
+}
+.about-banner__slides {
+  gap: 1.143rem;
+  justify-content: center !important;
+}
+.about-banner__item {
+  background-color: #ffffff;
+  padding: 1.714rem;
+  height: 29.643rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  min-width: 24rem;
+}
+.about-banner__item:nth-child(odd) {
+  margin-top: 4.143rem;
+}
+@media (max-width: 541px) {
+  .about-banner__item:nth-child(odd) {
+    margin-top: 0;
+  }
+}
+.about-banner__item-number {
+  font-size: 4.286rem;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  position: relative;
+  padding-left: 3rem;
+}
+.about-banner__item-number::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  position: absolute;
+  left: 0;
+  height: 3.071rem;
+  width: 2.571rem;
+}
+.about-banner__item-title {
+  font-size: 1.929rem;
+  color: #f41b1b;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+}
+.about-banner__item-text {
+  line-height: 120%;
+  width: 16.429rem;
+}
+
+.about-stages {
+  padding-top: 17.643rem;
+}
+.about-stages__heading {
+  text-align: center;
+  margin-bottom: 8.571rem;
+}
+.about-stages__section-title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.about-stages__subtitle {
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.286rem;
+  margin-top: 1.714rem;
+}
+.about-stages__subtitle svg {
+  height: 0.786rem;
+  width: 0.643rem;
+}
+.about-stages__item-inner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 12.071rem 5.643rem;
+  gap: 1.143rem;
+}
+.about-stages__bg {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  mix-blend-mode: soft-light;
+}
+.about-stages__img {
+  position: relative;
+  width: 40.714rem;
+}
+.about-stages__text {
+  width: 26%;
+  text-align: end;
+}
+.about-stages__title {
+  font-size: 1.929rem;
+  text-align: end;
+  margin-bottom: 1.714rem;
+}
+.about-stages__year-first {
+  position: absolute;
+  right: 66%;
+  font-size: 11.429rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  top: 5.214rem;
+}
+.about-stages__year-last {
+  position: absolute;
+  left: 65%;
+  font-size: 11.429rem;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  bottom: 7.571rem;
+  z-index: 2;
+}
+
+.about-mission {
+  height: 85rem;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .header {

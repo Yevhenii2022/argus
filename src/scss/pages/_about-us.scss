@@ -1,0 +1,204 @@
+.about-banner {
+  margin-top: 5.857rem;
+  padding-top: 5.714rem;
+ position: relative;
+  min-height: 68rem;
+
+  &__bg {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    mix-blend-mode: soft-light;
+
+    // &::before{
+    //   content: "";
+    //   background: linear-gradient(180deg, #ededed 80%, transparent 80%);
+    //   z-index: 1;
+    //   position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 20%;
+
+    // }
+
+  }
+
+  &__wrapper{
+   
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-family: $italic;
+    text-align: center;
+    line-height: 77%;
+  }
+
+  &__description {
+    margin: 1.143rem auto 0 auto;
+    text-align: center;
+    width: 18rem;
+  }
+
+  &__slider{
+    position: absolute;
+    transform: translate(17%, 70%);
+
+    @include media(mobile) {
+      margin-right: -1.714rem;
+      margin-top: 4.286rem;
+      position: static;
+    }
+  }
+
+  &__slides{
+    gap: 1.143rem;
+    justify-content: center !important;
+   
+  }
+
+  &__item {
+    background-color: $white;
+    padding: 1.714rem;
+    height: 29.643rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+    min-width: 24rem;
+      &:nth-child(odd){
+          margin-top: 4.143rem;
+
+          @include media(mobile) {
+            margin-top: 0;
+          }
+        }
+
+    &-number {
+      font-size: 4.286rem;
+      font-family: $italic;
+      position: relative;
+      padding-left: 3rem;
+
+      &::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+        position: absolute;
+        left: 0;
+        height: 3.071rem;
+        width: 2.571rem;
+      }
+    }
+
+    &-title {
+      font-size: 1.929rem;
+      color: $red;
+      font-family: $medium;
+    }
+
+    &-text{
+      line-height: 120%;
+      width: 16.429rem;
+    }
+  }
+}
+
+.about-stages{
+  padding-top: 17.643rem;
+  
+  &__heading{
+    text-align: center;
+    margin-bottom: 8.571rem;
+  }
+  
+  &__section-title{
+    em{
+      font-family: $italic;
+    }
+  }
+
+  &__subtitle{
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.286rem;
+    margin-top: 1.714rem;
+
+    svg{
+      height: 0.786rem;
+      width: 0.643rem;
+    }
+  }
+
+  &__item-inner{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 12.071rem 5.643rem;
+    gap: 1.143rem;
+  }
+
+  &__bg{
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    mix-blend-mode: soft-light;
+  }
+
+  &__img{
+    position: relative;
+    width: 40.714rem;
+  }
+
+  &__text{
+    width: 26%;
+    text-align: end;
+  }
+
+  &__title{
+    font-size: 1.929rem;
+    text-align: end;
+    margin-bottom: 1.714rem;
+  }
+
+  &__year-first{
+    position: absolute;
+    right: 66%;
+    font-size: 11.429rem;
+    font-family: $medium;
+    top: 5.214rem;
+  }
+
+  &__year-last{
+    position: absolute;
+    left: 65%;
+    font-size: 11.429rem;
+    font-family: $italic;
+    bottom: 7.571rem;
+    z-index: 2;
+  }
+
+
+}
+
+.about-mission{
+    height: 85rem;
+    background-position: left;
+    background-repeat: no-repeat;
+
+  
+}
