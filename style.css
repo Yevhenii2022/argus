@@ -376,6 +376,48 @@ button {
   height: 85rem;
   background-position: left;
   background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 8.571rem;
+}
+.about-mission__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5.143rem;
+}
+.about-mission__text {
+  width: 50%;
+}
+.about-mission__description p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.about-mission__description p em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.about-mission__paragraph {
+  font-size: 1.429rem;
+  line-height: 120%;
+  margin-bottom: 5.357rem;
+}
+.about-mission__title {
+  position: relative;
+  padding-left: 4.571rem;
+  line-height: 83%;
+}
+.about-mission__title::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  position: absolute;
+  left: 0;
+  height: 4.643rem;
+  width: 3.857rem;
+}
+.about-mission__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.about-mission__icon svg {
+  width: 5.357rem;
+  height: 4.143rem;
 }
 
 .header {
