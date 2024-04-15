@@ -614,21 +614,9 @@ button {
 }
 .about {
   padding-bottom: 5rem;
-  height: 74.337rem;
-  position: relative;
-}
-.about__bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-.about__bg svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 1151 1187' fill='none' xmlns='http://www.w3.org/2000/svg' id='about-svg'%3E%3Cg opacity='0.15'%3E%3Cpath d='M370.51 211.163L271.701 1H748.492C935.131 1 1140.59 115.492 1140.59 393.097C1140.59 615.182 981.659 732.393 902.194 763.238L1150 1186.7H913.173L561.853 590.715H748.492C801.817 590.715 935.13 562.484 935.13 393.097C935.13 257.588 810.705 215.346 748.492 211.163H370.51Z' stroke='black' /%3E%3Cpath d='M414.356 779.778L20.213 15.9863L-587.703 1185.06H-336.075L20.213 474.707L171.635 779.778H414.356Z' stroke='black' /%3E%3Cpath d='M512.327 982.47H278.205L379.712 1190.4H622.02L512.327 982.47Z' stroke='black' /%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .about__top {
   display: flex;
@@ -741,7 +729,6 @@ button {
 .services {
   background: #ffffff;
   border-radius: 1.25rem;
-  padding: 7.5rem 0;
   position: relative;
 }
 .services__title {
