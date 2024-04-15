@@ -1,5 +1,5 @@
 .button {
-	padding: 1rem 3.1rem 1rem 1.95rem;
+	padding: 1rem 2.071rem 1rem 1rem;
 	font-size: 0.786rem;
 	line-height: 1;
 	text-transform: uppercase;
@@ -9,7 +9,6 @@
 	white-space: nowrap;
 	border-radius: 5.714rem;
 	width: fit-content;
-	position: relative;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
@@ -19,53 +18,46 @@
 	-ms-user-select: none;
 	user-select: none;
 
-	&:after {
-		content: '';
-		width: 0.357rem;
-		height: 0.357rem;
-		background: $white;
-		border-radius: 50%;
-		position: absolute;
-		top: 50%;
-		right: 2rem;
-		transform: translateY(-70%);
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.714rem;
 		transition: $transition;
-	}
 
-	&:before {
-		content: '';
-		width: 0.357rem;
-		height: 0.357rem;
-		background: $white;
-		border-radius: 50%;
-		position: absolute;
-		top: 50%;
-		left: 2.5rem;
-		opacity: 0;
-		transform: translateY(-70%) translateX(-0.5rem);
-		transition: $transition;
-	}
+		&:after {
+			content: '';
+			width: 0.357rem;
+			height: 0.357rem;
+			background: $white;
+			border-radius: 50%;
+			transition: $transition;
+		}
 
-	p {
-		transition: $transition;
+		&:before {
+			content: '';
+			width: 0.357rem;
+			height: 0.357rem;
+			background: $white;
+			border-radius: 50%;
+			opacity: 0;
+			transition: $transition;
+		}
 	}
 
 	&:hover,
 	&:focus {
 		outline: none !important;
-		p {
+
+		.button__wrapper {
 			transform: translateX(12%);
+			&::before {
+				opacity: 1;
+			}
+			&::after {
+				opacity: 0;
+			}
 		}
-	}
-
-	&:hover.button::before {
-		transform: translateY(-70%) translateX(-0.5rem);
-		opacity: 1;
-	}
-
-	&:hover.button::after {
-		transform: translateY(-70%) translateX(0.5rem);
-		opacity: 0;
 	}
 }
 
