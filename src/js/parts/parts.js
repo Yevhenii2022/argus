@@ -1,2 +1,3 @@
-import "./header";
-import "./svg";
+import './header';
+import './home-video';
+import './svg';

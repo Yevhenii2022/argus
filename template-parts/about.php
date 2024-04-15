@@ -3,12 +3,7 @@ $video = get_field('about_video');
 $desc = get_field('about_desc');
 $title = get_field('about_title');
 $small_logo = get_field('small_logo', 'option');
-var_dump($video);
 ?>
-<video loop autoplay id="custom-video" class="video__video">
-    <source src="<?php echo esc_url($video); ?>" type="video/mp4">
-    Ваш браузер не підтримує тег video.
-</video>
 
 <section id="about" class="about">
     <div class="container">
@@ -30,18 +25,7 @@ var_dump($video);
             <div class="about__top">
                 <?php if ($video) : ?>
                     <div class="about__top-video">
-                        <video loop autoplay id="custom-video" class="video__video">
-                            <source src="<?php echo esc_url($video); ?>" type="video/mp4">
-                            Ваш браузер не підтримує тег video.
-                        </video>
-
-
-                        <video preload="auto" no-controls autoplay loop playsinline muted>
-                            <source src="<?php echo $video; ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-
-                        <video loop id="custom-video" class="video__video" preload="auto" playsinline preload="metadata">
+                        <video loop id="custom-video" preload="auto" muted playsinline preload="metadata">
                             <source src="<?php echo $video; ?>#t=0.001" type="video/mp4">
                             <source src="<?php echo $video; ?>#t=0.001" type="video/webm">
                             <source src="<?php echo $video; ?>#t=0.001" type="video/ogg">
@@ -49,6 +33,12 @@ var_dump($video);
                             <source src="<?php echo $video; ?>#t=0.001" type="video/x-flv">
                             <source src="<?php echo $video; ?>#t=0.001" type="video/x-msvideo">
                         </video>
+                        <button class="video__play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 19" fill="none">
+                                <path fill="#fff" d="M0 0v19l15-9.5L0 0Z" />
+                            </svg>
+                            <?php pll_e('video') ?>
+                        </button>
                     </div>
                 <?php endif; ?>
 

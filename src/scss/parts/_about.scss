@@ -28,8 +28,11 @@
 		gap: 1rem;
 
 		&-video {
-			width: 39.313rem;
-			height: 29.375rem;
+			width: 44.929rem;
+			height: 33.571rem;
+			display: block;
+			position: relative;
+			cursor: pointer;
 
 			video {
 				width: 100%;
@@ -139,21 +142,41 @@
 	}
 }
 
-#about-svg {
-	path {
-		stroke-dasharray: 4300;
-		stroke-dashoffset: 4300;
-	}
+.video__play {
+	display: flex;
+	gap: 0.286rem;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $white;
+	// font-family: $kudryashev;
+	font-size: 2.286rem;
+	line-height: 1;
+	cursor: pointer;
 
-	&.animate {
-		path {
-			animation: draw 5s ease forwards;
-		}
+	svg {
+		width: 0.857rem;
+		height: 1.071rem;
 	}
 }
 
-@keyframes draw {
-	to {
-		stroke-dashoffset: 0;
-	}
-}
+// #about-svg {
+// 	path {
+// 		stroke-dasharray: 4300;
+// 		stroke-dashoffset: 4300;
+// 	}
+
+// 	&.animate {
+// 		path {
+// 			animation: draw 5s ease forwards;
+// 		}
+// 	}
+// }
+
+// @keyframes draw {
+// 	to {
+// 		stroke-dashoffset: 0;
+// 	}
+// }
