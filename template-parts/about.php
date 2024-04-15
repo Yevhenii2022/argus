@@ -1,8 +1,8 @@
 <?php
 $video = get_field('about_video');
-$desc = get_field('about_desc');
-$title = get_field('about_title');
-$small_logo = get_field('small_logo', 'option');
+$desc = get_field('about_desc') ?? '';
+$title = get_field('about_title') ?? '';
+$subtitle = get_field('about_subtitle') ?? '';
 ?>
 
 <section id="about" class="about">
@@ -22,54 +22,67 @@ $small_logo = get_field('small_logo', 'option');
                 </svg> -->
             <!-- </div> -->
 
-            <div class="about__top">
-                <?php if ($video) : ?>
-                    <div class="about__top-video">
-                        <video loop id="custom-video" preload="auto" muted playsinline preload="metadata">
-                            <source src="<?php echo $video; ?>#t=0.001" type="video/mp4">
-                            <source src="<?php echo $video; ?>#t=0.001" type="video/webm">
-                            <source src="<?php echo $video; ?>#t=0.001" type="video/ogg">
-                            <source src="<?php echo $video; ?>#t=0.001" type="video/quicktime">
-                            <source src="<?php echo $video; ?>#t=0.001" type="video/x-flv">
-                            <source src="<?php echo $video; ?>#t=0.001" type="video/x-msvideo">
-                        </video>
-                        <button class="video__play">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 19" fill="none">
-                                <path fill="#fff" d="M0 0v19l15-9.5L0 0Z" />
-                            </svg>
-                            <?php pll_e('video') ?>
-                        </button>
-                    </div>
-                <?php endif; ?>
-
-                <div class="about__top-content">
-                    <?php if ($desc) : ?>
-                        <p class="about__top-desc">
-                            <?= $desc ?>
-                        </p>
-                    <?php endif; ?>
-
-                    <?php if ($small_logo) : ?>
-                        <div class="about__top-logo">
-                            <img src="<?= $small_logo ?>" alt="<?php pll_e('site_name') ?>">
+            <div class="about__box">
+                <div class="about__top">
+                    <?php if ($video) : ?>
+                        <div class="about__top-video">
+                            <video loop id="custom-video" preload="auto" muted playsinline preload="metadata">
+                                <source src="<?php echo $video; ?>#t=0.001" type="video/mp4">
+                                <source src="<?php echo $video; ?>#t=0.001" type="video/webm">
+                                <source src="<?php echo $video; ?>#t=0.001" type="video/ogg">
+                                <source src="<?php echo $video; ?>#t=0.001" type="video/quicktime">
+                                <source src="<?php echo $video; ?>#t=0.001" type="video/x-flv">
+                                <source src="<?php echo $video; ?>#t=0.001" type="video/x-msvideo">
+                            </video>
+                            <button class="video__play">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 19" fill="none">
+                                    <path fill="#fff" d="M0 0v19l15-9.5L0 0Z" />
+                                </svg>
+                                <?php pll_e('video') ?>
+                            </button>
                         </div>
                     <?php endif; ?>
 
-                    <a href="<?= get_home_url() . '/about' ?>" class="about__top-link link">
-                        <span>
-                            <?php pll_e('more_about_us') ?>
-                        </span>
-                    </a>
-                </div>
-            </div>
+                    <div class="about__top-content">
 
-            <?php if ($title) : ?>
-                <div class="about__middle">
-                    <div class="about__middle-title">
-                        <?= $title ?>
+                        <div class="about__top-inner">
+                            <div class="about__top-counter"></div>
+
+                            <?php
+                            $small_logo = get_field('small_logo');
+                            if ($small_logo) {
+                                $svg_url = wp_get_attachment_url($small_logo);
+                                $svg_content = file_get_contents($svg_url);
+                                if ($svg_content !== false) :
+                            ?>
+                                    <?= $svg_content; ?>
+                            <?php
+                                endif;
+                            }
+                            ?>
+                        </div>
+
+                        <?php if ($desc) : ?>
+                            <p class="about__top-desc"><?= $desc ?></p>
+                        <?php endif; ?>
+
+                        <a href="<?= get_home_url() . '/about' ?>" class="about__top-link link" style="width: <?php echo (pll_current_language() === 'en') ? '3.97rem' : '3.571rem'; ?>">
+                            <span>
+                                <?php pll_e('more_about_us') ?>
+                            </span>
+                        </a>
                     </div>
                 </div>
-            <?php endif; ?>
+
+                <?php if ($title) : ?>
+                    <div>
+                        <h1 class="main__title"><?= $title ?></h1>
+                        <?php if ($subtitle) : ?>
+                            <h1 class="main__title main__title--italic"><?= $subtitle ?></h1>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
 
             <?php if (have_rows('about_list')) : ?>
                 <div class="about__bottom">
@@ -104,11 +117,4 @@ $small_logo = get_field('small_logo', 'option');
             <?php endif; ?>
         </div>
     </div>
-
-    <!-- <div class="popup popup-video">
-    <div class="container">
-        <div class="popup__wrapper">
-        </div>
-    </div>
-</div> -->
 </section>
