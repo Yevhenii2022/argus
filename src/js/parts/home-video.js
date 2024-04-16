@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if (currentLanguage === 'uk') {
 		videoText = 'відео';
-	} else if (currentLanguage === 'en') {
+	} else {
 		videoText = 'video';
 	}
 
