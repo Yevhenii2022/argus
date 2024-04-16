@@ -72,6 +72,8 @@ get_header();
             </div>
     </section>
 
+    <!-- <?php get_template_part('template-parts/projects-part'); ?> -->
+
     <?php $stageBackground = get_field('stage_bg') ?? '' ;
           $stageTitle = get_field('stage_heading') ?? '' ;
           $stageSubtitle = get_field('stage_subtitle') ?? '' ;?>
@@ -150,9 +152,9 @@ get_header();
           $missionTitle = get_field('mission_title') ?? '' ;
           $missionText = get_field('mission_text') ?? '' ;
           $missionSubText = get_field('mission_subtext') ?? '' ;
-          $missionImg = get_field('mission_image') ?? '' ;
+          $missionVid = get_field('mission_video') ?? '' ;
 
-          if( $missionBackground  || $missionTitle || $missionText || $missionSubText || $missionImg): 
+          if( $missionBackground  || $missionTitle || $missionText || $missionSubText || $missionVid): 
     ?>
     <section class="about-mission" style=" background-image: url('<?php echo esc_url($missionBackground); ?>');">
         <div class="container">
@@ -206,13 +208,81 @@ get_header();
                 </div>
             </div>
         </div>
-        <?php if ($missionImg): ?>
-        <div class="about-mission__image">
-            <img src='<?php echo $missionImg['url']; ?>' alt='<?php echo $missionImg['alt']; ?>' />
+        <div class="about-mission__video">
+        <?php if( $missionVid ): ?>
+            <video preload="auto" no-controls autoplay loop playsinline muted>
+                <source src="<?php echo $missionVid['url']; ?>" type="<?php echo $missionVid['mime_type']; ?>">
+                Your browser does not support the video tag.
+            </video>
+        <?php endif; ?>
         </div>
-        <?php endif ?>
+        
     </section>
     <?php endif ?>
+
+
+    <?php $valuesHeading = get_field('values_title') ?? '' ;?>
+    <secton class="about-values">
+        <div class="container">
+            <div class="about-values__wrapper">
+                <div class="about-values__left">
+                    <?php if( $valuesHeading ): ?>
+                <h2 class="about-values__heading main__title" id="stiky">
+                    <?= $valuesHeading ;?>
+                </h2>
+                <?php endif ?>
+                </div>
+                <div class="about-values__right">
+                     <ul class="about-values__list">
+                    <?php while (have_rows('values_list')):
+                            the_row();
+                            $valuesItemTitle = get_sub_field('value_heading') ?? '' ;
+                            $valuesItemDescription = get_sub_field('value_description') ?? '' ; ?>
+                    <li class="about-values__item">
+                    
+                        <?php if( $valuesItemTitle ): ?>
+                        <h3 class="about-values__title">
+                            <?= $valuesItemTitle ;?>
+                        </h3>
+                        <?php endif ?>
+                        <?php if( $valuesItemDescription): ?>
+                        <p class="about-values__description">
+                            <?= $valuesItemDescription ;?>
+                        </p>
+                        <?php endif ?>
+                        
+                    </li>
+                    <? endwhile ?>
+                </ul>
+                </div>
+               
+            </div>
+        </div>
+    </secton>
+
+
+    <section class="about-team">
+        <div class="container">
+            <div class="about-team__wrapper">
+                <div class="about-team__content">
+                    <div class="about-team__image"></div>
+                    <div class="about-team__text">
+                        <div class="about-team__top">
+                            <div class="about-team__name"></div>
+                            <div class="about-team__description">
+                                <div class="about-team__paragraph"></div>
+                                <div class="about-team__icon"></div>
+                            </div>
+                        </div>
+                        <div class="about-team__bottom"></div>
+                    </div>
+                </div>
+                <div class="about-team__title"></div>
+            </div>
+        </div>
+
+    </section>
+    
     
 </main>
 

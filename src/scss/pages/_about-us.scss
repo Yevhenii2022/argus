@@ -1,7 +1,7 @@
 .about-banner {
   margin-top: 5.857rem;
   padding-top: 5.714rem;
- position: relative;
+  position: relative;
   min-height: 68rem;
 
   &__bg {
@@ -29,9 +29,7 @@
 
   }
 
-  &__wrapper{
-   
-  }
+  &__wrapper {}
 
   &__title {
     text-align: center;
@@ -49,7 +47,7 @@
     width: 18rem;
   }
 
-  &__slider{
+  &__slider {
     position: absolute;
     transform: translate(17%, 70%);
 
@@ -60,10 +58,10 @@
     }
   }
 
-  &__slides{
+  &__slides {
     gap: 1.143rem;
     justify-content: center !important;
-   
+
   }
 
   &__item {
@@ -75,13 +73,14 @@
     justify-content: space-between;
     width: fit-content;
     min-width: 24rem;
-      &:nth-child(odd){
-          margin-top: 4.143rem;
 
-          @include media(mobile) {
-            margin-top: 0;
-          }
-        }
+    &:nth-child(odd) {
+      margin-top: 4.143rem;
+
+      @include media(mobile) {
+        margin-top: 0;
+      }
+    }
 
     &-number {
       font-size: 4.286rem;
@@ -104,28 +103,28 @@
       font-family: $medium;
     }
 
-    &-text{
+    &-text {
       line-height: 120%;
       width: 16.429rem;
     }
   }
 }
 
-.about-stages{
+.about-stages {
   padding-top: 17.643rem;
-  
-  &__heading{
+
+  &__heading {
     text-align: center;
     margin-bottom: 8.571rem;
   }
-  
-  &__section-title{
-    em{
+
+  &__section-title {
+    em {
       font-family: $italic;
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     line-height: 120%;
     display: flex;
     align-items: center;
@@ -133,13 +132,13 @@
     gap: 0.286rem;
     margin-top: 1.714rem;
 
-    svg{
+    svg {
       height: 0.786rem;
       width: 0.643rem;
     }
   }
 
-  &__item-inner{
+  &__item-inner {
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -147,7 +146,7 @@
     gap: 1.143rem;
   }
 
-  &__bg{
+  &__bg {
     position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,31 +158,31 @@
     mix-blend-mode: soft-light;
   }
 
-  &__img{
+  &__img {
     position: relative;
     width: 40.714rem;
   }
 
-  &__text{
+  &__text {
     width: 26%;
     text-align: end;
   }
 
-  &__title{
+  &__title {
     font-size: 1.929rem;
     text-align: end;
     margin-bottom: 1.714rem;
   }
 
-  &__year-first{
+  &__year-first {
     position: absolute;
-    right: 66%;
+    right: 67%;
     font-size: 11.429rem;
     font-family: $medium;
     top: 5.214rem;
   }
 
-  &__year-last{
+  &__year-last {
     position: absolute;
     left: 65%;
     font-size: 11.429rem;
@@ -195,61 +194,172 @@
 
 }
 
-.about-mission{
-    height: 85rem;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-top: 8.571rem;
+.about-mission {
 
-  &__wrapper{
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 8.571rem;
+  
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5.143rem;
   }
 
-  &__text{
+  &__text {
     width: 50%;
   }
 
-  &__description{
-    p{
-     font-size: 2rem;
-     text-transform: uppercase;
-     margin-bottom: 1.5rem;
-      em{
+  &__description {
+    p {
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+
+      em {
         font-family: $italic;
       }
     }
   }
 
-  &__paragraph{
+  &__paragraph {
     font-size: 1.429rem;
     line-height: 120%;
     margin-bottom: 5.357rem;
   }
 
-  &__title{
+  &__title {
     position: relative;
     padding-left: 4.571rem;
     line-height: 83%;
 
-      &::before {
-        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
-        position: absolute;
-        left: 0;
-        height: 4.643rem;
-        width: 3.857rem;
-      }
-      em{
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+      position: absolute;
+      left: 0;
+      height: 4.643rem;
+      width: 3.857rem;
+    }
+
+    em {
+      font-family: $italic;
+    }
+  }
+
+  &__icon {
+    svg {
+      width: 5.357rem;
+      height: 4.143rem;
+    }
+  }
+
+  &__video {
+    overflow: hidden;
+    max-width: 100%;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.about-values {
+ 
+  margin-bottom: 13.429rem;
+
+  &__wrapper {
+    display: flex;
+    
+   
+  }
+
+  &__left{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading {
+     margin: 0;
+      position: sticky;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+  
+
+    p {
+     
+      em {
         font-family: $italic;
       }
-   }
-    &__icon{
-      svg{
-        width: 5.357rem;
-        height: 4.143rem;
-      }
     }
-  
+  }
+  &__right{
+     flex: 1;
+      
+  }
+
+  &__list {
+    counter-reset: item;
+    list-style-type: none;
+   
+  }
+
+  &__item {
+    counter-increment: item;
+    background-color: $white;
+    border-radius: 50%;
+    width: 22rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 1.929rem;
+    align-items: center;
+    padding-top: 6rem;
+
+    &::before {
+      content: counter(item, decimal-leading-zero) ". ";
+      position: absolute;
+      top: 0;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      left: 50%;
+      font-size: 4.286rem;
+      font-family: $italic;
+    }
+
+    &:nth-child(even) {
+      transform: rotate(5deg);
+      margin-left: 20rem;
+      margin-bottom: -7rem;
+    }
+
+    &:nth-child(odd) {
+      transform: rotate(-5deg);
+      margin-bottom: -7rem;
+    }
+  }
+
+  &__title {
+    font-size: 0.786rem;
+    line-height: 109%;
+    text-transform: uppercase;
+    text-align: center;
+
+  }
+
+  &__description {
+    width: 13.857rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 120%
+  }
 }
+
+
+
