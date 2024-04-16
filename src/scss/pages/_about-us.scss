@@ -200,7 +200,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   padding-top: 8.571rem;
-  
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -266,46 +266,46 @@
 }
 
 .about-values {
- 
+
   margin-bottom: 13.429rem;
 
   &__wrapper {
     display: flex;
-    
-   
+    padding-bottom: 13.429rem;
+    padding-top: 20.214rem;
   }
 
-  &__left{
+  &__left {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 6rem;
   }
 
   &__heading {
-     margin: 0;
-      position: sticky;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 1;
-  
+    margin: 0;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
 
     p {
-     
+
       em {
         font-family: $italic;
       }
     }
   }
-  &__right{
-     flex: 1;
-      
+
+  &__right {
+    flex: 1;
+    margin-top: 14rem;
+
   }
 
   &__list {
     counter-reset: item;
     list-style-type: none;
-   
+
   }
 
   &__item {
@@ -343,6 +343,10 @@
       transform: rotate(-5deg);
       margin-bottom: -7rem;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -361,5 +365,78 @@
   }
 }
 
+.about-team {
+  padding-top: 8.571rem;
+  padding-bottom: 8.571rem;
+  background-color: $white;
+  border-radius: 1.429rem;
 
+  &__content {
+    display: flex;
+    gap: 1.143rem;
+  }
 
+  &__image {
+    flex: 1;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    ;
+  }
+
+  &__description {
+    width: 24.286rem;
+    text-align: end;
+  }
+
+  &__logo {
+    margin-top: 0.857rem;
+
+    svg {
+      width: 3.143rem;
+      height: 2.429rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    height: 4.429rem;
+    display: flex;
+    margin-left: 10rem;
+
+    span {
+      width: 9.5rem;
+      font-size: 0.786rem;
+      line-height: 90%;
+      
+      &::before{
+        width: 1.143rem;
+        height: 1.214rem;
+      }
+    }
+  }
+
+  &__title{
+    margin-top: 2.286rem;
+    em{
+      font-family: $italic;
+    }
+  }
+}
