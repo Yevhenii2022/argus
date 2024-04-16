@@ -11,5 +11,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'about_us');
     pll_register_string('pointer_theme', 'menu');
     pll_register_string('pointer_theme', 'services_post_link');
+    pll_register_string('pointer_theme', 'you_can_become_part_of_the_team_view_vacancies');
     pll_register_string('pointer_theme', 'video');
 }
