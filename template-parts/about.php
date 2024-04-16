@@ -66,7 +66,7 @@ $subtitle = get_field('about_subtitle') ?? '';
                             <p class="about__top-desc"><?= $desc ?></p>
                         <?php endif; ?>
 
-                        <a href="<?= get_home_url() . '/about' ?>" class="about__top-link link" style="width: <?php echo (pll_current_language() === 'en') ? '3.97rem' : '3.571rem'; ?>">
+                        <a href="<?php echo esc_url(get_home_url() . '/about/'); ?>" class="about__top-link link" style="width: <?php echo (pll_current_language() === 'en') ? '3.97rem' : '3.571rem'; ?>">
                             <span>
                                 <?php pll_e('more_about_us') ?>
                             </span>
