@@ -26,7 +26,7 @@ $bg = get_field('hero_bg');
                     <p class="hero__desc"><?= $desc ?></p>
                 <?php endif; ?>
 
-                <a href="<?= get_home_url() . '/services' ?>" class="hero__button button">
+                <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="hero__button button">
                     <div class="button__wrapper">
                         <p><?php pll_e('look_services_button') ?></p>
                     </div>
@@ -34,7 +34,6 @@ $bg = get_field('hero_bg');
             </div>
 
             <div>
-
                 <div class="hero__inner">
                     <?php if ($text) : ?>
                         <p class="hero__text"><?= $text ?></p>

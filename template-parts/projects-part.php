@@ -1,35 +1,43 @@
 <?php
 $title = get_field('projects-part_title');
 ?>
-
 <section class="projects-part">
     <div class="container">
         <div class="projects-part__wrapper">
-            <?php if ($title): ?>
+            <?php if ($title) : ?>
                 <div class="projects-part__title title">
                     <?= $title ?>
+                    <div class="projects-part__counter"></div>
                 </div>
             <?php endif; ?>
 
-            <?php if (have_rows('projects-part_list')): ?>
+            <?php
+            $args = array(
+                'post_type' => 'projects',
+                'posts_per_page' => 6,
+            );
+            $projects_query = new WP_Query($args);
+            if ($projects_query->have_posts()) :
+            ?>
                 <div class="projects-part__list">
-                    <?php while (have_rows('projects-part_list')):
-                        the_row();
-                        $post_object = get_sub_field('item');
-                        $post = $post_object;
-                        setup_postdata($post);
-                        ?>
+                    <?php
+                    while ($projects_query->have_posts()) : $projects_query->the_post();
+                    ?>
 
                         <?php get_template_part('template-parts/project-card'); ?>
 
-                        <?php wp_reset_postdata(); ?>
-                    <?php endwhile; ?>
+                    <?php endwhile;
+                    wp_reset_postdata();
+                    ?>
                 </div>
             <?php endif; ?>
 
-            <div class="projects-part__button button">
-                <?php pll_e('more_projects-part'); ?>
-            </div>
+            <a href="<?php echo esc_url(get_home_url() . '/projects/'); ?>" class="projects-part__button button">
+                <div class="button__wrapper">
+                    <p> <?php pll_e('more_projects'); ?></p>
+                </div>
+            </a>
+
         </div>
     </div>
 </section>
