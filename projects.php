@@ -9,7 +9,7 @@ get_header(); ?>
     <section class="projects">
         <div class="container">
             <div class="projects__wrapper">
-                text
+                <p>text</p>
             </div>
         </div>
     </section>

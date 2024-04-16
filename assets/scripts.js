@@ -93,6 +93,16 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n  let hea
 
 /***/ }),
 
+/***/ "./src/js/parts/home-video.js":
+/*!************************************!*\
+  !*** ./src/js/parts/home-video.js ***!
+  \************************************/
+/***/ (() => {
+
+eval("document.addEventListener('DOMContentLoaded', function () {\r\n\tconst video = document.getElementById('custom-video');\r\n\tconst playPauseButton = document.querySelector('.video__play');\r\n\r\n\tconst currentLanguage = document.documentElement.lang;\r\n\r\n\tlet videoText = '';\r\n\r\n\tif (currentLanguage === 'uk') {\r\n\t\tvideoText = 'відео';\r\n\t} else if (currentLanguage === 'en') {\r\n\t\tvideoText = 'video';\r\n\t}\r\n\r\n\tconst togglePlayPause = () => {\r\n\t\tif (video.paused) {\r\n\t\t\tvideo.play();\r\n\t\t\tplayPauseButton.innerHTML = '';\r\n\t\t} else {\r\n\t\t\tvideo.pause();\r\n\t\t\tplayPauseButton.innerHTML = `<svg class=\"video__icon\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 15 19\" fill=\"none\"><path fill=\"#fff\" d=\"M0 0v19l15-9.5L0 0Z\" /></svg> ${videoText}`;\r\n\t\t}\r\n\t};\r\n\r\n\tif (video) {\r\n\t\tvideo.addEventListener('click', togglePlayPause);\r\n\t}\r\n\r\n\tif (playPauseButton) {\r\n\t\tplayPauseButton.addEventListener('click', togglePlayPause);\r\n\t}\r\n});\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/home-video.js?");
+
+/***/ }),
+
 /***/ "./src/js/parts/parts.js":
 /*!*******************************!*\
   !*** ./src/js/parts/parts.js ***!
@@ -100,7 +110,7 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\r\n  let hea
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/js/parts/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./svg */ \"./src/js/parts/svg.js\");\n/* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_svg__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/js/parts/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _home_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home-video */ \"./src/js/parts/home-video.js\");\n/* harmony import */ var _home_video__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_video__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg */ \"./src/js/parts/svg.js\");\n/* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_svg__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack_theme/./src/js/parts/parts.js?");
 
 /***/ }),
 
