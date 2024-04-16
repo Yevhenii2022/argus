@@ -72,7 +72,7 @@ get_header();
             </div>
     </section>
 
-    <!-- <?php get_template_part('template-parts/projects-part'); ?> -->
+    <?php get_template_part('template-parts/projects-part'); ?>
 
     <?php $stageBackground = get_field('stage_bg') ?? '' ;
           $stageTitle = get_field('stage_heading') ?? '' ;
