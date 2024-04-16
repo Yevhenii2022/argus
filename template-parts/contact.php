@@ -6,7 +6,7 @@ $img = get_field('contact_img');
 ?>
 
 <section class="contact">
-    <?php if ($img): ?>
+    <?php if ($img) : ?>
         <style>
             .contact {
                 background-image: url('<?= $img ?>');
@@ -16,32 +16,52 @@ $img = get_field('contact_img');
 
     <div class="container">
         <div class="contact__wrapper">
-            <div class="contact__top">
-                <?php if ($desc): ?>
-                    <p class="contact__desc">
-                        <?= $desc ?>
-                    </p>
-                <?php endif; ?>
-            </div>
 
-            <div class="contact__middle">
-                <?php if ($title): ?>
-                    <div class="contact__title">
-                        <?= $title ?>
-                    </div>
-                <?php endif; ?>
+            <div>
+                <div class="contact__top">
+                    <?php if ($desc) : ?>
+                        <p class="contact__desc">
+                            <?= $desc ?>
+                        </p>
+                    <?php endif; ?>
 
-                <div class="contact__button">
-                    <div class="contact__link link">
-                        <span>
-                            <?php pll_e('contact_with_us'); ?>
-                        </span>
-                    </div>
+                    <div class="contact__counter"></div>
+
+                </div>
+
+                <div class="contact__middle">
+                    <?php if ($title) : ?>
+                        <div class="contact__title">
+                            <?= $title ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <a href='#' class="contact__button">
+                        <div class="contact__link link">
+                            <span>
+                                <?php pll_e('contact_with_us'); ?>
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div class="contact__bottom">
-                <?php if ($text): ?>
+                <?php
+                $icon = get_field('contact_icon');
+                $file_path = get_attached_file($icon);
+
+                if ($file_path && file_exists($file_path)) {
+                    $svg_content = file_get_contents($file_path);
+                } else {
+                    $svg_content = false;
+                }
+                ?>
+                <?php if ($svg_content !== false) : ?>
+                    <?php echo $svg_content; ?>
+                <?php endif; ?>
+
+                <?php if ($text) : ?>
                     <div class="contact__text">
                         <?= $text ?>
                     </div>
@@ -49,5 +69,4 @@ $img = get_field('contact_img');
             </div>
         </div>
     </div>
-
 </section>

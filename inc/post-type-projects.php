@@ -23,13 +23,13 @@ function projects_custom_post()
     'public' => true,
     'menu_position' => 19,
     'show_in_rest' => true,
-    'supports' => array('title', 'editor', 'thumbnail'),
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
     'has_archive' => false,
     'show_in_admin_bar' => true,
     'show_in_nav_menus' => true,
     'rewrite' => array('slug' => 'projects'),
     'menu_icon' => 'dashicons-admin-multisite',
-    'publicly_queryable' => false,
+    // 'publicly_queryable' => false,
     'query_var' => true,
     'taxonomies' => array('category')
   );
