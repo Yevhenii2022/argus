@@ -23,7 +23,7 @@ function projects_custom_post()
     'public' => true,
     'menu_position' => 19,
     'show_in_rest' => true,
-    'supports' => array('title', 'editor', 'thumbnail'),
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
     'has_archive' => false,
     'show_in_admin_bar' => true,
     'show_in_nav_menus' => true,

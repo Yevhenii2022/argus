@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -916,8 +916,8 @@ button {
 
 .services {
   background: #ffffff;
-  border-radius: 1.25rem;
   position: relative;
+  height: 53.1rem;
 }
 .services__title {
   position: relative;
@@ -932,11 +932,11 @@ button {
 .services__title:before {
   content: "";
   display: block;
-  right: -1rem;
+  right: -1.8rem;
   top: 0.5rem;
   position: absolute;
-  width: 0.563rem;
-  height: 0.688rem;
+  width: 0.643rem;
+  height: 0.786rem;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -946,11 +946,9 @@ button {
   counter-increment: section;
   content: "0.0" counter(section);
   position: absolute;
-  top: 0.5rem;
-  right: -2.5rem;
-  font-size: 0.688rem;
-  line-height: 0.75rem;
-  color: #f9f9f9;
+  top: 0.3rem;
+  right: -4.1rem;
+  color: #ffffff;
 }
 .services__cover {
   width: 50%;
@@ -959,7 +957,6 @@ button {
 }
 .services__bg {
   width: 100%;
-  height: 100vh;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -970,7 +967,7 @@ button {
   background-color: #f41b1b;
   width: 50%;
   display: block;
-  height: 100vh;
+  height: 53.6rem;
   clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 30.278% 73.118%, 51.043% 49.933%, 30.278% 26.747%, 48.818% 26.747%, 69.583% 49.933%, 48.818% 73.118%, 30.278% 73.118%);
 }
 .services__item {
@@ -980,63 +977,49 @@ button {
   max-width: 10.875rem;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   position: absolute;
-  top: 50%;
-  left: 6%;
-  transform: translate(-50%, -50%);
-  font-weight: 500;
-  color: #f9f9f9;
-  line-height: 1.668rem;
-  font-size: 1.688rem;
-  margin-left: 1.5rem;
+  top: 25.5rem;
+  left: 1.6rem;
+  font-weight: 550;
+  color: #ffffff;
+  line-height: 1;
+  font-size: 1.929rem;
 }
 .services__item-text {
   max-width: 25.688rem;
   font-family: "HelveticaNeueCyr-Roman", "sans-serif";
   position: absolute;
-  font-weight: 400;
-  line-height: 1.05rem;
-  font-size: 0.875rem;
-  color: #f9f9f9;
-  bottom: 6%;
-  margin-left: 1.5rem;
+  color: #ffffff;
+  bottom: 3.5rem;
+  margin-left: 1.7rem;
   margin-bottom: 1.5rem;
 }
-.services__item-text p,
-.services__item-text span,
-.services__item-text strong {
-  font-family: "HelveticaNeueCyr-Roman", "sans-serif";
-  font-weight: 400;
-  line-height: 1.05rem;
-  font-size: 0.875rem;
-  color: #f9f9f9;
-}
 .services__item-link {
-  display: block;
-  margin-left: 1.5rem;
-  margin-bottom: 2.5rem;
+  display: inline-flex;
+  margin-left: 1.7rem;
+  margin-bottom: 2.8rem;
   position: absolute;
   z-index: 8;
-  font-size: 0.688rem;
-  line-height: 0.684rem;
-  color: #f9f9f9;
-  font-family: "HelveticaNeueCyr-Roman", "sans-serif";
-  font-weight: 400;
+  font-size: 0.786rem;
+  line-height: 1;
+  color: #ffffff;
   bottom: 0;
   text-transform: uppercase;
-  display: inline-flex;
   align-items: center;
   gap: 0.1rem;
 }
 .services__item-link::after {
-  transition: transform 0.3s ease;
   content: "";
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M4.664 5.29a.625.625 0 1 1 0-1.25h6.667c.345 0 .625.279.625.624v6.667a.625.625 0 1 1-1.25 0V6.173l-5.6 5.6a.625.625 0 0 1-.884-.884l5.6-5.6H4.664Z' clip-rule='evenodd'/%3E%3C/svg%3E");
-  width: 1rem;
-  height: 1rem;
+  width: 1.143rem;
+  height: 1.143rem;
+  transition: all 0.3s ease-in-out;
+}
+.services__item-link:hover::after {
+  transform: rotate(45deg);
 }
 .services__arrow--prev::before {
   content: "";
@@ -1044,10 +1027,14 @@ button {
   display: block;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 3.813rem;
-  height: 3.813rem;
+  width: 4.357rem;
+  height: 4.357rem;
   background-position: center;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.services__arrow--prev:hover::before {
+  transform: scale(1.1);
 }
 .services__arrow--next::before {
   content: "";
@@ -1055,21 +1042,53 @@ button {
   display: block;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 3.813rem;
-  height: 3.813rem;
+  width: 4.357rem;
+  height: 4.357rem;
   background-position: center;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.services__arrow--next:hover::before {
+  transform: scale(1.1);
 }
 .services__navigation {
-  margin-bottom: 2.5rem;
   display: flex;
   gap: 0.75rem;
   align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: 2.8rem;
+  left: 40.2rem;
   z-index: 8;
-  margin-right: 1.5rem;
-  left: 38.9%;
+}
+.services__button {
+  position: absolute;
+  bottom: 2.8rem;
+  right: 18.3rem;
+  z-index: 1;
+}
+
+.services-pagination {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 23.2rem;
+  left: 1.6rem;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.swiper-pagination-current {
+  margin-right: 3rem;
+  position: relative;
+}
+.swiper-pagination-current::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1.02rem;
+  width: 2rem;
+  height: 0.071rem;
+  background-color: #ffffff;
 }
 
 .projects-part {
