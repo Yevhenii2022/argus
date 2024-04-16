@@ -29,7 +29,7 @@ function projects_custom_post()
     'show_in_nav_menus' => true,
     'rewrite' => array('slug' => 'projects'),
     'menu_icon' => 'dashicons-admin-multisite',
-    'publicly_queryable' => false,
+    // 'publicly_queryable' => false,
     'query_var' => true,
     'taxonomies' => array('category')
   );

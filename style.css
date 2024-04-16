@@ -951,8 +951,8 @@ button {
   -o-transition: 0.3s ease-in-out;
 }
 .projects-card__img--error {
-  width: 11.081rem !important;
-  height: 11.081rem !important;
+  width: 20rem !important;
+  height: 20rem !important;
   object-fit: contain !important;
 }
 .projects-card__content {

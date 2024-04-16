@@ -1,8 +1,7 @@
 <?php
 $subtitle = get_field('project_subtitle');
 $location = get_field('project_location');
-$default_picture = get_field('dd', 'options');
-// var_dump($default_picture);
+$default_picture = get_field('default_picture', 'options');
 ?>
 
 <a href="<?php the_permalink() ?>" class="projects-card" aria-label="<?php the_title_attribute(); ?>">
