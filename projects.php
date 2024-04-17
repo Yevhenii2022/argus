@@ -20,38 +20,28 @@ get_header(); ?>
 
                 </div>
 
-
-
-
-
-
-                <?php
-                $args = array(
-                    'post_type' => 'projects',
-                    'posts_per_page' => 6,
-                );
-                $projects_query = new WP_Query($args);
-                if ($projects_query->have_posts()) :
-                ?>
-                    <div class="projects-part__list">
-                        <?php
+                <div class="projects-part__list">
+                    <?php
+                    $args = array(
+                        'post_type' => 'projects',
+                        'posts_per_page' => 6,
+                    );
+                    $projects_query = new WP_Query($args);
+                    if ($projects_query->have_posts()) :
                         while ($projects_query->have_posts()) : $projects_query->the_post();
-                        ?>
-
-                            <?php get_template_part('template-parts/project-card'); ?>
-
-                        <?php endwhile;
+                            get_template_part('template-parts/project-card');
+                        endwhile;
                         wp_reset_postdata();
-                        ?>
-                    </div>
-                <?php endif; ?>
+                    endif;
+                    ?>
+                </div>
 
-
-                <button type='button' class="projects__button button">
+                <button type='button' class="projects__button button" id="load-more-button">
                     <div class="button__wrapper">
-                        <p> <?php pll_e('download more'); ?></p>
+                        <p><?php pll_e('download_more'); ?></p>
                     </div>
                 </button>
+
 
 
 
