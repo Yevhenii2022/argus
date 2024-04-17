@@ -1,103 +1,125 @@
 .contact {
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-attachment: fixed;
-    height: 66.563rem;
-    margin-bottom: 7.5rem;
-    border-radius: 1.25rem;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 1.25rem;
 
-    &__wrapper {
-        padding: 2.5rem 0;
-    }
+	&__wrapper {
+		margin-bottom: 7.5rem;
+		padding: 2.7rem 0 2.9rem 0;
+		height: 76.05rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
-    &__top {
-        position: relative;
-        margin-bottom: 10.25rem;
+	&__top {
+		margin-bottom: 11.25rem;
+		display: flex;
+		gap: 29.7rem;
+	}
 
-        &::after {
-            counter-increment: section;
-            content: "0.0" counter(section);
-            position: absolute;
-            top: 0;
-            right: 50%;
-            font-size: 0.688rem;
-            line-height: 0.75rem;
-            color: $white;
-        }
-    }
+	&__counter {
+		display: flex;
+		gap: 0.286rem;
+		color: $white;
 
-    &__desc {
-        color: $white;
-        max-width: 23rem;
-    }
+		&::after {
+			counter-increment: section;
+			content: '0.0' counter(section);
+		}
+		&::before {
+			content: '';
+			margin-top: 0.1rem;
+			width: 0.643rem;
+			height: 0.786rem;
+			background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 9 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.24528 11H0L4.75472 5.5L0 0H4.24528L9 5.5L4.24528 11Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+		}
+	}
 
-    &__button {
-        position: absolute;
-        top: 41.3%;
-        right: 22%;
-    }
+	&__desc {
+		color: $white;
+		max-width: 18.5rem;
+	}
 
-    &__link {
-        position: relative;
+	&__button {
+		position: absolute;
+		top: 40.8%;
+		right: 21.3%;
 
-        &:before {
-            content: "";
-            background: $white;
-            width: 7.375rem;
-            height: 7.375rem;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+		&:has(.link) {
+			.link {
+				span {
+					&::before {
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M4.664 5.29a.625.625 0 1 1 0-1.25h6.667c.345 0 .625.279.625.624v6.667a.625.625 0 1 1-1.25 0V6.173l-5.6 5.6a.625.625 0 0 1-.884-.884l5.6-5.6H4.664Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+					}
+				}
+			}
+		}
+	}
 
-        span {
-            width: 4.25rem;
+	&__link {
+		color: $white;
 
-            &:after {
-                content: none;
-            }
-        }
-    }
+		&:before {
+			content: '';
+			background: $red;
+			width: 8.429rem;
+			height: 8.429rem;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 
-    &__title {
-        p {
-            &:nth-child(2) {
-                text-align: right;
-            }
-        }
+		span {
+			width: 4.95rem;
 
-        & > * {
-            font-size: 5.625rem;
-            text-transform: uppercase;
-            line-height: 1;
-            position: relative;
-            color: $white;
-        }
+			&:after {
+				content: none;
+			}
+		}
+	}
 
-        strong {
-            font-family: $medium;
-            color: $white;
-        }
+	&__title {
+		p {
+			&:nth-child(2) {
+				text-align: right;
+			}
+		}
 
-        em {
-            font-family: $italic;
-            color: $white;
-        }
-    }
+		& > * {
+			font-size: 6.429rem;
+			text-transform: uppercase;
+			line-height: 1;
+			position: relative;
+			color: $white;
+		}
 
-    &__bottom {
-        position: absolute;
-        left: 1.5rem;
-        bottom: 2.5rem;
-    }
+		strong {
+			font-family: $medium;
+			color: $white;
+		}
 
-    &__text {
-        color: $white;
-        max-width: 23rem;
-        position: relative;
-    }
+		em {
+			font-family: $italic;
+			color: $white;
+		}
+	}
+
+	&__bottom {
+		svg {
+			margin-left: -2.4rem;
+			width: 11.4rem;
+			height: 4.8rem;
+		}
+	}
+
+	&__text {
+		color: $white;
+		max-width: 26rem;
+	}
 }
