@@ -33,4 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+
+    const projects = new Swiper(".projects-slider__swiper", {
+        loop: true,
+       
+        watchSlidesProgress: true,
+        slidesPerView: 2,
+        spaceBetween: 16,
+        centeredSlides: true,
+        navigation: {
+            nextEl: ".projects__arrow--next",
+            prevEl: ".projects__arrow--prev",
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+    });
+
+
+
+
 });

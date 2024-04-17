@@ -72,15 +72,15 @@ get_header();
             </div>
     </section>
 
-    <?php get_template_part('template-parts/projects-part'); ?>
+    <?php get_template_part('template-parts/project-slider'); ?>
 
     <?php $stageBackground = get_field('stage_bg') ?? '' ;
           $stageTitle = get_field('stage_heading') ?? '' ;
-          $stageSubtitle = get_field('stage_subtitle') ?? '' ;?>
+          $stageSubtitle = get_field('stage_subtitle') ?? '' ; ?>
     <section class="about-stages">
         <!-- <div class="container"> -->
             <div class="about-stages__wrapper">
-                <?php if( $stageBackground || $stageTitle|| $stageSubtitle): ?>
+                <?php if( $stageBackground || $stageTitle || $stageSubtitle): ?>
                 <div class="about-stages__heading">
                     <?php if ($stageTitle): ?>
                     <h2 class="about-stages__section-title main__title main__title--sm">
@@ -222,7 +222,7 @@ get_header();
 
 
     <?php $valuesHeading = get_field('values_title') ?? '' ;?>
-    <secton class="about-values">
+    <section class="about-values">
         <div class="container">
             <div class="about-values__wrapper">
                 <div class="about-values__left">
@@ -258,7 +258,7 @@ get_header();
                
             </div>
         </div>
-    </secton>
+    </section>
 
 <?php $teamImg = get_field('team_photo') ?? '' ;
       $teamTitle = get_field('section_title') ?? '' ;
@@ -342,8 +342,6 @@ get_header();
 
     </section>
     <?php endif ?>
-    
-    
 </main>
 
 

@@ -1,0 +1,29 @@
+.projects-slider{
+	padding: 8.214rem 0 8.55rem 0;
+
+	&__title {
+		margin-bottom: 3.15rem;
+		display: flex;
+		gap: 1rem;
+	}
+
+	
+	&__list {
+		margin-bottom: 5rem;
+		
+	}
+
+	&__button {
+		margin: 0 auto;
+	}
+}
+
+.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal{
+	width: 95%;
+	height: 2px;
+	left: 50%;
+	bottom: 2rem !important;
+	margin: 0 auto;
+	transform: translate(-50%, -50%);
+	top: initial;
+ }
