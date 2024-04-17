@@ -11,7 +11,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1.5rem 0;
+        padding: 0.3rem 0;
     }
 
     &__logo {
@@ -81,10 +81,11 @@
     }
 
     a {
-        font-size: 0.688rem;
+        font-size: 0.786rem;
         line-height: 0.75rem;
         text-transform: uppercase;
         white-space: nowrap;
+        padding: 2.3rem 0;
     }
 
     .menu-item-has-children {
@@ -102,16 +103,51 @@
             height: 0.75rem;
             transition: $transition;
             position: absolute;
-            top: 0;
+            top: 2.3rem;
             right: 0;
+
+           
         }
 
         .sub-menu {
+            
+            display: flex;
             position: absolute;
             top: 100%;
+            left: 0;
+            right: 0;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transform: scaleY(0);
+            translate: -1.429rem 0.143rem;
+            transform-origin: top center;
+            transition: opacity 0.1s ease-out, transform 0.4s ease-out;
+            padding: 1rem 1rem;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: $white;
+            width: fit-content;
+            // margin-top: 1.2rem;
 
-            // temporarily
-            display: none;
+            a{
+                padding: 0;
+            }
+        }
+
+        &:hover,
+        &:focus{
+            .sub-menu{
+                display: flex;
+                transform: scaleY(1);
+                opacity: 1;
+                z-index: 150;
+                top: 5rem
+            }
+
+            &::after{
+                transform: rotate(180deg);
+            }
         }
     }
 }
