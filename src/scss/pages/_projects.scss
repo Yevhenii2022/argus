@@ -1,2 +1,17 @@
-.projects-page {
+.projects {
+	padding: 11.571rem 0 8.571rem 0;
+
+	&__top {
+		margin-bottom: 5.714rem;
+		display: flex;
+		gap: 12rem;
+	}
+
+	&__title {
+	}
+
+	&__button {
+		display: flex;
+		margin: 0 auto;
+	}
 }
