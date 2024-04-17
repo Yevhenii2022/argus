@@ -224,6 +224,26 @@ button {
   display: flex;
   gap: 12rem;
 }
+.projects__category {
+  display: flex;
+  justify-content: space-between;
+}
+.projects__selects {
+  display: flex;
+  justify-content: space-between;
+}
+.projects #category-filter .active,
+.projects #category-filter .active2,
+.projects #category-filter-right .active,
+.projects #category-filter-right .active2 {
+  border-bottom: 0.0171rem solid #181818;
+}
+@media (max-width: 541px) {
+  .projects #category-filter,
+  .projects #category-filter-right {
+    display: none;
+  }
+}
 .projects__button {
   display: flex;
   margin: 0 auto;

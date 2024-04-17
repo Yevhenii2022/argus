@@ -14,4 +14,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'you_can_become_part_of_the_team_view_vacancies');
     pll_register_string('pointer_theme', 'video');
     pll_register_string('pointer_theme', 'download_more');
+    pll_register_string('pointer_theme', 'all_projects');
+    pll_register_string('pointer_theme', 'filters');
 }

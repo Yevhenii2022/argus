@@ -10,6 +10,27 @@
 	&__title {
 	}
 
+	&__category {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__selects {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#category-filter,
+	#category-filter-right {
+		.active,
+		.active2 {
+			border-bottom: 0.0171rem solid $black;
+		}
+		@include media(mobile) {
+			display: none;
+		}
+	}
+
 	&__button {
 		display: flex;
 		margin: 0 auto;

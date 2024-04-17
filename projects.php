@@ -26,7 +26,7 @@ get_header(); ?>
                 <div class="projects__category">
                     <ul id="category-filter">
                         <li data-category="all" class="active">
-                            <?php pll_e('Все'); ?>
+                            <?php pll_e('all_projects'); ?>
                         </li>
 
                         <?php
@@ -46,7 +46,92 @@ get_header(); ?>
                         ?>
 
                     </ul>
+
+
+
+
+                    <ul id="category-filter-right">
+                        <li data-category="all" class="active2">
+                            <?php pll_e('all_projects'); ?>
+                        </li>
+
+                        <?php
+                        $categories = get_terms(
+                            array(
+                                'taxonomy' => 'category',
+                                'hide_empty' => false,
+                            )
+                        );
+
+                        foreach ($categories as $category) {
+                            if (in_array($category->slug, array('rent', 'selling'))) {
+                                $category_slug = rawurlencode($category->slug);
+                                echo '<li data-category="' . $category_slug . '">' . esc_html($category->name) . '</li>';
+                            }
+                        }
+                        ?>
+
+                    </ul>
                 </div>
+
+                <!-- dfdf -->
+                <div class="projects__selects">
+
+                    <div class="archive-blogs__select custom-select">
+                        <select id="archive-blogs__select-category" class="tabs-select">
+                            <option value="" disabled selected class="placeholder">
+                                <?php pll_e('filters'); ?>
+                            </option>
+                            <option value="all">
+                                <?php pll_e('all_projects'); ?>
+                            </option>
+                            <?php
+                            $categories = get_terms(
+                                array(
+                                    'taxonomy' => 'category',
+                                    'hide_empty' => false,
+                                    'count' => true,
+                                )
+                            );
+                            foreach ($categories as $category) {
+                                if ($category->count > 0 && $category->slug !== 'other') {
+                                    echo '<option value="' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</option>';
+                                }
+                            }
+                            ?>
+                        </select>
+                    </div>
+
+
+
+
+
+                    <div class="archive-blogs__select custom-select">
+                        <select id="archive-blogs__select-category2" class="tabs-select">
+                            <option value="all">
+                                <?php pll_e('all_projects'); ?>
+                            </option>
+                            <?php
+
+                            $categories = get_terms(
+                                array(
+                                    'taxonomy' => 'category',
+                                    'hide_empty' => false,
+                                    // 'count' => true,
+                                )
+                            );
+                            foreach ($categories as $category) {
+                                if (in_array($category->slug, array('rent', 'selling'))) {
+                                    echo '<option value="' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</option>';
+                                }
+                            }
+                            ?>
+                        </select>
+                    </div>
+
+                </div>
+                <!-- fggfg -->
+
 
 
 
