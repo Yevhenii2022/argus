@@ -45,21 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".services__swipper", {
-        loop: true,
-        effect: "fade",
-        watchSlidesProgress: true,
-        slidesPerView: 1,
-
-        // Navigation arrows
-        navigation: {
-            nextEl: ".services__arrow--next",
-            prevEl: ".services__arrow--prev",
-        },
-    });
-
-
     const projects = new Swiper(".projects-slider__swiper", {
         loop: true,
        
