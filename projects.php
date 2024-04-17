@@ -20,21 +20,42 @@ get_header(); ?>
 
                 </div>
 
-                <div class="projects-part__list">
-                    <?php
-                    $args = array(
-                        'post_type' => 'projects',
-                        'posts_per_page' => 6,
-                    );
-                    $projects_query = new WP_Query($args);
-                    if ($projects_query->have_posts()) :
-                        while ($projects_query->have_posts()) : $projects_query->the_post();
-                            get_template_part('template-parts/project-card');
-                        endwhile;
-                        wp_reset_postdata();
-                    endif;
-                    ?>
+
+
+
+                <div class="projects__category">
+                    <ul id="category-filter">
+                        <li data-category="all" class="active">
+                            <?php pll_e('Все'); ?>
+                        </li>
+
+                        <?php
+                        $categories = get_terms(
+                            array(
+                                'taxonomy' => 'category',
+                                'hide_empty' => false,
+                            )
+                        );
+
+                        foreach ($categories as $category) {
+                            if ($category->count > 0 && $category->slug !== 'other') {
+                                $category_slug = rawurlencode($category->slug);
+                                echo '<li data-category="' . $category_slug . '">' . esc_html($category->name) . '</li>';
+                            }
+                        }
+                        ?>
+
+                    </ul>
                 </div>
+
+
+
+
+
+
+                <div class="projects-part__list" id="projects-list"></div>
+
+
 
                 <button type='button' class="projects__button button" id="load-more-button">
                     <div class="button__wrapper">

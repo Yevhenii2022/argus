@@ -11,19 +11,60 @@ add_action('wp_enqueue_scripts', 'my_custom_scripts_projects');
 
 function load_more_projects()
 {
+  $category = isset($_POST['category']) ? $_POST['category'] : 'all';
+  $option = isset($_POST['option']) ? $_POST['option'] : 'all';
+  $paged = isset($_POST['page']) ? $_POST['page'] : 1;
+  $posts_per_page = 6;
+
+
+  if ($category === 'all') {
+    $tax_query = null;
+  } else {
+    $tax_query = array(
+      array(
+        'taxonomy' => 'category',
+        'field' => 'slug',
+        'terms' => $category,
+      ),
+    );
+  }
   $args = array(
     'post_type' => 'projects',
-    'posts_per_page' => 6,
-    'paged' => $_POST['page'],
+    'posts_per_page' => $posts_per_page,
+    'paged' => $paged,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'tax_query' => $tax_query,
   );
-  $projects_query = new WP_Query($args);
-  if ($projects_query->have_posts()) :
-    while ($projects_query->have_posts()) : $projects_query->the_post();
+
+
+  $query = new WP_Query($args);
+  if ($category !== 'all') {
+    $args['tax_query'] = array(
+      array(
+        'taxonomy' => 'category',
+        'field' => 'slug',
+        'terms' => $category,
+      ),
+    );
+  }
+
+  if ($query->have_posts()) :
+    while ($query->have_posts()) :
+      $query->the_post();
       get_template_part('template-parts/project-card');
     endwhile;
-    wp_reset_postdata();
+  else :
+    error_log('No posts found');
+    echo '<span class="blog__nothing">';
+    pll_e('Статті не знайдені');
+    echo '</span>';
   endif;
-  wp_die();
+
+
+
+  wp_reset_postdata();
+  die();
 }
 
 add_action('wp_ajax_load_more_projects', 'load_more_projects');
