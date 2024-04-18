@@ -55,12 +55,17 @@
       margin-right: -1.714rem;
       margin-top: 4.286rem;
       position: static;
+      transform: translate(0%, 0%);
     }
   }
 
   &__slides {
     gap: 1.143rem;
-    justify-content: center !important;
+    justify-content: center;
+    margin-bottom: 5rem;;
+    @include media(mobile) {
+      justify-content: flex-start;
+    }
 
   }
 

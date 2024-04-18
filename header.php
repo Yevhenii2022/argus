@@ -30,47 +30,59 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__wrapper">
-					<div class="header__left">
+					
 						<div class="header__logo">
 							<?= get_custom_logo(); ?>
 						</div>
-
-						<nav class="header__nav nav">
-							<?php
-							wp_nav_menu(
-								array(
-									'container' => 'ul',
-									'theme_location' => 'header-menu',
-									'menu_class' => 'nav__list',
-								)
-							);
-							?>
-						</nav>
-					</div>
-
-					<div class="header__right">
-						<?php
-						$phone = get_field('phone', 'options');
-						$number = $phone['phone_number'] ?? '';
-						$cleanedNumber = preg_replace('/\s+/', '', $number);
-						$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
-						?>
-						<?php if ($number) : ?>
-							<a href="tel:+<?= $cleanedNumber ?>" class="header__phone">
-								<div class="header__phone-img">
-									<img src="<?= get_template_directory_uri() . '/src/img/call.svg' ?>" alt="Phone">
+						<div class="header__content">
+								<div class="header__left">
+									<nav class="header__nav nav">
+										<?php
+										wp_nav_menu(
+											array(
+												'container' => 'ul',
+												'theme_location' => 'header-menu',
+												'menu_class' => 'nav__list',
+											)
+										);
+										?>
+									</nav>
 								</div>
 
-								<span>
-									<?= $number ?>
-								</span>
-							</a>
-						<?php endif; ?>
+								<div class="header__right">
+									<?php
+									$phone = get_field('phone', 'options');
+									$number = $phone['phone_number'] ?? '';
+									$cleanedNumber = preg_replace('/\s+/', '', $number);
+									$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
+									?>
+									<?php if ($number) : ?>
+										<a href="tel:+<?= $cleanedNumber ?>" class="header__phone">
+											<div class="header__phone-img">
+												<img src="<?= get_template_directory_uri() . '/src/img/call.svg' ?>" alt="Phone">
+											</div>
 
-						<?php if (function_exists('custom_polylang_language_switcher')) {
-							custom_polylang_language_switcher();
-						} ?>
+											<span>
+												<?= $number ?>
+											</span>
+										</a>
+									<?php endif; ?>
+
+									<?php if (function_exists('custom_polylang_language_switcher')) {
+										custom_polylang_language_switcher();
+									} ?>
+								</div>
+						</div>
+					
+					<div class="header__mobile-menu">
+						<span>
+								<?php pll_e('menu') ?>
+						</span>
+						<div class="header__burger">
+                <span></span>
+          </div>    
 					</div>
+					
 				</div>
 			</div>
 		</header>
