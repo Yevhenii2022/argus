@@ -25,13 +25,14 @@
 
 .title {
 	width: fit-content;
-
+  text-transform: uppercase;
 	p {
 		display: flex;
 		align-items: center;
 		gap: 1.2rem;
 		font-size: 4.286rem;
 		line-height: 1;
+		
 	}
 
 	em {

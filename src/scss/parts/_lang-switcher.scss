@@ -3,19 +3,30 @@
 
 	&__list {
 		position: absolute;
-		top: -27%;
-		left: -80%;
+		// top: -27%;
+		// left: -80%;
 		opacity: 0;
 		height: 0;
 		transition: $transition;
+		bottom: 0.1rem;
+    right: 2.5rem;
+		
+		@include media(mobile) {
+		bottom: 1.4rem;
+    right: 0.9rem;
+		}
 	}
 
 	&__current {
-		font-size: 0.688rem;
+		font-size: 0.786rem;
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
 		gap: 0.125rem;
+
+		@include media(mobile) {
+			font-size: 1rem;
+		}
 
 		&::after {
 			content: '';
@@ -43,10 +54,14 @@
 
 	&__item {
 		a {
-			font-size: 0.688rem;
+			font-size: 0.786rem;
 			line-height: 0.75rem;
 			text-transform: uppercase;
-			padding: 0.3rem 0;
+			padding: 0.35rem 0;
+			@include media(mobile) {
+				font-size: 1rem;
+			
+			}
 		}
 	}
 }

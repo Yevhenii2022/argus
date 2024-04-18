@@ -1,0 +1,30 @@
+.swiper{
+	padding-bottom: 1rem;
+}
+
+.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal{
+	width: 91%;
+	height: 0.071rem;
+	left: 50%;
+	margin: 0 auto;
+	transform: translate(-50%, -50%);
+	top: initial;
+ }
+
+ 
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+	background-color: $black;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+	top: initial;
+	color: $black;
+
+	&::after{
+		font-size: 0.5rem;
+		color: $black;
+		
+	}
+}
