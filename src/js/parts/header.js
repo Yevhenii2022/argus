@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //burger-menu
   const menu = document.querySelector('.header__content');
   const menuButton = document.querySelector('.header__burger');
-  // const closeBurger = document.querySelector('.close__burger');
-
+ 
   menuButton.addEventListener('click', function () {
       this.classList.toggle('active');
       menu.classList.toggle('open');
