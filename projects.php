@@ -11,17 +11,11 @@ get_header(); ?>
             <div class="projects__wrapper">
 
                 <div class="projects__top">
-
                     <?php if (function_exists('yoast_breadcrumb')) {
                         yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
                     } ?>
-
                     <h1 class="projects__title title"><?php the_content(); ?></h1>
-
                 </div>
-
-
-
 
                 <div class="projects__category">
                     <ul id="category-filter">
@@ -30,25 +24,25 @@ get_header(); ?>
                         </li>
 
                         <?php
-                        $categories = get_terms(
-                            array(
-                                'taxonomy' => 'category',
-                                'hide_empty' => false,
-                            )
-                        );
+                        $real_estate_category = get_term_by('slug', 'real-estate', 'project-type');
+                        if ($real_estate_category) {
+                            $parent_category_id = $real_estate_category->term_id;
 
-                        foreach ($categories as $category) {
-                            if ($category->count > 0 && $category->slug !== 'other') {
-                                $category_slug = rawurlencode($category->slug);
-                                echo '<li data-category="' . $category_slug . '">' . esc_html($category->name) . '</li>';
+                            $subcategories = get_terms(
+                                array(
+                                    'taxonomy' => 'project-type',
+                                    'hide_empty' => false,
+                                    'parent' => $parent_category_id,
+                                )
+                            );
+
+                            foreach ($subcategories as $subcategory) {
+                                $subcategory_slug = rawurlencode($subcategory->slug);
+                                echo '<li data-category="' . $subcategory_slug . '">' . esc_html($subcategory->name) . '</li>';
                             }
                         }
                         ?>
-
                     </ul>
-
-
-
 
                     <ul id="category-filter-right">
                         <li data-category="all" class="active2">
@@ -56,73 +50,76 @@ get_header(); ?>
                         </li>
 
                         <?php
-                        $categories = get_terms(
-                            array(
-                                'taxonomy' => 'category',
-                                'hide_empty' => false,
-                            )
-                        );
+                        $real_estate_category = get_term_by('slug', 'operations', 'project-type');
+                        if ($real_estate_category) {
+                            $parent_category_id = $real_estate_category->term_id;
 
-                        foreach ($categories as $category) {
-                            if (in_array($category->slug, array('rent', 'selling'))) {
-                                $category_slug = rawurlencode($category->slug);
-                                echo '<li data-category="' . $category_slug . '">' . esc_html($category->name) . '</li>';
+                            $subcategories = get_terms(
+                                array(
+                                    'taxonomy' => 'project-type',
+                                    'hide_empty' => false,
+                                    'parent' => $parent_category_id,
+                                )
+                            );
+
+                            foreach ($subcategories as $subcategory) {
+                                $subcategory_slug = rawurlencode($subcategory->slug);
+                                echo '<li data-category="' . $subcategory_slug . '">' . esc_html($subcategory->name) . '</li>';
                             }
                         }
                         ?>
-
                     </ul>
                 </div>
 
-                <!-- dfdf -->
                 <div class="projects__selects">
-
-                    <div class="archive-blogs__select custom-select">
-                        <select id="archive-blogs__select-category" class="tabs-select">
-                            <option value="" disabled selected class="placeholder">
-                                <?php pll_e('filters'); ?>
-                            </option>
+                    <div class="projects__select blog-select">
+                        <select id="projects-select" class="tabs-select">
                             <option value="all">
                                 <?php pll_e('all_projects'); ?>
                             </option>
                             <?php
-                            $categories = get_terms(
-                                array(
-                                    'taxonomy' => 'category',
-                                    'hide_empty' => false,
-                                    'count' => true,
-                                )
-                            );
-                            foreach ($categories as $category) {
-                                if ($category->count > 0 && $category->slug !== 'other') {
-                                    echo '<option value="' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</option>';
+                            $real_estate_category = get_term_by('slug', 'real-estate', 'project-type');
+
+                            if ($real_estate_category) {
+                                $parent_category_id = $real_estate_category->term_id;
+
+                                $subcategories = get_terms(
+                                    array(
+                                        'taxonomy' => 'project-type',
+                                        'hide_empty' => false,
+                                        'parent' => $parent_category_id,
+                                    )
+                                );
+
+                                foreach ($subcategories as $subcategory) {
+                                    echo '<option value="' . esc_attr($subcategory->slug) . '">' . esc_html($subcategory->name) . '</option>';
                                 }
                             }
                             ?>
                         </select>
                     </div>
 
-
-
-
-
-                    <div class="archive-blogs__select custom-select">
-                        <select id="archive-blogs__select-category2" class="tabs-select">
+                    <div class="projects__select blog-select">
+                        <select id="projects-select2" class="tabs-select">
                             <option value="all">
                                 <?php pll_e('all_projects'); ?>
                             </option>
                             <?php
+                            $real_estate_category = get_term_by('slug', 'operations', 'project-type');
 
-                            $categories = get_terms(
-                                array(
-                                    'taxonomy' => 'category',
-                                    'hide_empty' => false,
-                                    // 'count' => true,
-                                )
-                            );
-                            foreach ($categories as $category) {
-                                if (in_array($category->slug, array('rent', 'selling'))) {
-                                    echo '<option value="' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</option>';
+                            if ($real_estate_category) {
+                                $parent_category_id = $real_estate_category->term_id;
+
+                                $subcategories = get_terms(
+                                    array(
+                                        'taxonomy' => 'project-type',
+                                        'hide_empty' => false,
+                                        'parent' => $parent_category_id,
+                                    )
+                                );
+
+                                foreach ($subcategories as $subcategory) {
+                                    echo '<option value="' . esc_attr($subcategory->slug) . '">' . esc_html($subcategory->name) . '</option>';
                                 }
                             }
                             ?>
@@ -130,10 +127,6 @@ get_header(); ?>
                     </div>
 
                 </div>
-                <!-- fggfg -->
-
-
-
 
 
 
@@ -147,7 +140,6 @@ get_header(); ?>
                         <p><?php pll_e('download_more'); ?></p>
                     </div>
                 </button>
-
 
 
 

@@ -48,49 +48,13 @@ jQuery(function ($) {
 		loadBlogs(category, option);
 	});
 
-	// $(document).on('change', '#blogs__select', function () {
-	// 	if (window.innerWidth > 541) {
-	// 		var category = $('#category-filter li.active').data('category');
-	// 	} else {
-	// 		var category = $('#archive-blogs__select-category').val();
-	// 	}
-
-	// 	var option = $(this).val();
-	// 	page = 1;
-	// 	projectsContainer.empty();
-	// 	if (option === 'popular') {
-	// 		loadBlogs(category, 'post_popularity');
-	// 	} else {
-	// 		loadBlogs(category, option);
-	// 	}
-	// });
-	$(document).on(
-		'change',
-		'#archive-blogs__select-category, #archive-blogs__select-category2',
-		function () {
-			var option = $('#blogs__select').val();
-			var category = $(this).val();
-			page = 1;
-			projectsContainer.empty();
-			loadBlogs(category, option);
-		},
-	);
-	// $(document).on('click', '.blog .pagination span', function (e) {
-	// 	e.preventDefault();
-	// 	var page = $(this).data('page');
-	// 	var category = $('#category-filter li.active').data('category');
-	// 	var option = $('#blogs__select').val();
-	// 	projectsContainer.empty();
-	// 	loadBlogs(category, option, page);
-	// });
+	$(document).on('change', '#projects-select, #projects-select2', function () {
+		var option = $('#blogs__select').val();
+		var category = $(this).val();
+		page = 1;
+		projectsContainer.empty();
+		loadBlogs(category, option);
+	});
 
 	loadBlogs('all');
-
-	$(document).ready(function () {
-		$('#archive-blogs__select-category').on('change', function () {
-			if ($(this).val() !== '') {
-				$('.placeholder').hide();
-			}
-		});
-	});
 });

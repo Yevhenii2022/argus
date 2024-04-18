@@ -11,8 +11,26 @@
 	}
 
 	&__category {
+		margin-bottom: 1.714rem;
 		display: flex;
 		justify-content: space-between;
+
+		ul {
+			display: flex;
+			gap: 1.714rem;
+		}
+
+		li {
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+	}
+
+	&__nothing {
+		margin: 5rem auto 0 auto;
+		font-family: $medium;
+		font-size: 1.857rem;
+		text-transform: uppercase;
 	}
 
 	&__selects {
