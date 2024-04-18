@@ -67,6 +67,9 @@ get_header();
                             </div>
                             <?php endwhile ?>
                         </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
