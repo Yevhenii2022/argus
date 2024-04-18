@@ -17,5 +17,9 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'all_projects');
     pll_register_string('pointer_theme', 'filters');
     pll_register_string('pointer_theme', 'nothing_found');
-    pll_register_string('pointer_theme', 'menu');
+    pll_register_string('pointer_theme', 'all_articles');
+    pll_register_string('pointer_theme', 'read');
+    pll_register_string('pointer_theme', 'popular');
+    pll_register_string('pointer_theme', 'newest');
+    pll_register_string('pointer_theme', 'від А-Я');
 }
