@@ -32,7 +32,7 @@ html {
 }
 @media (max-width: 1025px) {
   html {
-    font-size: 1.45vw;
+    font-size: 1.3vw;
   }
 }
 @media (max-width: 541px) {
@@ -218,13 +218,11 @@ button {
 
 .blog-select {
   display: none;
-  position: relative;
-  min-width: 3.757rem;
 }
 @media (max-width: 541px) {
   .blog-select {
     display: block;
-    min-width: 4.7rem;
+    position: relative;
   }
 }
 
@@ -233,13 +231,13 @@ button {
 }
 
 .select-selected {
-  padding: 0.3rem 0 0.3rem 0.3rem;
+  padding: 0.3rem 0 0.3rem 0;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 541px) {
   .select-selected {
-    font-size: 1.286rem;
+    font-size: 0.786rem;
   }
 }
 .select-selected:after {
@@ -263,7 +261,7 @@ button {
 }
 @media (max-width: 541px) {
   .select-selected:after {
-    right: 0.3rem;
+    right: -1.5rem;
   }
 }
 .select-selected.select-arrow-active:after {
@@ -295,6 +293,7 @@ button {
 
 /* Style items (options): */
 .select-items {
+  min-width: 6.55rem;
   position: absolute;
   background-color: #ffffff;
   top: 100%;
@@ -310,18 +309,18 @@ button {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: 0.3rem;
-  text-align: center;
+  padding: 0.7rem 0.3rem;
   display: flex;
   flex-direction: column;
-  gap: 0.38rem;
+  gap: 1rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .select-items:-webkit-scrollbar {
   display: none;
 }
 .select-items div {
+  font-size: 0.786rem;
   text-transform: uppercase;
 }
 
@@ -330,6 +329,10 @@ button {
   max-height: 0;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.same-as-selected {
+  display: none;
 }
 
 .projects {
@@ -345,6 +348,11 @@ button {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 541px) {
+  .projects__category {
+    margin-bottom: 0;
+  }
+}
 .projects__category ul {
   display: flex;
   gap: 1.714rem;
@@ -354,14 +362,22 @@ button {
   cursor: pointer;
 }
 .projects__nothing {
-  margin: 5rem auto 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-size: 1.857rem;
   text-transform: uppercase;
 }
 .projects__selects {
   display: flex;
-  justify-content: space-between;
+  gap: 11.9rem;
+}
+@media (max-width: 541px) {
+  .projects__selects {
+    margin: 0 1.143rem 1.143rem 0;
+  }
 }
 .projects #category-filter .active,
 .projects #category-filter .active2,
@@ -378,6 +394,12 @@ button {
 .projects__button {
   display: flex;
   margin: 0 auto;
+}
+
+.ajax-preloader {
+  margin: 0 auto;
+  width: 20rem;
+  height: 20rem;
 }
 
 .about-banner {

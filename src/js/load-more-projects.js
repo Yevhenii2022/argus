@@ -3,12 +3,12 @@ jQuery(function ($) {
 	var canLoad = true;
 	var ajaxUrl = MyAjaxProjects.ajaxurl;
 	var projectsContainer = $('#projects-list');
-	// var preloader = $('.ajax-preloader');
+	var preloader = $('.ajax-preloader');
 
 	function loadBlogs(category, option, page) {
 		if (canLoad) {
 			canLoad = false;
-			// preloader.show();
+			preloader.show();
 
 			var data = {
 				action: 'load_more_projects',
@@ -18,7 +18,7 @@ jQuery(function ($) {
 			};
 
 			$.post(ajaxUrl, data, function (response) {
-				// preloader.hide();
+				preloader.hide();
 
 				if (response !== 'no_posts') {
 					projectsContainer.append(response);

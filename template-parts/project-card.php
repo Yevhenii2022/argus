@@ -15,11 +15,11 @@ $default_picture = get_field('default_picture', 'options');
 
     <div class="projects-card__categories">
         <?php
-        $categories = get_the_terms($data_id, 'project-type');
-        if ($categories) {
+        $categories = get_the_terms(get_the_ID(), 'project-type');
+        if ($categories && !is_wp_error($categories)) {
             foreach ($categories as $category) {
-                $translated_category = get_term_by('id', pll_get_term($category->term_id), 'project-type');
-                echo '<span class="projects-card__category">' . esc_html($translated_category->name) . '</span>';
+                // $translated_category = get_term_by('id', pll_get_term($category->term_id), 'project-type');
+                echo '<span class="projects-card__category">' . esc_html($category->name) . '</span>';
             }
         }
         ?>
