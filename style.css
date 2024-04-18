@@ -609,6 +609,12 @@ button {
   width: 100%;
   background: #ededed;
   z-index: 10;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+.header--hidden {
+  opacity: 0;
+  transform: translateY(-140%);
 }
 .header__wrapper {
   width: 100%;
