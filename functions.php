@@ -187,3 +187,6 @@ require get_template_directory() . '/inc/translates-registration.php';
  * Language switcher
  */
 require get_template_directory() . '/inc/lang-switcher.php';
+
+// ajax
+require get_template_directory() . '/inc/custom-load-projects.php';

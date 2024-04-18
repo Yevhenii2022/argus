@@ -19,10 +19,6 @@
 	}
 }
 
-.section__title {
-	// margin-bottom: 1.714rem;
-}
-
 .title {
 	width: fit-content;
   text-transform: uppercase;
@@ -31,6 +27,7 @@
 		align-items: center;
 		gap: 1.2rem;
 		font-size: 4.286rem;
+		text-transform: uppercase;
 		line-height: 1;
 		
 	}

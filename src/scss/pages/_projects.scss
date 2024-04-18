@@ -1,2 +1,70 @@
-.projects-page {
+.projects {
+	padding: 11.571rem 0 8.571rem 0;
+
+	&__top {
+		margin-bottom: 5.714rem;
+		display: flex;
+		gap: 12rem;
+	}
+
+	&__category {
+		margin-bottom: 1.714rem;
+		display: flex;
+		justify-content: space-between;
+
+		@include media(mobile) {
+			margin-bottom: 0;
+		}
+
+		ul {
+			display: flex;
+			gap: 1.714rem;
+		}
+
+		li {
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+	}
+
+	&__nothing {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: $medium;
+		font-size: 1.857rem;
+		text-transform: uppercase;
+	}
+
+	&__selects {
+		display: flex;
+		gap: 11.9rem;
+
+		@include media(mobile) {
+			margin: 0 1.143rem 1.143rem 0;
+		}
+	}
+
+	#category-filter,
+	#category-filter-right {
+		.active,
+		.active2 {
+			border-bottom: 0.0171rem solid $black;
+		}
+		@include media(mobile) {
+			display: none;
+		}
+	}
+
+	&__button {
+		display: flex;
+		margin: 0 auto;
+	}
+}
+
+.ajax-preloader {
+	margin: 0 auto;
+	width: 20rem;
+	height: 20rem;
 }
