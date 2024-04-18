@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: ".swiper-button-prev",
           },
             pagination: {
-              el: ".swiper-pagination'",
+              el: ".swiper-pagination",
               type: 'progressbar',
            },
 
