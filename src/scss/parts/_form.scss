@@ -1,0 +1,100 @@
+.form {
+  &__wrapper{
+  width: 40.786rem
+ }
+
+  &__input {
+   
+    margin-bottom: 2.2rem;
+    font-size: 0.786rem;
+    transition: $transition;
+    
+   
+    input{
+       border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
+      font-size: 0.786rem;
+      text-transform: uppercase;
+      background-color: $bg;
+      padding-bottom: 1.143rem;
+      width: 100%;
+      line-height: 109%;
+      &::placeholder {
+        color: $black;
+        text-transform: uppercase;
+        line-height: 109%;
+        
+      }
+        &:hover,
+        &:focus,
+        &:active {
+          border-bottom: 0.071rem solid $black;
+        }
+
+       &:invalid {
+      border-bottom: 0.071rem solid $red;
+    }
+  }
+}
+    &__input-text{
+        margin-bottom: 1.143rem;
+    }
+         
+    textarea{
+      border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
+      font-size: 0.786rem;
+      text-transform: uppercase;
+      background-color: $bg;
+      height: 5.8rem;
+      font-family: $regular;
+      line-height: 109%;
+      width: 100%;
+      transition: $transition;
+      &:invalid {
+        border-bottom: 0.071rem solid $red;
+      }
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: 0.071rem solid $black;
+    }
+  }
+  &__submit{
+    margin-top: 2.286rem;
+  }
+  &__button {
+    background-color: $red;
+    color: $white;
+    font-size: 0.786rem;
+    text-transform: uppercase;
+  }
+
+  &__text{
+    width: 60%;
+    line-height: 109%;
+    font-size: 0.786rem;
+    color: rgba(24, 24, 24, 0.4);
+    a{
+      display: contents;
+      border-bottom: 0.071rem solid $black !important;
+      text-decoration: underline !important;
+      color: $black;
+    }
+  }
+
+  span.wpcf7-spinner {
+    display: none;
+  }
+}
+
+.wpcf7-response-output{
+  display: none;
+}
+.wpcf7-not-valid-tip {
+  position: absolute;
+  font-size: 0.786rem;
+}
+
+// .form__input input:invalid, 
+// .form__input-text input:invalid {
+//   border-bottom: 0.071rem solid $red;
+// }
