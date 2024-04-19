@@ -999,6 +999,48 @@ button {
   text-transform: uppercase;
 }
 
+.single-news {
+  padding: 11.571rem 0 8.571rem 0;
+}
+.single-news__top {
+  margin-bottom: 1.714rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 7.5rem;
+}
+.single-news__title p,
+.single-news__title em {
+  text-align: start;
+  font-size: 4.286rem;
+}
+.single-news__time {
+  align-self: flex-end;
+  opacity: 0.4;
+}
+.single-news__image {
+  height: 52rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.single-news__image img {
+  width: 100%;
+  height: 100%;
+}
+.single-news__img--error {
+  width: 40rem !important;
+  height: 40rem !important;
+  object-fit: contain !important;
+}
+.single-news__content {
+  padding: 5.714rem 16.786rem 8.571rem 16.786rem;
+}
+.single-news__content img {
+  margin: 5.714rem 0;
+  height: 35.143rem;
+}
+
 .header {
   position: fixed;
   top: 0;
