@@ -18,4 +18,7 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'filters');
     pll_register_string('pointer_theme', 'nothing_found');
     pll_register_string('pointer_theme', 'menu');
+    pll_register_string('pointer_theme', 'contact_button');
+
+    
 }
