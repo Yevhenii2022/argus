@@ -36,24 +36,21 @@ get_header(); ?>
             ?>
           </ul>
 
-          <div class="archive-blogs__select custom-select">
-            <select id="archive-blogs__select-category" class="tabs-select" style="display: none;">
+          <div class="news__select-filters blog-select">
+            <select id="news__select-filters" class="tabs-select">
               <option value="all">
-                <?php pll_e('Все'); ?>
+                <?php pll_e('all_articles'); ?>
               </option>
-              <?php
 
-              $categories = get_terms(
-                array(
-                  'taxonomy' => 'category',
-                  'hide_empty' => false,
-                  'count' => true,
-                )
-              );
+              <?php
+              $categories = get_categories(array(
+                'taxonomy' => 'category',
+                'hide_empty' => false,
+                'count' => true,
+                'exclude' => get_category_by_slug('other')->term_id,
+              ));
               foreach ($categories as $category) {
-                if ($category->count > 0) {
-                  echo '<option value="' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</option>';
-                }
+                echo '<option value="' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</option>';
               }
               ?>
             </select>
@@ -68,7 +65,7 @@ get_header(); ?>
                 <?php pll_e('popular'); ?>
               </option>
               <option value="az">
-                <?php pll_e('От А-Я'); ?>
+                <?php pll_e('від А-Я'); ?>
               </option>
             </select>
           </div>

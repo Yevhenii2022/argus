@@ -53,7 +53,7 @@
 	}
 
 	&__bottom {
-		padding-top: 1.214rem;
+		padding-top: 1rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1.214rem;
@@ -74,6 +74,7 @@
 	}
 
 	&__title {
+		margin: 0.8rem 0 0.5rem 0;
 		margin-bottom: 0.5rem;
 		height: 5.9rem;
 		display: -webkit-box;

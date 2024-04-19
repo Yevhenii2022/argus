@@ -42,7 +42,7 @@ jQuery(function ($) {
 		if (window.innerWidth > 541) {
 			var category = $('#category-filter li.active').data('category');
 		} else {
-			var category = $('#archive-blogs__select-category').val();
+			var category = $('#news__select-filters').val();
 		}
 
 		var option = $(this).val();
@@ -54,7 +54,7 @@ jQuery(function ($) {
 			loadBlogs(category, option);
 		}
 	});
-	$(document).on('change', '#archive-blogs__select-category', function () {
+	$(document).on('change', '#news__select-filters', function () {
 		var option = $('#blogs__select').val();
 		var category = $(this).val();
 		page = 1;

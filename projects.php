@@ -125,7 +125,6 @@ get_header(); ?>
                 </div>
 
 
-
                 <div class="projects-part__list" id="projects-list"></div>
 
 
