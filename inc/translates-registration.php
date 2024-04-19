@@ -13,6 +13,10 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'services_post_link');
     pll_register_string('pointer_theme', 'view_vacancies_link');
     pll_register_string('pointer_theme', 'video');
+    pll_register_string('pointer_theme', 'download_more');
+    pll_register_string('pointer_theme', 'all_projects');
+    pll_register_string('pointer_theme', 'filters');
+    pll_register_string('pointer_theme', 'nothing_found');
     pll_register_string('pointer_theme', 'menu');
     pll_register_string('pointer_theme', 'contact_button');
 
