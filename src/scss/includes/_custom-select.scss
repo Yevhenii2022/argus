@@ -1,10 +1,9 @@
 .blog-select {
 	display: none;
+	position: relative;
 
 	@include media(mobile) {
 		display: block;
-		position: relative;
-		// min-width: 4.7rem;
 	}
 }
 
@@ -14,12 +13,9 @@
 
 .select-selected {
 	padding: 0.3rem 0 0.3rem 0;
+	font-size: 0.786rem;
 	text-transform: uppercase;
 	transition: $transition;
-
-	@include media(mobile) {
-		font-size: 0.786rem;
-	}
 
 	&:after {
 		content: '';
@@ -28,7 +24,7 @@
 		position: absolute !important;
 		top: 50%;
 		transform: translateY(-50%);
-		right: 0.1rem;
+		right: -1.5rem;
 		width: 1.357rem;
 		height: 1.357rem;
 		pointer-events: none;
@@ -39,10 +35,6 @@
 		-ms-transition: 0.35s ease-in-out;
 		-o-transition: 0.35s ease-in-out;
 		background-repeat: no-repeat;
-
-		@include media(mobile) {
-			right: -1.5rem;
-		}
 	}
 
 	&.select-arrow-active {
@@ -86,7 +78,7 @@
 	position: absolute;
 	background-color: $white;
 	top: 100%;
-	left: 0;
+	left: -0.3rem;
 	z-index: 99;
 	overflow: hidden;
 	transition: 0.35s ease-in-out;
