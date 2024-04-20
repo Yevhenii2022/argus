@@ -19,9 +19,21 @@
 .swiper-button-prev {
 	top: initial;
 	color: $black;
+	transition: $transition;
 
 	&::after {
 		font-size: 0.5rem;
 		color: $black;
+	}
+}
+
+.swiper-button-next {
+	&:hover {
+		transform: translateX(15%);
+	}
+}
+.swiper-button-prev {
+	&:hover {
+		transform: translateX(-15%);
 	}
 }
