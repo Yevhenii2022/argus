@@ -1,9 +1,9 @@
 html {
 	font-size: 0.972vw; // font size 14px
 
-	@include media(tablet) {
-		font-size: 1.3vw;
-	}
+	// @include media(tablet) {
+	// 	font-size: 1.3vw;
+	// }
 	@include media(mobile) {
 		font-size: 3.733vw; // font size 14px
 	}
@@ -54,5 +54,9 @@ button {
 	@include media(mobile) {
 		width: 100%;
 		padding: 0 1.143rem;
+	}
+
+	&--slider{
+		padding: 0 0;
 	}
 }

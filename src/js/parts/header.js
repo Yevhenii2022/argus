@@ -27,11 +27,5 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.toggle('burger-open');
       
   });
-          closeBurger.addEventListener('click', function(){
-              menu.classList.remove('open');
-              menuButton.classList.remove('active');
-              document.body.classList.remove('burger-open');
-             
-          });
-
+        
 });

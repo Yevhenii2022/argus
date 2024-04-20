@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (window.innerWidth < 541) {
-
+       
         const aboutSlider = new Swiper(".about-banner__slider", {
             slidesPerView: 1,
             spaceBetween: 8,
@@ -76,9 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
               el: ".swiper-pagination",
               type: 'progressbar',
            },
-
         });
     }
            
-
 });
