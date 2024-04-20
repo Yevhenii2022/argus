@@ -1,0 +1,232 @@
+.news {
+	padding: 11rem 0 8.571rem 0;
+
+	&:has(.pagination) {
+		padding: 11rem 0 16.5rem 0;
+
+		@include media(tablet) {
+			padding: 11rem 0;
+		}
+
+		@include media(mobile) {
+			padding: 8.68rem 0 12.5rem 0;
+		}
+	}
+
+	@include media(mobile) {
+		padding: 8.68rem 0 5.61rem 0;
+	}
+
+	&__top {
+		margin-bottom: 5.714rem;
+		display: flex;
+		gap: 12rem;
+	}
+
+	&__select {
+		margin-right: 1.2rem;
+		display: block;
+
+		.select-items {
+			min-width: 6.05rem;
+			background-color: $bg;
+		}
+	}
+
+	&__select-filters {
+		.select-items {
+			background-color: $bg;
+		}
+	}
+
+	&__category {
+		margin-bottom: 1.42rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-transform: uppercase;
+
+		ul {
+			display: flex;
+			gap: 2.286rem;
+
+			@include media(mobile) {
+				display: none;
+			}
+
+			.active {
+				border-bottom: 0.0171rem solid $black;
+			}
+
+			li {
+				position: relative;
+				font-size: 0.786rem;
+				cursor: pointer;
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					right: 0;
+					width: 0;
+					height: 0.071rem;
+					background-color: $black;
+					transition: width 0.5s;
+				}
+
+				&:hover:after {
+					content: '';
+					width: 100%;
+					display: block;
+					position: absolute;
+					left: 0;
+					height: 0.071rem;
+					background-color: $black;
+					transition: width 0.5s;
+				}
+			}
+		}
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		gap: 1.143rem;
+		row-gap: 4.4rem;
+		position: relative;
+
+		@include media(mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		@media screen and (min-width: 542px) {
+			a:first-of-type {
+				grid-area: 1 / 1 / 2 / 3;
+
+				.news-card {
+					margin: 0 -1.714rem 1.3rem -1.714rem;
+					padding: 3.31rem 1.714rem;
+					display: flex;
+					background-color: $white;
+					height: 42.714rem;
+					border-radius: 1.429rem;
+
+					// @include media(tablet) {
+					// 	margin-bottom: 2.5rem;
+					// 	height: 30.79rem;
+					// }
+
+					&__image {
+						width: 49.4%;
+						height: 100%;
+						img {
+							height: 100%;
+						}
+					}
+
+					&__bottom {
+						position: relative;
+						width: 50%;
+						padding: 0 10.5rem 0 4.214rem;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						gap: 0;
+
+						// @include media(tablet) {
+						// 	padding: 2.2rem;
+						// }
+
+						p {
+							display: block;
+						}
+					}
+
+					&__categories {
+						position: unset;
+					}
+
+					&__time {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+					}
+
+					&__title {
+						margin: 1.5rem 0 1.143rem 0;
+						font-size: 2rem;
+						height: 6.1rem;
+						font-family: $medium;
+						font-weight: 550;
+
+						// @include media(tablet) {
+						// 	font-size: 2.4rem;
+						// 	height: 4.9rem;
+						// }
+					}
+
+					&__link {
+						&::after {
+							margin-bottom: 0.05rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.pagination {
+		display: flex;
+		position: absolute;
+		bottom: -7.7rem;
+		left: 50%;
+		gap: 0.45rem;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		@include media(mobile) {
+			bottom: -6.8rem;
+		}
+
+		span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 1.643rem;
+			height: 1.643rem;
+			border-radius: 50%;
+			cursor: pointer;
+			border: 0.071rem solid transparent;
+			transition: $transition;
+
+			&:hover {
+				border: 0.071rem solid #262626;
+			}
+
+			&.pagination_active {
+				background-color: #262626;
+				border-radius: 50%;
+				border: 0.071rem solid #262626;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				overflow: hidden;
+				color: $white;
+			}
+		}
+	}
+}
+
+.blog__nothing {
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-family: $medium;
+	font-size: 1.857rem;
+	text-transform: uppercase;
+}
