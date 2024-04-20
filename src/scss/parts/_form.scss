@@ -19,9 +19,10 @@
       width: 100%;
       line-height: 109%;
       &::placeholder {
-        color: $black;
+        
         text-transform: uppercase;
         line-height: 109%;
+        color: rgba(24, 24, 24, 0.4);
         
       }
         &:hover,
@@ -51,6 +52,10 @@
       transition: $transition;
       &:invalid {
         border-bottom: 0.071rem solid $red;
+      }
+
+      &::placeholder{
+        color: rgba(24, 24, 24, 0.4);
       }
     &:hover,
     &:focus,

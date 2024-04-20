@@ -1,5 +1,5 @@
 <?php
-$projectsTitle = get_field('projects-part_title', 'options');
+$projectsTitle = get_field('slider_title');
 ?>
 <section class="projects-slider">
         <div class="projects-slider__wrapper">

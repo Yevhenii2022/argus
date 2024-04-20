@@ -7,11 +7,11 @@ get_header();
 ?>
 
 <main>
-    <?php $background_image = get_field('banner_img') ?? '' ;?>
+    <?php $backgroundImage = get_field('banner_img') ?? '' ;?>
         <section class="about-banner">
+            <div class="about-banner__bg" style=" background-image: url('<?php echo esc_url($backgroundImage); ?>');"></div>
             <div class="container">
                 <div class="about-banner__wrapper">
-                    <div class="about-banner__bg" style=" background-image: url('<?php echo esc_url($background_image); ?>');"></div>
                     <div class="about-banner__breadcrumps">
                         <?php if ( function_exists('yoast_breadcrumb') ) {
                             yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' );
@@ -19,31 +19,23 @@ get_header();
                     </div>
                     <?php
                     $title = get_field('about-us_title') ?? '';
-                    $subTitle = get_field('about-us_subtitle') ?? '';
                     $description = get_field('about-us_description') ?? '';
                     
                     if( $title || $subTitle || $description): ?>
-                    <div class="about-banner__banner">
+                    <div class="about-banner__content">
                     <?php if ($title) : ?>
                         <h1 class="about-banner__title main__title main__title--sm">
                             <?=$title ;?>
                         </h1>
-                    <?php endif ?>
-                    <?php if ($subTitle) : ?>
-                        <h2 class="about-banner__subtitle main__title main__title--sm main__title--italic">
-                            <?=$subTitle ;?>
-                        </h2>
                     <?php endif ?>
                     <?php if ($description) : ?>
                         <p class="about-banner__description">
                             <?=$description ;?>
                         </p>
                     <?php endif ?>
-                    </div>
-                    <?php endif ?>
-                    <div class="about-banner__slider swiper">
-                        <div class="about-banner__slides swiper-wrapper ">
-                        <?php while (have_rows('about-us_list')):
+                        <div class="about-banner__slider swiper">
+                           <div class="about-banner__slides swiper-wrapper ">
+                            <?php while (have_rows('about-us_list')):
                             the_row();
                             $number = get_sub_field('number');
                             $title = get_sub_field('title');
@@ -66,11 +58,13 @@ get_header();
                                 <?php endif ?>
                             </div>
                             <?php endwhile ?>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div> 
                     </div>
+                    <?php endif ?>
                 </div>
             </div>
     </section>
@@ -81,7 +75,7 @@ get_header();
           $stageTitle = get_field('stage_heading') ?? '' ;
           $stageSubtitle = get_field('stage_subtitle') ?? '' ; ?>
     <section class="about-stages">
-        <!-- <div class="container"> -->
+        <div class="container">
             <div class="about-stages__wrapper">
                 <?php if( $stageBackground || $stageTitle || $stageSubtitle): ?>
                 <div class="about-stages__heading">
@@ -147,7 +141,7 @@ get_header();
                 </div>
                 
             </div>
-        <!-- </div> -->
+        </div>
         
     </section>
 
@@ -328,7 +322,7 @@ get_header();
                             
                                 <a href="<?= get_home_url() . '/career' ?>" class="about-team__link link">
                                     <span>
-                                        <?php pll_e('you_can_become_part_of_the_team_view_vacancies') ?>
+                                        <?php pll_e('view_vacancies_link') ?>
                                     </span>
                                 </a>
                                                   
