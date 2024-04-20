@@ -1,32 +1,32 @@
-<?php
-$projectsTitle = get_field('projects-part_title', 'options');
-?>
+<!-- <?php
+        $projectsTitle = get_field('projects-part_title', 'options');
+        ?> -->
 <section class="projects-slider">
-        <div class="projects-slider__wrapper">
-            <div class="container">
+    <div class="projects-slider__wrapper">
+        <!-- <div class="container">
             <?php if ($projectsTitle) : ?>
                 <div class="projects-slider__title main__title main__title--sm">
-                    <?= $projectsTitle ;?>
+                    <?= $projectsTitle; ?>
                 </div>
             <?php endif; ?>
-            </div>
-            <div class="projects-slider__swiper swiper">
-                <?php
-                $args = array(
-                    'post_type' => 'projects',
-                    'posts_per_page' => -1,
-                );
-                $projects_query = new WP_Query($args);
-                if ($projects_query->have_posts()) :
-                ?> 
-                    <div class="projects-slider__list swiper-wrapper">   
-                        <?php
-                        while ($projects_query->have_posts()) : $projects_query->the_post();
-                        ?>
+            </div> -->
+        <div class="projects-slider__swiper swiper">
+            <?php
+            $args = array(
+                'post_type' => 'projects',
+                'posts_per_page' => -1,
+            );
+            $projects_query = new WP_Query($args);
+            if ($projects_query->have_posts()) :
+            ?>
+                <div class="projects-slider__list swiper-wrapper">
+                    <?php
+                    while ($projects_query->have_posts()) : $projects_query->the_post();
+                    ?>
                         <?php
                         $subtitle = get_field('project_subtitle');
                         $location = get_field('project_location');
-                        $default_picture = get_field('dd', 'options');
+                        $default_picture = get_field('default_picture', 'options');
                         ?>
 
                         <a href="<?php the_permalink() ?>" class="projects-card swiper-slide" aria-label="<?php the_title_attribute(); ?>">
@@ -40,11 +40,10 @@ $projectsTitle = get_field('projects-part_title', 'options');
 
                             <div class="projects-card__categories">
                                 <?php
-                                $categories = get_the_category();
-                                if ($categories) {
+                                $categories = get_the_terms(get_the_ID(), 'project-type');
+                                if ($categories && !is_wp_error($categories)) {
                                     foreach ($categories as $category) {
-                                        $translated_category = get_term_by('id', pll_get_term($category->term_id), 'category');
-                                        echo '<span class="projects-card__category">' . esc_html($translated_category->name) . '</span>';
+                                        echo '<span class="projects-card__category">' . esc_html($category->name) . '</span>';
                                     }
                                 }
                                 ?>
@@ -69,23 +68,23 @@ $projectsTitle = get_field('projects-part_title', 'options');
                                     </span>
                                 <?php endif; ?>
                             </div>
-                        </a>  
+                        </a>
 
-                        <?php endwhile;
+                    <?php endwhile;
                     wp_reset_postdata();
                     ?>
-                  </div>          
-                <?php endif; ?>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-            </div> 
-                    
-            <a href="<?php echo esc_url(get_home_url() . '/projects/'); ?>" class="projects-slider__button button">
-                <div class="button__wrapper">
-                    <p> <?php pll_e('more_projects'); ?></p>
                 </div>
-            </a>
-        </div> 
-   
-</section> 
+            <?php endif; ?>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <a href="<?php echo esc_url(get_home_url() . '/projects/'); ?>" class="projects-slider__button button">
+            <div class="button__wrapper">
+                <p> <?php pll_e('more_projects'); ?></p>
+            </div>
+        </a>
+    </div>
+
+</section>

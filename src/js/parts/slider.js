@@ -45,40 +45,51 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-    const projects = new Swiper(".projects-slider__swiper", {
-        loop: true,
-        watchSlidesProgress: true,
-        slidesPerView: 2,
-        spaceBetween: 16,
-        centeredSlides: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
-        },
-    });
+	const projects = new Swiper('.projects-slider__swiper', {
+		loop: true,
+		watchSlidesProgress: true,
+		slidesPerView: 2,
+		spaceBetween: 16,
+		centeredSlides: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
+	});
 
-    if (window.innerWidth < 541) {
+	const newsSlider = new Swiper('.news-slider__swiper', {
+		loop: true,
+		watchSlidesProgress: true,
+		slidesPerView: 2.44,
+		spaceBetween: 16,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
+	});
 
-        const aboutSlider = new Swiper(".about-banner__slider", {
-            slidesPerView: 1,
-            spaceBetween: 8,
-            // autoplay:true,
-            watchSlidesProgress: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-            pagination: {
-              el: ".swiper-pagination",
-              type: 'progressbar',
-           },
-
-        });
-    }
-           
-
+	if (window.innerWidth < 541) {
+		const aboutSlider = new Swiper('.about-banner__slider', {
+			slidesPerView: 1,
+			spaceBetween: 8,
+			// autoplay:true,
+			watchSlidesProgress: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'progressbar',
+			},
+		});
+	}
 });
