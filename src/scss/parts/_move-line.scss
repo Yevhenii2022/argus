@@ -1,0 +1,35 @@
+.move-line {
+  // position: relative;
+  z-index: 10;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: $white;
+  transition: 0.3s;
+  cursor: default;
+
+  &__box {
+    display: flex;
+    width: 110vw;
+    }
+
+  &__item {
+    animation: 5s linear infinite scroll;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.286rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1rem;
+        &::before {
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+            height: 3.214rem;
+            width: 2.714rem;
+            margin-right: 1rem;
+    }
+  }
+}
+@keyframes scroll {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}

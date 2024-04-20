@@ -92,4 +92,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		});
 	}
+
+	if (window.innerWidth < 541) {
+		const aboutSlider = new Swiper('.about-banner__slider', {
+			slidesPerView: 1,
+			spaceBetween: 8,
+			// autoplay:true,
+			watchSlidesProgress: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'progressbar',
+			},
+		});
+	}
 });

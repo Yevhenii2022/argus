@@ -6,56 +6,59 @@
 
   &__bg {
     position: absolute;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    bottom: 0;
-    left: 0;
+    top: 0;
     z-index: -1;
     mix-blend-mode: soft-light;
+    max-height: 68rem;
 
-    // &::before{
-    //   content: "";
-    //   background: linear-gradient(180deg, #ededed 80%, transparent 80%);
-    //   z-index: 1;
-    //   position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 20%;
-
-    // }
-
+    &::before{
+      content: "";
+      background: linear-gradient(360deg, #ededed 0%, #ededed 100%);
+      z-index: 1;
+      position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        opacity: 0.4;
+    }
   }
 
-  &__wrapper {}
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__title {
     text-align: center;
-  }
+    display: block;
+    width: 50%;
 
-  &__subtitle {
-    font-family: $italic;
-    text-align: center;
-    line-height: 77%;
+    em{
+      font-family: $italic;
+    }
   }
 
   &__description {
     margin: 1.143rem auto 0 auto;
     text-align: center;
     width: 18rem;
+    margin-bottom: 23.857rem;
   }
 
   &__slider {
-    position: absolute;
-    transform: translate(17%, 70%);
-
+   
     @include media(mobile) {
       margin-right: -1.714rem;
       margin-top: 4.286rem;
       position: static;
-      transform: translate(0%, 0%);
     }
   }
 
@@ -66,19 +69,17 @@
     @include media(mobile) {
       justify-content: flex-start;
     }
-
   }
 
   &__item {
     background-color: $white;
-    padding: 1.714rem;
+    padding: 1.714rem 3.643rem 1.714rem 1.714rem;
     height: 29.643rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: fit-content;
-    min-width: 24rem;
-
+   
     &:nth-child(odd) {
       margin-top: 4.143rem;
 
@@ -106,7 +107,13 @@
       font-size: 1.929rem;
       color: $red;
       font-family: $medium;
+
+      strong{
+        font-size: 0.8rem;
+    font-weight: 800;
+    vertical-align: super;
     }
+  }
 
     &-text {
       line-height: 120%;
@@ -195,8 +202,6 @@
     bottom: 7.571rem;
     z-index: 2;
   }
-
-
 }
 
 .about-mission {
@@ -272,8 +277,6 @@
 
 .about-values {
 
-  margin-bottom: 13.429rem;
-
   &__wrapper {
     display: flex;
     padding-bottom: 13.429rem;
@@ -292,7 +295,6 @@
     transform: translateY(-50%);
     z-index: 1;
 
-
     p {
 
       em {
@@ -304,13 +306,11 @@
   &__right {
     flex: 1;
     margin-top: 14rem;
-
   }
 
   &__list {
     counter-reset: item;
     list-style-type: none;
-
   }
 
   &__item {
@@ -326,6 +326,17 @@
     gap: 1.929rem;
     align-items: center;
     padding-top: 6rem;
+    transition: $transition;
+
+    &:hover,
+    &:focus{
+        background-color: $red;
+        color: $white;
+
+        &::before{
+          color: $black;
+        }
+    }
 
     &::before {
       content: counter(item, decimal-leading-zero) ". ";
@@ -359,7 +370,6 @@
     line-height: 109%;
     text-transform: uppercase;
     text-align: center;
-
   }
 
   &__description {
