@@ -1,0 +1,72 @@
+.contact-us {
+  padding: 7.9rem 0;
+  border-radius: 1.429rem;
+  background-color: $white;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6.286rem;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    gap: 1.857rem;
+
+  }
+
+  &__content-block {
+    height: 27.071rem;
+    width: 17.929rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    &::before{
+      content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi41IDMzQzI1LjYxMjcgMzMgMzMgMjUuNjEyNyAzMyAxNi41QzMzIDcuMzg3MyAyNS42MTI3IDAgMTYuNSAwQzcuMzg3MyAwIDAgNy4zODczIDAgMTYuNUMwIDI1LjYxMjcgNy4zODczIDMzIDE2LjUgMzNaTTIyIDE2LjVMMTQgMTFWMjJMMjIgMTYuNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=");
+      position: absolute;
+      right: 0.6rem;
+      top: 0.6rem;
+      height: 2.357rem;
+      width: 2.357rem;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    em {
+      font-family: $italic;
+    }
+  }
+
+  &__manager-name {
+    font-size: 0.929rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.929rem;
+
+    &::before{
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+        position: absolute;
+        left: 0;
+        height: 0.786rem;
+        width: 0.643rem;
+    }
+  }
+
+  &__manager-position {
+    opacity: 0.3;
+    font-size: 0.929rem;
+  }
+
+}

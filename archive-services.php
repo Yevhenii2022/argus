@@ -106,7 +106,7 @@ get_header(); ?>
         </div>
     </section>
     
-    <?php get_template_part('template-parts/form'); ?>
+    <?php get_template_part('template-parts/contact-us'); ?>
 </main>
 
 <?php get_footer(); ?>
