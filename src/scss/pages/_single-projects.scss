@@ -1,0 +1,55 @@
+.project {
+	padding: 11.571rem 0 8.571rem 0;
+
+	&__top {
+		margin-bottom: 1.714rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		h1 {
+			max-width: 70rem;
+		}
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		a {
+			max-width: 20rem;
+		}
+		p {
+			opacity: 0.3;
+		}
+	}
+
+	&__image {
+		margin-bottom: 13.571rem;
+		height: 52rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__img--error {
+		width: 50rem !important;
+		height: 50rem !important;
+		object-fit: contain !important;
+	}
+
+	&__info {
+		margin-bottom: 4.571rem;
+		p,
+		em {
+			font-size: 4.286rem;
+		}
+	}
+}

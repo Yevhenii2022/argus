@@ -23,4 +23,5 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'newest');
     pll_register_string('pointer_theme', 'від А-Я');
     pll_register_string('pointer_theme', 'contact_button');
+    pll_register_string('pointer_theme', 'go_to_page');
 }

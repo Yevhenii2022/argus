@@ -56,7 +56,15 @@ button {
 		padding: 0 1.143rem;
 	}
 
-	&--slider{
+	&--slider {
 		padding: 0 0;
 	}
+}
+
+.yoast-breadcrumbs > span {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.357rem;
+	font-size: 0.786rem;
+	text-transform: uppercase;
 }
