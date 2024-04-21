@@ -6,7 +6,7 @@
         $sectionName = get_field('contact_name', 'options') ?? '' ;
         $sectionPosition = get_field('contact_position', 'options') ?? '' ;
 
-        if ($sectionTitle || $sectionImage  || $sectionVideo || $sectionHeading || $sectionName || $sectionPosition) :
+        if ($sectionTitle || $sectionImage || $sectionVideo || $sectionHeading || $sectionName || $sectionPosition) :
         ?>
   <div class="container">
     <div class="contact-us__wrapper">
@@ -17,8 +17,9 @@
       <?php endif ?>
       <div class="contact-us__content">
         <div class="contact-us__right">
-    <?php if ($sectionImage && $sectionVideo) : ?>
-          <a href="<?php echo esc_url($sectionVideo); ?>" data-fancybox data-width="640" data-height="360" class="contact-us__content-block" style=" background-image: url('<?php echo esc_url($sectionImage); ?>');"></a>
+           <?php if ($sectionImage) : ?>
+            <a href="<?= $sectionVideo; ?>" data-fancybox="video"  data-width="90%" data-height="70%"    class="contact-us__content-block" style=" background-image: url('<?php echo esc_url($sectionImage); ?>');">
+           </a>
           <?php endif ?>
           <div class="contact-us__text">
           <?php if ($sectionHeading): ?>
