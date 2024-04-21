@@ -48,6 +48,7 @@
       line-height: 109%;
       width: 100%;
       transition: $transition;
+      resize: none;
       &:invalid {
         border-bottom: 0.071rem solid $red;
       }
