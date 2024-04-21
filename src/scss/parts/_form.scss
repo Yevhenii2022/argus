@@ -8,18 +8,16 @@
     margin-bottom: 2.2rem;
     font-size: 0.786rem;
     transition: $transition;
-    
-   
+     
     input{
-       border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
+      border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
       font-size: 0.786rem;
       text-transform: uppercase;
-      background-color: $bg;
+      background-color: $white;
       padding-bottom: 1.143rem;
       width: 100%;
       line-height: 109%;
       &::placeholder {
-        
         text-transform: uppercase;
         line-height: 109%;
         color: rgba(24, 24, 24, 0.4);
@@ -44,7 +42,7 @@
       border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
       font-size: 0.786rem;
       text-transform: uppercase;
-      background-color: $bg;
+      background-color: $white;
       height: 5.8rem;
       font-family: $regular;
       line-height: 109%;

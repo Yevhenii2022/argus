@@ -1,0 +1,60 @@
+.contact-us {
+  padding: 8.571rem 0;
+  border-radius: 1.429rem;
+  background-color: $white;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6.286rem;
+  }
+
+  &__right {
+    display: flex;
+    gap: 1.857rem;
+
+  }
+
+  &__content-block {
+    height: 27.071rem;
+    width: 17.929rem;
+  }
+
+  &__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    em {
+      font-family: $italic;
+    }
+  }
+
+  &__manager-name {
+    font-size: 0.929rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.929rem;
+
+    &::before{
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+        position: absolute;
+        left: 0;
+        height: 0.786rem;
+        width: 0.643rem;
+    }
+  }
+
+  &__manager-position {
+    opacity: 0.3;
+    font-size: 0.929rem;
+  }
+
+}
