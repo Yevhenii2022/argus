@@ -11,12 +11,12 @@
   <div class="container">
     <div class="contact-us__wrapper">
     <?php if ($sectionTitle): ?>
-      <div class="contact-us__title main__title title ">
+      <div class="contact-us__title main__title">
         <?= $sectionTitle ;?>
       </div>
       <?php endif ?>
       <div class="contact-us__content">
-        <div class="contact-us__right">
+        <div class="contact-us__left">
            <?php if ($sectionImage) : ?>
             <a href="<?= $sectionVideo; ?>" data-fancybox="video"  data-width="90%" data-height="70%"    class="contact-us__content-block" style=" background-image: url('<?php echo esc_url($sectionImage); ?>');">
            </a>
