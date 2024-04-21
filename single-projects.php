@@ -54,12 +54,50 @@ $default_picture = get_field('default_picture', 'options');
           <?php endif; ?>
         </div>
 
+
+        <div class="project__box">
+          <?php
+          $info = get_field('info') ?? '';
+          ?>
+          <?php if ($info) : ?>
+            <h2 class="project__info title"><?= $info; ?></h2>
+          <?php endif; ?>
+
+          <?php
+          $characteristics = get_field('characteristics') ?? '';
+          if ($characteristics) : ?>
+            <ul>
+              <?php
+              while (have_rows('characteristics')) : the_row();
+                $parameter = get_sub_field('characteristics_parameter') ?? '';
+                $category = get_sub_field('characteristics_category') ?? '';
+              ?>
+
+                <?php if ($parameter) : ?>
+                  <li class="project__characteristics">
+                    <h3 class="project__parameter"><?= $parameter; ?></h3>
+                    <p class="project__category"><?= $category; ?></p>
+                  </li>
+                <?php endif; ?>
+
+              <?php endwhile; ?>
+            </ul>
+          <?php endif; ?>
+        </div>
+
+
+
         <?php
-        $info = get_field('info') ?? '';
+        $images = get_field('project_gallery');
+        if ($images) {
+          foreach ($images as $image) {
+            echo '<div class="swiper-slide">';
+            echo wp_get_attachment_image($image, "full", '', ['alt' => 'картинка галереї']);
+            echo '</div>';
+          }
+        }
         ?>
-        <?php if ($info) : ?>
-          <h2 class="project__info title"><?= $info; ?></h2>
-        <?php endif; ?>
+
 
 
 

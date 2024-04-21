@@ -61,6 +61,14 @@ button {
 	}
 }
 
+.yoast-breadcrumbs {
+	margin-bottom: 1.714rem;
+
+	@include media(mobile) {
+		margin-bottom: 1.143rem;
+	}
+}
+
 .yoast-breadcrumbs > span {
 	display: flex;
 	flex-wrap: wrap;
