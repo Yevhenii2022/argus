@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -690,7 +690,7 @@ button {
 .about-mission__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
-.about-mission__icon svg {
+.about-mission__icon {
   width: 5.357rem;
   height: 4.143rem;
 }
@@ -1042,7 +1042,7 @@ button {
 
 .service-information {
   padding-top: 8.571rem;
-  padding-bottom: 7rem;
+  padding-bottom: 6.857rem;
 }
 .service-information__heading {
   display: flex;
@@ -1121,16 +1121,89 @@ button {
 }
 
 .service-banner {
-  padding-top: 7rem;
+  padding-top: 6.857rem;
+  position: relative;
+}
+.service-banner__bg {
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
-  bottom: 0;
+  height: 68rem;
+  top: 8%;
   left: 0;
   z-index: -1;
   mix-blend-mode: soft-light;
+}
+.service-banner__bg::before {
+  content: "";
+  background: linear-gradient(360deg, #ededed 0%, #ededed 100%);
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  opacity: 0.4;
+}
+.service-banner__wrapper {
+  padding-bottom: 21.071rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-banner__logo {
+  width: 3.143rem;
+  height: 2.429rem;
+}
+.service-banner__string {
+  display: flex;
+  width: 100vw;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: default;
+  margin-bottom: 21.071rem;
+}
+.service-banner__title {
+  animation: 8s linear infinite marquee;
+  font-style: normal;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 3rem;
+  text-transform: uppercase;
+}
+.service-banner__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+@keyframes marquee {
+  0% {
+    transform: translateZ(0);
+    display: block;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+    display: none;
+  }
+}
+.service-banner__main {
+  width: 53.786rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 2.286rem;
+}
+.service-banner__description {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  line-height: 100%;
+}
+.service-banner__description em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
 .projects {
@@ -1443,7 +1516,7 @@ button {
 .about-mission__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
-.about-mission__icon svg {
+.about-mission__icon {
   width: 5.357rem;
   height: 4.143rem;
 }
@@ -3359,7 +3432,7 @@ button {
   border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
   font-size: 0.786rem;
   text-transform: uppercase;
-  background-color: #ededed;
+  background-color: #ffffff;
   padding-bottom: 1.143rem;
   width: 100%;
   line-height: 109%;
@@ -3382,7 +3455,7 @@ button {
   border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
   font-size: 0.786rem;
   text-transform: uppercase;
-  background-color: #ededed;
+  background-color: #ffffff;
   height: 5.8rem;
   font-family: "HelveticaNeueCyr-Roman", "sans-serif";
   line-height: 109%;
@@ -3399,7 +3472,7 @@ button {
   border-bottom: 0.071rem solid #181818;
 }
 .form__submit {
-  margin-top: 2.286rem;
+  margin-top: 2.5rem;
 }
 .form__button {
   background-color: #f41b1b;
@@ -3414,9 +3487,8 @@ button {
   color: rgba(24, 24, 24, 0.4);
 }
 .form__text a {
-  display: contents;
-  border-bottom: 0.071rem solid #181818 !important;
-  text-decoration: underline !important;
+  display: inline;
+  text-decoration: underline;
   color: #181818;
 }
 .form span.wpcf7-spinner {
@@ -3468,4 +3540,65 @@ button {
   100% {
     transform: translateX(0);
   }
+}
+.contact-us {
+  padding: 7.9rem 0;
+  border-radius: 1.429rem;
+  background-color: #ffffff;
+}
+.contact-us__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.286rem;
+  align-items: center;
+}
+.contact-us__right {
+  display: flex;
+  gap: 1.857rem;
+}
+.contact-us__content-block {
+  height: 27.071rem;
+  width: 17.929rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.contact-us__content-block::before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi41IDMzQzI1LjYxMjcgMzMgMzMgMjUuNjEyNyAzMyAxNi41QzMzIDcuMzg3MyAyNS42MTI3IDAgMTYuNSAwQzcuMzg3MyAwIDAgNy4zODczIDAgMTYuNUMwIDI1LjYxMjcgNy4zODczIDMzIDE2LjUgMzNaTTIyIDE2LjVMMTQgMTFWMjJMMjIgMTYuNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=");
+  position: absolute;
+  right: 0.6rem;
+  top: 0.6rem;
+  height: 2.357rem;
+  width: 2.357rem;
+}
+.contact-us__text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-us__heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-us__heading em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.contact-us__manager-name {
+  font-size: 0.929rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 0.929rem;
+}
+.contact-us__manager-name::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  position: absolute;
+  left: 0;
+  height: 0.786rem;
+  width: 0.643rem;
+}
+.contact-us__manager-position {
+  opacity: 0.3;
+  font-size: 0.929rem;
 }

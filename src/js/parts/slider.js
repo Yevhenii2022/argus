@@ -109,4 +109,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		});
 	}
+
+//fancy Box   
+Fancybox.bind('[data-fancybox]', {
+    Html : {
+      youtube: {
+        controls: 0,
+        rel: 0,
+        fs: 0
+      }
+    }
+  });
+    
 });
+

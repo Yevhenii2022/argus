@@ -49,7 +49,6 @@
       $informationMainImg = get_field('information_image') ?? '' ;
 
       if( $informationTitle || $informationTopImg || $informationBottomImg || $informationQuestion || $informationMainImg ) : 
-
 ?>
    <section class="service-information">
     <div class="container">
@@ -103,31 +102,81 @@
         $bannerDescription = get_field('banner_description') ?? '' ;
         $icon = get_field('small_logo', 'options') ?? '';
      if( $bannerBg || $bannerTitle || $bannerDescription || $icon ): ?>
+
   <section class="service-banner">
-     <div class="service-banner_bg" style=" background-image: url('<?php echo esc_url($bannerBg); ?>');"></div>
+     <div class="service-banner__bg" style=" background-image: url('<?php echo esc_url($bannerBg); ?>');"></div>
      <div class="container">
-      <div class="services-banner__string">
-         <?php if ($bannerTitle) : ?>
-         <h2 class="services-banner__title">
-            <?= $bannerTitle ;?>
-         </h2>
-         <?php endif ?>   
-      </div>
-      <div class="services-banner__main">
-         <?php if ($icon) : ?>
-        <div class="services-banner__logo">
-            <?= $icon ;?>
-        </div>
-         <?php endif ?> 
-        <?php if ($bannerDescription) : ?>
-        <div class="services-banner__description">
-            <?= $bannerDescription ;?>
-        </div>
-        <?php endif ?>   
-      </div>
+        <div class="service-banner__wrapper">
+          <div class="service-banner__string">
+              <?php for ($i = 0; $i < 18; $i++) { ?>
+                <?php if ($bannerTitle) : ?>
+                  <span class="service-banner__title main__title main__title--sm">
+                    <?= $bannerTitle ;?>
+                  </span> 
+                  <?php endif?>
+              <?php } ?>
+          </div>
+          <div class="service-banner__main">
+              <div class="service-banner__logo">
+                <?php if ($icon) :
+                      echo '<img src="' . esc_url($icon) . '" alt="logo">';
+                endif ;?> 
+              </div>
+          
+              <?php if ($bannerDescription) : ?>
+              <div class="service-banner__description">
+                <?= $bannerDescription ;?>
+              </div>
+              <?php endif ?>   
+          </div>
+       </div>
     </div>
   </section>
   <?php endif ?>
+
+   <?php $advantagesTitle = get_field('advantages_title') ?? '' ; ?>
+    <section class="service-advantages">
+    <div class="container container--slider">
+      <div class="service-advantages__wrapper">
+      <?php if( $advantagesTitle): ?> 
+        <div class="service-advantages__title main__title main__title--sm">
+          <?= $advantagesTitle?>
+        </div>
+        <?php endif ?>
+        <div class="service-advantages__slider swiper">
+          <div class="service-advantages__list swiper-wrapper">
+            <div class="service-advantages__item swiper-slide">
+            <?php while (have_rows('advantages_list')):
+                the_row();
+                $advantagesImage = get_sub_field('advantages_img') ?? '' ;
+                $advantagesHeading = get_sub_field('advantages_card_heading') ?? '' ;
+                $advantagesDescription = get_sub_field('advantages_card_desc') ?? '' ; ?>
+              <?php if( $advantagesImage): ?> 
+              <div class="service-advantages__image">
+                  
+              </div>
+              <?php endif ?>
+             
+              <div class="service-advantages__text">
+              <?php if( $advantagesHeading): ?> 
+                <div class="service-advantages__heading">
+                    <?= $advantagesHeading?>
+                </div>
+                <?php endif ?>
+                <?php if( $advantagesDescription): ?> 
+                <div class="service-advantages__description">
+                    <?= $advantagesDescription?>
+                </div>
+                <?php endif ?>
+              </div>
+              <?php endwhile?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
 </main>
 
 <?php
