@@ -17,8 +17,8 @@
       <?php endif ?>
       <div class="contact-us__content">
         <div class="contact-us__right">
-          <?php if ($sectionImage) : ?>
-          <a href="<?php echo esc_url($video_url); ?>" data-fancybox data-width="640" data-height="360" class="contact-us__content-block" style=" background-image: url('<?php echo esc_url($sectionImage); ?>');"></a>
+    <?php if ($sectionImage && $sectionVideo) : ?>
+          <a href="<?php echo esc_url($sectionVideo); ?>" data-fancybox data-width="640" data-height="360" class="contact-us__content-block" style=" background-image: url('<?php echo esc_url($sectionImage); ?>');"></a>
           <?php endif ?>
           <div class="contact-us__text">
           <?php if ($sectionHeading): ?>
