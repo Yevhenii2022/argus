@@ -1199,6 +1199,90 @@ button {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
+.service-advantages__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.service-advantages__slider {
+  position: absolute;
+  background-color: #f41b1b;
+  color: #ffffff;
+  width: 55.071rem;
+  padding: 2.857rem 1.714rem 2.857rem 2.857rem;
+}
+.service-advantages__heading {
+  font-size: 2rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  text-transform: uppercase;
+}
+.service-advantages__heading em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.service-advantages__arrow--prev::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='61' height='61' fill='none'%3E%3Ccircle cx='30.5' cy='30.5' r='30' stroke='%23fff'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m27.47 23.708-7.842 7.842m0 0 7.749 7.75m-7.75-7.75 21.04-.126'/%3E%3C/svg%3E");
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4.357rem;
+  height: 4.357rem;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.service-advantages__arrow--prev:hover::before {
+  transform: scale(1.1);
+}
+.service-advantages__arrow--next::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='61' height='61' fill='none'%3E%3Ccircle cx='30.5' cy='30.5' r='30' stroke='%23fff' transform='rotate(-180 30.5 30.5)'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m33.53 37.292 7.842-7.842m0 0-7.749-7.75m7.75 7.75-21.04.126'/%3E%3C/svg%3E");
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4.357rem;
+  height: 4.357rem;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.service-advantages__arrow--next:hover::before {
+  transform: scale(1.1);
+}
+.service-advantages__navigation {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  position: absolute;
+  bottom: 2.8rem;
+  left: 40.2rem;
+  z-index: 8;
+}
+
+.advantages-pagination {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 23.2rem;
+  left: 1.6rem;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.swiper-pagination-current {
+  margin-right: 3rem;
+  position: relative;
+}
+.swiper-pagination-current::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1.02rem;
+  width: 2rem;
+  height: 0.071rem;
+  background-color: #ffffff;
+}
+
 .projects {
   padding: 11.571rem 0 8.571rem 0;
 }

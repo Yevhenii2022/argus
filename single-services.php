@@ -134,7 +134,9 @@
   </section>
   <?php endif ?>
 
-   <?php $advantagesTitle = get_field('advantages_title') ?? '' ; ?>
+   <?php $advantagesTitle = get_field('advantages_title') ?? '' ;
+         $advantagesImage = get_field('advantages_img') ?? '' ;
+    if( $advantagesTitle || $advantagesImage ): ?>
     <section class="service-advantages">
     <div class="container container--slider">
       <div class="service-advantages__wrapper">
@@ -143,20 +145,19 @@
           <?= $advantagesTitle?>
         </div>
         <?php endif ?>
+        <?php if( $advantagesImage): ?> 
+        <div class="service-advantages__image">
+          <img src='<?php echo $advantagesImage['url']; ?>' alt='<?php echo $advantagesImage['alt']; ?>' />
+        </div>
+        <?php endif ?>
         <div class="service-advantages__slider swiper">
           <div class="service-advantages__list swiper-wrapper">
-            <div class="service-advantages__item swiper-slide">
+            
             <?php while (have_rows('advantages_list')):
                 the_row();
-                $advantagesImage = get_sub_field('advantages_img') ?? '' ;
                 $advantagesHeading = get_sub_field('advantages_card_heading') ?? '' ;
                 $advantagesDescription = get_sub_field('advantages_card_desc') ?? '' ; ?>
-              <?php if( $advantagesImage): ?> 
-              <div class="service-advantages__image">
-                  
-              </div>
-              <?php endif ?>
-             
+            <div class="service-advantages__item swiper-slide">
               <div class="service-advantages__text">
               <?php if( $advantagesHeading): ?> 
                 <div class="service-advantages__heading">
@@ -169,13 +170,19 @@
                 </div>
                 <?php endif ?>
               </div>
-              <?php endwhile?>
             </div>
+            <?php endwhile?>
           </div>
+          <div class="service-advantages__navigation">
+                <div class="service-advantages__arrow service-advantages__arrow--prev"></div>
+                <div class="service-advantages__arrow service-advantages__arrow--next"></div>
+          </div>
+          <div class="service-advantages__pagination"></div>
         </div>
       </div>
     </div>
   </section>
+  <?php endif ?>
  
 </main>
 

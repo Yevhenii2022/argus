@@ -93,6 +93,32 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
+	const advanagesSwiper = new Swiper('.service-advantages__slider', {
+		loop: true,
+		effect: 'fade',
+		watchSlidesProgress: true,
+		slidesPerView: 1,
+		pagination: {
+			el: '.service-advantages__pagination',
+			type: 'fraction',
+			renderFraction: function (currentClass, totalClass) {
+				return (
+					'<span class="' +
+					currentClass +
+					'"></span>' +
+					'' +
+					'<span class="' +
+					totalClass +
+					'"></span>'
+				);
+			},
+		},
+		navigation: {
+			nextEl: '.service-advantages__arrow--next',
+			prevEl: '.service-advantages__arrow--prev',
+		},
+	});
+
 	if (window.innerWidth < 541) {
 		const aboutSlider = new Swiper('.about-banner__slider', {
 			slidesPerView: 1,
