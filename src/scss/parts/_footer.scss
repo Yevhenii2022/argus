@@ -80,7 +80,7 @@
     @include media(mobile) {
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 3.429rem;
+      gap: 3.2rem;
     }
   }
 
@@ -109,7 +109,7 @@
       line-height: 218%;
 
       @include media(mobile) {
-        line-height: 169%;
+        line-height: 171%;
         font-size: 1rem;
       }
     }
@@ -143,6 +143,7 @@
     margin-bottom: 1.714rem;
     @include media(mobile) {
       margin-bottom: 1.143rem;
+      font-size: 1rem;
     }
   }
 

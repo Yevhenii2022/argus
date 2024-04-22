@@ -3204,7 +3204,7 @@ button {
   .footer__menu {
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 3.429rem;
+    gap: 3.2rem;
   }
 }
 @media (max-width: 541px) {
@@ -3229,7 +3229,7 @@ button {
 }
 @media (max-width: 541px) {
   .footer__nav-list li {
-    line-height: 169%;
+    line-height: 171%;
     font-size: 1rem;
   }
 }
@@ -3259,6 +3259,7 @@ button {
 @media (max-width: 541px) {
   .footer__menu-name {
     margin-bottom: 1.143rem;
+    font-size: 1rem;
   }
 }
 .footer__bottom {
