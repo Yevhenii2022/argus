@@ -52,7 +52,7 @@ get_header();
 					<?php
 					$slider_title = get_field('single_news_slider_title');
 					?>
-					<?php if ($title) : ?>
+					<?php if ($slider_title) : ?>
 						<h2 class="single-news__title title">
 							<?= $slider_title; ?>
 						</h2>
@@ -65,36 +65,9 @@ get_header();
 					</a>
 				</div>
 
-
-
-
 				<?php get_template_part('template-parts/news-slider'); ?>
 
-
-
 				<?php get_template_part('template-parts/form'); ?>
-
-
-				<!-- <ul class="post__inner">
-					<?php
-					$current_post_id = get_the_ID();
-					$popular_posts_query = new WP_Query(array(
-						'posts_per_page' => 3,
-						'post__not_in' => array($current_post_id),
-						'orderby' => 'comment_count',
-						'order' => 'DESC'
-					));
-
-					if ($popular_posts_query->have_posts()) {
-						while ($popular_posts_query->have_posts()) {
-							$popular_posts_query->the_post();
-							get_template_part('template-parts/blog-card');
-						}
-						wp_reset_postdata();
-					}
-					?>
-				</ul> -->
-
 
 			</div>
 		</div>
