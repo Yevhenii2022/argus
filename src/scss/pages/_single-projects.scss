@@ -1,8 +1,17 @@
 .project {
 	padding: 11.571rem 0 8.571rem 0;
 
+	&:has(.projects-slider) {
+		.projects-slider {
+			padding: 0 0 8.5rem 0;
+		}
+		.swiper {
+			padding-bottom: 0.8rem;
+		}
+	}
+
 	&__top {
-		margin-bottom: 1.714rem;
+		margin-bottom: 2.2rem;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -19,15 +28,18 @@
 		justify-content: space-between;
 
 		a {
+			margin-top: 0.4rem;
 			max-width: 20rem;
+			align-self: flex-end;
 		}
 		p {
+			margin-bottom: 0.8rem;
 			opacity: 0.3;
 		}
 	}
 
 	&__image {
-		margin: 0 -1.714rem 13.571rem -1.714rem;
+		margin: 0 -1.714rem 13.2rem -1.714rem;
 		height: 52rem;
 		display: flex;
 		align-items: center;
@@ -46,7 +58,7 @@
 	}
 
 	&__box {
-		margin-bottom: 4.571rem;
+		margin-bottom: 4.8rem;
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -55,11 +67,11 @@
 			width: 40.786rem;
 			position: absolute;
 			right: 0;
-			top: -30rem;
-			padding: 2.857rem;
+			top: -24rem;
+			padding: 2.5rem 2.8rem 1.03rem 2.8rem;
 			display: flex;
 			flex-direction: column;
-			gap: 1.714rem;
+			gap: 1.6rem;
 			background-color: $white;
 
 			li:first-of-type {
@@ -82,7 +94,7 @@
 	}
 
 	&__parameter {
-		margin-bottom: 0.571rem;
+		margin-bottom: 0.7rem;
 		font-family: $italic;
 		font-size: 2rem;
 		font-weight: 300;
@@ -96,5 +108,107 @@
 		font-weight: 550;
 		line-height: 1;
 		color: $red;
+	}
+
+	&__slider {
+		margin-bottom: 10.3rem;
+		height: 41.9rem;
+		img {
+			height: 35.429rem;
+		}
+	}
+
+	&__start {
+		margin-bottom: 7.4rem;
+		display: flex;
+		gap: 5.357rem;
+		h3 {
+			display: flex;
+			gap: 1rem;
+			p,
+			em {
+				width: 45.6rem;
+				font-size: 4.286rem;
+				text-align: start;
+			}
+			svg {
+				margin-top: 0.5rem;
+				width: 2.571rem;
+				height: 3.071rem;
+			}
+		}
+	}
+
+	&__start-text {
+		margin-top: 0.4rem;
+		width: 32.286rem;
+		font-family: $medium;
+		font-weight: 550;
+		strong {
+			color: $red;
+		}
+		p {
+			margin-bottom: 1.25rem;
+		}
+	}
+
+	&__image-center {
+		margin: 0 -1.714rem 8.3rem -1.714rem;
+		img {
+			height: 49.786rem;
+		}
+	}
+
+	&__advantages {
+		margin-bottom: 8.4rem;
+
+		h3 {
+			margin-bottom: 3.1rem;
+			p,
+			em {
+				font-size: 4.286rem;
+			}
+		}
+
+		ul {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+			gap: 1.143rem;
+			row-gap: 4.6rem;
+			h4 {
+				margin-bottom: 1.1rem;
+				font-size: 1.929rem;
+				font-family: $medium;
+				font-weight: 550;
+				line-height: 1;
+			}
+			p {
+				width: 33.5rem;
+			}
+		}
+	}
+
+	&__line {
+		margin-bottom: 1.143rem;
+		display: flex;
+		align-items: center;
+		svg {
+			width: 0.714rem;
+			height: 0.857rem;
+		}
+		div {
+			width: 100%;
+			height: 0.071rem;
+			background-color: rgba(24, 24, 24, 0.1);
+		}
+	}
+
+	&__others {
+		margin-bottom: 3.2rem;
+		p,
+		em {
+			font-size: 4.286rem;
+		}
 	}
 }

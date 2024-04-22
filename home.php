@@ -39,7 +39,7 @@ get_header();
     <?php get_template_part('template-parts/news-slider'); ?>
   </div>
 
-  <?php get_template_part('template-parts/form'); ?>
+  <?php get_template_part('template-parts/contact-us'); ?>
 
 </main>
 

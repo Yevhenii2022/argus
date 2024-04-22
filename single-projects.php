@@ -85,24 +85,110 @@ $default_picture = get_field('default_picture', 'options');
           <?php endif; ?>
         </div>
 
+        <?php $images = get_field('project_gallery');
+        if ($images) : ?>
+          <div class="project__slider swiper">
+            <div class="swiper-wrapper">
+              <?php
+              if ($images) {
+                foreach ($images as $image) {
+                  $image_url = wp_get_attachment_url($image);
+                  echo '<a class="swiper-slide" href="' . esc_url($image_url) . '" data-fancybox="gallery">';
+                  echo wp_get_attachment_image($image, "full", '', ['alt' => 'картинка галереї']);
+                  echo '</a>';
+                }
+              }
+              ?>
+            </div>
 
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        <?php endif; ?>
+
+        <div class="project__start">
+          <?php
+          $project_start = get_field('project_start') ?? '';
+          ?>
+          <?php if ($project_start) : ?>
+            <h3 class="title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
+                <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />
+              </svg>
+              <?= $project_start; ?>
+            </h3>
+          <?php endif; ?>
+
+          <div class="project__start-text">
+            <?php
+            $project_text = get_field('project_text') ?? '';
+            ?>
+            <?php if ($project_text) : ?>
+              <?= $project_text; ?>
+            <?php endif; ?>
+          </div>
+        </div>
+
+        <div class="project__image-center">
+          <?php $image = get_field('project_img'); ?>
+          <?php
+          if ($image) {
+            echo wp_get_attachment_image($image, "full", '', ['alt' => 'картинка галереї']);
+          }
+          ?>
+        </div>
 
         <?php
-        $images = get_field('project_gallery');
-        if ($images) {
-          foreach ($images as $image) {
-            echo '<div class="swiper-slide">';
-            echo wp_get_attachment_image($image, "full", '', ['alt' => 'картинка галереї']);
-            echo '</div>';
-          }
-        }
+        $advantages_list = get_field('advantages_list') ?? '';
+        if ($advantages_list) : ?>
+          <div class="project__advantages">
+            <?php
+            $advantages_title = get_field('project_advantages_title') ?? '';
+            ?>
+            <?php if ($advantages_title) : ?>
+              <h3 class="title">
+                <?= $advantages_title; ?>
+              </h3>
+            <?php endif; ?>
+            <ul>
+              <?php
+              while (have_rows('advantages_list')) : the_row();
+                $advantages_title = get_sub_field('advantages_title') ?? '';
+                $advantages_text = get_sub_field('advantages_text') ?? '';
+              ?>
+                <?php if ($advantages_title) : ?>
+                  <li>
+                    <div class="project__line">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
+                        <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />
+                      </svg>
+                      <div></div>
+                    </div>
+
+                    <h4><?= $advantages_title; ?></h4>
+                    <p><?= $advantages_text; ?></p>
+                  </li>
+                <?php endif; ?>
+              <?php endwhile; ?>
+            </ul>
+          </div>
+        <?php endif; ?>
+
+        <?php
+        $project_others = get_field('project_others') ?? '';
         ?>
-
-
-
+        <?php if ($project_others) : ?>
+          <h2 class="project__others title"><?= $project_others; ?></h3>
+          <?php endif; ?>
 
       </div>
     </div>
+
+    <?php get_template_part('template-parts/project-slider'); ?>
+
+    <?php get_template_part('template-parts/contact-us'); ?>
+
   </section>
 </main>
 

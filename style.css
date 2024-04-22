@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -78,7 +78,7 @@ button {
 }
 
 .yoast-breadcrumbs {
-  margin-bottom: 1.714rem;
+  margin-bottom: 1.2rem;
 }
 @media (max-width: 541px) {
   .yoast-breadcrumbs {
@@ -2109,8 +2109,14 @@ button {
 .project {
   padding: 11.571rem 0 8.571rem 0;
 }
+.project:has(.projects-slider) .projects-slider {
+  padding: 0 0 8.5rem 0;
+}
+.project:has(.projects-slider) .swiper {
+  padding-bottom: 0.8rem;
+}
 .project__top {
-  margin-bottom: 1.714rem;
+  margin-bottom: 2.2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -2123,13 +2129,16 @@ button {
   justify-content: space-between;
 }
 .project__link a {
+  margin-top: 0.4rem;
   max-width: 20rem;
+  align-self: flex-end;
 }
 .project__link p {
+  margin-bottom: 0.8rem;
   opacity: 0.3;
 }
 .project__image {
-  margin: 0 -1.714rem 13.571rem -1.714rem;
+  margin: 0 -1.714rem 13.2rem -1.714rem;
   height: 52rem;
   display: flex;
   align-items: center;
@@ -2146,7 +2155,7 @@ button {
   object-fit: contain !important;
 }
 .project__box {
-  margin-bottom: 4.571rem;
+  margin-bottom: 4.8rem;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -2155,11 +2164,11 @@ button {
   width: 40.786rem;
   position: absolute;
   right: 0;
-  top: -30rem;
-  padding: 2.857rem;
+  top: -24rem;
+  padding: 2.5rem 2.8rem 1.03rem 2.8rem;
   display: flex;
   flex-direction: column;
-  gap: 1.714rem;
+  gap: 1.6rem;
   background-color: #ffffff;
 }
 .project__box ul li:first-of-type h3 {
@@ -2173,7 +2182,7 @@ button {
   font-size: 4.286rem;
 }
 .project__parameter {
-  margin-bottom: 0.571rem;
+  margin-bottom: 0.7rem;
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
   font-size: 2rem;
   font-weight: 300;
@@ -2186,6 +2195,99 @@ button {
   font-weight: 550;
   line-height: 1;
   color: #f41b1b;
+}
+.project__slider {
+  margin-bottom: 10.3rem;
+  height: 41.9rem;
+}
+.project__slider img {
+  height: 35.429rem;
+}
+.project__start {
+  margin-bottom: 7.4rem;
+  display: flex;
+  gap: 5.357rem;
+}
+.project__start h3 {
+  display: flex;
+  gap: 1rem;
+}
+.project__start h3 p,
+.project__start h3 em {
+  width: 45.6rem;
+  font-size: 4.286rem;
+  text-align: start;
+}
+.project__start h3 svg {
+  margin-top: 0.5rem;
+  width: 2.571rem;
+  height: 3.071rem;
+}
+.project__start-text {
+  margin-top: 0.4rem;
+  width: 32.286rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  font-weight: 550;
+}
+.project__start-text strong {
+  color: #f41b1b;
+}
+.project__start-text p {
+  margin-bottom: 1.25rem;
+}
+.project__image-center {
+  margin: 0 -1.714rem 8.3rem -1.714rem;
+}
+.project__image-center img {
+  height: 49.786rem;
+}
+.project__advantages {
+  margin-bottom: 8.4rem;
+}
+.project__advantages h3 {
+  margin-bottom: 3.1rem;
+}
+.project__advantages h3 p,
+.project__advantages h3 em {
+  font-size: 4.286rem;
+}
+.project__advantages ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1.143rem;
+  row-gap: 4.6rem;
+}
+.project__advantages ul h4 {
+  margin-bottom: 1.1rem;
+  font-size: 1.929rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  font-weight: 550;
+  line-height: 1;
+}
+.project__advantages ul p {
+  width: 33.5rem;
+}
+.project__line {
+  margin-bottom: 1.143rem;
+  display: flex;
+  align-items: center;
+}
+.project__line svg {
+  width: 0.714rem;
+  height: 0.857rem;
+}
+.project__line div {
+  width: 100%;
+  height: 0.071rem;
+  background-color: rgba(24, 24, 24, 0.1);
+}
+.project__others {
+  margin-bottom: 3.2rem;
+}
+.project__others p,
+.project__others em {
+  font-size: 4.286rem;
 }
 
 .header {
@@ -3461,6 +3563,7 @@ button {
   line-height: 109%;
   width: 100%;
   transition: all 0.3s ease-in-out;
+  resize: none;
 }
 .form textarea:invalid {
   border-bottom: 0.071rem solid #f41b1b;
