@@ -5,7 +5,7 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'more_about_us');
     pll_register_string('pointer_theme', 'more_details');
     pll_register_string('pointer_theme', 'more_projects');
-    pll_register_string('pointer_theme', 'contact_with_us');
+    // pll_register_string('pointer_theme', 'contact_with_us');
     pll_register_string('pointer_theme', 'all_news');
     pll_register_string('pointer_theme', 'services');
     pll_register_string('pointer_theme', 'about_us');
