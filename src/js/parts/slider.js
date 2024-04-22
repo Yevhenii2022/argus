@@ -94,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	const advanagesSwiper = new Swiper('.service-advantages__slider', {
-		loop: true,
-		effect: 'fade',
+		loop: false,
 		watchSlidesProgress: true,
 		slidesPerView: 1,
+		
 		pagination: {
 			el: '.service-advantages__pagination',
 			type: 'fraction',

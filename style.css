@@ -572,6 +572,10 @@ button {
   width: 16.429rem;
 }
 
+.about-projects__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+
 .about-stages {
   padding-top: 7.143rem;
 }
@@ -1203,21 +1207,74 @@ button {
   display: flex;
   flex-direction: row-reverse;
   position: relative;
+  height: 57.286rem;
+  gap: 3.071rem;
+  justify-content: flex-end;
+}
+.service-advantages__title {
+  max-width: 46rem;
+  position: relative;
+}
+.service-advantages__title p {
+  padding-left: 3.5rem;
+}
+.service-advantages__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  margin-left: -3.5rem;
+}
+.service-advantages__title::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  position: absolute;
+  left: 0;
+  height: 3.071rem;
+  width: 2.571rem;
+}
+.service-advantages__image {
+  max-width: 52rem;
+  height: 100%;
+}
+.service-advantages__image img {
+  height: 100%;
 }
 .service-advantages__slider {
   position: absolute;
   background-color: #f41b1b;
+  bottom: 0;
+  right: 0;
   color: #ffffff;
   width: 55.071rem;
+  height: 41.214rem;
+}
+.service-advantages__item {
+  counter-increment: item;
   padding: 2.857rem 1.714rem 2.857rem 2.857rem;
+}
+.service-advantages__item::after {
+  content: counter(item, decimal-leading-zero) ". ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 2.857rem;
+  padding-right: 1.714rem;
+  font-size: 4.286rem;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  line-height: 100%;
 }
 .service-advantages__heading {
   font-size: 2rem;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   text-transform: uppercase;
+  line-height: 100%;
+  margin-bottom: 11.143rem;
+  max-width: 33.714rem;
 }
 .service-advantages__heading em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.service-advantages__description {
+  max-width: 37.929rem;
+  line-height: 120%;
+  font-size: 1.429rem;
 }
 .service-advantages__arrow--prev::before {
   content: "";
@@ -1255,16 +1312,17 @@ button {
   align-items: center;
   position: absolute;
   bottom: 2.8rem;
-  left: 40.2rem;
+  left: 2.857rem;
   z-index: 8;
 }
 
-.advantages-pagination {
+.service-advantages__pagination {
   width: fit-content;
   height: fit-content;
   position: absolute;
-  top: 23.2rem;
-  left: 1.6rem;
+  bottom: 4.286rem;
+  left: initial;
+  right: 1.714rem;
   z-index: 1;
   color: #ffffff;
 }
@@ -1281,6 +1339,10 @@ button {
   width: 2rem;
   height: 0.071rem;
   background-color: #ffffff;
+}
+
+.services-projects {
+  padding-top: 8.571rem;
 }
 
 .projects {
@@ -1480,6 +1542,10 @@ button {
 .about-banner__item-text {
   line-height: 120%;
   width: 16.429rem;
+}
+
+.about-projects__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
 .about-stages {
@@ -2193,19 +2259,21 @@ button {
   }
 }
 .header__logo {
-  width: 6.063rem;
-  height: 2.081rem;
+  width: 7.071rem;
+  height: 2.357rem;
 }
 @media (max-width: 541px) {
   .header__logo {
-    width: 6.643rem;
-    height: 2.357rem;
     opacity: 0.65;
   }
 }
 .header__logo img {
-  width: 100%;
+  min-width: 100%;
   object-fit: contain;
+  width: 7.071rem;
+  height: 2.357rem;
+  min-height: 100%;
+  max-width: initial;
 }
 .header__content {
   display: flex;
@@ -3249,6 +3317,16 @@ button {
   width: 7.071rem;
   margin-bottom: 2.6rem;
 }
+.footer__logo img {
+  width: 7.071rem;
+  height: 2.357rem;
+}
+@media (max-width: 541px) {
+  .footer__logo img {
+    height: 3.143rem;
+    width: 9.143rem;
+  }
+}
 @media (max-width: 541px) {
   .footer__logo {
     margin-bottom: 0;
@@ -3277,7 +3355,7 @@ button {
   }
 }
 .footer__icon:hover, .footer__icon:focus {
-  transform: scale(2);
+  transform: scale(1.2);
 }
 .footer__menu {
   display: flex;
@@ -3427,7 +3505,7 @@ button {
 }
 
 .projects-slider {
-  padding: 17.643rem 0 7.929rem 0;
+  padding: 2.857rem 0 7.929rem 0;
 }
 .projects-slider__title {
   margin-bottom: 2.857rem;

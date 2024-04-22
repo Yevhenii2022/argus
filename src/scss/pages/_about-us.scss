@@ -122,6 +122,14 @@
   }
 }
 
+.about-projects{
+  &__title{
+    em{
+      font-family: $italic;
+    }
+
+  }
+}
 .about-stages {
   padding-top: 7.143rem;
 

@@ -183,7 +183,20 @@
     </div>
   </section>
   <?php endif ?>
- 
+
+  <?php $projectsTitle = get_field('slider_title') ?? '' ;?>
+    <section class="services-projects">
+        <div class="container">
+        <?php if ($projectsTitle) : ?>
+            <div class="services-projects__title main__title main__title--sm">
+                <?= $projectsTitle ;?>
+            </div>
+        <?php endif; ?>
+        </div>
+      <?php get_template_part('template-parts/project-slider'); ?>
+  </section>
+
+  <?php get_template_part('template-parts/contact-us'); ?>
 </main>
 
 <?php

@@ -277,25 +277,83 @@
     display: flex;
     flex-direction: row-reverse;
     position: relative;
+    height: 57.286rem;
+    gap: 3.071rem;
+    justify-content: flex-end;
   }
 
+  &__title{
+    max-width: 46rem;
+    position: relative;
+
+    p {
+      padding-left: 3.5rem;
+    }
+    em{
+      font-family: $italic;
+      margin-left: -3.5rem;
+    }
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+      position: absolute;
+      left: 0;
+      height: 3.071rem;
+      width: 2.571rem;
+    }
+  }
+
+  &__image{
+    max-width: 52rem;
+    height: 100%;
+    img{
+      height: 100%;
+    }
+  }
   &__slider{
+
     position: absolute;
     background-color: $red;
+    bottom: 0;
+    right: 0;
     color: $white;
     width: 55.071rem;
-    padding: 2.857rem 1.714rem 2.857rem 2.857rem;
+    height: 41.214rem;
+    
   }
 
+  &__item{
+    counter-increment: item;
+    padding: 2.857rem 1.714rem 2.857rem 2.857rem;
 
+    &::after{
+      content: counter(item, decimal-leading-zero) ". ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 2.857rem;
+      padding-right: 1.714rem;
+      font-size: 4.286rem;
+      font-family: $italic;
+      line-height: 100%;
+    }
+  }
 
   &__heading{
     font-size: 2rem;
     font-family: $medium;
     text-transform: uppercase;
+    line-height: 100%;
+    margin-bottom: 11.143rem;
+    max-width: 33.714rem;
     em{
       font-family: $italic;
     }
+  }
+
+  &__description{
+    max-width: 37.929rem;
+    line-height: 120%;
+    font-size: 1.429rem;
   }
 ///////////////////////////////////////////////////////////////////////////////////
   &__arrow--prev {
@@ -342,18 +400,19 @@
 		align-items: center;
 		position: absolute;
 		bottom: 2.8rem;
-		left: 40.2rem;
+    left: 2.857rem;
 		z-index: 8;
 	}
 
 }
 
-.advantages-pagination {
+.service-advantages__pagination {
 	width: fit-content;
 	height: fit-content;
 	position: absolute;
-	top: 23.2rem;
-	left: 1.6rem;
+  bottom: 4.286rem;
+  left: initial;
+  right: 1.714rem;
 	z-index: 1;
 	color: $white;
 }
@@ -370,6 +429,10 @@
 		height: 0.071rem;
 		background-color: $white;
 	}
+}
+
+.services-projects{
+  padding-top: 8.571rem;
 }
 
 

@@ -70,10 +70,10 @@ get_header();
     </section>
 
     <?php $projectsTitle = get_field('slider_title') ?? '' ;?>
-    <section class="projects-slider__section-title">
+    <section class="about-projects">
         <div class="container">
         <?php if ($projectsTitle) : ?>
-            <div class="projects-slider__title main__title main__title--sm">
+            <div class="about-projects__title main__title main__title--sm">
                 <?= $projectsTitle ;?>
             </div>
         <?php endif; ?>
