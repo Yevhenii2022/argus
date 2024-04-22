@@ -1,13 +1,22 @@
 .form {
   &__wrapper{
-  width: 40.786rem
+  width: 40.786rem;
+
+  @include media(mobile) {
+    width: 24.5rem;
+    margin-top: 2.857rem;
  }
+}
 
   &__input {
    
     margin-bottom: 2.2rem;
     font-size: 0.786rem;
     transition: $transition;
+    @include media(mobile) {
+      font-size: 1rem;
+      margin-bottom: 1.47rem;
+    }
      
     input{
       border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
@@ -17,10 +26,18 @@
       padding-bottom: 1.143rem;
       width: 100%;
       line-height: 109%;
+      @include media(mobile) {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
       &::placeholder {
         text-transform: uppercase;
         line-height: 109%;
         color: rgba(24, 24, 24, 0.4);
+        @include media(mobile) {
+          font-size: 1rem;
+          line-height: 100%;
+        }
         
       }
         &:hover,
@@ -49,12 +66,20 @@
       width: 100%;
       transition: $transition;
       resize: none;
+      @include media(mobile) {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        height: 5.786rem;
+      }
       &:invalid {
         border-bottom: 0.071rem solid $red;
       }
 
       &::placeholder{
         color: rgba(24, 24, 24, 0.4);
+        @include media(mobile) {
+          font-size: 1rem;
+        }
       }
     &:hover,
     &:focus,
@@ -65,6 +90,9 @@
 
   &__submit{
     margin-top: 2.5rem;
+    @include media(mobile) {
+      margin-top: 2.2rem;
+    }
   }
   
   &__button {
@@ -79,6 +107,11 @@
     line-height: 109%;
     font-size: 0.786rem;
     color: rgba(24, 24, 24, 0.4);
+    @include media(mobile) {
+      font-size: 1rem;
+      width: 100%;
+      line-height: 114%;
+    }
     a{
       display: inline;
       text-decoration: underline;
@@ -99,7 +132,3 @@
   font-size: 0.786rem;
 }
 
-// .form__input input:invalid, 
-// .form__input-text input:invalid {
-//   border-bottom: 0.071rem solid $red;
-// }
