@@ -36,6 +36,12 @@ body {
 		background-color: #b8b2b2;
 	}
 }
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 button {
 	background-color: transparent;
 	border: none;
@@ -56,7 +62,23 @@ button {
 		padding: 0 1.143rem;
 	}
 
-	&--slider{
+	&--slider {
 		padding: 0 0;
 	}
+}
+
+.yoast-breadcrumbs {
+	margin-bottom: 1.2rem;
+
+	@include media(mobile) {
+		margin-bottom: 1.143rem;
+	}
+}
+
+.yoast-breadcrumbs > span {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.357rem;
+	font-size: 0.786rem;
+	text-transform: uppercase;
 }

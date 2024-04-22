@@ -1,6 +1,5 @@
 <?php
 $title = get_field('hero_title') ?? '';
-$subtitle = get_field('hero_subtitle') ?? '';
 $desc = get_field('hero_desc') ?? '';
 $text = get_field('hero_text') ?? '';
 $bg = get_field('hero_bg');
@@ -13,13 +12,8 @@ $bg = get_field('hero_bg');
             <?php endif; ?>
 
             <div>
-                <?php if ($title || $subtitle) : ?>
-                    <div class="hero__title">
-                        <h1 class="main__title main__title--sm"><?= $title ?></h1>
-                        <?php if ($subtitle) : ?>
-                            <h1 class="main__title main__title--sm main__title--italic"><?= $subtitle ?></h1>
-                        <?php endif; ?>
-                    </div>
+                <?php if ($title) : ?>
+                    <h1 class="hero__title title anim-title _anim-items"><?= $title ?></h1>
                 <?php endif; ?>
 
                 <?php if ($desc) : ?>

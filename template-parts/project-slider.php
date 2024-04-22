@@ -1,10 +1,5 @@
-<!-- <?php
-        $projectsTitle = get_field('slider_title');
-        ?> -->
-
 <section class="projects-slider">
     <div class="projects-slider__wrapper">
-        
         <div class="projects-slider__swiper swiper">
             <?php
             $args = array(
@@ -81,5 +76,4 @@
             </div>
         </a>
     </div>
-
 </section>

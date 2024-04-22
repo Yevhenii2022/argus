@@ -5,10 +5,10 @@ $title = get_field('projects-part_title');
     <div class="container">
         <div class="projects-part__wrapper">
             <?php if ($title) : ?>
-                <div class="projects-part__title title">
+                <h3 class="projects-part__title title">
                     <?= $title ?>
                     <div class="projects-part__counter"></div>
-                </div>
+                </h3>
             <?php endif; ?>
 
             <?php

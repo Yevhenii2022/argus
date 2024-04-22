@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -57,6 +57,11 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #b8b2b2;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -75,6 +80,23 @@ button {
 }
 .container--slider {
   padding: 0 0;
+}
+
+.yoast-breadcrumbs {
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 541px) {
+  .yoast-breadcrumbs {
+    margin-bottom: 1.143rem;
+  }
+}
+
+.yoast-breadcrumbs > span {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.357rem;
+  font-size: 0.786rem;
+  text-transform: uppercase;
 }
 
 .main__title {
@@ -127,6 +149,16 @@ button {
   line-height: 1;
 }
 
+.anim-title {
+  transform: translateY(4.286rem);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+.anim-title._active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .button {
   padding: 1rem 2.071rem 1rem 1rem;
   font-size: 0.786rem;
@@ -156,6 +188,7 @@ button {
 }
 .button__wrapper:after {
   content: "";
+  margin-bottom: 0.1rem;
   width: 0.357rem;
   height: 0.357rem;
   background: #ffffff;
@@ -164,6 +197,7 @@ button {
 }
 .button__wrapper:before {
   content: "";
+  margin-bottom: 0.1rem;
   width: 0.357rem;
   height: 0.357rem;
   background: #ffffff;
@@ -2026,11 +2060,30 @@ button {
 }
 .single-news__title {
   max-width: 87%;
+  display: flex;
 }
 .single-news__title p,
-.single-news__title em {
+.single-news__title em,
+.single-news__title strong {
   text-align: start;
   font-size: 4.286rem;
+}
+.single-news__counter {
+  margin: 0.3rem 0 0 1.143rem;
+  display: flex;
+  gap: 0.286rem;
+}
+.single-news__counter::after {
+  counter-increment: section;
+  content: "0.0" counter(section);
+}
+.single-news__counter::before {
+  content: "";
+  margin-top: 0.1rem;
+  width: 0.643rem;
+  height: 0.786rem;
+  background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 9 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.24528 11H0L4.75472 5.5L0 0H4.24528L9 5.5L4.24528 11Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
 }
 .single-news__time {
   align-self: flex-end;
@@ -2229,6 +2282,190 @@ button {
 }
 .services-cards__last-title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+
+.project {
+  padding: 11.571rem 0 8.571rem 0;
+}
+.project:has(.projects-slider) .projects-slider {
+  padding: 0 0 8.5rem 0;
+}
+.project:has(.projects-slider) .swiper {
+  padding-bottom: 0.8rem;
+}
+.project__top {
+  margin-bottom: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.project__title h1 {
+  max-width: 70rem;
+}
+.project__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project__link a {
+  margin-top: 0.4rem;
+  max-width: 20rem;
+  align-self: flex-end;
+}
+.project__link p {
+  margin-bottom: 0.8rem;
+  opacity: 0.3;
+}
+.project__image {
+  margin: 0 -1.714rem 13.2rem -1.714rem;
+  height: 52rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.project__image img {
+  width: 100%;
+  height: 100%;
+}
+.project__img--error {
+  width: 50rem !important;
+  height: 50rem !important;
+  object-fit: contain !important;
+}
+.project__box {
+  margin-bottom: 4.8rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.project__box ul {
+  width: 40.786rem;
+  position: absolute;
+  right: 0;
+  top: -24rem;
+  padding: 2.5rem 2.8rem 1.03rem 2.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  background-color: #ffffff;
+}
+.project__box ul li:first-of-type h3 {
+  font-size: 4.286rem;
+}
+.project__box ul li:not(:last-child) {
+  border-bottom: 0.071rem solid rgba(24, 24, 24, 0.05);
+}
+.project__info p,
+.project__info em {
+  font-size: 4.286rem;
+}
+.project__parameter {
+  margin-bottom: 0.7rem;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.project__category {
+  margin-bottom: 1.714rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  font-weight: 550;
+  line-height: 1;
+  color: #f41b1b;
+}
+.project__slider {
+  margin-bottom: 10.3rem;
+  height: 41.9rem;
+}
+.project__slider img {
+  height: 35.429rem;
+}
+.project__start {
+  margin-bottom: 7.4rem;
+  display: flex;
+  gap: 5.357rem;
+}
+.project__start h3 {
+  display: flex;
+  gap: 1rem;
+}
+.project__start h3 p,
+.project__start h3 em {
+  width: 45.6rem;
+  font-size: 4.286rem;
+  text-align: start;
+}
+.project__start h3 svg {
+  margin-top: 0.5rem;
+  width: 2.571rem;
+  height: 3.071rem;
+}
+.project__start-text {
+  margin-top: 0.4rem;
+  width: 32.286rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  font-weight: 550;
+}
+.project__start-text strong {
+  color: #f41b1b;
+}
+.project__start-text p {
+  margin-bottom: 1.25rem;
+}
+.project__image-center {
+  margin: 0 -1.714rem 8.3rem -1.714rem;
+}
+.project__image-center img {
+  height: 49.786rem;
+}
+.project__advantages {
+  margin-bottom: 8.4rem;
+}
+.project__advantages h3 {
+  margin-bottom: 3.1rem;
+}
+.project__advantages h3 p,
+.project__advantages h3 em {
+  font-size: 4.286rem;
+}
+.project__advantages ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1.143rem;
+  row-gap: 4.6rem;
+}
+.project__advantages ul h4 {
+  margin-bottom: 1.1rem;
+  font-size: 1.929rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  font-weight: 550;
+  line-height: 1;
+}
+.project__advantages ul p {
+  width: 33.5rem;
+}
+.project__line {
+  margin-bottom: 1.143rem;
+  display: flex;
+  align-items: center;
+}
+.project__line svg {
+  width: 0.714rem;
+  height: 0.857rem;
+}
+.project__line div {
+  width: 100%;
+  height: 0.071rem;
+  background-color: rgba(24, 24, 24, 0.1);
+}
+.project__others {
+  margin-bottom: 3.2rem;
+}
+.project__others p,
+.project__others em {
+  font-size: 4.286rem;
 }
 
 .header {
@@ -2661,7 +2898,7 @@ button {
 .hero__wrapper {
   margin: 5.8rem 0 8.58rem 0;
   padding: 5.4rem 0;
-  height: 90.5dvh;
+  height: 89.8dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2672,8 +2909,14 @@ button {
   background-repeat: no-repeat;
 }
 .hero__title {
-  margin-bottom: 1.39rem;
+  width: 49.5rem;
+  margin: 0 auto 1.39rem auto;
   text-align: center;
+}
+.hero__title p,
+.hero__title strong,
+.hero__title em {
+  font-size: 4.286rem;
 }
 .hero__desc {
   width: 18.6rem;
@@ -2685,19 +2928,20 @@ button {
 }
 .hero__inner {
   margin-bottom: 8.857rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 33.5rem;
 }
 .hero__text {
+  margin: 0 auto;
   width: 26.2rem;
   text-align: center;
 }
 .hero__phone {
-  padding: 0.1rem;
+  padding-right: 0.1rem;
   width: 3.071rem;
   height: 3.071rem;
+  position: fixed;
+  right: 1.714rem;
+  bottom: 18dvh;
+  z-index: 99;
 }
 .hero__phone svg {
   transition: all 0.3s ease-in-out;
@@ -2755,6 +2999,9 @@ button {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 1151 1187' fill='none' xmlns='http://www.w3.org/2000/svg' id='about-svg'%3E%3Cg opacity='0.15'%3E%3Cpath d='M370.51 211.163L271.701 1H748.492C935.131 1 1140.59 115.492 1140.59 393.097C1140.59 615.182 981.659 732.393 902.194 763.238L1150 1186.7H913.173L561.853 590.715H748.492C801.817 590.715 935.13 562.484 935.13 393.097C935.13 257.588 810.705 215.346 748.492 211.163H370.51Z' stroke='black' /%3E%3Cpath d='M414.356 779.778L20.213 15.9863L-587.703 1185.06H-336.075L20.213 474.707L171.635 779.778H414.356Z' stroke='black' /%3E%3Cpath d='M512.327 982.47H278.205L379.712 1190.4H622.02L512.327 982.47Z' stroke='black' /%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
+}
+.about__title p {
+  text-align: start;
 }
 .about__box {
   display: flex;
@@ -2868,6 +3115,9 @@ button {
   position: relative;
   height: 53.1rem;
 }
+.services:has(.swiper) .swiper {
+  padding-bottom: 0;
+}
 .services__title {
   position: relative;
   margin: 2.5rem 0;
@@ -2876,7 +3126,8 @@ button {
 .services__title em,
 .services__title strong,
 .services__title span {
-  color: #f9f9f9;
+  font-size: 4.286rem;
+  color: #ffffff;
 }
 .services__title:before {
   content: "";
@@ -3005,7 +3256,7 @@ button {
   gap: 0.75rem;
   align-items: center;
   position: absolute;
-  bottom: 2.8rem;
+  bottom: 3.3rem;
   left: 40.2rem;
   z-index: 8;
 }
@@ -3047,6 +3298,11 @@ button {
   margin-bottom: 3.15rem;
   display: flex;
   gap: 1rem;
+}
+.projects-part__title p,
+.projects-part__title strong,
+.projects-part__title em {
+  font-size: 4.286rem;
 }
 .projects-part__counter {
   margin-top: 0.3rem;
@@ -3170,7 +3426,7 @@ button {
 .projects-card__category {
   background-color: #f41b1b;
   color: #ffffff;
-  padding: 0.5rem 0.571rem;
+  padding: 0.5rem 0.571rem 0.4rem 0.571rem;
   border-radius: 3.857rem;
   text-transform: uppercase;
   font-size: 0.786rem;
@@ -3186,7 +3442,7 @@ button {
   border-radius: 1.25rem;
 }
 .contact__wrapper {
-  margin-bottom: 7.5rem;
+  margin-bottom: 8.3rem;
   padding: 2.7rem 0 2.9rem 0;
   height: 76.05rem;
   display: flex;
@@ -3526,7 +3782,7 @@ button {
 }
 
 .news-slider {
-  padding-bottom: 11.143rem;
+  padding-bottom: 14.7rem;
   margin-right: -1.714rem;
 }
 .news-slider:has(.swiper-pagination) .swiper-pagination {
@@ -3624,7 +3880,7 @@ button {
 .news-card__category {
   background-color: #f41b1b;
   color: #ffffff;
-  padding: 0.5rem 0.571rem;
+  padding: 0.5rem 0.571rem 0.4rem 0.571rem;
   border-radius: 3.857rem;
   text-transform: uppercase;
   font-size: 0.786rem;

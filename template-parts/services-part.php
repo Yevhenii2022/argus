@@ -7,9 +7,9 @@ $title = get_field('services-part_title');
         <div class="services__cover">
             <div class="container">
                 <?php if ($title) : ?>
-                    <div class="services__title title">
+                    <h3 class="services__title title">
                         <?= $title ?>
-                    </div>
+                    </h3>
                 <?php endif; ?>
             </div>
         </div>
@@ -64,4 +64,7 @@ $title = get_field('services-part_title');
         </a>
 
     </div>
+
+    <?php get_template_part('template-parts/move-line'); ?>
+
 </section>

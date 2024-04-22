@@ -2,7 +2,7 @@
 	&__wrapper {
 		margin: 5.8rem 0 8.58rem 0;
 		padding: 5.4rem 0;
-		height: 90.5dvh;
+		height: 89.8dvh;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -14,8 +14,15 @@
 	}
 
 	&__title {
-		margin-bottom: 1.39rem;
+		width: 49.5rem;
+		margin: 0 auto 1.39rem auto;
 		text-align: center;
+
+		p,
+		strong,
+		em {
+			font-size: 4.286rem;
+		}
 	}
 
 	&__desc {
@@ -30,21 +37,22 @@
 
 	&__inner {
 		margin-bottom: 8.857rem;
-		display: flex;
-		justify-content: flex-end;
-		align-items: flex-end;
-		gap: 33.5rem;
 	}
 
 	&__text {
+		margin: 0 auto;
 		width: 26.2rem;
 		text-align: center;
 	}
 
 	&__phone {
-		padding: 0.1rem;
+		padding-right: 0.1rem;
 		width: 3.071rem;
 		height: 3.071rem;
+		position: fixed;
+		right: 1.714rem;
+		bottom: 18dvh;
+		z-index: 99;
 		svg {
 			transition: $transition;
 
