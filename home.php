@@ -23,10 +23,10 @@ get_header();
       $slider_title = get_field('news_title');
       ?>
       <?php if ($slider_title) : ?>
-        <h2 class="single-news__title title">
+        <h3 class="single-news__title title">
           <?= $slider_title; ?>
           <div class="single-news__counter"></div>
-        </h2>
+        </h3>
       <?php endif; ?>
 
       <a href="<?php echo esc_url(get_home_url() . '/news/'); ?>" class="single-news__button button">

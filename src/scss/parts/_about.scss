@@ -20,6 +20,12 @@
 	// 	}
 	// }
 
+	&__title {
+		p {
+			text-align: start;
+		}
+	}
+
 	&__box {
 		display: flex;
 		flex-direction: column;

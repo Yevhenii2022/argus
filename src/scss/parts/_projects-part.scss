@@ -5,6 +5,11 @@
 		margin-bottom: 3.15rem;
 		display: flex;
 		gap: 1rem;
+		p,
+		strong,
+		em {
+			font-size: 4.286rem;
+		}
 	}
 
 	&__counter {

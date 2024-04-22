@@ -4,6 +4,7 @@
 	line-height: 0.988;
 	font-weight: 550;
 	text-transform: uppercase;
+
 	@include media(mobile) {
 		font-size: 2.857rem;
 	}
@@ -50,5 +51,16 @@
 		text-transform: uppercase;
 		font-family: $medium;
 		line-height: 1;
+	}
+}
+
+.anim-title {
+	transform: translateY(4.286rem);
+	opacity: 0;
+	transition: all 0.7s ease-in-out;
+
+	&._active {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }

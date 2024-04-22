@@ -36,6 +36,12 @@ body {
 		background-color: #b8b2b2;
 	}
 }
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 button {
 	background-color: transparent;
 	border: none;
