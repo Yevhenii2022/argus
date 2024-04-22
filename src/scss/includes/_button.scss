@@ -27,6 +27,7 @@
 
 		&:after {
 			content: '';
+			margin-bottom: 0.1rem;
 			width: 0.357rem;
 			height: 0.357rem;
 			background: $white;
@@ -36,6 +37,7 @@
 
 		&:before {
 			content: '';
+			margin-bottom: 0.1rem;
 			width: 0.357rem;
 			height: 0.357rem;
 			background: $white;
@@ -70,7 +72,6 @@
 		font-size: 0.786rem;
 		line-height: 1;
 		text-transform: uppercase;
-		// width: 3.571rem;
 		padding-bottom: 2.1rem;
 		position: relative;
 		overflow: hidden;

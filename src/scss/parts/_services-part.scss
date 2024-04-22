@@ -3,6 +3,12 @@
 	position: relative;
 	height: 53.1rem;
 
+	&:has(.swiper) {
+		.swiper {
+			padding-bottom: 0;
+		}
+	}
+
 	&__title {
 		position: relative;
 		margin: 2.5rem 0;
@@ -11,7 +17,8 @@
 		em,
 		strong,
 		span {
-			color: $light;
+			font-size: 4.286rem;
+			color: $white;
 		}
 
 		&:before {
@@ -177,7 +184,7 @@
 		gap: 0.75rem;
 		align-items: center;
 		position: absolute;
-		bottom: 2.8rem;
+		bottom: 3.3rem;
 		left: 40.2rem;
 		z-index: 8;
 	}

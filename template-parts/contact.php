@@ -31,12 +31,12 @@ $img = get_field('contact_img');
 
                 <div class="contact__middle">
                     <?php if ($title) : ?>
-                        <div class="contact__title">
+                        <h2 class="contact__title anim-title _anim-items">
                             <?= $title ?>
-                        </div>
+                        </h2>
                     <?php endif; ?>
 
-                    <a href='#' class="contact__button">
+                    <a href='#contact-us' class="contact__button">
                         <div class="contact__link link">
                             <span>
                                 <?php pll_e('contact_with_us'); ?>

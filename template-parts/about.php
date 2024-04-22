@@ -2,7 +2,6 @@
 $video = get_field('about_video');
 $desc = get_field('about_desc') ?? '';
 $title = get_field('about_title') ?? '';
-$subtitle = get_field('about_subtitle') ?? '';
 ?>
 
 <section id="about" class="about">
@@ -51,8 +50,8 @@ $subtitle = get_field('about_subtitle') ?? '';
                             <?php
                             $small_logo = get_field('small_logo');
                             if ($small_logo) {
-                                $svg_url = wp_get_attachment_url($small_logo);
-                                $svg_content = file_get_contents($svg_url);
+                                $file_path = get_attached_file($small_logo);
+                                $svg_content = file_get_contents($file_path);
                                 if ($svg_content !== false) :
                             ?>
                                     <?= $svg_content; ?>
@@ -75,12 +74,7 @@ $subtitle = get_field('about_subtitle') ?? '';
                 </div>
 
                 <?php if ($title) : ?>
-                    <div>
-                        <h1 class="main__title"><?= $title ?></h1>
-                        <?php if ($subtitle) : ?>
-                            <h1 class="main__title main__title--italic"><?= $subtitle ?></h1>
-                        <?php endif; ?>
-                    </div>
+                    <h2 class="about__title title anim-title _anim-items"><?= $title ?></h2>
                 <?php endif; ?>
             </div>
 
