@@ -26,18 +26,18 @@
     }
 
     &__logo {
-        width: 6.063rem;
-        height: 2.081rem;
+        width: 7.071rem;
+        height: 2.357rem;
         @include media(mobile) {
-            width: 6.643rem;
-            height: 2.357rem;
             opacity: 0.65;
         }
-        
-
         img {
-            width: 100%;
+            min-width: 100%;
             object-fit: contain;
+            width: 7.071rem;
+            height: 2.357rem;
+            min-height: 100%;
+            max-width: initial;
         }
     }
 

@@ -12,7 +12,7 @@
 ?>
 
 <?php $facebook = get_field('facebook', 'options') ;
-      $viber = get_field('viber', 'options') ;
+      $whatsapp = get_field('whatsapp', 'options') ;
       $telegram = get_field('telegram', 'options') ;
       $email = get_field('email', 'options') ;
       $emailItem = $email['email'] ?? '' ;
@@ -32,19 +32,19 @@
                          $facebookIcon = $facebook['facebook_icon'] ?? '' ;
                          $facebookLink = $facebook['facebook_link'] ?? '' ;
                          if ($facebookLink && $facebookIcon) : ?>
-                        <a href="<?= $facebookLink?>" class="footer__icon">
+                        <a href="<?= $facebookLink?>" class="footer__icon" target="_blank">
                             <img src='<?php echo $facebookIcon['url']; ?>' alt='<?php echo $facebookIcon['alt']; ?>' />
                         </a>
                         <?php endif ?>
                         <?php
-							$numberViber = $viber['viber_number'] ?? '';
-                            $viberIcon  = $viber['viber_icon'] ?? '';
-							$cleanedNumberViber = preg_replace('/\s+/', '', $numberViber);
-							$cleanedNumberViber = preg_replace('/\D/', '', $cleanedNumberViber);
+							$numberWhatsapp = $whatsapp['whatsapp_number'] ?? '';
+                            $whatsappIcon  = $whatsapp['whatsapp_icon'] ?? '';
+							$cleanedNumberWhatsapp = preg_replace('/\s+/', '', $numberWhatsapp);
+							$cleanedNumberWhatsapp = preg_replace('/\D/', '', $cleanedNumberWhatsapp);
 							?>
-                        <?php if ($numberViber) : ?>
-                        <a href="tel:+<?= $cleanedNumberViber ?>" class="footer__icon">
-                            <img src='<?php echo $viberIcon['url']; ?>' alt='<?php echo $viberIcon['alt']; ?>' />
+                        <?php if ($numberWhatsapp) : ?>
+                        <a href="https://wa.me/+<?= $cleanedNumberWhatsapp ?>" class="footer__icon" target="_blank">
+                            <img src='<?php echo $whatsappIcon['url']; ?>' alt='<?php echo $whatsappIcon['alt']; ?>' />
                         </a>
                         <?php endif ?>
                         <?php
@@ -54,7 +54,7 @@
 							$cleanedNumberTelegram = preg_replace('/\D/', '', $cleanedNumberTelegram);
 							?>
                         <?php if ($numberTelegram) : ?>
-                        <a href="tel:+<?= $cleanedNumberTelegram ?>" class="footer__icon">
+                        <a href="https://t.me/+<?= $cleanedNumberTelegram ?>" class="footer__icon" target="_blank">
                             <img src='<?php echo $telegramIcon['url']; ?>' alt='<?php echo $telegramIcon['alt']; ?>' />
                         </a>
                         <?php endif ?>

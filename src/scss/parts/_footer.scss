@@ -40,6 +40,16 @@
     width: 7.071rem;
     margin-bottom: 2.6rem;
 
+    img{
+      width: 7.071rem;
+      height: 2.357rem;
+      @include media(mobile) {
+       
+        height: 3.143rem;
+        width: 9.143rem;
+      }
+    }
+
     @include media(mobile) {
       margin-bottom: 0;
       height: 3.143rem;
@@ -68,7 +78,7 @@
 
     &:hover,
     &:focus {
-      transform: scale(2);
+      transform: scale(1.2);
     }
   }
 

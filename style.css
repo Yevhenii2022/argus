@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -604,6 +604,10 @@ button {
 .about-banner__item-text {
   line-height: 120%;
   width: 16.429rem;
+}
+
+.about-projects__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
 .about-stages {
@@ -1233,6 +1237,210 @@ button {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
+.service-advantages__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  height: 57.286rem;
+  gap: 3.071rem;
+  justify-content: flex-end;
+}
+.service-advantages__title {
+  max-width: 46rem;
+  position: relative;
+}
+.service-advantages__title p {
+  padding-left: 3.5rem;
+}
+.service-advantages__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  margin-left: -3.5rem;
+}
+.service-advantages__title::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  position: absolute;
+  left: 0;
+  height: 3.071rem;
+  width: 2.571rem;
+}
+.service-advantages__image {
+  max-width: 52rem;
+  height: 100%;
+}
+.service-advantages__image img {
+  height: 100%;
+}
+.service-advantages__slider {
+  position: absolute;
+  background-color: #f41b1b;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  width: 55.071rem;
+  height: 41.214rem;
+}
+.service-advantages__item {
+  counter-increment: item;
+  padding: 2.857rem 1.714rem 2.857rem 2.857rem;
+}
+.service-advantages__item::after {
+  content: counter(item, decimal-leading-zero) ". ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 2.857rem;
+  padding-right: 1.714rem;
+  font-size: 4.286rem;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  line-height: 100%;
+}
+.service-advantages__heading {
+  font-size: 2rem;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  text-transform: uppercase;
+  line-height: 100%;
+  margin-bottom: 11.143rem;
+  max-width: 33.714rem;
+}
+.service-advantages__heading em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.service-advantages__description {
+  max-width: 37.929rem;
+  line-height: 120%;
+  font-size: 1.429rem;
+}
+.service-advantages__arrow--prev::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='61' height='61' fill='none'%3E%3Ccircle cx='30.5' cy='30.5' r='30' stroke='%23fff'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m27.47 23.708-7.842 7.842m0 0 7.749 7.75m-7.75-7.75 21.04-.126'/%3E%3C/svg%3E");
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4.357rem;
+  height: 4.357rem;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.service-advantages__arrow--prev:hover::before {
+  transform: scale(1.1);
+}
+.service-advantages__arrow--next::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='61' height='61' fill='none'%3E%3Ccircle cx='30.5' cy='30.5' r='30' stroke='%23fff' transform='rotate(-180 30.5 30.5)'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' d='m33.53 37.292 7.842-7.842m0 0-7.749-7.75m7.75 7.75-21.04.126'/%3E%3C/svg%3E");
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4.357rem;
+  height: 4.357rem;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.service-advantages__arrow--next:hover::before {
+  transform: scale(1.1);
+}
+.service-advantages__navigation {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  position: absolute;
+  bottom: 2.8rem;
+  left: 2.857rem;
+  z-index: 8;
+}
+
+.service-advantages__pagination {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 4.286rem;
+  left: initial;
+  right: 1.714rem;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.swiper-pagination-current {
+  margin-right: 3rem;
+  position: relative;
+}
+.swiper-pagination-current::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1.02rem;
+  width: 2rem;
+  height: 0.071rem;
+  background-color: #ffffff;
+}
+
+.service-projects {
+  padding-top: 8.571rem;
+}
+.service-projects__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+
+.service-work {
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+.service-work__title {
+  margin-bottom: 5rem;
+  width: 50%;
+}
+.service-work__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.service-work__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 29.643rem;
+  padding: 1.821rem 1.393rem 1.821rem 1.821rem;
+  counter-increment: item;
+}
+.service-work__card::after {
+  content: counter(item, decimal-leading-zero) ". ";
+  position: absolute;
+  top: 25px;
+  left: -14px;
+  font-size: 1rem;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  line-height: 100%;
+  border-radius: 100%;
+  padding: 7.27px 3.49px 6.2px 4.41px;
+}
+.service-work__card:nth-child(odd) {
+  background-color: #ededed;
+}
+.service-work__card:nth-child(odd)::after {
+  background-color: #f41b1b;
+  color: #ffffff;
+}
+.service-work__card:nth-child(even) {
+  background-color: #f41b1b;
+  color: #ffffff;
+}
+.service-work__card:nth-child(even)::after {
+  background-color: #ededed;
+  color: #181818;
+}
+.service-work__image {
+  width: 8.786rem;
+  height: 8.786rem;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.service-work__heading {
+  font-size: 1.929rem;
+  text-transform: uppercase;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+
 .projects {
   padding: 11.571rem 0 8.571rem 0;
 }
@@ -1430,6 +1638,10 @@ button {
 .about-banner__item-text {
   line-height: 120%;
   width: 16.429rem;
+}
+
+.about-projects__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
 .about-stages {
@@ -2346,19 +2558,21 @@ button {
   }
 }
 .header__logo {
-  width: 6.063rem;
-  height: 2.081rem;
+  width: 7.071rem;
+  height: 2.357rem;
 }
 @media (max-width: 541px) {
   .header__logo {
-    width: 6.643rem;
-    height: 2.357rem;
     opacity: 0.65;
   }
 }
 .header__logo img {
-  width: 100%;
+  min-width: 100%;
   object-fit: contain;
+  width: 7.071rem;
+  height: 2.357rem;
+  min-height: 100%;
+  max-width: initial;
 }
 .header__content {
   display: flex;
@@ -3421,6 +3635,16 @@ button {
   width: 7.071rem;
   margin-bottom: 2.6rem;
 }
+.footer__logo img {
+  width: 7.071rem;
+  height: 2.357rem;
+}
+@media (max-width: 541px) {
+  .footer__logo img {
+    height: 3.143rem;
+    width: 9.143rem;
+  }
+}
 @media (max-width: 541px) {
   .footer__logo {
     margin-bottom: 0;
@@ -3449,7 +3673,7 @@ button {
   }
 }
 .footer__icon:hover, .footer__icon:focus {
-  transform: scale(2);
+  transform: scale(1.2);
 }
 .footer__menu {
   display: flex;
@@ -3599,7 +3823,7 @@ button {
 }
 
 .projects-slider {
-  padding: 17.643rem 0 7.929rem 0;
+  padding: 2.857rem 0 7.929rem 0;
 }
 .projects-slider__title {
   margin-bottom: 2.857rem;
@@ -4018,7 +4242,7 @@ button {
   height: 27.071rem;
   min-width: 17.929rem;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
 }
 @media (max-width: 541px) {

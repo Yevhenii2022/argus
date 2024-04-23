@@ -70,10 +70,10 @@ get_header();
     </section>
 
     <?php $projectsTitle = get_field('slider_title') ?? '' ;?>
-    <section class="projects-slider__section-title">
+    <section class="about-projects">
         <div class="container">
         <?php if ($projectsTitle) : ?>
-            <div class="projects-slider__title main__title main__title--sm">
+            <div class="about-projects__title main__title main__title--sm">
                 <?= $projectsTitle ;?>
             </div>
         <?php endif; ?>
@@ -163,7 +163,7 @@ get_header();
           $missionText = get_field('mission_text') ?? '' ;
           $missionSubText = get_field('mission_subtext') ?? '' ;
           $missionVid = get_field('mission_video') ?? '' ;
-          $missionIcon = get_field('small_logo', 'options') ?? '';
+          $missionIcon = get_field('default_picture', 'options') ?? '';
 
           if( $missionBackground  || $missionTitle || $missionText || $missionSubText || $missionVid || $missionIcon): 
     ?>
