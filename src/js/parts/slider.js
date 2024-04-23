@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		loop: false,
 		watchSlidesProgress: true,
 		slidesPerView: 1,
-		
+
 		pagination: {
 			el: '.service-advantages__pagination',
 			type: 'fraction',
@@ -135,17 +135,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	const workSwiper = new Swiper('.service-work__swiper', {
-		slidesPerView: 4,
-		spaceBetween: 30,
+		slidesPerView: 4.285,
 		centeredSlides: true,
 		mousewheel: true,
 	});
-	
+
 
 	if (window.innerWidth < 541) {
 		const aboutSlider = new Swiper('.about-banner__slider', {
 			slidesPerView: 1,
-			spaceBetween: 8,
+			spaceBetween: 1,
 			// autoplay:true,
 			watchSlidesProgress: true,
 			navigation: {

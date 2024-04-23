@@ -63,31 +63,11 @@ get_header(); ?>
                 <?php
                     while ($services_query->have_posts()) : $services_query->the_post();
                     ?>
-                        <div class="services-cards__item">
-                           <div class="services-cards__image">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-                            <?php endif; ?>
-                           </div>
-                            <h2>
-                                <?php the_title(); ?>
-                            </h2>
-                            <div class="services-cards__item-text">
-                                <?php the_excerpt(); ?>
-                            </div>
-                            <a href="<?php the_permalink(); ?>" class="services-cards__item-link link">
-                                <?php pll_e('services_post_link') ?>
-                            </a>
-                                                  
-                        </div>
-
-                        
-
+                        <?php get_template_part('template-parts/service-card'); ?>
                     <?php endwhile;
                     wp_reset_postdata();
                     ?>
-            
-        <?php endif; ?>
+                <?php endif; ?>
                     <div class="services-cards__last">
                     <?php $lastCard = get_field('last_title') ?? '' ;
                     if ($lastCard) : ?>

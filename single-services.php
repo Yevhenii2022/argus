@@ -198,7 +198,8 @@
 
   <?php $workTitle = get_field('work_title') ?? '';
         $workBackground = get_field('work_bg') ?? '';
-        if( $workTitle || $workBackground ): ?>
+        $workVideo = get_field('work_video') ?? '' ;
+        if( $workTitle || $workBackground || $workVideo ): ?>
  <section class="service-work" style=" background-image: url('<?php echo esc_url($workBackground); ?>');">
     <div class="container container--slider">
       <div class="service-work__wrapper">
@@ -237,11 +238,57 @@
             <?php endwhile?>
           </div>
         </div>
+        <div class="service-work__video">
+        <?php if( $workVideo ): ?>
+            <video preload="auto" no-controls autoplay loop playsinline muted>
+                <source src="<?php echo $workVideo['url']; ?>" type="<?php echo $workVideo['mime_type']; ?>">
+                Your browser does not support the video tag.
+            </video>
+        <?php endif; ?>
+        </div>
       </div>
     </div>
   </section>
   <?php endif; ?>
 
+  <?php $otherTitle = get_field('other_title') ?? '';?>
+  <section class="service-cards">
+        <div class="container">
+          <div class="service-cards__wrapper">
+            <div class="service-cards__heading">
+            <?php if( $otherTitle ): ?>
+              <h2 class="service-cards__title main__title main__title--sm">
+                <?= $otherTitle ;?>
+              </h2>
+            <?php endif; ?>
+              <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="service-cards__button button">
+                  <div class="button__wrapper">
+                      <p><?php pll_e('services') ?></p>
+                  </div>
+              </a>
+            </div>
+          </div>
+            <div class="service-cards__box">
+                <?php
+                $args = array(
+                    'post_type' => 'services',
+                    'posts_per_page' => 2,
+                );
+                $services_query = new WP_Query($args);
+                if ($services_query->have_posts()) :
+                ?>
+                <?php
+                    while ($services_query->have_posts()) : $services_query->the_post();
+                    ?>
+                        <?php get_template_part('template-parts/service-card'); ?>
+                    <?php endwhile;
+                    wp_reset_postdata();
+                    ?>
+                <?php endif; ?>
+            </div>
+          </div>
+        </div>
+  </section>        
   <?php get_template_part('template-parts/contact-us'); ?>
 </main>
 
