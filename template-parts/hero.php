@@ -17,7 +17,7 @@ $bg = get_field('hero_bg');
                 <?php endif; ?>
 
                 <?php if ($desc) : ?>
-                    <p class="hero__desc"><?= $desc ?></p>
+                    <p class="hero__desc anim-title _anim-items"><?= $desc ?></p>
                 <?php endif; ?>
 
                 <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="hero__button button">
@@ -30,7 +30,7 @@ $bg = get_field('hero_bg');
             <div>
                 <div class="hero__inner">
                     <?php if ($text) : ?>
-                        <p class="hero__text"><?= $text ?></p>
+                        <p class="hero__text anim-title _anim-items"><?= $text ?></p>
                     <?php endif; ?>
 
                     <?php

@@ -62,7 +62,6 @@ $title = get_field('services-part_title');
                 <p><?php pll_e('look_services_button') ?></p>
             </div>
         </a>
-
     </div>
 
     <?php get_template_part('template-parts/move-line'); ?>

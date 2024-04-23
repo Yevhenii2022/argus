@@ -20,7 +20,9 @@ $title = get_field('about_title') ?? '';
                     </g>
                 </svg> -->
             <!-- </div> -->
-
+            <div class="about--hide">
+                <div class="about__top-counter"></div>
+            </div>
             <div class="about__box">
                 <div class="about__top">
                     <?php if ($video) : ?>
@@ -44,25 +46,27 @@ $title = get_field('about_title') ?? '';
 
                     <div class="about__top-content">
 
-                        <div class="about__top-inner">
-                            <div class="about__top-counter"></div>
+                        <div class="about--show">
+                            <div class="about__top-inner">
+                                <div class="about__top-counter"></div>
 
-                            <?php
-                            $small_logo = get_field('small_logo');
-                            if ($small_logo) {
-                                $file_path = get_attached_file($small_logo);
-                                $svg_content = file_get_contents($file_path);
-                                if ($svg_content !== false) :
-                            ?>
-                                    <?= $svg_content; ?>
-                            <?php
-                                endif;
-                            }
-                            ?>
+                                <?php
+                                $small_logo = get_field('small_logo');
+                                if ($small_logo) {
+                                    $file_path = get_attached_file($small_logo);
+                                    $svg_content = file_get_contents($file_path);
+                                    if ($svg_content !== false) :
+                                ?>
+                                        <?= $svg_content; ?>
+                                <?php
+                                    endif;
+                                }
+                                ?>
+                            </div>
                         </div>
 
                         <?php if ($desc) : ?>
-                            <p class="about__top-desc"><?= $desc ?></p>
+                            <p class="about__top-desc anim-title _anim-items"><?= $desc ?></p>
                         <?php endif; ?>
 
                         <a href="<?php echo esc_url(get_home_url() . '/about/'); ?>" class="about__top-link link" style="width: <?php echo (pll_current_language() === 'en') ? '3.97rem' : '3.571rem'; ?>">

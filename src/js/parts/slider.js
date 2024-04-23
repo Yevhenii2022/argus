@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const newsSlider = new Swiper('.news-slider__swiper', {
 		loop: true,
 		watchSlidesProgress: true,
-		slidesPerView: 2.44,
-		spaceBetween: 16,
+		slidesPerView: 1.1,
+		spaceBetween: 8,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -88,6 +88,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'progressbar',
+		},
+		breakpoints: {
+			541: {
+				spaceBetween: 16,
+				slidesPerView: 2.44,
+			},
 		},
 	});
 
@@ -139,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		centeredSlides: true,
 		mousewheel: true,
 	});
-
 
 	if (window.innerWidth < 541) {
 		const aboutSlider = new Swiper('.about-banner__slider', {

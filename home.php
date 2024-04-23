@@ -17,7 +17,7 @@ get_header();
 
   <?php get_template_part('template-parts/contact'); ?>
 
-  <div class="container">
+  <div class="single-news__container container">
     <div class="single-news__box">
       <?php
       $slider_title = get_field('news_title');

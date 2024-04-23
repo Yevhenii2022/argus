@@ -1,7 +1,7 @@
 .hero {
 	&__wrapper {
-		margin: 5.8rem 0 8.58rem 0;
-		padding: 5.4rem 0;
+		margin: 5.8rem -0.571rem 8.58rem -0.571rem;
+		padding: 5.4rem 1.714rem;
 		height: 89.8dvh;
 		display: flex;
 		flex-direction: column;
@@ -18,10 +18,18 @@
 		margin: 0 auto 1.39rem auto;
 		text-align: center;
 
+		@include media(mobile) {
+			width: 100%;
+		}
+
 		p,
 		strong,
 		em {
 			font-size: 4.286rem;
+
+			@include media(mobile) {
+				font-size: 2.857rem;
+			}
 		}
 	}
 
@@ -37,12 +45,20 @@
 
 	&__inner {
 		margin-bottom: 8.857rem;
+
+		@include media(mobile) {
+			margin-bottom: 4.571rem;
+		}
 	}
 
 	&__text {
 		margin: 0 auto;
 		width: 26.2rem;
 		text-align: center;
+
+		@include media(mobile) {
+			width: 100%;
+		}
 	}
 
 	&__phone {
@@ -52,7 +68,12 @@
 		position: fixed;
 		right: 1.714rem;
 		bottom: 18dvh;
-		z-index: 99;
+		z-index: 9;
+
+		@include media(mobile) {
+			display: none;
+		}
+
 		svg {
 			transition: $transition;
 
