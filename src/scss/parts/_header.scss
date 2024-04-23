@@ -91,10 +91,17 @@
        
     }
 
+    &__contacts{
+        display: flex;
+        align-items: center;
+        gap: 1.143rem;
+    }
+    
     &__phone {
         display: flex;
         align-items: center;
         gap: 1.5rem;
+        position: relative;
 
         span {
             font-size: 0.786rem;
@@ -105,6 +112,56 @@
             }
         }
 
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 0;
+            height: 0.071rem;
+            background-color: $black;
+            transition: width 0.5s;
+            bottom: 0;
+          }
+    
+          &:hover:after {
+            content: '';
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            height: 0.071rem;
+            background-color: $black;
+            transition: width 0.5s;
+          }
+
+        // &-img {
+        //     display: inline-block;
+        //     width: 0.857rem;
+        //     height: 0.857rem;
+        //     position: relative;
+        //     transition: $transition;
+
+        //     &::before {
+        //         content: "";
+        //         display: inline-block;
+        //         width: 2.286rem;
+        //         height: 2.286rem;
+        //         background: rgba(24, 24, 24, 0.05);
+        //         border-radius: 2.286rem;
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 50%;
+        //         transform: translate(-50%, -50%);
+        //     }
+        // }
+
+        // &:hover .header__phone-img {
+        //     transform: scale(1.2);
+        // }
+    }
+
+    &__whatsapp{
         &-img {
             display: inline-block;
             width: 0.857rem;
@@ -124,10 +181,9 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-        }
-
-        &:hover .header__phone-img {
-            transform: scale(1.2);
+            &:hover{
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -235,7 +291,6 @@
         white-space: nowrap;
         padding: 2.25rem 0;
         position: relative;
-        line-height: 100%;
         width: fit-content;
         &:after {
             content: '';
@@ -341,34 +396,34 @@
             a{
                 padding: 0;
                 width: fit-content;
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    right: 0;
-                    width: 0;
-                    height: 0.071rem;
-                    background-color: $black;
-                    transition: width 0.5s;
-                  }
+                // &:after {
+                //     content: '';
+                //     display: block;
+                //     position: absolute;
+                //     right: 0;
+                //     width: 0;
+                //     height: 0.071rem;
+                //     background-color: $black;
+                //     transition: width 0.5s;
+                //   }
             
-                  &:hover:after {
-                    content: '';
-                    width: 100%;
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    height: 0.071rem;
-                    background-color: $black;
-                    transition: width 0.5s;
-                  }
+                //   &:hover:after {
+                //     content: '';
+                //     width: 100%;
+                //     display: block;
+                //     position: absolute;
+                //     left: 0;
+                //     height: 0.071rem;
+                //     background-color: $black;
+                //     transition: width 0.5s;
+                //   }
                 
                 @include media(mobile) {
                     font-size: 1rem;
                 }
                 
             }
-        }
+        } 
 
         &:hover,
         &:focus{
