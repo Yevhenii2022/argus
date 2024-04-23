@@ -6,6 +6,11 @@
 		.swiper-pagination {
 			width: 90.5%;
 			left: 49%;
+
+			@include media(mobile) {
+				width: 85.5%;
+				left: 46%;
+			}
 		}
 		.swiper-button-next {
 			right: 1.4rem;

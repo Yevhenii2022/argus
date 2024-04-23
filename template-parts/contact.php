@@ -6,7 +6,7 @@ $img = get_field('contact_img');
 ?>
 
 <div class="image-container" cursor-class="arrow">
-    <a href='#contact-us'>
+    <a href="#contact-us" id="contact-link">
         <section class="contact">
             <?php if ($img) : ?>
                 <style>
@@ -68,5 +68,11 @@ $img = get_field('contact_img');
                 </div>
             </div>
         </section>
+    </a>
+
+    <a href="#contact-us" class="contact__button button">
+        <div class="button__wrapper">
+            <p> <?php pll_e('contact_with_us'); ?></p>
+        </div>
     </a>
 </div>

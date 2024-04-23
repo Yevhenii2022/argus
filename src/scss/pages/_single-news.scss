@@ -1,6 +1,10 @@
 .single-news {
 	padding: 11.571rem 0 8.571rem 0;
 
+	&__container {
+		position: relative;
+	}
+
 	&__top {
 		margin-bottom: 1.9rem;
 		display: flex;
@@ -11,11 +15,20 @@
 	&__title {
 		max-width: 87%;
 		display: flex;
+
+		@include media(mobile) {
+			max-width: 100%;
+		}
+
 		p,
 		em,
 		strong {
 			text-align: start;
 			font-size: 4.286rem;
+
+			@include media(mobile) {
+				font-size: 2.857rem;
+			}
 		}
 	}
 
@@ -23,6 +36,11 @@
 		margin: 0.3rem 0 0 1.143rem;
 		display: flex;
 		gap: 0.286rem;
+
+		@include media(mobile) {
+			margin: 0 0 1.143rem 0;
+		}
+
 		&::after {
 			counter-increment: section;
 			content: '0.0' counter(section);
@@ -118,5 +136,25 @@
 
 	&__button {
 		align-self: center;
+
+		@include media(mobile) {
+			position: absolute;
+			bottom: 9rem;
+			left: 9rem;
+		}
 	}
+}
+
+.home:has(.single-news__box) {
+	.single-news__title {
+		@include media(mobile) {
+			flex-direction: column-reverse;
+		}
+	}
+	// .single-news__button {
+	// 	@include media(mobile) {
+	// 		position: absolute;
+	// 		bottom: 0;
+	// 	}
+	// }
 }

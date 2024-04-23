@@ -9,6 +9,15 @@
 		strong,
 		em {
 			font-size: 4.286rem;
+
+			@include media(mobile) {
+				font-size: 2.857rem;
+			}
+		}
+
+		@include media(mobile) {
+			margin-bottom: 2.5rem;
+			flex-direction: column-reverse;
 		}
 	}
 
@@ -39,6 +48,12 @@
 
 		@include media(mobile) {
 			grid-template-columns: repeat(1, 1fr);
+			row-gap: 3.47rem;
+
+			> :nth-child(5),
+			> :nth-child(6) {
+				display: none;
+			}
 		}
 	}
 

@@ -68,4 +68,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (currentLanguage === 'en-GB') {
 		cursor.classList.add('lang');
 	}
+
+	const link = document.getElementById('contact-link');
+
+	function toggleHref() {
+		if (window.innerWidth < 542) {
+			link.removeAttribute('href');
+		} else {
+			link.setAttribute('href', '#contact-us');
+		}
+	}
+
+	toggleHref();
+	window.addEventListener('resize', toggleHref);
 });
