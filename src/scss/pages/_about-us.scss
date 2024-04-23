@@ -15,16 +15,16 @@
     mix-blend-mode: soft-light;
     max-height: 68rem;
 
-    &::before{
+    &::before {
       content: "";
       background: linear-gradient(360deg, #ededed 0%, #ededed 100%);
       z-index: 1;
       position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 30%;
-        opacity: 0.4;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      opacity: 0.4;
     }
   }
 
@@ -41,7 +41,7 @@
     display: block;
     width: 50%;
 
-    em{
+    em {
       font-family: $italic;
     }
   }
@@ -54,7 +54,7 @@
   }
 
   &__slider {
-   
+
     @include media(mobile) {
       margin-right: -1.714rem;
       margin-top: 4.286rem;
@@ -65,7 +65,9 @@
   &__slides {
     gap: 1.143rem;
     justify-content: center;
-    margin-bottom: 5rem;;
+    margin-bottom: 5rem;
+    ;
+
     @include media(mobile) {
       justify-content: flex-start;
     }
@@ -79,7 +81,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: fit-content;
-   
+
     &:nth-child(odd) {
       margin-top: 4.143rem;
 
@@ -108,17 +110,26 @@
       color: $red;
       font-family: $medium;
 
-      strong{
+      strong {
         font-size: 0.8rem;
-    font-weight: 800;
-    vertical-align: super;
+        font-weight: 800;
+        vertical-align: super;
+      }
     }
-  }
 
     &-text {
       line-height: 120%;
       width: 16.429rem;
     }
+  }
+}
+
+.about-projects {
+  &__title {
+    em {
+      font-family: $italic;
+    }
+
   }
 }
 
@@ -258,10 +269,10 @@
   }
 
   &__icon {
-      width: 5.357rem;
-      height: 4.143rem;
-    }
-  
+    width: 5.357rem;
+    height: 4.143rem;
+  }
+
 
   &__video {
     overflow: hidden;
@@ -328,13 +339,13 @@
     transition: $transition;
 
     &:hover,
-    &:focus{
-        background-color: $red;
-        color: $white;
+    &:focus {
+      background-color: $red;
+      color: $white;
 
-        &::before{
-          color: $black;
-        }
+      &::before {
+        color: $black;
+      }
     }
 
     &::before {
@@ -413,16 +424,15 @@
 
   &__description {
     width: 24.286rem;
-    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &__logo {
     margin-top: 0.857rem;
-
-    svg {
-      width: 3.143rem;
-      height: 2.429rem;
-    }
+    width: 3.143rem;
+    height: 2.429rem;
   }
 
   &__bottom {
@@ -439,17 +449,18 @@
       width: 9.5rem;
       font-size: 0.786rem;
       line-height: 90%;
-      
-      &::before{
+
+      &::before {
         width: 1.143rem;
         height: 1.214rem;
       }
     }
   }
 
-  &__title{
+  &__title {
     margin-top: 2.286rem;
-    em{
+
+    em {
       font-family: $italic;
     }
   }
