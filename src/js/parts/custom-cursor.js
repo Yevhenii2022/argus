@@ -62,4 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			cursor.classList.remove(className);
 		});
 	});
+
+	const currentLanguage = document.documentElement.lang;
+
+	if (currentLanguage === 'en-GB') {
+		cursor.classList.add('lang');
+	}
 });
