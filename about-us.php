@@ -163,7 +163,7 @@ get_header();
           $missionText = get_field('mission_text') ?? '' ;
           $missionSubText = get_field('mission_subtext') ?? '' ;
           $missionVid = get_field('mission_video') ?? '' ;
-          $missionIcon = get_field('small_logo', 'options') ?? '';
+          $missionIcon = get_field('default_picture', 'options') ?? '';
 
           if( $missionBackground  || $missionTitle || $missionText || $missionSubText || $missionVid || $missionIcon): 
     ?>

@@ -100,7 +100,7 @@
   <?php $bannerBg = get_field('banner_background') ?? '' ; 
         $bannerTitle = get_field('banner_title') ?? '' ;
         $bannerDescription = get_field('banner_description') ?? '' ;
-        $icon = get_field('small_logo', 'options') ?? '';
+        $icon = get_field('default_picture', 'options') ?? '';
      if( $bannerBg || $bannerTitle || $bannerDescription || $icon ): ?>
 
   <section class="service-banner">
@@ -184,17 +184,63 @@
   </section>
   <?php endif ?>
 
-  <?php $projectsTitle = get_field('slider_title') ?? '' ;?>
-    <section class="services-projects">
+  <?php $projectsTitle = get_field('slider_title_s') ?? '' ; ?>
+    <section class="service-projects">
         <div class="container">
         <?php if ($projectsTitle) : ?>
-            <div class="services-projects__title main__title main__title--sm">
+            <div class="service-projects__title main__title main__title--sm">
                 <?= $projectsTitle ;?>
             </div>
         <?php endif; ?>
         </div>
       <?php get_template_part('template-parts/project-slider'); ?>
   </section>
+
+  <?php $workTitle = get_field('work_title') ?? '';
+        $workBackground = get_field('work_bg') ?? '';
+        if( $workTitle || $workBackground ): ?>
+ <section class="service-work" style=" background-image: url('<?php echo esc_url($workBackground); ?>');">
+    <div class="container container--slider">
+      <div class="service-work__wrapper">
+      <?php if ($workTitle) : ?>
+        <h2 class="service-work__title main__title main__title--sm">
+          <?= $workTitle ;?>
+        </h2>
+        <?php endif; ?>
+        <div class="service-work__swiper swiper">
+          <div class="service-work__inner swiper-wrapper">
+            <?php while (have_rows('cards')):
+                the_row(); ?>
+            <div class="service-work__card swiper-slide">
+            
+          <?php $cardTitle = get_sub_field('card_title') ?? '' ;
+                $cardImage = get_sub_field('card_image') ?? '' ;
+                $cardText= get_sub_field('card_text') ?? '' ; ?>
+              <?php if ($cardTitle) : ?>
+              <h3 class="service-work__heading">
+                <?= $cardTitle ;?>
+              </h3>
+              <?php endif; ?>
+                <div class="service-work__card-bottom">
+                  <?php if ($cardImage) : ?>
+                  <div class="service-work__image">
+                    <img src='<?php echo $cardImage['url']; ?>' alt='<?php echo $cardImage['alt']; ?>' />
+                  </div>
+                  <?php endif; ?>
+                  <?php if ($cardText) : ?>
+                  <p class="service-work__text">
+                    <?= $cardText?>
+                  </p>
+                  <?php endif; ?>
+                </div>
+              </div>
+            <?php endwhile?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
 
   <?php get_template_part('template-parts/contact-us'); ?>
 </main>

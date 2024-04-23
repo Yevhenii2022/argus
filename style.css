@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -1375,8 +1375,70 @@ button {
   background-color: #ffffff;
 }
 
-.services-projects {
+.service-projects {
   padding-top: 8.571rem;
+}
+.service-projects__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+
+.service-work {
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+.service-work__title {
+  margin-bottom: 5rem;
+  width: 50%;
+}
+.service-work__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+.service-work__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 29.643rem;
+  padding: 1.821rem 1.393rem 1.821rem 1.821rem;
+  counter-increment: item;
+}
+.service-work__card::after {
+  content: counter(item, decimal-leading-zero) ". ";
+  position: absolute;
+  top: 25px;
+  left: -14px;
+  font-size: 1rem;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  line-height: 100%;
+  border-radius: 100%;
+  padding: 7.27px 3.49px 6.2px 4.41px;
+}
+.service-work__card:nth-child(odd) {
+  background-color: #ededed;
+}
+.service-work__card:nth-child(odd)::after {
+  background-color: #f41b1b;
+  color: #ffffff;
+}
+.service-work__card:nth-child(even) {
+  background-color: #f41b1b;
+  color: #ffffff;
+}
+.service-work__card:nth-child(even)::after {
+  background-color: #ededed;
+  color: #181818;
+}
+.service-work__image {
+  width: 8.786rem;
+  height: 8.786rem;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.service-work__heading {
+  font-size: 1.929rem;
+  text-transform: uppercase;
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
 .projects {
@@ -4180,7 +4242,7 @@ button {
   height: 27.071rem;
   min-width: 17.929rem;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
 }
 @media (max-width: 541px) {

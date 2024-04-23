@@ -134,6 +134,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
+	const workSwiper = new Swiper('.service-work__swiper', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		centeredSlides: true,
+		mousewheel: true,
+	});
+	
+
 	if (window.innerWidth < 541) {
 		const aboutSlider = new Swiper('.about-banner__slider', {
 			slidesPerView: 1,
