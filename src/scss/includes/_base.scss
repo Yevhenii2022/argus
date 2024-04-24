@@ -33,12 +33,12 @@ body {
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: $img_not_found;
+		background-color: $red;
 		border-radius: 0.571rem;
 	}
 
 	&::-webkit-scrollbar-thumb:hover {
-		background-color: #b8b2b2;
+		background-color: #ca2828;
 	}
 }
 
