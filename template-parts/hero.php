@@ -16,23 +16,24 @@ $bg = get_field('hero_bg');
             <?php endif; ?>
 
             <div class="hero__box">
-                <?php if ($title) : ?>
-                    <h1 class="hero__title title anim-title _anim-items"><?= $title ?></h1>
-                <?php endif; ?>
 
-                <?php if ($desc) : ?>
-                    <p class="hero__desc anim-title _anim-items"><?= $desc ?></p>
-                <?php endif; ?>
+                <div>
+                    <?php if ($title) : ?>
+                        <h1 class="hero__title title anim-title _anim-items"><?= $title ?></h1>
+                    <?php endif; ?>
 
-                <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="hero__button button">
-                    <div class="button__wrapper">
-                        <p><?php pll_e('look_services_button') ?></p>
-                    </div>
-                </a>
-            </div>
+                    <?php if ($desc) : ?>
+                        <p class="hero__desc anim-title _anim-items"><?= $desc ?></p>
+                    <?php endif; ?>
 
-            <div class="hero__box">
-                <div class="hero__inner">
+                    <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="hero__button button">
+                        <div class="button__wrapper">
+                            <p><?php pll_e('look_services_button') ?></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div>
                     <?php if ($text) : ?>
                         <p class="hero__text anim-title _anim-items"><?= $text ?></p>
                     <?php endif; ?>
@@ -56,13 +57,12 @@ $bg = get_field('hero_bg');
                             <?php echo $svg_content; ?>
                         </a>
                     <?php endif; ?>
-                </div>
 
-                <div class="hero__more">
                     <?php get_template_part('template-parts/scroll') ?>
-                </div>
-            </div>
 
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
