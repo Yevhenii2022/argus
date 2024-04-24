@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -50,11 +50,11 @@ body::-webkit-scrollbar {
   width: 0.5rem;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #dddddd;
+  background-color: #f41b1b;
   border-radius: 0.571rem;
 }
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #b8b2b2;
+  background-color: #ca2828;
 }
 
 html,
@@ -165,7 +165,7 @@ button {
 }
 
 .anim-title {
-  transform: translateY(6.286rem);
+  transform: translateY(4.286rem) rotate(2deg);
   opacity: 0;
   transition: all 1s ease-in-out;
 }
@@ -2582,12 +2582,11 @@ button {
   display: flex;
   opacity: 1;
   z-index: -1;
-  top: 3.857rem;
-  height: 100vh;
-  padding-bottom: 1rem;
-  height: calc(100vh - 3.857rem);
+  top: 0;
+  bottom: 0;
+  padding-bottom: 2.286rem;
   background-color: #ededed;
-  padding-top: 3rem;
+  padding-top: 6.857rem;
 }
 .header__left {
   display: flex;
@@ -2695,6 +2694,7 @@ button {
     justify-content: flex-end;
     height: 0.7rem;
     margin-right: 0.25rem;
+    margin-bottom: 0.2rem;
     cursor: pointer;
   }
 }
@@ -2897,7 +2897,7 @@ button {
   height: 0;
   transition: all 0.3s ease-in-out;
   bottom: 0.1rem;
-  right: 2.5rem;
+  right: 2rem;
 }
 @media (max-width: 541px) {
   .lang-switcher__list {
@@ -2939,26 +2939,37 @@ button {
   font-size: 0.786rem;
   line-height: 0.75rem;
   text-transform: uppercase;
-  padding: 0.17rem 0;
+  padding: 0.17rem 0.5rem;
 }
 @media (max-width: 541px) {
   .lang-switcher__item a {
+    padding: 0.17rem 0;
     font-size: 1rem;
   }
 }
 
+.hero {
+  margin-bottom: 8.571rem;
+  padding: 11.571rem 0 5.071rem 0;
+  height: 100dvh;
+}
 .hero__wrapper {
-  margin: 5.8rem -0.571rem 8.58rem -0.571rem;
-  padding: 5.4rem 1.714rem;
-  height: 89.8dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.hero__background img {
+  padding: 0 1.714rem;
+  height: 89.7dvh;
+  position: absolute;
+  top: 5.857rem;
+  right: 0;
   border-radius: 1.429rem;
-  background: #f9f9f9;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
+  object-fit: initial;
+  overflow: hidden;
+}
+.hero__box {
+  z-index: 1;
 }
 .hero__title {
   width: 49.5rem;

@@ -1,16 +1,38 @@
 .hero {
+	margin-bottom: 8.571rem;
+	// margin: 5.8rem -0.571rem 8.58rem -0.571rem;
+	padding: 11.571rem 0 5.071rem 0;
+	height: 100dvh;
 	&__wrapper {
-		margin: 5.8rem -0.571rem 8.58rem -0.571rem;
-		padding: 5.4rem 1.714rem;
-		height: 89.8dvh;
+		// position: relative;
+
+		// height: 100dvh;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		border-radius: 1.429rem;
-		background: $light;
-		background-size: cover;
-		background-position: bottom;
-		background-repeat: no-repeat;
+		// border-radius: 1.429rem;
+		// background: $light;
+		// background-size: cover;
+		// background-position: bottom;
+		// background-repeat: no-repeat;
+	}
+
+	&__background {
+		img {
+			padding: 0 1.714rem;
+			height: 89.7dvh;
+			position: absolute;
+			top: 5.857rem;
+			right: 0;
+			border-radius: 1.429rem;
+			object-fit: initial;
+			overflow: hidden;
+		}
+	}
+
+	&__box {
+		z-index: 1;
 	}
 
 	&__title {

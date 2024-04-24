@@ -7,11 +7,15 @@ $bg = get_field('hero_bg');
 
 <section class="hero">
     <div class="container">
-        <?php if ($bg) : ?>
-            <div class="hero__wrapper" style=" background-image: url('<?php echo $bg; ?>');">
+        <div class="hero__wrapper">
+
+            <?php if ($bg) : ?>
+                <div class="hero__background">
+                    <img src="<?php echo $bg; ?>" alt="фонове зображення головної сторінки">
+                </div>
             <?php endif; ?>
 
-            <div>
+            <div class="hero__box">
                 <?php if ($title) : ?>
                     <h1 class="hero__title title anim-title _anim-items"><?= $title ?></h1>
                 <?php endif; ?>
@@ -27,7 +31,7 @@ $bg = get_field('hero_bg');
                 </a>
             </div>
 
-            <div>
+            <div class="hero__box">
                 <div class="hero__inner">
                     <?php if ($text) : ?>
                         <p class="hero__text anim-title _anim-items"><?= $text ?></p>
@@ -59,6 +63,6 @@ $bg = get_field('hero_bg');
                 </div>
             </div>
 
-            </div>
+        </div>
     </div>
 </section>
