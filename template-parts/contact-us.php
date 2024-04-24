@@ -11,7 +11,7 @@
   <div class="container">
     <div class="contact-us__wrapper">
     <?php if ($sectionTitle): ?>
-      <div class="contact-us__title main__title">
+      <div class="contact-us__title main__title anim-title _anim-items">
         <?= $sectionTitle ;?>
       </div>
       <?php endif ?>
@@ -23,7 +23,7 @@
           <?php endif ?>
           <div class="contact-us__text">
           <?php if ($sectionHeading): ?>
-            <h2 class="contact-us__heading">
+            <h2 class="contact-us__heading anim-title _anim-items">
               <?= $sectionHeading ;?>
             </h2>
             <?php endif ?>

@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const projects = new Swiper('.projects-slider__swiper', {
 		loop: true,
 		watchSlidesProgress: true,
-		slidesPerView: 2,
-		spaceBetween: 16,
+		slidesPerView: 1.2,
+		spaceBetween: 8,
 		centeredSlides: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -59,6 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			el: '.swiper-pagination',
 			type: 'progressbar',
 		},
+		breakpoints: {
+			541: {
+				spaceBetween: 16,
+				slidesPerView: 2,
+			},
+		},
+
 	});
 
 	const projectsSingle = new Swiper('.project__slider', {
@@ -97,22 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-	if (window.innerWidth < 541) {
-		const aboutSlider = new Swiper('.about-banner__slider', {
-			slidesPerView: 1,
-			spaceBetween: 8,
-			// autoplay:true,
-			watchSlidesProgress: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'progressbar',
-			},
-		});
-	}
 
 	const advanagesSwiper = new Swiper('.service-advantages__slider', {
 		loop: false,
@@ -140,13 +131,34 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
+
 	const workSwiper = new Swiper('.service-work__swiper', {
-		slidesPerView: 4.285,
+		slidesPerView: 1.22,
 		centeredSlides: true,
 		mousewheel: true,
+		on: {
+			slideChange: function () {
+				const slides = document.querySelectorAll('.service-work__card');
+				slides.forEach((slide, index) => {
+					if (index === this.activeIndex) {
+						slide.style.transform = 'rotate(5deg)';
+
+					} else {
+						slide.style.transform = 'rotate(0deg)';
+
+					}
+				});
+			},
+		},
+		breakpoints: {
+			541: {
+				slidesPerView: 4.285,
+			},
+		},
 	});
 
-	if (window.innerWidth < 541) {
+
+	if (window.innerWidth < 542) {
 		const aboutSlider = new Swiper('.about-banner__slider', {
 			slidesPerView: 1,
 			spaceBetween: 1,

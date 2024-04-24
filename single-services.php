@@ -20,7 +20,7 @@
         </div>
       <div class="service-hero__heading">
       <?php if ($serviceTitle) : ?>
-        <h1 class="service-hero__title main__title">
+        <h1 class="service-hero__title main__title anim-title _anim-items">
            <?= $serviceTitle ;?>
         </h1>
         <?php endif ?>
@@ -54,7 +54,7 @@
     <div class="container">
       <div class="service-information__heading">
       <?php if ($informationTitle) : ?>
-        <h2 class="service-information__title main__title">
+        <h2 class="service-information__title main__title anim-title _anim-items">
             <?= $informationTitle ;?>
         </h2>
         <?php endif ?>
@@ -71,7 +71,7 @@
             <?= $informationQuestion ;?>
           </p>
           <?php endif ?>
-          <ul class="service-information__answers">
+          <ul class="service-information__answers anim-title _anim-items">
           <?php while (have_rows('information_main')):
                             the_row();
               $informationParagraph = get_sub_field('information_paragraph'); ?>
@@ -110,13 +110,13 @@
           <div class="service-banner__string">
               <?php for ($i = 0; $i < 18; $i++) { ?>
                 <?php if ($bannerTitle) : ?>
-                  <span class="service-banner__title main__title main__title--sm">
+                  <span class="service-banner__title main__title main__title--sm anim-title _anim-items">
                     <?= $bannerTitle ;?>
                   </span> 
                   <?php endif?>
               <?php } ?>
           </div>
-          <div class="service-banner__main">
+          <div class="service-banner__main anim-title _anim-items">
               <div class="service-banner__logo">
                 <?php if ($icon) :
                       echo '<img src="' . esc_url($icon) . '" alt="logo">';
@@ -141,7 +141,7 @@
     <div class="container container--slider">
       <div class="service-advantages__wrapper">
       <?php if( $advantagesTitle): ?> 
-        <div class="service-advantages__title main__title main__title--sm">
+        <div class="service-advantages__title main__title main__title--sm anim-title _anim-items">
           <?= $advantagesTitle?>
         </div>
         <?php endif ?>
@@ -188,7 +188,7 @@
     <section class="service-projects">
         <div class="container">
         <?php if ($projectsTitle) : ?>
-            <div class="service-projects__title main__title main__title--sm">
+            <div class="service-projects__title main__title main__title--sm anim-title _anim-items">
                 <?= $projectsTitle ;?>
             </div>
         <?php endif; ?>
@@ -204,7 +204,7 @@
     <div class="container container--slider">
       <div class="service-work__wrapper">
       <?php if ($workTitle) : ?>
-        <h2 class="service-work__title main__title main__title--sm">
+        <h2 class="service-work__title main__title main__title--sm anim-title _anim-items">
           <?= $workTitle ;?>
         </h2>
         <?php endif; ?>
@@ -257,7 +257,7 @@
           <div class="service-cards__wrapper">
             <div class="service-cards__heading">
             <?php if( $otherTitle ): ?>
-              <h2 class="service-cards__title main__title main__title--sm">
+              <h2 class="service-cards__title main__title main__title--sm anim-title _anim-items">
                 <?= $otherTitle ;?>
               </h2>
             <?php endif; ?>
@@ -267,7 +267,7 @@
                   </div>
               </a>
             </div>
-          </div>
+          
             <div class="service-cards__box">
                 <?php
                 $args = array(

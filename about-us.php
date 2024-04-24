@@ -24,7 +24,7 @@ get_header();
                     if( $title || $subTitle || $description): ?>
                     <div class="about-banner__content">
                     <?php if ($title) : ?>
-                        <h1 class="about-banner__title main__title main__title--sm">
+                        <h1 class="about-banner__title main__title main__title--sm anim-title _anim-items">
                             <?=$title ;?>
                         </h1>
                     <?php endif ?>
@@ -33,37 +33,36 @@ get_header();
                             <?=$description ;?>
                         </p>
                     <?php endif ?>
-                        <div class="about-banner__slider swiper">
+                    <!-- <div class="about-banner__slider swiper">
                            <div class="about-banner__slides swiper-wrapper ">
-                            <?php while (have_rows('about-us_list')):
-                            the_row();
-                            $number = get_sub_field('number');
-                            $title = get_sub_field('title');
-                            $text = get_sub_field('text'); ?>
-                            <div class="about-banner__item swiper-slide">
-                                <?php if ($number): ?>
-                                <div class="about-banner__item-number">
-                                    <?= $number ;?>
+                                <?php while (have_rows('about-us_list')):
+                                the_row();
+                                $number = get_sub_field('number');
+                                $title = get_sub_field('title');
+                                $text = get_sub_field('text'); ?>
+                                <div class="about-banner__item swiper-slide">
+                                    <?php if ($number): ?>
+                                    <p class="about-banner__item-number">
+                                        <?= $number ;?>
+                                    </p>
+                                    <?php endif ?>
+                                    <?php if ($title): ?>
+                                    <h3 class="about-banner__item-title">
+                                        <?= $title ;?>
+                                    </h3>
+                                    <?php endif ?>
+                                    <?php if ($text): ?>
+                                    <p class="about-banner__item-text">
+                                        <?= $text ;?>
+                                    </p>
+                                    <?php endif ?>
                                 </div>
-                                <?php endif ?>
-                                <?php if ($title): ?>
-                                <div class="about-banner__item-title">
-                                    <?= $title ;?>
-                                </div>
-                                <?php endif ?>
-                                <?php if ($text): ?>
-                                <div class="about-banner__item-text">
-                                    <?= $text ;?>
-                                </div>
-                                <?php endif ?>
+                                <?php endwhile ?>
                             </div>
-                            <?php endwhile ?>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div> 
-                    </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                    </div> -->
                     <?php endif ?>
                 </div>
             </div>
@@ -73,7 +72,7 @@ get_header();
     <section class="about-projects">
         <div class="container">
         <?php if ($projectsTitle) : ?>
-            <div class="about-projects__title main__title main__title--sm">
+            <div class="about-projects__title main__title main__title--sm anim-title _anim-items">
                 <?= $projectsTitle ;?>
             </div>
         <?php endif; ?>
@@ -93,7 +92,7 @@ get_header();
                 <?php if( $stageBackground || $stageTitle || $stageSubtitle): ?>
                 <div class="about-stages__heading">
                     <?php if ($stageTitle): ?>
-                    <h2 class="about-stages__section-title main__title main__title--sm">
+                    <h2 class="about-stages__section-title main__title main__title--sm anim-title _anim-items">
                         <?= $stageTitle ;?>
                     </h2>
                     <?php endif ?>
@@ -171,11 +170,11 @@ get_header();
         <div class="container">
             <div class="about-mission__wrapper">
                 <?php if ($missionTitle): ?>
-                <h2 class="about-mission__title main__title">
+                <h2 class="about-mission__title main__title anim-title _anim-items">
                     <?= $missionTitle ;?>
                 </h2>
                 <?php endif ?>
-                <div class="about-mission__text">
+                <div class="about-mission__text anim-title _anim-items">
                     <?php if ($missionText): ?>
                     <div class="about-mission__description">
                         <?= $missionText ;?>
@@ -213,7 +212,7 @@ get_header();
             <div class="about-values__wrapper">
                 <div class="about-values__left">
                     <?php if( $valuesHeading ): ?>
-                <h2 class="about-values__heading main__title" id="stiky">
+                <h2 class="about-values__heading main__title anim-title _anim-items">
                     <?= $valuesHeading ;?>
                 </h2>
                 <?php endif ?>
@@ -295,7 +294,7 @@ get_header();
                     </div>
                 </div>
                 <?php if( $teamDescription): ?>
-                <h2 class="about-team__title main__title">
+                <h2 class="about-team__title main__title anim-title _anim-items">
                     <?= $teamTitle ;?>
                 </h2>
                 <?php endif ?>

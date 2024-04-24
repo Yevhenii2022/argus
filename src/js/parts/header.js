@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.toggle('active');
       menu.classList.toggle('open');
       document.body.classList.toggle('burger-open');
-      
+  
   });
         
 });

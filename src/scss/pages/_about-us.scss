@@ -28,6 +28,11 @@
     }
   }
 
+  &__breadcrumps{
+    position: absolute;
+    top: 5.7rem;
+  }
+
   &__content {
     position: relative;
     display: flex;
@@ -81,6 +86,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: fit-content;
+    min-width: 24rem;
 
     &:nth-child(odd) {
       margin-top: 4.143rem;
