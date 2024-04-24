@@ -24,12 +24,12 @@ get_header(); ?>
                     </div>
                    <div class="our-services__content">
                         <?php if ($servicesTitle): ?>
-                        <h1 class="our-services__title main__title main__title--sm">
+                        <h1 class="our-services__title main__title main__title--sm anim-title _anim-items">
                             <?= $servicesTitle ;?>
                         </h1>
                         <?php endif ?>
                         <?php if ($servicesDescription): ?>
-                        <p class="our-services__description">
+                        <p class="our-services__description anim-title _anim-items">
                             <?= $servicesDescription ;?>
                         </p>
                         <?php endif ?>

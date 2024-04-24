@@ -18,10 +18,15 @@ body {
 	font-weight: 400;
 	line-height: 1.2;
 	counter-reset: section;
-
-	// &.burger-open {
-	// 	overflow: hidden;
-	// }
+  
+	&.burger-open {
+		overflow: hidden;
+		max-height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
 
 	&::-webkit-scrollbar {
 		width: 0.5rem;
