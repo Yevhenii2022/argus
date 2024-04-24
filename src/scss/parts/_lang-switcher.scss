@@ -9,11 +9,11 @@
 		height: 0;
 		transition: $transition;
 		bottom: 0.1rem;
-    right: 2.5rem;
-		
+		right: 2rem;
+
 		@include media(mobile) {
-		bottom: 1.4rem;
-    right: 0.9rem;
+			bottom: 1.4rem;
+			right: 0.9rem;
 		}
 	}
 
@@ -57,10 +57,10 @@
 			font-size: 0.786rem;
 			line-height: 0.75rem;
 			text-transform: uppercase;
-			padding: 0.17rem 0;
+			padding: 0.17rem 0.5rem;
 			@include media(mobile) {
+				padding: 0.17rem 0;
 				font-size: 1rem;
-			
 			}
 		}
 	}

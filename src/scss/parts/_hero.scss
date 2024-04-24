@@ -1,25 +1,71 @@
 .hero {
 	&__wrapper {
-		margin: 5.8rem -0.571rem 8.58rem -0.571rem;
-		padding: 5.4rem 1.714rem;
-		height: 89.8dvh;
+		margin-bottom: 8.571rem;
+		height: 100dvh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include media(mobile) {
+			margin-bottom: 9.9rem;
+			justify-content: initial;
+			height: 52.4rem;
+		}
+	}
+
+	&__background {
+		img {
+			padding: 0 1.714rem;
+			height: calc(100dvh - 5.857rem);
+			position: absolute;
+			top: 5.857rem;
+			right: 0;
+			border-radius: 1.429rem;
+			object-fit: initial;
+			overflow: hidden;
+
+			@include media(mobile) {
+				padding: 0 0.571rem;
+				// height: 100dvh;
+				height: 52.4rem;
+				top: 5rem;
+			}
+		}
+	}
+
+	&__box {
+		height: 89dvh;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		border-radius: 1.429rem;
-		background: $light;
-		background-size: cover;
-		background-position: bottom;
-		background-repeat: no-repeat;
+		z-index: 1;
+
+		@include media(mobile) {
+			height: auto;
+		}
+	}
+
+	&__logo {
+		display: none;
+		@include media(mobile) {
+			margin-top: 7.6rem;
+			display: flex;
+			svg {
+				margin: 0 auto;
+				width: 6.929rem;
+				height: 2.371rem;
+			}
+		}
 	}
 
 	&__title {
 		width: 49.5rem;
-		margin: 0 auto 1.39rem auto;
+		margin: 8rem auto 1.39rem auto;
 		text-align: center;
 
 		@include media(mobile) {
 			width: 100%;
+			margin: 1.5rem auto 1.3rem auto;
 		}
 
 		p,
@@ -41,14 +87,7 @@
 
 	&__button {
 		margin: 0 auto 1rem auto;
-	}
-
-	&__inner {
-		margin-bottom: 8.857rem;
-
-		@include media(mobile) {
-			margin-bottom: 4.571rem;
-		}
+		z-index: 1;
 	}
 
 	&__text {
@@ -57,7 +96,8 @@
 		text-align: center;
 
 		@include media(mobile) {
-			width: 100%;
+			width: 91%;
+			margin: 10.6rem auto 0 auto;
 		}
 	}
 
@@ -67,7 +107,7 @@
 		height: 3.071rem;
 		position: fixed;
 		right: 1.714rem;
-		bottom: 18dvh;
+		bottom: 12.5dvh;
 		z-index: 9;
 
 		@include media(mobile) {
