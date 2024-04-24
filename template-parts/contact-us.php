@@ -17,9 +17,13 @@
       <?php endif ?>
       <div class="contact-us__content">
         <div class="contact-us__left">
-           <?php if ($sectionImage) : ?>
-            <a href="<?= $sectionVideo; ?>" data-fancybox="video"  data-width="90%" data-height="70%"    class="contact-us__content-block" style=" background-image: url('<?php echo esc_url($sectionImage); ?>');">
-           </a>
+           <?php if ($sectionVideo) : ?>
+            <div class="contact-us__video">
+              <video preload="auto" no-controls autoplay loop playsinline muted>
+                <source src="<?php echo $sectionVideo['url']; ?>" type="<?php echo $sectionVideo['mime_type']; ?>">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           <?php endif ?>
           <div class="contact-us__text">
           <?php if ($sectionHeading): ?>

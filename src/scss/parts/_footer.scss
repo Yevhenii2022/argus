@@ -1,6 +1,9 @@
 .footer {
   padding-top: 5.714rem;
   background-color: $bg;
+  position: sticky;
+  bottom: 0;
+  
   @include media(mobile) {
    padding-top: 4.571rem;
   }

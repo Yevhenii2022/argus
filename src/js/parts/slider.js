@@ -67,6 +67,26 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 
 	});
+// 	if (window.innerWidth < 542) {
+// 	const values = new Swiper('.about-values__right', {
+
+// 		loop: true,
+// 		watchSlidesProgress: true,
+// 		slidesPerView: 2,
+// 		spaceBetween: 8,
+// 		centeredSlides: true,
+// 		navigation: {
+// 			nextEl: '.swiper-button-next',
+// 			prevEl: '.swiper-button-prev',
+// 		},
+// 		pagination: {
+// 			el: '.swiper-pagination',
+// 			type: 'progressbar',
+// 		},
+		
+// 	});
+// }
+
 
 	const projectsSingle = new Swiper('.project__slider', {
 		loop: true,
@@ -136,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerView: 1.22,
 		centeredSlides: true,
 		mousewheel: true,
+		freeMode: true,
 		on: {
 			slideChange: function () {
 				const slides = document.querySelectorAll('.service-work__card');
@@ -156,22 +177,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 
-	if (window.innerWidth < 542) {
-		const aboutSlider = new Swiper('.about-banner__slider', {
-			slidesPerView: 1,
-			spaceBetween: 1,
-			// autoplay:true,
-			watchSlidesProgress: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'progressbar',
-			},
-		});
-	}
+	// if (window.innerWidth < 542) {
+	// 	const aboutSlider = new Swiper('.about-banner__slider', {
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 1,
+	// 		// autoplay:true,
+	// 		watchSlidesProgress: true,
+	// 		navigation: {
+	// 			nextEl: '.swiper-button-next',
+	// 			prevEl: '.swiper-button-prev',
+	// 		},
+	// 		pagination: {
+	// 			el: '.swiper-pagination',
+	// 			type: 'progressbar',
+	// 		},
+	// 	});
+	// }
 
 	//fancy Box
 	Fancybox.bind('[data-fancybox]', {
