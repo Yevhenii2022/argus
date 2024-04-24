@@ -24,8 +24,7 @@ get_header();
                     if( $title || $subTitle || $description): ?>
                     <div class="about-banner__content">
                     <?php if ($title) : ?>
-                        <h1 class="about-banner__title main__title main__title--sm anim-title _anim-items
-">
+                        <h1 class="about-banner__title main__title main__title--sm anim-title _anim-items">
                             <?=$title ;?>
                         </h1>
                     <?php endif ?>
@@ -34,37 +33,36 @@ get_header();
                             <?=$description ;?>
                         </p>
                     <?php endif ?>
-                        <div class="about-banner__slider swiper anim-title     _anim-items">
+                    <!-- <div class="about-banner__slider swiper">
                            <div class="about-banner__slides swiper-wrapper ">
-                            <?php while (have_rows('about-us_list')):
-                            the_row();
-                            $number = get_sub_field('number');
-                            $title = get_sub_field('title');
-                            $text = get_sub_field('text'); ?>
-                            <div class="about-banner__item swiper-slide">
-                                <?php if ($number): ?>
-                                <div class="about-banner__item-number">
-                                    <?= $number ;?>
+                                <?php while (have_rows('about-us_list')):
+                                the_row();
+                                $number = get_sub_field('number');
+                                $title = get_sub_field('title');
+                                $text = get_sub_field('text'); ?>
+                                <div class="about-banner__item swiper-slide">
+                                    <?php if ($number): ?>
+                                    <p class="about-banner__item-number">
+                                        <?= $number ;?>
+                                    </p>
+                                    <?php endif ?>
+                                    <?php if ($title): ?>
+                                    <h3 class="about-banner__item-title">
+                                        <?= $title ;?>
+                                    </h3>
+                                    <?php endif ?>
+                                    <?php if ($text): ?>
+                                    <p class="about-banner__item-text">
+                                        <?= $text ;?>
+                                    </p>
+                                    <?php endif ?>
                                 </div>
-                                <?php endif ?>
-                                <?php if ($title): ?>
-                                <div class="about-banner__item-title">
-                                    <?= $title ;?>
-                                </div>
-                                <?php endif ?>
-                                <?php if ($text): ?>
-                                <div class="about-banner__item-text">
-                                    <?= $text ;?>
-                                </div>
-                                <?php endif ?>
+                                <?php endwhile ?>
                             </div>
-                            <?php endwhile ?>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div> 
-                    </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                    </div> -->
                     <?php endif ?>
                 </div>
             </div>

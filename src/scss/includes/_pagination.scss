@@ -9,6 +9,9 @@
 	margin: 0 auto;
 	transform: translate(-50%, -50%);
 	top: initial;
+	@include media(mobile) {
+		width: 75%;
+	}
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
