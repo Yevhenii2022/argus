@@ -141,12 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				const slides = document.querySelectorAll('.service-work__card');
 				slides.forEach((slide, index) => {
 					if (index === this.activeIndex) {
-						slide.style.transform = 'rotate(5deg)';
-
-					} else {
-						slide.style.transform = 'rotate(-5deg)';
-
-					}
+						slide.style.transform = 'rotate(5deg) translateY(-10%)';
+				} else {
+						slide.style.transform = 'rotate(-5deg) translateY(0)';
+				}
 				});
 			},
 		},
