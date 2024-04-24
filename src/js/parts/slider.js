@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						slide.style.transform = 'rotate(5deg)';
 
 					} else {
-						slide.style.transform = 'rotate(0deg)';
+						slide.style.transform = 'rotate(-5deg)';
 
 					}
 				});
