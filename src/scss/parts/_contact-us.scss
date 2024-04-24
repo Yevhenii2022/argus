@@ -47,12 +47,15 @@
     }
   }
 
-  &__content-block {
+  &__video{
     height: 27.071rem;
-    min-width: 17.929rem;
+    max-width: 17.929rem;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 
     @include media(mobile) {
       min-width: 10.286rem;
