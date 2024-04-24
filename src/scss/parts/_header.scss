@@ -95,96 +95,69 @@
 		gap: 1.143rem;
 	}
 
-	&__phone {
-		display: flex;
-		align-items: center;
-		gap: 1.5rem;
-		position: relative;
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
 
-		span {
-			font-size: 0.786rem;
-			line-height: 0.786rem;
-			text-transform: uppercase;
-			@include media(mobile) {
-				font-size: 1rem;
-			}
-		}
-
-		&:after {
-			content: '';
-			display: block;
-			position: absolute;
-			right: 0;
-			width: 0;
-			height: 0.071rem;
-			background-color: $black;
-			transition: width 0.5s;
-			bottom: 0;
-		}
-
-		&:hover:after {
-			content: '';
-			width: 100%;
-			display: block;
-			position: absolute;
-			left: 0;
-			height: 0.071rem;
-			background-color: $black;
-			transition: width 0.5s;
-		}
-
-		// &-img {
-		//     display: inline-block;
-		//     width: 0.857rem;
-		//     height: 0.857rem;
-		//     position: relative;
-		//     transition: $transition;
-
-		//     &::before {
-		//         content: "";
-		//         display: inline-block;
-		//         width: 2.286rem;
-		//         height: 2.286rem;
-		//         background: rgba(24, 24, 24, 0.05);
-		//         border-radius: 2.286rem;
-		//         position: absolute;
-		//         top: 50%;
-		//         left: 50%;
-		//         transform: translate(-50%, -50%);
-		//     }
-		// }
-
-		// &:hover .header__phone-img {
-		//     transform: scale(1.2);
-		// }
-	}
-
-	&__whatsapp {
-		&-img {
-			display: inline-block;
-			width: 0.857rem;
-			height: 0.857rem;
-			position: relative;
-			transition: $transition;
-
-			&::before {
+        span {
+            font-size: 0.688rem;
+            line-height: 0.75rem;
+            text-transform: uppercase;
+            position: relative;
+            &:after {
 				content: '';
-				display: inline-block;
-				width: 2.286rem;
-				height: 2.286rem;
-				background: rgba(24, 24, 24, 0.05);
-				border-radius: 2.286rem;
+				display: block;
 				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+				right: 0;
+				width: 0;
+				height: 0.071rem;
+				background-color: $black;
+				transition: width 0.5s;
 			}
-			&:hover {
-				transform: scale(1.2);
-			}
-		}
-	}
 
+			&:hover:after {
+				content: '';
+				width: 100%;
+				display: block;
+				position: absolute;
+				left: 0;
+				height: 0.071rem;
+				background-color: $black;
+				transition: width 0.5s;
+			}
+      }
+
+        &-img {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            position: relative;
+            transition: $transition;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                background: rgba(24, 24, 24, 0.05);
+                border-radius: 2rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &:hover .header__phone-img {
+            transform: scale(1.2);
+
+            .header__phone span{
+
+            }
+        }
+    }
+	
 	&__mobile-menu {
 		display: flex;
 		align-items: center;

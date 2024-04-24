@@ -574,7 +574,7 @@
   }
 
   &__inner {
-    padding: 2rem 0;
+    padding: 3rem 0;
     margin-left: 4rem;
     @include media(mobile) {
       margin-left: 0;
@@ -590,7 +590,7 @@
     min-height: 29.643rem;
     padding: 1.621rem 1.393rem 1.821rem 1.821rem;
     counter-increment: item;
-    transition: $transition;
+    transition: all 1s ease-in-out ;
 
     &::after {
       content: counter(item, decimal-leading-zero) ". ";

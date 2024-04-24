@@ -52,46 +52,28 @@
 						</div>
 
 						<div class="header__right">
-							<div class="header__contacts">
-								<?php $whatsapp = get_field('whatsapp', 'options') ;?>
-
+							
 								<?php
-								$numberWhatsapp = $whatsapp['whatsapp_number'] ?? '';
-															$whatsappIcon  = $whatsapp['whatsapp_icon'] ?? '';
-								$cleanedNumberWhatsapp = preg_replace('/\s+/', '', $numberWhatsapp);
-								$cleanedNumberWhatsapp = preg_replace('/\D/', '', $cleanedNumberWhatsapp);
-								?>
-								<?php if ($numberWhatsapp) : ?>
-								<a href="https://wa.me/+<?= $cleanedNumberWhatsapp ?>" class="header__whatsapp" target="_blank">
-									<div class="header__whatsapp-img">
-										<img src='<?php echo $whatsappIcon['url']; ?>' alt='<?php echo $whatsappIcon['alt']; ?>' />
-									</div>
-								</a>
-								<?php endif ?>
-
-								<?php
+							
 								$phone = get_field('phone', 'options');
 								$number = $phone['phone_number'] ?? '';
+								$phoneIcon = $phone['phone_icon'] ?? '';
 								$cleanedNumber = preg_replace('/\s+/', '', $number);
 								$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
 								?>
 								<?php if ($number) : ?>
 									<a href="tel:+<?= $cleanedNumber ?>" class="header__phone">
-										<!-- <div class="header__phone-img">
-											<img src="<?= get_template_directory_uri() . '/src/img/call.svg' ?>" alt="Phone">
-										</div> -->
+										<div class="header__phone-img">
+										<img src='<?php echo $phoneIcon['url']; ?>' alt='<?php echo $phoneIcon['alt']; ?>' />
+										</div>
 
 										<span>
 											<?= $number ?>
 										</span>
 									</a>
 								<?php endif; ?>
-								</div>
 							
-
 							
-
-
 							<?php if (function_exists('custom_polylang_language_switcher')) {
 								custom_polylang_language_switcher();
 							} ?>
