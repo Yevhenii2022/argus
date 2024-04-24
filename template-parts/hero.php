@@ -18,6 +18,26 @@ $bg = get_field('hero_bg');
             <div class="hero__box">
 
                 <div>
+
+
+                    <div class="hero__logo">
+                        <?php
+                        $icon = get_field('hero_logo');
+                        $file_path = get_attached_file($icon);
+
+                        if ($file_path && file_exists($file_path)) {
+                            $svg_content = file_get_contents($file_path);
+                        } else {
+                            $svg_content = false;
+                        }
+                        ?>
+                        <?php if ($svg_content !== false) : ?>
+                            <?php echo $svg_content; ?>
+                        <?php endif; ?>
+                    </div>
+
+
+
                     <?php if ($title) : ?>
                         <h1 class="hero__title title anim-title _anim-items"><?= $title ?></h1>
                     <?php endif; ?>

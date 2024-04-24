@@ -5,6 +5,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
+		@include media(mobile) {
+			margin-bottom: 9.9rem;
+			justify-content: initial;
+			height: 52.4rem;
+		}
 	}
 
 	&__background {
@@ -17,6 +23,13 @@
 			border-radius: 1.429rem;
 			object-fit: initial;
 			overflow: hidden;
+
+			@include media(mobile) {
+				padding: 0 0.571rem;
+				// height: 100dvh;
+				height: 52.4rem;
+				top: 5rem;
+			}
 		}
 	}
 
@@ -26,6 +39,23 @@
 		flex-direction: column;
 		justify-content: space-between;
 		z-index: 1;
+
+		@include media(mobile) {
+			height: auto;
+		}
+	}
+
+	&__logo {
+		display: none;
+		@include media(mobile) {
+			margin-top: 7.6rem;
+			display: flex;
+			svg {
+				margin: 0 auto;
+				width: 6.929rem;
+				height: 2.371rem;
+			}
+		}
 	}
 
 	&__title {
@@ -35,6 +65,7 @@
 
 		@include media(mobile) {
 			width: 100%;
+			margin: 1.5rem auto 1.3rem auto;
 		}
 
 		p,
@@ -65,7 +96,8 @@
 		text-align: center;
 
 		@include media(mobile) {
-			width: 100%;
+			width: 91%;
+			margin: 10.6rem auto 0 auto;
 		}
 	}
 

@@ -5,6 +5,10 @@
 	align-items: center;
 	gap: 1rem;
 
+	@include media(mobile) {
+		margin-top: 4.7rem;
+	}
+
 	&__animate {
 		display: block;
 		width: 0.071rem;
