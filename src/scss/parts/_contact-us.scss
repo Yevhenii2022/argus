@@ -22,6 +22,7 @@
     @include media(mobile) {
       flex-direction: column;
       align-items: flex-start;
+      margin-top: 5rem;
     }
 
   }
@@ -41,7 +42,7 @@
     gap: 1.857rem;
 
     @include media(mobile) {
-      margin-top: 2.714rem;
+      margin-top: 1.714rem;
       gap: 1.143rem
       ;
     }
@@ -58,7 +59,7 @@
     justify-content: center;
 
     @include media(mobile) {
-      min-width: 10.286rem;
+      width: 10.286rem;
       height: 15.5rem;
     }
 
@@ -86,19 +87,30 @@
     }
   }
 
+  &__heading-mobile{
+    display: none;
+    text-transform: uppercase;
+
+    em{
+      font-family: $italic;
+    }
+    @include media(mobile) {
+      display: block;
+      font-size: 1.286rem;
+      width: 100%;
+      line-height: 100%;
+    }
+  }
+
   &__heading {
     font-size: 2rem;
     text-transform: uppercase;
     width: 60%;
-
     @include media(mobile) {
-      font-size: 1.286rem;
-      position: absolute;
-      top: 10.5rem;
-      width: 100%;
-      left: 0;
-      line-height: 100%;
+      display: none;
     }
+
+   
 
     em {
       font-family: $italic;

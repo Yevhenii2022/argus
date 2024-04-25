@@ -26,6 +26,7 @@
       padding-bottom: 1.143rem;
       width: 100%;
       line-height: 109%;
+      transition: $transition;
       @include media(mobile) {
         font-size: 1rem;
         padding-bottom: 1rem;
