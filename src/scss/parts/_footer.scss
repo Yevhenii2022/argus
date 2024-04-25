@@ -1,13 +1,20 @@
 .footer {
   padding-top: 5.714rem;
   background-color: $bg;
-  position: sticky;
+  position: fixed;
   bottom: 0;
-  
+  left: 0;
+  width: 100%;
   @include media(mobile) {
    padding-top: 4.571rem;
   }
   
+  &--additional{
+    height: 33.5rem;
+    display: block;
+    z-index: -1;
+    width: 0;
+  }
 
   &__wrapper {
     display: flex;

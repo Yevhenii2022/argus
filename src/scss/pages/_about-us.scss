@@ -6,11 +6,12 @@
   margin-top: 5.857rem;
   padding-top: 5.714rem;
   position: relative;
-  min-height: 68rem;
+  min-height: 65rem;
 
   @include media(mobile) {
     padding-top: 7.3571rem;
     margin-top: 0;
+    padding-bottom: 43.5rem;
   }
 
 
@@ -23,13 +24,13 @@
     top: 0;
     z-index: -1;
     mix-blend-mode: soft-light;
-    max-height: 68rem;
+    max-height: 63rem;
 
     @include media(mobile) {
       background-size: cover;
       top: 6rem;
-      max-height: 68rem;
-      background-position-x: 58%;
+      max-height: 59rem;
+      background-position-x: 50%;
     }
 
     &::before {
@@ -47,7 +48,7 @@
 
   &__breadcrumps {
     position: absolute;
-    top: 5.7rem;
+    top: 7.7rem;
   }
 
   &__content {
@@ -66,6 +67,7 @@
     @include media(mobile) {
       width: 100%;
       text-align: start;
+      margin-top: 2rem;
     }
 
     em {
@@ -81,7 +83,7 @@
 
     @include media(mobile) {
       text-align: start;
-      width: 100%;
+      width: 97%;
       margin-bottom: 0;
     }
   }
@@ -94,6 +96,10 @@
       position: static;
 
       display: none; ///////////////////////////////////////////////////////////////////////////////////////////////
+
+      @include media(mobile) {
+
+      }
     }
   }
 
@@ -229,6 +235,7 @@
 
     @include media(mobile) {
       width: 24.5rem;
+      margin-bottom: 9.214rem;
     }
   }
 
@@ -246,6 +253,10 @@
     font-size: 1.929rem;
     text-align: end;
     margin-bottom: 1.714rem;
+    @include media(mobile) {
+     
+      text-align: start;
+    }
   }
 
   &__year-first {
@@ -257,6 +268,8 @@
 
     @include media(mobile) {
       font-size: 4.286rem;
+      right: 19.7rem;
+      bottom: 16rem;
 
     }
   }
@@ -271,7 +284,9 @@
 
     @include media(mobile) {
       font-size: 4.286rem;
-
+      left: 20rem;
+      z-index: 2;
+      top: 14.5rem;
     }
   }
 }
@@ -287,11 +302,19 @@
     display: flex;
     gap: 6rem;
     margin-bottom: 5.143rem;
+    @include media(mobile) {
+      flex-direction: column;
+      margin-bottom: 3.429rem;
+    }
   }
 
   &__text {
     width: 50%;
     padding-left: 1.6rem;
+    @include media(mobile) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
 
   &__description {
@@ -301,6 +324,9 @@
       margin-bottom: 1.5rem;
       line-height: 100%;
       letter-spacing: 0.01rem;
+      @include media(mobile) {
+        font-size: 1.286rem;
+      }
 
       em {
         font-family: $italic;
@@ -312,12 +338,19 @@
     font-size: 1.429rem;
     line-height: 120%;
     margin-bottom: 5.357rem;
+    @include media(mobile) {
+      font-size: 1rem;
+      margin-bottom: 3.429rem;
+    }
   }
 
   &__title {
     position: relative;
     padding-left: 4.571rem;
     line-height: 83%;
+    @include media(mobile) {
+      padding-left: 2.571rem;
+    }
 
     &::before {
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
@@ -325,6 +358,10 @@
       left: 0;
       height: 4.643rem;
       width: 3.857rem;
+      @include media(mobile) {
+        height: 1.714rem;
+        width: 2.143rem;
+      }
     }
 
     em {
@@ -473,10 +510,24 @@
   padding-bottom: 8.571rem;
   background-color: $white;
   border-radius: 1.429rem;
+  @include media(mobile) {
+    position: relative;
+    padding-bottom: 8.071rem;
+    padding-bottom: 5.714rem;
+  }
+  
+  &__wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
 
   &__content {
     display: flex;
     gap: 1.143rem;
+    @include media(mobile) {
+      flex-direction: column;
+    }
   }
 
   &__image {
@@ -497,7 +548,11 @@
 
   &__name {
     text-transform: uppercase;
-    ;
+    @include media(mobile) {
+      position: absolute;
+      top: 8.5rem;
+    }
+    
   }
 
   &__description {
@@ -511,17 +566,28 @@
     margin-top: 0.857rem;
     width: 3.143rem;
     height: 2.429rem;
+    @include media(mobile) {
+      display: none;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: center;
+    @include media(mobile) {
+      justify-content: start;
+      
+    }
   }
 
   &__link {
     height: 4.429rem;
     display: flex;
     margin-left: 10rem;
+    @include media(mobile) {
+      margin-left: 0;
+      margin-top: 2.286rem;
+    }
 
     span {
       width: 9.5rem;

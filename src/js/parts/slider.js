@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const projects = new Swiper('.projects-slider__swiper', {
 		loop: true,
 		watchSlidesProgress: true,
-		slidesPerView: 1.2,
+		slidesPerView: 1.1,
 		spaceBetween: 8,
 		centeredSlides: true,
 		navigation: {
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerView: 1.22,
 		centeredSlides: true,
 		mousewheel: true,
-		freeMode: true,
+		  freeMode: true,
 		on: {
 			slideChange: function () {
 				const slides = document.querySelectorAll('.service-work__card');
