@@ -13,6 +13,9 @@
 
 	&__swiper{
 		margin-bottom: 3.714rem;
+		@include media(mobile) {
+		margin-bottom: 0.714rem;
+		}
 	}
 
 	

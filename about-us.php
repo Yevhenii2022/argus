@@ -6,7 +6,7 @@ Template Name: Про нас
 get_header();
 ?>
 
-<main>
+<main class="main">
     <?php $backgroundImage = get_field('banner_img') ?? '' ;?>
         <section class="about-banner">
             <div class="about-banner__bg" style=" background-image: url('<?php echo esc_url($backgroundImage); ?>');"></div>
@@ -87,7 +87,7 @@ get_header();
           $stageTitle = get_field('stage_heading') ?? '' ;
           $stageSubtitle = get_field('stage_subtitle') ?? '' ; ?>
     <section class="about-stages">
-        <div class="container">
+        <div class="container container--slider">
             <div class="about-stages__wrapper">
                 <?php if( $stageBackground || $stageTitle || $stageSubtitle): ?>
                 <div class="about-stages__heading">
@@ -120,7 +120,7 @@ get_header();
                             class="about-stages__bg"
                             style="background-image: url('<?php echo esc_url($stageBackground); ?>')">
                         </div>
-                        <?php if ($startDate): ?>
+                        <!-- <?php if ($startDate): ?>
                         <div class="about-stages__year-first">
                             <?= $startDate ;?>
                         </div>
@@ -129,7 +129,7 @@ get_header();
                         <div class="about-stages__year-last">
                             <?= $endDate ;?>
                         </div>
-                        <?php endif ?>
+                        <?php endif ?> -->
 
                         <div class="about-stages__text">
                             <?php if ($stageHeading): ?>
@@ -146,6 +146,16 @@ get_header();
                         <?php if ($stageImg): ?>
                         <div class="about-stages__img" data-image-wrap>
                             <img src='<?php echo $stageImg['url']; ?>' alt='<?php echo $stageImg['alt']; ?>' />
+                            <?php if ($startDate): ?>
+                        <div class="about-stages__year-first">
+                            <?= $startDate ;?>
+                        </div>
+                        <?php endif ?>
+                        <?php if ($endDate): ?>
+                        <div class="about-stages__year-last">
+                            <?= $endDate ;?>
+                        </div>
+                        <?php endif ?>
                         </div>
                         <?php endif ?>
                     </div>

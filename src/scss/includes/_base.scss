@@ -87,3 +87,13 @@ button {
 	font-size: 0.786rem;
 	text-transform: uppercase;
 }
+
+
+
+main{
+  transition: 0.45s linear;
+  z-index: 1;
+  position: relative;
+  background-color: $bg;
+}
+

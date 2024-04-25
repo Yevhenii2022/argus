@@ -11,6 +11,8 @@
 	top: initial;
 	@include media(mobile) {
 		width: 75%;
+		transform: translate(-52%, -50%);
+		top: 28rem;
 	}
 }
 
