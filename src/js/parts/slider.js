@@ -165,7 +165,6 @@ const projectsSingle = new Swiper('.project__slider', {
 					if (index === this.activeIndex) {
 						slide.style.transform = 'rotate(5deg) translateY(-10%)';
 					} else {
-					} else {
 						slide.style.transform = 'rotate(-5deg) translateY(0)';
 					}
 				});
