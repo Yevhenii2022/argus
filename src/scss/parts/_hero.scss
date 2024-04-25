@@ -1,3 +1,6 @@
+body {
+	overflow-x: hidden;
+}
 .hero {
 	&__wrapper {
 		margin-bottom: 8.571rem;
@@ -5,6 +8,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		position: relative;
 
 		@include media(mobile) {
 			margin-bottom: 9.9rem;
@@ -14,16 +18,101 @@
 	}
 
 	&__background {
-		img {
-			padding: 0 1.714rem;
-			height: calc(100dvh - 5.857rem);
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+
+		&--show {
+			.hero__background-angar {
+				opacity: 1;
+			}
+			svg {
+				path {
+					stroke-dashoffset: 0 !important;
+					stroke: #181818 !important;
+				}
+			}
+		}
+		&-left {
 			position: absolute;
-			top: 5.857rem;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			width: 36.5rem;
+			display: flex;
+			align-items: end;
+			svg {
+				width: 100%;
+				height: fit-content;
+
+				path {
+					stroke-dashoffset: 100%;
+					stroke-dasharray: 100%;
+					transition:
+						4s ease-in-out,
+						stroke 1s linear;
+					transition-delay: 1s;
+
+					stroke: transparent;
+					&.house2 {
+						transition-delay: 3s;
+					}
+					&.house3 {
+						transition-delay: 5s;
+					}
+				}
+			}
+		}
+		&-right {
+			position: absolute;
+			display: flex;
+			align-items: end;
 			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 36.5rem;
+
+			svg {
+				width: 100%;
+				height: fit-content;
+
+				path {
+					stroke-dashoffset: 100%;
+					stroke-dasharray: 100%;
+					transition:
+						4s ease-in-out,
+						stroke 1s linear;
+					transition-delay: 2s;
+					stroke: transparent;
+					&.house2 {
+						transition-delay: 4s;
+					}
+					&.house3 {
+						transition-delay: 6s;
+					}
+				}
+			}
+		}
+		&-bottom {
+			height: 28.35rem;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			pointer-events: all !important;
+		}
+		&-angar {
+			opacity: 0;
+			//   padding: 0 1.714rem;
+			height: 100%;
 			border-radius: 1.429rem;
 			object-fit: initial;
 			overflow: hidden;
-
+			transition: opacity 1s ease-in-out;
+			perspective: 10000px;
 			@include media(mobile) {
 				padding: 0 0.571rem;
 				// height: 100dvh;

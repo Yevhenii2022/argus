@@ -2,19 +2,33 @@
 	padding-bottom: 14.7rem;
 	margin-right: -1.714rem;
 
+	@include media(mobile) {
+		padding-bottom: 8.85rem;
+	}
+
 	&:has(.swiper-pagination) {
 		.swiper-pagination {
 			width: 90.5%;
 			left: 49%;
 
 			@include media(mobile) {
-				width: 85.5%;
-				left: 46%;
+				width: 78%;
+				left: 48%;
+			}
+		}
+		.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+			@include media(mobile) {
+				top: 24.45rem;
 			}
 		}
 		.swiper-button-next {
 			right: 1.4rem;
 			transition: $transition;
+
+			@include media(mobile) {
+				bottom: 1.45rem;
+			}
+
 			&:hover {
 				transform: translateX(15%);
 			}
@@ -22,6 +36,11 @@
 		.swiper-button-prev {
 			left: -0.5rem;
 			transition: $transition;
+
+			@include media(mobile) {
+				bottom: 1.45rem;
+			}
+
 			&:hover {
 				transform: translateX(-15%);
 			}
@@ -59,6 +78,12 @@
 		font-size: 1.929rem;
 		line-height: 1;
 		overflow: hidden;
+
+		@include media(mobile) {
+			margin: 1.76rem 0;
+			height: 3.143rem;
+			font-size: 1.571rem;
+		}
 	}
 
 	&__image {
@@ -69,6 +94,10 @@
 		height: 23rem;
 		overflow: hidden;
 		background: $img_not_found;
+
+		@include media(mobile) {
+			height: 13.2rem;
+		}
 
 		img {
 			width: 100%;

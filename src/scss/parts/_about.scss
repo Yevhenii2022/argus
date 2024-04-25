@@ -5,6 +5,12 @@
 	background-repeat: no-repeat;
 	background-position: center;
 
+	@include media(mobile) {
+		padding-bottom: 5.8rem;
+		background-position: top;
+		background-size: auto 50rem;
+	}
+
 	// &__bg {
 	// 	// position: absolute;
 	// 	width: 100%;
@@ -21,6 +27,9 @@
 	// }
 
 	&__title {
+		@include media(mobile) {
+			margin-top: 1rem;
+		}
 		p {
 			text-align: start;
 		}
@@ -33,6 +42,7 @@
 
 		@include media(mobile) {
 			flex-direction: column-reverse;
+			gap: 1.4rem;
 		}
 	}
 
@@ -124,10 +134,23 @@
 		&-desc {
 			max-width: 21.8rem;
 			align-self: center;
+
+			@include media(mobile) {
+				max-width: 100%;
+			}
 		}
 
 		&-link {
 			align-self: center;
+
+			@include media(mobile) {
+				width: 4.48rem !important;
+				margin-top: 2.4rem;
+				align-self: flex-start;
+				span {
+					font-size: 0.89rem;
+				}
+			}
 		}
 	}
 
@@ -137,7 +160,9 @@
 		justify-content: space-between;
 
 		@include media(mobile) {
+			margin-top: 3.4rem;
 			flex-direction: column;
+			gap: 2.7rem;
 		}
 
 		&-item {
@@ -152,6 +177,11 @@
 			font-weight: 300;
 			line-height: 1;
 			color: $red;
+
+			@include media(mobile) {
+				margin-bottom: 0.75rem;
+				font-size: 4.286rem;
+			}
 		}
 
 		&-title {
@@ -159,6 +189,11 @@
 			line-height: 1.09;
 			margin-bottom: 1.1rem;
 			text-transform: uppercase;
+
+			@include media(mobile) {
+				font-size: 1rem;
+				line-height: 0.85;
+			}
 		}
 
 		&-text {
