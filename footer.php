@@ -19,6 +19,7 @@
       $phone = get_field('phone', 'options') ;
 
 ?>
+<div class="footer--additional"></div>
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">

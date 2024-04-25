@@ -1,8 +1,19 @@
+.main{
+  background-color: $bg;
+  z-index: 2;
+}
 .about-banner {
   margin-top: 5.857rem;
   padding-top: 5.714rem;
   position: relative;
-  min-height: 68rem;
+  min-height: 65rem;
+
+  @include media(mobile) {
+    padding-top: 7.3571rem;
+    margin-top: 0;
+    padding-bottom: 43.5rem;
+  }
+
 
   &__bg {
     position: absolute;
@@ -13,7 +24,14 @@
     top: 0;
     z-index: -1;
     mix-blend-mode: soft-light;
-    max-height: 68rem;
+    max-height: 63rem;
+
+    @include media(mobile) {
+      background-size: cover;
+      top: 6rem;
+      max-height: 59rem;
+      background-position-x: 50%;
+    }
 
     &::before {
       content: "";
@@ -28,9 +46,9 @@
     }
   }
 
-  &__breadcrumps{
+  &__breadcrumps {
     position: absolute;
-    top: 5.7rem;
+    top: 7.7rem;
   }
 
   &__content {
@@ -46,6 +64,12 @@
     display: block;
     width: 50%;
 
+    @include media(mobile) {
+      width: 100%;
+      text-align: start;
+      margin-top: 2rem;
+    }
+
     em {
       font-family: $italic;
     }
@@ -56,6 +80,12 @@
     text-align: center;
     width: 18rem;
     margin-bottom: 23.857rem;
+
+    @include media(mobile) {
+      text-align: start;
+      width: 97%;
+      margin-bottom: 0;
+    }
   }
 
   &__slider {
@@ -64,6 +94,12 @@
       margin-right: -1.714rem;
       margin-top: 4.286rem;
       position: static;
+
+      display: none; ///////////////////////////////////////////////////////////////////////////////////////////////
+
+      @include media(mobile) {
+
+      }
     }
   }
 
@@ -71,7 +107,7 @@
     gap: 1.143rem;
     justify-content: center;
     margin-bottom: 5rem;
-    ;
+    display: flex;
 
     @include media(mobile) {
       justify-content: flex-start;
@@ -142,6 +178,7 @@
 .about-stages {
   padding-top: 7.143rem;
 
+
   &__heading {
     text-align: center;
     margin-bottom: 8.571rem;
@@ -171,8 +208,13 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    padding: 12.071rem 5.643rem;
+    padding: 12.071rem 6.4rem;
     gap: 1.143rem;
+
+    @include media(mobile) {
+      padding: 0 1.143rem;
+      flex-direction: column-reverse;
+    }
   }
 
   &__bg {
@@ -190,34 +232,62 @@
   &__img {
     position: relative;
     width: 40.714rem;
+
+    @include media(mobile) {
+      width: 24.5rem;
+      margin-bottom: 9.214rem;
+    }
   }
 
   &__text {
     width: 26%;
     text-align: end;
+
+    @include media(mobile) {
+      width: 100%;
+      text-align: start;
+    }
   }
 
   &__title {
     font-size: 1.929rem;
     text-align: end;
     margin-bottom: 1.714rem;
+    @include media(mobile) {
+     
+      text-align: start;
+    }
   }
 
   &__year-first {
     position: absolute;
-    right: 67%;
+    right: 89%;
     font-size: 11.429rem;
-    font-family: $medium;
-    top: 5.214rem;
+    font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+    bottom: 21.5rem;
+
+    @include media(mobile) {
+      font-size: 4.286rem;
+      right: 19.7rem;
+      bottom: 16rem;
+
+    }
   }
 
   &__year-last {
     position: absolute;
-    left: 65%;
+    left: 37rem;
     font-size: 11.429rem;
-    font-family: $italic;
-    bottom: 7.571rem;
+    font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
     z-index: 2;
+    top: 19.5rem;
+
+    @include media(mobile) {
+      font-size: 4.286rem;
+      left: 20rem;
+      z-index: 2;
+      top: 14.5rem;
+    }
   }
 }
 
@@ -230,12 +300,21 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 6rem;
     margin-bottom: 5.143rem;
+    @include media(mobile) {
+      flex-direction: column;
+      margin-bottom: 3.429rem;
+    }
   }
 
   &__text {
     width: 50%;
+    padding-left: 1.6rem;
+    @include media(mobile) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
 
   &__description {
@@ -243,6 +322,11 @@
       font-size: 2rem;
       text-transform: uppercase;
       margin-bottom: 1.5rem;
+      line-height: 100%;
+      letter-spacing: 0.01rem;
+      @include media(mobile) {
+        font-size: 1.286rem;
+      }
 
       em {
         font-family: $italic;
@@ -254,12 +338,19 @@
     font-size: 1.429rem;
     line-height: 120%;
     margin-bottom: 5.357rem;
+    @include media(mobile) {
+      font-size: 1rem;
+      margin-bottom: 3.429rem;
+    }
   }
 
   &__title {
     position: relative;
     padding-left: 4.571rem;
     line-height: 83%;
+    @include media(mobile) {
+      padding-left: 2.571rem;
+    }
 
     &::before {
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
@@ -267,6 +358,10 @@
       left: 0;
       height: 4.643rem;
       width: 3.857rem;
+      @include media(mobile) {
+        height: 1.714rem;
+        width: 2.143rem;
+      }
     }
 
     em {
@@ -283,6 +378,7 @@
   &__video {
     overflow: hidden;
     max-width: 100%;
+    max-height: 49.8rem;
 
     video {
       width: 100%;
@@ -296,12 +392,20 @@
   &__wrapper {
     display: flex;
     padding-bottom: 13.429rem;
-    padding-top: 20.214rem;
+    padding-top: 20rem;
+    gap: 10rem;
+
+    @include media(mobile) {
+      padding-top: 5.714rem;
+      flex-direction: column;
+    }
   }
 
   &__left {
     flex: 1;
-    margin-top: 6rem;
+
+
+    @include media(mobile) {}
   }
 
   &__heading {
@@ -321,7 +425,12 @@
 
   &__right {
     flex: 1;
-    margin-top: 14rem;
+    margin-top: 16rem;
+
+    @include media(mobile) {
+      display: none; /////////////////////////////////////////////////////////////////////////
+    }
+
   }
 
   &__list {
@@ -339,9 +448,9 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    gap: 1.929rem;
+    gap: 3rem;
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 6.2rem;
     transition: $transition;
 
     &:hover,
@@ -401,10 +510,24 @@
   padding-bottom: 8.571rem;
   background-color: $white;
   border-radius: 1.429rem;
+  @include media(mobile) {
+    position: relative;
+    padding-bottom: 8.071rem;
+    padding-bottom: 5.714rem;
+  }
+  
+  &__wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
 
   &__content {
     display: flex;
     gap: 1.143rem;
+    @include media(mobile) {
+      flex-direction: column;
+    }
   }
 
   &__image {
@@ -425,7 +548,11 @@
 
   &__name {
     text-transform: uppercase;
-    ;
+    @include media(mobile) {
+      position: absolute;
+      top: 8.5rem;
+    }
+    
   }
 
   &__description {
@@ -439,17 +566,28 @@
     margin-top: 0.857rem;
     width: 3.143rem;
     height: 2.429rem;
+    @include media(mobile) {
+      display: none;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: center;
+    @include media(mobile) {
+      justify-content: start;
+      
+    }
   }
 
   &__link {
     height: 4.429rem;
     display: flex;
     margin-left: 10rem;
+    @include media(mobile) {
+      margin-left: 0;
+      margin-top: 2.286rem;
+    }
 
     span {
       width: 9.5rem;

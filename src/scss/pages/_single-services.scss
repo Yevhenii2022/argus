@@ -561,7 +561,6 @@
   padding-top: 5.714rem;
 
   &__title {
-    margin-bottom: 4.3rem;
     width: 50%;
 
     em {
@@ -570,16 +569,15 @@
   }
 
   &__swiper{
-    margin-bottom: 8.571rem;
+    margin-bottom: 1.571rem;
   }
 
   &__inner {
-    padding: 3rem 0;
+    padding: 7rem 0;
     margin-left: 4rem;
     @include media(mobile) {
       margin-left: 0;
     }
-
   }
 
   &__card {
