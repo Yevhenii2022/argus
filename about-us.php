@@ -33,8 +33,8 @@ get_header();
                             <?=$description ;?>
                         </p>
                     <?php endif ?>
-                    <!-- <div class="about-banner__slider swiper">
-                           <div class="about-banner__slides swiper-wrapper ">
+                    <div class="about-banner__slider swiper">
+                           <div class="about-banner__slides swiper-wrapper">
                                 <?php while (have_rows('about-us_list')):
                                 the_row();
                                 $number = get_sub_field('number');
@@ -62,7 +62,7 @@ get_header();
                                 <div class="swiper-pagination"></div>
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
-                    </div> -->
+                    </div>
                     <?php endif ?>
                 </div>
             </div>
@@ -79,9 +79,7 @@ get_header();
         </div>
        <?php get_template_part('template-parts/project-slider'); ?>
     </section> 
-
-
-   
+  
 
     <?php $stageBackground = get_field('stage_bg') ?? '' ;
           $stageTitle = get_field('stage_heading') ?? '' ;
@@ -120,17 +118,7 @@ get_header();
                             class="about-stages__bg"
                             style="background-image: url('<?php echo esc_url($stageBackground); ?>')">
                         </div>
-                        <!-- <?php if ($startDate): ?>
-                        <div class="about-stages__year-first">
-                            <?= $startDate ;?>
-                        </div>
-                        <?php endif ?>
-                        <?php if ($endDate): ?>
-                        <div class="about-stages__year-last">
-                            <?= $endDate ;?>
-                        </div>
-                        <?php endif ?> -->
-
+                       
                         <div class="about-stages__text">
                             <?php if ($stageHeading): ?>
                             <div class="about-stages__title">
@@ -227,13 +215,13 @@ get_header();
                 </h2>
                 <?php endif ?>
                 </div>
-                <div class="about-values__right">
-                     <ul class="about-values__list">
+                <div class="about-values__right swiper">
+                     <ul class="about-values__list swiper-wrapper">
                     <?php while (have_rows('values_list')):
                             the_row();
                             $valuesItemTitle = get_sub_field('value_heading') ?? '' ;
                             $valuesItemDescription = get_sub_field('value_description') ?? '' ; ?>
-                    <li class="about-values__item">
+                    <li class="about-values__item swiper-slide">
                     
                         <?php if( $valuesItemTitle ): ?>
                         <h3 class="about-values__title">
@@ -249,6 +237,9 @@ get_header();
                     </li>
                     <? endwhile ?>
                 </ul>
+                  <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
                
             </div>

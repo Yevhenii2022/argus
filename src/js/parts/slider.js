@@ -66,27 +66,32 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		},
 	});
-	// 	if (window.innerWidth < 542) {
-	// 	const values = new Swiper('.about-values__right', {
 
-	// 		loop: true,
-	// 		watchSlidesProgress: true,
-	// 		slidesPerView: 2,
-	// 		spaceBetween: 8,
-	// 		centeredSlides: true,
-	// 		navigation: {
-	// 			nextEl: '.swiper-button-next',
-	// 			prevEl: '.swiper-button-prev',
-	// 		},
-	// 		pagination: {
-	// 			el: '.swiper-pagination',
-	// 			type: 'progressbar',
-	// 		},
+	const values = new Swiper('.about-values__right', {
 
-	// 	});
-	// }
+		watchSlidesProgress: true,
+		slidesPerView: 1.2,
+		spaceBetween: 8,
+		centeredSlides: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
+		breakpoints: {
+			541: {
+				spaceBetween: 1,
+				slidesPerView: 0,
+			},
+		},
+	
+	});
 
-	const projectsSingle = new Swiper('.project__slider', {
+	
+const projectsSingle = new Swiper('.project__slider', {
 		loop: true,
 		watchSlidesProgress: true,
 		slidesPerView: 2,
@@ -160,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					if (index === this.activeIndex) {
 						slide.style.transform = 'rotate(5deg) translateY(-10%)';
 					} else {
+					} else {
 						slide.style.transform = 'rotate(-5deg) translateY(0)';
 					}
 				});
@@ -173,20 +179,26 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	// if (window.innerWidth < 542) {
-	// 	const aboutSlider = new Swiper('.about-banner__slider', {
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 1,
-	// 		// autoplay:true,
-	// 		watchSlidesProgress: true,
-	// 		navigation: {
-	// 			nextEl: '.swiper-button-next',
-	// 			prevEl: '.swiper-button-prev',
-	// 		},
-	// 		pagination: {
-	// 			el: '.swiper-pagination',
-	// 			type: 'progressbar',
-	// 		},
-	// 	});
+	const aboutSlider = new Swiper('.about-banner__slider', {
+		slidesPerView: 1.1,
+		spaceBetween: 8,
+		// autoplay:true,
+		// watchSlidesProgress: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
+		breakpoints: {
+			541: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+		},
+	});
 	// }
 
 	//fancy Box
@@ -219,3 +231,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	//fancy Box
 });
+

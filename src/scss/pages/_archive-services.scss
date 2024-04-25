@@ -3,9 +3,17 @@
   padding-top: 5.714rem;
   padding-bottom: 8.571rem;
   background-repeat: no-repeat;
+  @include media(mobile) {
+      padding-top: 7.571rem;  
+      margin-top: 0;
+  }
 
   &__wrapper {
     display: flex;
+
+    @include media(mobile) {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -21,7 +29,9 @@
   }
 
   &__title {
-
+    @include media(mobile) {
+      margin-bottom: 1.714rem;
+    }
     em {
       font-family: $italic;
     }
@@ -31,11 +41,17 @@
     padding-left: 18.5rem;
     padding-right: 4.786rem;
     line-height: 120%;
-    
+    @include media(mobile) {
+    padding-left: 0rem;
+    padding-right: 2rem;
+    margin-bottom: 2.857rem;
+   }
   }
 
   &__arrow {
-
+    @include media(mobile) {
+      display: none;
+    }
     svg {
       width: 1.143rem;
       height: 1.143rem;
@@ -55,6 +71,9 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.143rem;
 		row-gap: 4.4rem;
+    @include media(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
  
