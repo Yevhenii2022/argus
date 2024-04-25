@@ -3715,12 +3715,13 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 541px) {
   .hero__wrapper {
-    margin-bottom: 9.9rem;
+    margin-bottom: 4.85rem;
     justify-content: initial;
-    height: 52.4rem;
+    height: 54.01rem;
   }
 }
 .hero__background {
@@ -3746,6 +3747,13 @@ body {
   width: 36.5rem;
   display: flex;
   align-items: end;
+}
+@media (max-width: 541px) {
+  .hero__background-left {
+    width: 17.5rem;
+    bottom: 3rem;
+    left: -7rem;
+  }
 }
 .hero__background-left svg {
   width: 100%;
@@ -3773,6 +3781,13 @@ body {
   height: 100%;
   width: 36.5rem;
 }
+@media (max-width: 541px) {
+  .hero__background-right {
+    width: 17.5rem;
+    bottom: 3rem;
+    right: -7rem;
+  }
+}
 .hero__background-right svg {
   width: 100%;
   height: fit-content;
@@ -3797,6 +3812,14 @@ body {
   bottom: 0;
   right: 0;
   pointer-events: all !important;
+}
+@media (max-width: 541px) {
+  .hero__background-bottom {
+    height: 30.8rem;
+  }
+  .hero__background-bottom img {
+    object-fit: contain;
+  }
 }
 .hero__background-angar {
   opacity: 0;
@@ -3879,16 +3902,16 @@ body {
 }
 @media (max-width: 541px) {
   .hero__text {
-    width: 91%;
-    margin: 10.6rem auto 0 auto;
+    width: 83%;
+    margin: 8.6rem auto 0 auto;
   }
 }
 .hero__phone {
-  padding-right: 0.1rem;
+  padding-right: 0.2rem;
   width: 3.071rem;
   height: 3.071rem;
   position: fixed;
-  right: 1.714rem;
+  right: 1.514rem;
   bottom: 12.5dvh;
   z-index: 9;
 }
@@ -3919,7 +3942,7 @@ body {
 }
 @media (max-width: 541px) {
   .scroll {
-    margin-top: 4.7rem;
+    margin-top: 4.2rem;
   }
 }
 .scroll__animate {

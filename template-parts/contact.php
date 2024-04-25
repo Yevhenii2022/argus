@@ -19,10 +19,6 @@ $img = get_field('contact_img');
             <div class="container">
                 <div class="contact__wrapper">
 
-                    <div id="cursor">
-                        <div class="cursor__circle"></div>
-                    </div>
-
                     <div>
                         <div class="contact__top">
                             <?php if ($desc) : ?>

@@ -9,11 +9,12 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		position: relative;
+		overflow: hidden;
 
 		@include media(mobile) {
-			margin-bottom: 9.9rem;
+			margin-bottom: 4.85rem;
 			justify-content: initial;
-			height: 52.4rem;
+			height: 54.01rem;
 		}
 	}
 
@@ -44,6 +45,13 @@ body {
 			width: 36.5rem;
 			display: flex;
 			align-items: end;
+
+			@include media(mobile) {
+				width: 17.5rem;
+				bottom: 3rem;
+				left: -7rem;
+			}
+
 			svg {
 				width: 100%;
 				height: fit-content;
@@ -75,6 +83,12 @@ body {
 			height: 100%;
 			width: 36.5rem;
 
+			@include media(mobile) {
+				width: 17.5rem;
+				bottom: 3rem;
+				right: -7rem;
+			}
+
 			svg {
 				width: 100%;
 				height: fit-content;
@@ -103,10 +117,15 @@ body {
 			bottom: 0;
 			right: 0;
 			pointer-events: all !important;
+			@include media(mobile) {
+				height: 30.8rem;
+				img {
+					object-fit: contain;
+				}
+			}
 		}
 		&-angar {
 			opacity: 0;
-			//   padding: 0 1.714rem;
 			height: 100%;
 			border-radius: 1.429rem;
 			object-fit: initial;
@@ -115,7 +134,6 @@ body {
 			perspective: 10000px;
 			@include media(mobile) {
 				padding: 0 0.571rem;
-				// height: 100dvh;
 				height: 52.4rem;
 				top: 5rem;
 			}
@@ -185,17 +203,17 @@ body {
 		text-align: center;
 
 		@include media(mobile) {
-			width: 91%;
-			margin: 10.6rem auto 0 auto;
+			width: 83%;
+			margin: 8.6rem auto 0 auto;
 		}
 	}
 
 	&__phone {
-		padding-right: 0.1rem;
+		padding-right: 0.2rem;
 		width: 3.071rem;
 		height: 3.071rem;
 		position: fixed;
-		right: 1.714rem;
+		right: 1.514rem;
 		bottom: 12.5dvh;
 		z-index: 9;
 
