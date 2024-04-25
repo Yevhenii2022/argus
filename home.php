@@ -23,7 +23,7 @@ get_header();
       $slider_title = get_field('news_title');
       ?>
       <?php if ($slider_title) : ?>
-        <h3 class="single-news__title title">
+        <h3 class="single-news__title title anim-title _anim-items">
           <?= $slider_title; ?>
           <div class="single-news__counter"></div>
         </h3>

@@ -65,28 +65,26 @@ document.addEventListener('DOMContentLoaded', function () {
 				slidesPerView: 2,
 			},
 		},
-
 	});
-// 	if (window.innerWidth < 542) {
-// 	const values = new Swiper('.about-values__right', {
+	// 	if (window.innerWidth < 542) {
+	// 	const values = new Swiper('.about-values__right', {
 
-// 		loop: true,
-// 		watchSlidesProgress: true,
-// 		slidesPerView: 2,
-// 		spaceBetween: 8,
-// 		centeredSlides: true,
-// 		navigation: {
-// 			nextEl: '.swiper-button-next',
-// 			prevEl: '.swiper-button-prev',
-// 		},
-// 		pagination: {
-// 			el: '.swiper-pagination',
-// 			type: 'progressbar',
-// 		},
-		
-// 	});
-// }
+	// 		loop: true,
+	// 		watchSlidesProgress: true,
+	// 		slidesPerView: 2,
+	// 		spaceBetween: 8,
+	// 		centeredSlides: true,
+	// 		navigation: {
+	// 			nextEl: '.swiper-button-next',
+	// 			prevEl: '.swiper-button-prev',
+	// 		},
+	// 		pagination: {
+	// 			el: '.swiper-pagination',
+	// 			type: 'progressbar',
+	// 		},
 
+	// 	});
+	// }
 
 	const projectsSingle = new Swiper('.project__slider', {
 		loop: true,
@@ -106,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const newsSlider = new Swiper('.news-slider__swiper', {
 		loop: true,
 		watchSlidesProgress: true,
-		slidesPerView: 1.1,
+		slidesPerView: 1.13,
 		spaceBetween: 8,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -123,7 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		},
 	});
-
 
 	const advanagesSwiper = new Swiper('.service-advantages__slider', {
 		loop: false,
@@ -151,21 +148,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-
 	const workSwiper = new Swiper('.service-work__swiper', {
 		slidesPerView: 1.22,
 		centeredSlides: true,
 		mousewheel: true,
-		  freeMode: true,
+		freeMode: true,
 		on: {
 			slideChange: function () {
 				const slides = document.querySelectorAll('.service-work__card');
 				slides.forEach((slide, index) => {
 					if (index === this.activeIndex) {
 						slide.style.transform = 'rotate(5deg) translateY(-10%)';
-				} else {
+					} else {
 						slide.style.transform = 'rotate(-5deg) translateY(0)';
-				}
+					}
 				});
 			},
 		},
@@ -175,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		},
 	});
-
 
 	// if (window.innerWidth < 542) {
 	// 	const aboutSlider = new Swiper('.about-banner__slider', {
