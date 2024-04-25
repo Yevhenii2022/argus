@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	const values = new Swiper('.about-values__right', {
-
 		watchSlidesProgress: true,
 		slidesPerView: 1.2,
 		spaceBetween: 8,
@@ -87,11 +86,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				slidesPerView: 0,
 			},
 		},
-	
 	});
 
-	
-const projectsSingle = new Swiper('.project__slider', {
+	const projectsSingle = new Swiper('.project__slider', {
 		loop: true,
 		watchSlidesProgress: true,
 		slidesPerView: 2,
@@ -165,7 +162,6 @@ const projectsSingle = new Swiper('.project__slider', {
 					if (index === this.activeIndex) {
 						slide.style.transform = 'rotate(5deg) translateY(-10%)';
 					} else {
-					} else {
 						slide.style.transform = 'rotate(-5deg) translateY(0)';
 					}
 				});
@@ -231,4 +227,3 @@ const projectsSingle = new Swiper('.project__slider', {
 	});
 	//fancy Box
 });
-

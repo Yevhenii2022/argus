@@ -26,7 +26,7 @@ $img = get_field('contact_img');
                     <div>
                         <div class="contact__top">
                             <?php if ($desc) : ?>
-                                <p class="contact__desc">
+                                <p class="contact__desc anim-title _anim-items">
                                     <?= $desc ?>
                                 </p>
                             <?php endif; ?>
@@ -60,7 +60,7 @@ $img = get_field('contact_img');
                         <?php endif; ?>
 
                         <?php if ($text) : ?>
-                            <div class="contact__text">
+                            <div class="contact__text anim-title _anim-items">
                                 <?= $text ?>
                             </div>
                         <?php endif; ?>
