@@ -90,7 +90,7 @@ $title = get_field('about_title') ?? '';
                         $title = get_sub_field('title');
                         $text = get_sub_field('text'); ?>
 
-                        <div class="about__bottom-item">
+                        <div class="about__bottom-item anim-title _anim-items">
                             <?php if ($number) : ?>
                                 <span class="about__bottom-number">
                                     <?= $number ?>

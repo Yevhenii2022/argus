@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				slidesPerView: 2,
 			},
 		},
-
 	});
 
 	const values = new Swiper('.about-values__right', {
@@ -110,7 +109,7 @@ const projectsSingle = new Swiper('.project__slider', {
 	const newsSlider = new Swiper('.news-slider__swiper', {
 		loop: true,
 		watchSlidesProgress: true,
-		slidesPerView: 1.1,
+		slidesPerView: 1.13,
 		spaceBetween: 8,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -127,7 +126,6 @@ const projectsSingle = new Swiper('.project__slider', {
 			},
 		},
 	});
-
 
 	const advanagesSwiper = new Swiper('.service-advantages__slider', {
 		loop: false,
@@ -155,7 +153,6 @@ const projectsSingle = new Swiper('.project__slider', {
 		},
 	});
 
-
 	const workSwiper = new Swiper('.service-work__swiper', {
 		slidesPerView: 1.22,
 		centeredSlides: true,
@@ -168,6 +165,7 @@ const projectsSingle = new Swiper('.project__slider', {
 					if (index === this.activeIndex) {
 						slide.style.transform = 'rotate(5deg) translateY(-10%)';
 					} else {
+					} else {
 						slide.style.transform = 'rotate(-5deg) translateY(0)';
 					}
 				});
@@ -179,7 +177,6 @@ const projectsSingle = new Swiper('.project__slider', {
 			},
 		},
 	});
-
 
 	// if (window.innerWidth < 542) {
 	const aboutSlider = new Swiper('.about-banner__slider', {

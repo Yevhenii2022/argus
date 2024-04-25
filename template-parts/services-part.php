@@ -7,7 +7,7 @@ $title = get_field('services-part_title');
         <div class="services__cover">
             <div class="container">
                 <?php if ($title) : ?>
-                    <h3 class="services__title title">
+                    <h3 class="services__title title anim-title _anim-items">
                         <?= $title ?>
                     </h3>
                 <?php endif; ?>

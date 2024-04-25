@@ -28,13 +28,13 @@ function editLoginPage()
 
         }
 
-        .login {
+        /* .login {
             background-image: url(<?= $logo_url ?>);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
 
-        }
+        } */
 
         .login:before {
             content: "";

@@ -5,7 +5,7 @@ $title = get_field('projects-part_title');
     <div class="container">
         <div class="projects-part__wrapper">
             <?php if ($title) : ?>
-                <h3 class="projects-part__title title">
+                <h3 class="projects-part__title title anim-title _anim-items">
                     <?= $title ?>
                     <div class="projects-part__counter"></div>
                 </h3>

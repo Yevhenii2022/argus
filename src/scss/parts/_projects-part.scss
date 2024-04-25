@@ -1,6 +1,10 @@
 .projects-part {
 	padding: 8.214rem 0 8.55rem 0;
 
+	@include media(mobile) {
+		padding: 5.35rem 0 5.75rem 0;
+	}
+
 	&__title {
 		margin-bottom: 3.15rem;
 		display: flex;
@@ -47,6 +51,7 @@
 		row-gap: 4.4rem;
 
 		@include media(mobile) {
+			margin-bottom: 2.85rem;
 			grid-template-columns: repeat(1, 1fr);
 			row-gap: 3.47rem;
 
