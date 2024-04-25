@@ -16,6 +16,11 @@
       </div>
       <?php endif ?>
       <div class="contact-us__content">
+      <?php if ($sectionHeading): ?>
+      <h2 class="contact-us__heading-mobile anim-title _anim-items">
+          <?= $sectionHeading ;?>
+      </h2>
+      <?php endif ?>
         <div class="contact-us__left">
            <?php if ($sectionVideo) : ?>
             <div class="contact-us__video">
