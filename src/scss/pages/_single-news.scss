@@ -151,10 +151,7 @@
 			flex-direction: column-reverse;
 		}
 	}
-	// .single-news__button {
-	// 	@include media(mobile) {
-	// 		position: absolute;
-	// 		bottom: 0;
-	// 	}
-	// }
+	.swiper {
+		z-index: 0 !important;
+	}
 }

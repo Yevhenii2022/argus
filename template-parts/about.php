@@ -70,6 +70,11 @@ $title = get_field('about_title') ?? '';
                         <?php endif; ?>
 
                         <a href="<?php echo esc_url(get_home_url() . '/about/'); ?>" class="about__top-link link" style="width: <?php echo (pll_current_language() === 'en') ? '3.97rem' : '3.571rem'; ?>">
+
+
+
+
+
                             <span>
                                 <?php pll_e('more_about_us') ?>
                             </span>
@@ -90,7 +95,7 @@ $title = get_field('about_title') ?? '';
                         $title = get_sub_field('title');
                         $text = get_sub_field('text'); ?>
 
-                        <div class="about__bottom-item">
+                        <div class="about__bottom-item anim-title _anim-items">
                             <?php if ($number) : ?>
                                 <span class="about__bottom-number">
                                     <?= $number ?>

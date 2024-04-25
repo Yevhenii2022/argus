@@ -102,12 +102,12 @@
 	}
 
 	&__phone {
-		padding-right: 0.1rem;
+		padding: 0.1rem 0.2rem 0.2rem 0.1rem;
 		width: 3.071rem;
 		height: 3.071rem;
 		position: fixed;
 		right: 1.714rem;
-		bottom: 12.5dvh;
+		bottom: 7dvh;
 		z-index: 9;
 
 		@include media(mobile) {
