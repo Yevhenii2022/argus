@@ -255,6 +255,7 @@
 		@include media(mobile) {
 			flex-direction: column;
 			gap: 1.143rem;
+			z-index: -1;
 		}
 
 		a {
