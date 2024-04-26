@@ -85,10 +85,14 @@ button {
 	gap: 0.357rem;
 	font-size: 0.786rem;
 	text-transform: uppercase;
+}
 
-	@include media(mobile) {
-		flex-wrap: wrap;
-	}
+.breadcrumb_last {
+	height: 0.857rem;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
 }
 
 body,
