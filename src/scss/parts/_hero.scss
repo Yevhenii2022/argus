@@ -1,6 +1,3 @@
-body {
-	overflow-x: hidden;
-}
 .hero {
 	&__wrapper {
 		margin-bottom: 8.571rem;
@@ -216,10 +213,7 @@ body {
 		right: 1.514rem;
 		bottom: 12.5dvh;
 		z-index: 9;
-
-		@include media(mobile) {
-			display: none;
-		}
+		display: none;
 
 		svg {
 			transition: $transition;
@@ -233,6 +227,16 @@ body {
 			&:focus {
 				transform: scale(1.19);
 			}
+		}
+	}
+}
+
+.home:has(.hero__phone) {
+	.hero__phone {
+		display: block;
+
+		@include media(mobile) {
+			display: none;
 		}
 	}
 }

@@ -73,15 +73,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		const link = document.getElementById('contact-link');
 
-		function toggleHref() {
-			if (window.innerWidth < 542) {
-				link.removeAttribute('href');
-			} else {
-				link.setAttribute('href', '#contact-us');
+		if (link) {
+			function toggleHref() {
+				if (window.innerWidth < 542) {
+					link.removeAttribute('href');
+				} else {
+					link.setAttribute('href', '#contact-us');
+				}
 			}
-		}
 
-		toggleHref();
-		window.addEventListener('resize', toggleHref);
+			toggleHref();
+			window.addEventListener('resize', toggleHref);
+		}
 	}
 });

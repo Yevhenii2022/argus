@@ -18,7 +18,7 @@ body {
 	font-weight: 400;
 	line-height: 1.2;
 	counter-reset: section;
-  
+
 	&.burger-open {
 		overflow: hidden;
 		max-height: 100vh;
@@ -51,11 +51,6 @@ button {
 	background-color: transparent;
 	border: none;
 }
-// .body {
-// 	&--popup {
-// 		overflow: hidden;
-// 	}
-// }
 
 .container {
 	max-width: 102.857rem;
@@ -87,18 +82,23 @@ button {
 
 .yoast-breadcrumbs > span {
 	display: flex;
-	flex-wrap: wrap;
 	gap: 0.357rem;
 	font-size: 0.786rem;
 	text-transform: uppercase;
+
+	@include media(mobile) {
+		flex-wrap: wrap;
+	}
 }
 
-
-
-main{
-  transition: 0.45s linear;
-  z-index: 1;
-  position: relative;
-  background-color: $bg;
+body,
+main {
+	overflow-x: hidden;
 }
 
+main {
+	transition: 0.45s linear;
+	z-index: 1;
+	position: relative;
+	background-color: $bg;
+}
