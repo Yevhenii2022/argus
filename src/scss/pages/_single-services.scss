@@ -370,10 +370,10 @@
   
 
   &__image {
-    max-width: 52rem;
+    width: 52rem;
     height: 100%;
     @include media(mobile) {}
-
+      width: 26.786rem;
     img {
       height: 100%;
     }
@@ -563,16 +563,17 @@
   &__title {
     width: 50%;
     padding-bottom: 2rem;
+    margin-left: 1.143rem;
+    padding-left: 3rem;
     &::before {
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
       position: absolute;
       left: 0;
-      height: 1.786rem;
-      width: 1.643rem;
-      bottom: 4.6rem;
+      height: 3.071rem;
+      width: 2.571rem;
       @include media(mobile) {
-        bottom: 0;
-        top: 0;
+        width: 1.571rem;
+        height: 1.929rem;
       }
     }
 

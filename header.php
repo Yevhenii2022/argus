@@ -61,12 +61,20 @@
 								$phoneIcon = $phone['phone_icon'] ?? '';
 								$cleanedNumber = preg_replace('/\s+/', '', $number);
 								$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
+								$file_path = get_attached_file($phoneIcon);
 								?>
 								<?php if ($number) : ?>
 									<a href="tel:+<?= $cleanedNumber ?>" class="header__phone">
-										<div class="header__phone-img">
-										<img src='<?php echo $phoneIcon['url']; ?>' alt='<?php echo $phoneIcon['alt']; ?>' />
-										</div>
+										
+										<?php if ($file_path && file_exists($file_path)) {
+														$svg_content = file_get_contents($file_path);
+												} else {
+														$svg_content = false;
+												}
+												?>
+												<div class="header__phone-img">
+												    <?php echo $svg_content; ?>
+										    </div>
 
 										<span>
 											<?= $number ?>

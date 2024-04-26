@@ -478,21 +478,12 @@
     padding-top: 6.2rem;
     transition: $transition;
     margin-top: 2rem;
+    color: $black;
     @include media(mobile) {
       width: 22rem;
       height: 22rem;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $red;
-      color: $white;
-
-      &::before {
-        color: $black;
-      }
-    }
-
+    } 
+    
     &::before {
       content: counter(item, decimal-leading-zero) ". ";
       position: absolute;
@@ -502,8 +493,20 @@
       left: 50%;
       font-size: 4.286rem;
       font-family: $italic;
+      color: $black;
     }
 
+    &:hover,
+    &:focus {
+      background-color: $red;
+
+      .about-values__title,
+      .about-values__description{
+        color: $white;
+      }
+    }
+
+   
     &:nth-child(even) {
       transform: rotate(5deg);
       margin-left: 20rem;
@@ -597,7 +600,6 @@
       position: absolute;
       top: 8.5rem;
     }
-    
   }
 
   &__description {

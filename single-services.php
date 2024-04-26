@@ -263,7 +263,7 @@
             <?php endif; ?>
               <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="service-cards__button button">
                   <div class="button__wrapper">
-                      <p><?php pll_e('services') ?></p>
+                      <p><?php pll_e('all_services') ?></p>
                   </div>
               </a>
             </div>
