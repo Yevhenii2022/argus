@@ -21,12 +21,12 @@
     input{
       border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
       font-size: 0.786rem;
-      text-transform: uppercase;
       background-color: $white;
       padding-bottom: 1.143rem;
       width: 100%;
       line-height: 109%;
       transition: $transition;
+      border-radius: 0 !important;
       @include media(mobile) {
         font-size: 1rem;
         padding-bottom: 1rem;
@@ -49,6 +49,7 @@
 
        &:invalid {
       border-bottom: 0.071rem solid $red;
+      border-radius: 0 !important;
     }
   }
 }
@@ -59,7 +60,6 @@
     textarea{
       border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
       font-size: 0.786rem;
-      text-transform: uppercase;
       background-color: $white;
       height: 5.8rem;
       font-family: $regular;
@@ -67,6 +67,8 @@
       width: 100%;
       transition: $transition;
       resize: none;
+      border-radius: 0 !important;
+      border-radius: 0 !important;
       @include media(mobile) {
         font-size: 1rem;
         padding-bottom: 1rem;
@@ -74,6 +76,7 @@
       }
       &:invalid {
         border-bottom: 0.071rem solid $red;
+        border-radius: 0 !important;
       }
 
       &::placeholder{
@@ -86,6 +89,7 @@
     &:focus,
     &:active {
       border-bottom: 0.071rem solid $black;
+      border-radius: 0 !important;
     }
   }
 
