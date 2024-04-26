@@ -22,6 +22,8 @@
 		justify-content: space-between;
 		@include media(mobile) {
 			padding: 1.2rem 0;
+			gap: 12rem;
+			justify-content: flex-start;
 		}
 	}
 
@@ -86,7 +88,7 @@
 	&__right {
 		display: flex;
 		align-items: center;
-		gap: 10.5rem;
+		gap: 12.7rem;
 	}
 
 	&__contacts {
@@ -100,9 +102,10 @@
         align-items: center;
         gap: 1.5rem;
 				transition: $transition;
+				
 
         span {
-            font-size: 0.688rem;
+            font-size: 0.786rem;
             line-height: 0.75rem;
             text-transform: uppercase;
             position: relative;
@@ -262,7 +265,7 @@
 	}
 	&__list {
 		display: flex;
-		gap: 1.5rem;
+		gap: 1.8rem;
 		@include media(mobile) {
 			flex-direction: column;
 			gap: 1.143rem;

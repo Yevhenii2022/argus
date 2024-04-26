@@ -176,10 +176,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// if (window.innerWidth < 542) {
 	const aboutSlider = new Swiper('.about-banner__slider', {
-		slidesPerView: 1.1,
+		slidesPerView: 1.15,
 		spaceBetween: 8,
-		// autoplay:true,
-		// watchSlidesProgress: true,
+		freeMode: true,
+		
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',

@@ -52,9 +52,9 @@ get_header();
                                     </h3>
                                     <?php endif ?>
                                     <?php if ($text): ?>
-                                    <p class="about-banner__item-text">
+                                    <div class="about-banner__item-text">
                                         <?= $text ;?>
-                                    </p>
+                                    </div>
                                     <?php endif ?>
                                 </div>
                                 <?php endwhile ?>
