@@ -54,15 +54,21 @@
 			margin-bottom: 2.85rem;
 			grid-template-columns: repeat(1, 1fr);
 			row-gap: 3.47rem;
-
-			> :nth-child(5),
-			> :nth-child(6) {
-				display: none;
-			}
 		}
 	}
 
 	&__button {
 		margin: 0 auto;
+	}
+}
+
+.home:has(.projects-part__list) {
+	.projects-part__list {
+		@include media(mobile) {
+			> :nth-child(5),
+			> :nth-child(6) {
+				display: none;
+			}
+		}
 	}
 }
