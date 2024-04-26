@@ -980,19 +980,13 @@ main {
   padding-top: 6.2rem;
   transition: all 0.3s ease-in-out;
   margin-top: 2rem;
+  color: #181818;
 }
 @media (max-width: 541px) {
   .about-values__item {
     width: 22rem;
     height: 22rem;
   }
-}
-.about-values__item:hover, .about-values__item:focus {
-  background-color: #f41b1b;
-  color: #ffffff;
-}
-.about-values__item:hover::before, .about-values__item:focus::before {
-  color: #181818;
 }
 .about-values__item::before {
   content: counter(item, decimal-leading-zero) ". ";
@@ -1003,6 +997,15 @@ main {
   left: 50%;
   font-size: 4.286rem;
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  color: #181818;
+}
+.about-values__item:hover, .about-values__item:focus {
+  background-color: #f41b1b;
+}
+.about-values__item:hover .about-values__title,
+.about-values__item:hover .about-values__description, .about-values__item:focus .about-values__title,
+.about-values__item:focus .about-values__description {
+  color: #ffffff;
 }
 .about-values__item:nth-child(even) {
   transform: rotate(5deg);
@@ -1616,8 +1619,9 @@ main {
   }
 }
 .service-advantages__image {
-  max-width: 52rem;
+  width: 52rem;
   height: 100%;
+  width: 26.786rem;
 }
 .service-advantages__image img {
   height: 100%;
@@ -2490,19 +2494,13 @@ main {
   padding-top: 6.2rem;
   transition: all 0.3s ease-in-out;
   margin-top: 2rem;
+  color: #181818;
 }
 @media (max-width: 541px) {
   .about-values__item {
     width: 22rem;
     height: 22rem;
   }
-}
-.about-values__item:hover, .about-values__item:focus {
-  background-color: #f41b1b;
-  color: #ffffff;
-}
-.about-values__item:hover::before, .about-values__item:focus::before {
-  color: #181818;
 }
 .about-values__item::before {
   content: counter(item, decimal-leading-zero) ". ";
@@ -2513,6 +2511,15 @@ main {
   left: 50%;
   font-size: 4.286rem;
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  color: #181818;
+}
+.about-values__item:hover, .about-values__item:focus {
+  background-color: #f41b1b;
+}
+.about-values__item:hover .about-values__title,
+.about-values__item:hover .about-values__description, .about-values__item:focus .about-values__title,
+.about-values__item:focus .about-values__description {
+  color: #ffffff;
 }
 .about-values__item:nth-child(even) {
   transform: rotate(5deg);
@@ -3441,6 +3448,10 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out;
+}
+.header__phone-img svg {
+  width: 0.857rem;
+  height: 0.857rem;
 }
 .header__mobile-menu {
   display: flex;

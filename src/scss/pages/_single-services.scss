@@ -370,10 +370,10 @@
   
 
   &__image {
-    max-width: 52rem;
+    width: 52rem;
     height: 100%;
     @include media(mobile) {}
-
+      width: 26.786rem;
     img {
       height: 100%;
     }
