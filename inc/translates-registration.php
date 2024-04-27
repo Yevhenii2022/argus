@@ -26,4 +26,5 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'go_to_page');
     pll_register_string('pointer_theme', 'all_services');
     pll_register_string('pointer_theme', 'Головна');
+    pll_register_string('pointer_theme', 'Показати на карті');
 }
