@@ -59,9 +59,10 @@
 								$phone = get_field('phone', 'options');
 								$number = $phone['phone_number'] ?? '';
 								$phoneIcon = $phone['phone_icon'] ?? '';
+								$file_path = get_attached_file($phoneIcon);
 								$cleanedNumber = preg_replace('/\s+/', '', $number);
 								$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
-								$file_path = get_attached_file($phoneIcon);
+								
 								?>
 								<?php if ($number) : ?>
 									<a href="tel:+<?= $cleanedNumber ?>" class="header__phone">

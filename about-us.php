@@ -210,7 +210,7 @@ get_header();
             <div class="about-values__wrapper">
                 <div class="about-values__left">
                     <?php if( $valuesHeading ): ?>
-                <h2 class="about-values__heading main__title anim-title _anim-items">
+                <h2 class="about-values__heading main__title">
                     <?= $valuesHeading ;?>
                 </h2>
                 <?php endif ?>
