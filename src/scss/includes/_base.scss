@@ -95,9 +95,11 @@ button {
 	overflow: hidden;
 }
 
-body,
-main {
+body.home {
 	overflow-x: hidden;
+	main {
+		overflow-x: hidden;
+	}
 }
 
 main {
