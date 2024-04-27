@@ -4,6 +4,7 @@ get_header();
 $project_subtitle = get_field('project_subtitle') ?? '';
 $location = get_field('project_location') ?? '';
 $default_picture = get_field('default_picture', 'options');
+$video = get_field('project_video');
 ?>
 
 <main id="primary">
@@ -130,14 +131,24 @@ $default_picture = get_field('default_picture', 'options');
           </div>
         </div>
 
-        <div class="project__image-center">
-          <?php $image = get_field('project_img'); ?>
-          <?php
-          if ($image) {
-            echo wp_get_attachment_image($image, "full", '', ['alt' => 'картинка галереї']);
-          }
-          ?>
-        </div>
+        <?php if ($video) : ?>
+          <div class="project__video">
+            <video loop id="custom-video" preload="auto" muted playsinline preload="metadata">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/mp4">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/webm">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/ogg">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/quicktime">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/x-flv">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/x-msvideo">
+            </video>
+            <button class="video__play">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 19" fill="none">
+                <path fill="#fff" d="M0 0v19l15-9.5L0 0Z" />
+              </svg>
+              <?php pll_e('video') ?>
+            </button>
+          </div>
+        <?php endif; ?>
 
         <?php
         $advantages_list = get_field('advantages_list') ?? '';

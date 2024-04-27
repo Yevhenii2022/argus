@@ -259,17 +259,22 @@
 		}
 	}
 
-	&__image-center {
+	&__video {
 		margin: 0 -1.714rem 8.3rem -1.714rem;
+		height: 49.786rem;
+		display: block;
+		position: relative;
+		cursor: pointer;
+
 		@include media(mobile) {
 			margin: 0 -1.143rem 5.45rem -1.143rem;
+			height: 12.929rem;
 		}
 
-		img {
-			height: 49.786rem;
-			@include media(mobile) {
-				height: 12.929rem;
-			}
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 
