@@ -94,14 +94,20 @@ get_header();
             </div>
         </div>
        
-       
-        <div class="contacts__information">
-
-
-        <div class="contacts__address"></div>
-            <div></div>
+       </div>
+        
+        <div class="contacts__address">
+        <?php while (have_rows('address')):
+                            the_row();
+                $addressName =  get_sub_field('address_type') ?? '' ;
+                $addressContent = get_sub_field('address_text') ?? '' ;
+                $addressButton =  get_sub_field('address_button') ?? '' ; 
+                $addressButton =  get_sub_field('address_button') ?? '' ; 
+                           ?>
         </div>
-      </div>
+            
+        </div>
+      
     </div>
   </section>
 

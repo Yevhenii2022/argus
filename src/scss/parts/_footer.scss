@@ -6,7 +6,11 @@
   left: 0;
   width: 100%;
   @include media(mobile) {
-   padding-top: 4.571rem;
+   padding-top: 4rem;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
   }
   
   &--additional{
@@ -22,7 +26,7 @@
     justify-content: space-between;
     gap: 7rem;
     @include media(mobile) {
-      gap: 3.429rem;
+      gap: 2.2rem;
     }
   }
 
@@ -41,7 +45,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 3.429rem;
+      margin-bottom: 2.2rem;
     }
   }
 
@@ -100,7 +104,7 @@
     @include media(mobile) {
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 3.2rem;
+      gap: 2.2rem;
     }
   }
 
@@ -134,32 +138,6 @@
             @include media(mobile) {
                font-size: 1rem;
               }
-         
-      //   &:after {
-      //       content: '';
-      //       display: block;
-      //       position: absolute;
-      //       right: 0;
-      //       width: 0;
-      //       height: 0.071rem;
-      //       background-color: $black;
-      //       transition: width 0.5s;
-      //     }
-        
-
-			// &:hover,
-      // &:focus{
-      //    &:after {
-      //       content: '';
-      //       width: 100%;
-      //       display: block;
-      //       position: absolute;
-      //       left: 0;
-      //       height: 0.071rem;
-      //       background-color: $black;
-      //       transition: width 0.5s;
-      //     }
-      //   }
     }
   }
 
@@ -188,9 +166,12 @@
           position: absolute;
           right: 0;
           width: 0;
-          height: 0.071rem;
+          height: 0.05rem;
           background-color: $black;
           transition: width 0.5s;
+          @include media(mobile) {
+            content: none;
+          }
         }
   
         &:hover:after {
@@ -199,9 +180,12 @@
           display: block;
           position: absolute;
           left: 0;
-          height: 0.071rem;
+          height: 0.05rem;
           background-color: $black;
           transition: width 0.5s;
+          @include media(mobile) {
+            content: none;
+          }
         }
       }
 
@@ -304,7 +288,7 @@
       flex-direction: column;
       gap: 1rem;
       align-items: flex-start;
-      margin-bottom: 3.429rem;
+      margin-bottom: 2.2rem;
     }
   }
 

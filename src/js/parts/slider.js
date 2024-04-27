@@ -67,26 +67,28 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-	const values = new Swiper('.about-values__right', {
-		watchSlidesProgress: true,
-		slidesPerView: 1.15,
-		spaceBetween: 8,
-		centeredSlides: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'progressbar',
-		},
-		breakpoints: {
-			541: {
-				spaceBetween: 0,
-				slidesPerView: 0,
+	if (window.innerWidth < 542) {
+		const values = new Swiper('.about-values__right', {
+			watchSlidesProgress: true,
+			slidesPerView: 1.15,
+			spaceBetween: 8,
+			centeredSlides: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
-		},
-	});
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'progressbar',
+			},
+			// breakpoints: {
+			// 	541: {
+			// 		spaceBetween: 0,
+			// 		slidesPerView: 0,
+			// 	},
+			// },
+		});
+	}
 
 	const projectsSingle = new Swiper('.project__slider', {
 		loop: true,
@@ -180,28 +182,21 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-	// if (window.innerWidth < 542) {
-	const aboutSlider = new Swiper('.about-banner__slider', {
-		slidesPerView: 1.15,
-		spaceBetween: 8,
-		freeMode: true,
-
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'progressbar',
-		},
-		breakpoints: {
-			541: {
-				slidesPerView: 3,
-				spaceBetween: 0,
+	if (window.innerWidth < 542) {
+		const aboutSlider = new Swiper('.about-banner__slider', {
+			slidesPerView: 1.148,
+			centeredSlides: true,
+			spaceBetween: 8,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
-		},
-	});
-	// }
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'progressbar',
+			},
+		});
+	}
 
 	//fancy Box
 	Fancybox.bind('[data-fancybox]', {

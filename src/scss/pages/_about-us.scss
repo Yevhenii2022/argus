@@ -89,13 +89,16 @@
   }
 
   &__slider {
-    max-width: 102.857rem;
+
+    // max-width: 102.857rem;
 
     @include media(mobile) {
-      margin-right: -1.714rem;
+    
       margin-top: 4rem;
-      max-width: 26.786rem;
+      // max-width: 26.786rem;
+      width:calc(100% + 2.286rem);
       padding-bottom: 4rem;
+      margin-left: -1.143rem;
     }
   }
 
@@ -107,22 +110,23 @@
     display: flex;
 
     @include media(mobile) {
-      justify-content: flex-start;
+      justify-content: initial;
       gap: 0rem;
     }
   }
 
   &__item {
     background-color: $white;
-    padding: 1.714rem 2.643rem 1.714rem 1.714rem;
+    padding: 1.714rem 2rem 1.714rem 1.714rem;
     height: 29.643rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 24rem !important;
-
+    width: 24rem;
+   
     @include media(mobile) {
-      width: 23.214rem !important;
+    width: auto;
+
     }
 
     &:nth-child(odd) {
@@ -531,7 +535,7 @@
     flex-direction: column;
 
     @include media(mobile) {
-      max-width: 26.786rem;
+      
       margin-bottom: 6.3rem;
       flex-direction: initial;
     }
