@@ -76,6 +76,13 @@
 		font-family: $medium;
 		font-size: 1.857rem;
 		text-transform: uppercase;
+
+		@include media(mobile) {
+			margin: 2rem auto 0 auto;
+			position: unset;
+			transform: none;
+			font-size: 1.357rem;
+		}
 	}
 
 	&__selects {

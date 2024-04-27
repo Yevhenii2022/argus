@@ -188,6 +188,11 @@ require get_template_directory() . '/inc/translates-registration.php';
  */
 require get_template_directory() . '/inc/lang-switcher.php';
 
+/**
+ * Breadcrumbs
+ */
+require get_template_directory() . '/inc/custom-breadcrumbs.php';
+
 // ajax
 require get_template_directory() . '/inc/custom-load-projects.php';
 require get_template_directory() . '/inc/custom-load-news.php';

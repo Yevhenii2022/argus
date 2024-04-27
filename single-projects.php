@@ -4,6 +4,7 @@ get_header();
 $project_subtitle = get_field('project_subtitle') ?? '';
 $location = get_field('project_location') ?? '';
 $default_picture = get_field('default_picture', 'options');
+$video = get_field('project_video');
 ?>
 
 <main id="primary">
@@ -19,8 +20,8 @@ $default_picture = get_field('default_picture', 'options');
 
         <div class="project__top">
           <div class="project__title">
-            <h1 class="main__title main__title--italic"><?php echo $project_subtitle ?></h1>
-            <h1 class="main__title"><?php echo the_title() ?></h1>
+            <h1 class="main__title main__title--italic anim-title _anim-items"><?php echo $project_subtitle ?></h1>
+            <h1 class="main__title anim-title _anim-items"><?php echo the_title() ?></h1>
           </div>
 
           <?php
@@ -60,7 +61,7 @@ $default_picture = get_field('default_picture', 'options');
           $info = get_field('info') ?? '';
           ?>
           <?php if ($info) : ?>
-            <h2 class="project__info title"><?= $info; ?></h2>
+            <h2 class="project__info title anim-title _anim-items"><?= $info; ?></h2>
           <?php endif; ?>
 
           <?php
@@ -112,7 +113,7 @@ $default_picture = get_field('default_picture', 'options');
           $project_start = get_field('project_start') ?? '';
           ?>
           <?php if ($project_start) : ?>
-            <h3 class="title">
+            <h3 class="title anim-title _anim-items">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
                 <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />
               </svg>
@@ -130,14 +131,24 @@ $default_picture = get_field('default_picture', 'options');
           </div>
         </div>
 
-        <div class="project__image-center">
-          <?php $image = get_field('project_img'); ?>
-          <?php
-          if ($image) {
-            echo wp_get_attachment_image($image, "full", '', ['alt' => 'картинка галереї']);
-          }
-          ?>
-        </div>
+        <?php if ($video) : ?>
+          <div class="project__video">
+            <video loop id="custom-video" preload="auto" muted playsinline preload="metadata">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/mp4">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/webm">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/ogg">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/quicktime">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/x-flv">
+              <source src="<?php echo $video; ?>#t=0.001" type="video/x-msvideo">
+            </video>
+            <button class="video__play">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 19" fill="none">
+                <path fill="#fff" d="M0 0v19l15-9.5L0 0Z" />
+              </svg>
+              <?php pll_e('video') ?>
+            </button>
+          </div>
+        <?php endif; ?>
 
         <?php
         $advantages_list = get_field('advantages_list') ?? '';
@@ -147,7 +158,7 @@ $default_picture = get_field('default_picture', 'options');
             $advantages_title = get_field('project_advantages_title') ?? '';
             ?>
             <?php if ($advantages_title) : ?>
-              <h3 class="title">
+              <h3 class="title anim-title _anim-items">
                 <?= $advantages_title; ?>
               </h3>
             <?php endif; ?>
@@ -179,17 +190,20 @@ $default_picture = get_field('default_picture', 'options');
         $project_others = get_field('project_others') ?? '';
         ?>
         <?php if ($project_others) : ?>
-          <h2 class="project__others title"><?= $project_others; ?></h3>
+          <h2 class="project__others title anim-title _anim-items"><?= $project_others; ?></h3>
           <?php endif; ?>
 
       </div>
     </div>
 
-    <?php get_template_part('template-parts/project-slider'); ?>
-
-    <?php get_template_part('template-parts/contact-us'); ?>
+    <div class="project__inner">
+      <?php get_template_part('template-parts/project-slider'); ?>
+    </div>
 
   </section>
+
+  <?php get_template_part('template-parts/contact-us'); ?>
+
 </main>
 
 <?php
