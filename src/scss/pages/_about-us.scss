@@ -24,9 +24,9 @@
 
     @include media(mobile) {
       background-size: cover;
-        top: 7.3rem;
-        max-height: 48rem;
-        background-position-x: 59%;
+      top: 7.3rem;
+      max-height: 48rem;
+      background-position-x: 59%;
     }
 
     &::before {
@@ -45,6 +45,7 @@
   &__breadcrumps {
     position: absolute;
     top: 5.7rem;
+
     @include media(mobile) {
       position: static;
     }
@@ -66,7 +67,7 @@
     @include media(mobile) {
       width: 100%;
       text-align: start;
-      
+
     }
 
     em {
@@ -78,26 +79,26 @@
     margin: 1.143rem auto 23.857rem auto;
     text-align: center;
     width: 18rem;
-  
+
     @include media(mobile) {
       text-align: start;
       width: 97%;
       margin: 1.3rem 0 0 0;
-     
+
     }
   }
 
   &__slider {
     max-width: 102.857rem;
-   
+
     @include media(mobile) {
       margin-right: -1.714rem;
       margin-top: 4rem;
       max-width: 26.786rem;
       padding-bottom: 4rem;
-      }
     }
-  
+  }
+
 
   &__slides {
     gap: 1.143rem;
@@ -118,9 +119,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 24rem!important;
+    width: 24rem !important;
+
     @include media(mobile) {
-     width: 23.214rem !important;
+      width: 23.214rem !important;
     }
 
     &:nth-child(odd) {
@@ -134,16 +136,17 @@
     &-number {
       font-size: 4.286rem;
       font-family: $italic;
-      position: relative;
-      padding-left: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       line-height: 90%;
 
       &::before {
-        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
-        position: absolute;
-        left: 0;
-        height: 3.071rem;
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
         width: 2.571rem;
+        height: 3.071rem;
       }
     }
 
@@ -151,14 +154,16 @@
       font-size: 1.929rem;
       color: $red;
       font-family: $medium;
+
       @include media(mobile) {
-      font-size: 1.571rem;
+        font-size: 1.571rem;
       }
+
       strong {
         font-size: 0.8rem;
         font-weight: 800;
         vertical-align: super;
-        
+
       }
     }
 
@@ -168,6 +173,7 @@
       padding-top: 1.5rem;
     }
   }
+
   .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
     width: 91%;
     height: 0.071rem;
@@ -175,30 +181,35 @@
     margin: 0 auto;
     transform: translate(-50%, -50%);
     top: initial;
+
     @include media(mobile) {
       width: 77%;
       transform: translate(-55%, -50%);
       top: 33.4rem;
     }
   }
-  .swiper-button-prev{
+
+  .swiper-button-prev {
     left: 0;
   }
-  .swiper-button-next{
-    right: 2rem ;
+
+  .swiper-button-next {
+    right: 2rem;
   }
-.swiper-button-next,
-.swiper-button-prev{
-  @include media(mobile) {
-    top: 33.4rem;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    @include media(mobile) {
+      top: 33.4rem;
+    }
   }
-}
 
 }
-  
+
 
 .about-projects {
   padding-top: 9rem;
+
   @include media(mobile) {
     padding-top: 0;
   }
@@ -212,10 +223,11 @@
 
 .about-stages {
   padding-top: 7.143rem;
+
   @include media(mobile) {
     padding-top: 13.5rem;
   }
-  
+
 
 
   &__heading {
@@ -236,6 +248,7 @@
     justify-content: center;
     gap: 0.286rem;
     margin-top: 1.714rem;
+
     @include media(mobile) {
       margin-top: 2rem;
     }
@@ -280,7 +293,7 @@
 
     @include media(mobile) {
       width: 24.5rem;
-      
+
     }
   }
 
@@ -298,6 +311,7 @@
     font-size: 1.929rem;
     text-align: end;
     margin-bottom: 1.714rem;
+
     @include media(mobile) {
       font-size: 1.571rem;
       text-align: start;
@@ -345,6 +359,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   padding-top: 8.571rem;
+
   @include media(mobile) {
     padding-top: 5.714rem;
   }
@@ -353,6 +368,7 @@
     display: flex;
     gap: 6rem;
     margin-bottom: 5.143rem;
+
     @include media(mobile) {
       flex-direction: column;
       margin-bottom: 3.429rem;
@@ -363,6 +379,7 @@
   &__text {
     width: 50%;
     padding-left: 1.6rem;
+
     @include media(mobile) {
       width: 100%;
       padding-left: 0;
@@ -377,6 +394,7 @@
       line-height: 100%;
       letter-spacing: 0.01rem;
       font-family: $medium;
+
       @include media(mobile) {
         font-size: 1.286rem;
         margin-bottom: 1.3rem;
@@ -392,6 +410,7 @@
     font-size: 1.429rem;
     line-height: 120%;
     margin-bottom: 5.357rem;
+
     @include media(mobile) {
       font-size: 1rem;
       margin-bottom: 3.429rem;
@@ -399,22 +418,23 @@
   }
 
   &__title {
-    position: relative;
-    padding-left: 4.571rem;
+    display: flex;
+    gap: 0.571rem;
     line-height: 83%;
-    @include media(mobile) {
-      padding-left: 2.571rem;
-    }
+
+    @include media(mobile) {}
 
     &::before {
-      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
-      position: absolute;
-      left: 0;
-      height: 4.643rem;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
       width: 3.857rem;
+      height: 4.643rem;
+
+
       @include media(mobile) {
-        height: 1.714rem;
-        width: 2.143rem;
+        width: 1.714rem;
+        height: 2.143rem;
       }
     }
 
@@ -422,6 +442,7 @@
       font-family: $italic;
     }
   }
+
 
   &__icon {
     width: 5.357rem;
@@ -433,10 +454,12 @@
     overflow: hidden;
     max-width: 100%;
     height: 49.8rem;
+
     @include media(mobile) {
-    height: 12.929rem;
-    width: 26.786rem;
+      height: 12.929rem;
+      width: 26.786rem;
     }
+
     video {
       width: 100%;
       height: auto;
@@ -461,10 +484,11 @@
   }
 
   &__left {
-    flex: 1;
+    width: 40%;
 
-
-    @include media(mobile) {}
+    @include media(mobile) {
+      width: 100%;
+    }
   }
 
   &__heading {
@@ -483,12 +507,13 @@
   }
 
   &__right {
-    flex: 1;
+    width: 60%;
     margin-top: 14rem;
 
     @include media(mobile) {
       margin-top: 0;
-      
+      width: 100%;
+
     }
   }
 
@@ -499,7 +524,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    
+
     @include media(mobile) {
       max-width: 26.786rem;
       margin-bottom: 6.3rem;
@@ -523,11 +548,12 @@
     transition: $transition;
     margin-top: 2rem;
     color: $black;
+
     @include media(mobile) {
       width: 22rem;
       height: 22rem;
-    } 
-    
+    }
+
     &::before {
       content: counter(item, decimal-leading-zero) ". ";
       position: absolute;
@@ -545,16 +571,17 @@
       background-color: $red;
 
       .about-values__title,
-      .about-values__description{
+      .about-values__description {
         color: $white;
       }
     }
 
-   
+
     &:nth-child(even) {
       transform: rotate(5deg);
       margin-left: 20rem;
       margin-bottom: -7rem;
+
       @include media(mobile) {
         margin-left: 0;
         margin-bottom: 0;
@@ -564,6 +591,7 @@
     &:nth-child(odd) {
       transform: rotate(-5deg);
       margin-bottom: -7rem;
+
       @include media(mobile) {
         margin-bottom: 0;
       }
@@ -579,6 +607,7 @@
     line-height: 109%;
     text-transform: uppercase;
     text-align: center;
+
     @include media(mobile) {
       font-size: 1rem;
     }
@@ -590,10 +619,12 @@
     font-size: 1rem;
     line-height: 120%
   }
+
   .swiper-button-next,
   .swiper-button-prev,
-  .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal{
+  .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
     display: none;
+
     @include media(mobile) {
       display: block;
     }
@@ -605,16 +636,17 @@
   padding-bottom: 8.571rem;
   background-color: $white;
   border-radius: 1.429rem;
+
   @include media(mobile) {
     position: relative;
     padding-bottom: 8.071rem;
     padding-top: 7.9rem;
   }
-  
-  &__wrapper{
+
+  &__wrapper {
     display: flex;
     flex-direction: column;
-    
+
     @include media(mobile) {
       flex-direction: column-reverse;
     }
@@ -623,12 +655,13 @@
   &__content {
     display: flex;
     gap: 1.143rem;
+
     @include media(mobile) {
       flex-direction: column;
     }
   }
 
-  &__image{
+  &__image {
     @include media(mobile) {
       margin-top: 1.143rem;
     }
@@ -636,6 +669,7 @@
 
   &__paragraph {
     text-align: end;
+
     @include media(mobile) {
       text-align: start;
     }
@@ -646,10 +680,11 @@
     flex-direction: column;
     justify-content: space-between;
     width: 54%;
+
     @include media(mobile) {
       width: 100%;
     }
-   
+
   }
 
   &__top {
@@ -660,6 +695,7 @@
   &__name {
     text-transform: uppercase;
     line-height: 109%;
+
     @include media(mobile) {
       position: absolute;
       top: 5.7rem;
@@ -671,6 +707,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
     @include media(mobile) {
       align-items: flex-start;
     }
@@ -680,6 +717,7 @@
     margin-top: 0.857rem;
     width: 3.143rem;
     height: 2.429rem;
+
     @include media(mobile) {
       display: none;
     }
@@ -688,9 +726,10 @@
   &__bottom {
     display: flex;
     justify-content: center;
+
     @include media(mobile) {
       justify-content: start;
-      
+
     }
   }
 
@@ -698,6 +737,7 @@
     height: 4rem;
     display: flex;
     margin-left: 6.5rem;
+
     @include media(mobile) {
       margin-left: 0;
       margin-top: 2.286rem;
@@ -718,6 +758,7 @@
   &__title {
     margin-top: 2.286rem;
     padding-right: 12.5rem;
+
     @include media(mobile) {
       margin-top: 0;
       padding-right: 0;
@@ -728,6 +769,5 @@
       font-family: $italic;
     }
   }
-  
-}
 
+}

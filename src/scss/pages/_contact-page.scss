@@ -1,4 +1,56 @@
 .contacts{
   padding-top: 11.571rem;
   padding-bottom: 8.571rem;
+
+  &__title{
+
+    em{
+      font-family: $italic;
+    }
+  }
+
+  &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  &__heading{
+    // padding: 0 3.643rem 0 1.714rem;
+  }
+
+  &__grid{
+    grid-column: 1 / span 1;
+    padding: 0 3.643rem 0 1.714rem;
+  }
+
+  &__image{
+    grid-column: 2 / span 1; 
+    grid-row: 1 / span 2;
+  }
+
+  &__text{
+    line-height: 120%;
+    margin-left: 28rem;
+  }
+
+  &__red-arrow{
+    position: relative;
+    padding-left: 1rem;
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+      position: absolute;
+      left: 0;
+      height: 0.786rem;
+      width: 0.643rem;
+      
+    }
+  }
+
+  &__phone,
+  &__email,
+  &__address{
+    
+  }
+
 }

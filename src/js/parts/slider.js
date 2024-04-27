@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const values = new Swiper('.about-values__right', {
 		watchSlidesProgress: true,
-		slidesPerView: 1.2,
+		slidesPerView: 1.15,
 		spaceBetween: 8,
 		centeredSlides: true,
 		navigation: {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 		breakpoints: {
 			541: {
-				spaceBetween: 1,
+				spaceBetween: 0,
 				slidesPerView: 0,
 			},
 		},
