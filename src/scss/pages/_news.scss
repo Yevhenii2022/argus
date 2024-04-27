@@ -1,6 +1,10 @@
 .news {
 	padding: 11rem 0 8.571rem 0;
 
+	@include media(mobile) {
+		padding: 7.5rem 0 12.5rem 0;
+	}
+
 	&:has(.pagination) {
 		padding: 11rem 0 16.5rem 0;
 
@@ -9,7 +13,17 @@
 		}
 
 		@include media(mobile) {
-			padding: 8.68rem 0 12.5rem 0;
+			padding: 7.5rem 0 12.5rem 0;
+		}
+	}
+
+	&:has(.yoast-breadcrumbs) {
+		.yoast-breadcrumbs {
+			margin-top: 0.5rem;
+
+			@include media(mobile) {
+				margin: 0 0 0.9rem 0;
+			}
 		}
 	}
 
@@ -20,7 +34,19 @@
 	&__top {
 		margin-bottom: 5.714rem;
 		display: flex;
-		gap: 12rem;
+
+		@include media(mobile) {
+			margin-bottom: 2.714rem;
+			flex-direction: column;
+		}
+
+		h1 {
+			@include media(mobile) {
+				p {
+					text-align: start;
+				}
+			}
+		}
 	}
 
 	&__select {
@@ -45,6 +71,10 @@
 		align-items: center;
 		justify-content: space-between;
 		text-transform: uppercase;
+
+		@include media(mobile) {
+			margin-bottom: 0.8rem;
+		}
 
 		ul {
 			display: flex;
@@ -98,10 +128,27 @@
 
 		@include media(mobile) {
 			grid-template-columns: repeat(1, 1fr);
+			row-gap: 3.3rem;
 		}
 
-		@media screen and (min-width: 542px) {
-			a:first-of-type {
+		a:first-of-type {
+			@include media(mobile) {
+				margin: 0 -1.143rem;
+				padding: 2.3rem 1.143rem 2.2rem 1.143rem;
+				background-color: $white;
+				border-radius: 1.429rem;
+
+				.news-card__bottom p {
+					display: block;
+
+					@include media(mobile) {
+						margin-top: 1.15rem;
+						margin-bottom: 0.3rem;
+					}
+				}
+			}
+
+			@media screen and (min-width: 542px) {
 				grid-area: 1 / 1 / 2 / 3;
 
 				.news-card {
@@ -111,11 +158,6 @@
 					background-color: $white;
 					height: 42.714rem;
 					border-radius: 1.429rem;
-
-					// @include media(tablet) {
-					// 	margin-bottom: 2.5rem;
-					// 	height: 30.79rem;
-					// }
 
 					&__image {
 						width: 49.4%;
@@ -133,10 +175,6 @@
 						flex-direction: column;
 						justify-content: space-between;
 						gap: 0;
-
-						// @include media(tablet) {
-						// 	padding: 2.2rem;
-						// }
 
 						p {
 							display: block;
@@ -159,11 +197,6 @@
 						height: 6.1rem;
 						font-family: $medium;
 						font-weight: 550;
-
-						// @include media(tablet) {
-						// 	font-size: 2.4rem;
-						// 	height: 4.9rem;
-						// }
 					}
 
 					&__link {
@@ -229,4 +262,12 @@
 	font-family: $medium;
 	font-size: 1.857rem;
 	text-transform: uppercase;
+
+	@include media(mobile) {
+		margin: 0 auto;
+		width: 13.6rem;
+		top: 1rem;
+		right: 0;
+		font-size: 1.157rem;
+	}
 }

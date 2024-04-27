@@ -1,19 +1,24 @@
 .project {
-	padding: 11.571rem 0 8.571rem 0;
+	padding: 11.571rem 0 0 0;
+	@include media(mobile) {
+		padding: 7.5rem 0 0 0;
+	}
 
-	&:has(.projects-slider) {
-		.projects-slider {
-			padding: 0 0 8.5rem 0;
-		}
-		.swiper {
-			padding-bottom: 0.8rem;
+	&:has(.yoast-breadcrumbs) {
+		.yoast-breadcrumbs {
+			margin-bottom: 0.9rem;
 		}
 	}
 
 	&__top {
-		margin-bottom: 2.2rem;
+		margin-bottom: 2.5rem;
 		display: flex;
 		justify-content: space-between;
+
+		@include media(mobile) {
+			margin-bottom: 2.9rem;
+			flex-direction: column;
+		}
 	}
 
 	&__title {
@@ -27,14 +32,33 @@
 		flex-direction: column;
 		justify-content: space-between;
 
+		@include media(mobile) {
+			margin-top: 1.4rem;
+			flex-direction: column-reverse;
+		}
+
 		a {
 			margin-top: 0.4rem;
 			max-width: 20rem;
 			align-self: flex-end;
+
+			@include media(mobile) {
+				align-self: start;
+			}
+
+			span {
+				@include media(mobile) {
+					font-size: 1rem;
+				}
+			}
 		}
 		p {
 			margin-bottom: 0.8rem;
 			opacity: 0.3;
+
+			@include media(mobile) {
+				margin-bottom: 2.35rem;
+			}
 		}
 	}
 
@@ -45,6 +69,10 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
+		@include media(mobile) {
+			margin: 0 -1.143rem 19.25rem -1.143rem;
+			height: 13.5rem;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -55,6 +83,10 @@
 		width: 50rem !important;
 		height: 50rem !important;
 		object-fit: contain !important;
+		@include media(mobile) {
+			width: 13.5rem !important;
+			height: 13.5rem !important;
+		}
 	}
 
 	&__box {
@@ -62,6 +94,9 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+		@include media(mobile) {
+			margin-bottom: 2.5rem;
+		}
 
 		ul {
 			width: 40.786rem;
@@ -73,10 +108,27 @@
 			flex-direction: column;
 			gap: 1.6rem;
 			background-color: $white;
+			@include media(mobile) {
+				width: 100%;
+				padding: 1.5rem 1.143rem 1.143rem 1.143rem;
+				top: -22.1rem;
+				gap: 0.44rem;
+			}
 
 			li:first-of-type {
 				h3 {
 					font-size: 4.286rem;
+					@include media(mobile) {
+						font-size: 2.857rem;
+					}
+				}
+			}
+
+			li:last-of-type {
+				p {
+					@include media(mobile) {
+						margin-bottom: 0;
+					}
 				}
 			}
 
@@ -90,6 +142,10 @@
 		p,
 		em {
 			font-size: 4.286rem;
+			@include media(mobile) {
+				text-align: start;
+				font-size: 2.857rem;
+			}
 		}
 	}
 
@@ -100,6 +156,11 @@
 		font-weight: 300;
 		line-height: 1;
 		text-transform: uppercase;
+
+		@include media(mobile) {
+			margin-bottom: 0.7rem;
+			font-size: 1.286rem;
+		}
 	}
 
 	&__category {
@@ -113,8 +174,31 @@
 	&__slider {
 		margin-bottom: 10.3rem;
 		height: 41.9rem;
+		@include media(mobile) {
+			margin-right: -1.143rem;
+			margin-bottom: 5rem;
+			height: 20.905rem;
+
+			&:has(.swiper-pagination) {
+				.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+					width: 80%;
+					left: 49%;
+					top: 20.15rem;
+				}
+				.swiper-button-next,
+				.swiper-button-prev {
+					top: 20.15rem;
+				}
+				.swiper-button-prev {
+					left: -0.4rem;
+				}
+			}
+		}
 		img {
 			height: 35.429rem;
+			@include media(mobile) {
+				height: 16.7rem;
+			}
 		}
 	}
 
@@ -122,19 +206,38 @@
 		margin-bottom: 7.4rem;
 		display: flex;
 		gap: 5.357rem;
+		@include media(mobile) {
+			margin-bottom: 3.45rem;
+			flex-direction: column;
+			gap: 2.05rem;
+		}
+
 		h3 {
 			display: flex;
 			gap: 1rem;
+			@include media(mobile) {
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
 			p,
 			em {
 				width: 45.6rem;
 				font-size: 4.286rem;
 				text-align: start;
+				@include media(mobile) {
+					width: 100%;
+					font-size: 2.857rem;
+				}
 			}
 			svg {
 				margin-top: 0.5rem;
 				width: 2.571rem;
 				height: 3.071rem;
+				@include media(mobile) {
+					width: 1.857rem;
+					height: 2.143rem;
+				}
 			}
 		}
 	}
@@ -144,6 +247,10 @@
 		width: 32.286rem;
 		font-family: $medium;
 		font-weight: 550;
+		@include media(mobile) {
+			width: 100%;
+		}
+
 		strong {
 			color: $red;
 		}
@@ -152,21 +259,42 @@
 		}
 	}
 
-	&__image-center {
+	&__video {
 		margin: 0 -1.714rem 8.3rem -1.714rem;
-		img {
-			height: 49.786rem;
+		height: 49.786rem;
+		display: block;
+		position: relative;
+		cursor: pointer;
+
+		@include media(mobile) {
+			margin: 0 -1.143rem 5.45rem -1.143rem;
+			height: 12.929rem;
+		}
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 
 	&__advantages {
 		margin-bottom: 8.4rem;
+		@include media(mobile) {
+			margin-bottom: 5.6rem;
+		}
 
 		h3 {
 			margin-bottom: 3.1rem;
+			@include media(mobile) {
+				margin-bottom: 2.5rem;
+			}
 			p,
 			em {
 				font-size: 4.286rem;
+				@include media(mobile) {
+					font-size: 2.857rem;
+				}
 			}
 		}
 
@@ -176,15 +304,26 @@
 			grid-template-rows: auto;
 			gap: 1.143rem;
 			row-gap: 4.6rem;
+			@include media(mobile) {
+				grid-template-columns: repeat(1, 1fr);
+				row-gap: 2.38rem;
+			}
+
 			h4 {
 				margin-bottom: 1.1rem;
 				font-size: 1.929rem;
 				font-family: $medium;
 				font-weight: 550;
 				line-height: 1;
+				@include media(mobile) {
+					font-size: 1.571rem;
+				}
 			}
 			p {
 				width: 33.5rem;
+				@include media(mobile) {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -206,9 +345,47 @@
 
 	&__others {
 		margin-bottom: 3.2rem;
+		@include media(mobile) {
+			margin-bottom: 2.5rem;
+		}
+
 		p,
 		em {
 			font-size: 4.286rem;
+			@include media(mobile) {
+				text-align: start;
+				font-size: 2.857rem;
+			}
+		}
+	}
+
+	&__inner {
+		&:has(.projects-slider) {
+			.projects-slider {
+				padding: 0 0 8.5rem 0;
+				@include media(mobile) {
+					padding: 0 0 5.7rem 0;
+				}
+			}
+			.swiper {
+				padding-bottom: 0.8rem;
+				@include media(mobile) {
+					padding-bottom: 4.05rem;
+				}
+			}
+			.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+				@include media(mobile) {
+					width: 79%;
+					left: 52%;
+					top: 28.15rem;
+				}
+			}
+			.swiper-button-next,
+			.swiper-button-prev {
+				@include media(mobile) {
+					top: 28.15rem;
+				}
+			}
 		}
 	}
 }

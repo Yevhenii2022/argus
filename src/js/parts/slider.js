@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const projectsSingle = new Swiper('.project__slider', {
 		loop: true,
 		watchSlidesProgress: true,
-		slidesPerView: 2,
-		spaceBetween: 16,
+		slidesPerView: 1.1,
+		spaceBetween: 8,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -100,6 +100,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'progressbar',
+		},
+		breakpoints: {
+			541: {
+				spaceBetween: 16,
+				slidesPerView: 2,
+			},
 		},
 	});
 
@@ -179,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerView: 1.15,
 		spaceBetween: 8,
 		freeMode: true,
-		
+
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
