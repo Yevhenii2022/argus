@@ -238,7 +238,10 @@
   }
 
   &__section-title {
-    width: 69.786rem;
+    width: 55rem;
+    @include media(mobile) {
+      width: 100%;
+    }
     em {
       font-family: $italic;
     }

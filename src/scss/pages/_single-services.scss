@@ -685,6 +685,7 @@
     border-radius: 100%;
     overflow: hidden;
     display: flex;
+    margin-bottom: 1.3rem;
   }
 
   &__heading {
@@ -728,6 +729,11 @@
   }
 
   &__title{
+    width: 50%;
+
+    @include media(mobile) {
+      width: 100%;
+    }
     em{
       font-family: $italic;
     }

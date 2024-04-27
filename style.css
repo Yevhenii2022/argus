@@ -1338,6 +1338,7 @@ main {
   border-radius: 100%;
   overflow: hidden;
   display: flex;
+  margin-bottom: 1.3rem;
 }
 .service-work__heading {
   font-size: 1.929rem;
@@ -1374,6 +1375,14 @@ main {
 @media (max-width: 541px) {
   .service-cards__heading {
     flex-direction: column;
+  }
+}
+.service-cards__title {
+  width: 50%;
+}
+@media (max-width: 541px) {
+  .service-cards__title {
+    width: 100%;
   }
 }
 .service-cards__title em {
@@ -1731,7 +1740,12 @@ main {
   align-items: center;
 }
 .about-stages__section-title {
-  width: 69.786rem;
+  width: 55rem;
+}
+@media (max-width: 541px) {
+  .about-stages__section-title {
+    width: 100%;
+  }
 }
 .about-stages__section-title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
@@ -3242,6 +3256,7 @@ main {
 @media (max-width: 541px) {
   .contacts__grid {
     padding: 0 1.143rem 0 1.143rem;
+    margin-top: 5.714rem;
   }
 }
 .contacts__image {
@@ -4953,7 +4968,7 @@ main {
 @media (max-width: 541px) {
   .footer {
     padding-top: 4rem;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
