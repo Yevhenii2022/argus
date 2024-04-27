@@ -96,21 +96,34 @@ get_header();
        
        </div>
         
-        <div class="contacts__address">
+        <div class="contacts__address-inner">
         <?php while (have_rows('address')):
                             the_row();
                 $addressName =  get_sub_field('address_type') ?? '' ;
                 $addressContent = get_sub_field('address_text') ?? '' ;
-                $addressButton =  get_sub_field('address_button') ?? '' ; 
-                $addressButton =  get_sub_field('address_button') ?? '' ; 
-                           ?>
+                $addressButtonLink =  get_sub_field('address_link') ?? '' ; ?>
+          <div class="contacts__address-item">
+            <?php if ($addressName) : ?>   
+            <p class="contacts__address-type contacts__red-arrow">
+              <?= $addressName ;?>
+            </p>
+            <?php endif; ?>
+            <?php if ($addressContent) : ?>   
+            <p class="contacts__address-text">
+              <?= $addressContent ;?>
+            </p>
+            <?php endif; ?>
+            <a href="<?= $addressButtonLink ?>" target="_blank" class="contacts__address-button button">
+                <div class="button__wrapper">
+                    <p><?php pll_e('Показати на карті') ?></p>
+                </div>
+            </a>
+          </div>               
+         <? endwhile ?>
         </div>
-            
-        </div>
-      
     </div>
   </section>
-
+  <?php get_template_part('template-parts/contact-us'); ?>
 </main>
 
 <?php get_footer(); ?>

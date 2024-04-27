@@ -10,7 +10,6 @@
     padding-bottom: 5.5rem;
   }
 
-
   &__bg {
     position: absolute;
     background-size: cover;
@@ -67,7 +66,6 @@
     @include media(mobile) {
       width: 100%;
       text-align: start;
-
     }
 
     em {
@@ -84,18 +82,14 @@
       text-align: start;
       width: 97%;
       margin: 1.3rem 0 0 0;
-
     }
   }
 
   &__slider {
 
-    // max-width: 102.857rem;
-
     @include media(mobile) {
     
       margin-top: 4rem;
-      // max-width: 26.786rem;
       width:calc(100% + 2.286rem);
       padding-bottom: 4rem;
       margin-left: -1.143rem;
@@ -575,17 +569,6 @@
       color: $black;
     }
 
-    &:hover,
-    &:focus {
-      background-color: $red;
-
-      .about-values__title,
-      .about-values__description {
-        color: $white;
-      }
-    }
-
-
     &:nth-child(even) {
       transform: rotate(5deg);
       margin-left: 20rem;
@@ -608,6 +591,15 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:nth-child(4) {
+      background-color: $red;
+
+      .about-values__title,
+      .about-values__description {
+        color: $white;
+      }
     }
   }
 
