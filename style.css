@@ -120,8 +120,10 @@ button {
   overflow: hidden;
 }
 
-body,
-main {
+body.home {
+  overflow-x: hidden;
+}
+body.home main {
   overflow-x: hidden;
 }
 

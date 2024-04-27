@@ -128,11 +128,11 @@ get_header(); ?>
                 <div class="projects-part__list" id="projects-list"></div>
 
 
-                <button type='button' class="projects__button button" id="load-more-button">
+                <!-- <button type='button' class="projects__button button" id="load-more-button">
                     <div class="button__wrapper">
                         <p><?php pll_e('download_more'); ?></p>
                     </div>
-                </button>
+                </button> -->
 
 
                 <div class="ajax-preloader">
