@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -799,6 +799,12 @@ main {
 .about-stages__heading {
   text-align: center;
   margin-bottom: 8.571rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-stages__section-title {
+  width: 69.786rem;
 }
 .about-stages__section-title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
@@ -2445,6 +2451,12 @@ main {
 .about-stages__heading {
   text-align: center;
   margin-bottom: 8.571rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-stages__section-title {
+  width: 69.786rem;
 }
 .about-stages__section-title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
