@@ -19,8 +19,8 @@ $default_picture = get_field('default_picture', 'options');
 
         <div class="project__top">
           <div class="project__title">
-            <h1 class="main__title main__title--italic"><?php echo $project_subtitle ?></h1>
-            <h1 class="main__title"><?php echo the_title() ?></h1>
+            <h1 class="main__title main__title--italic anim-title _anim-items"><?php echo $project_subtitle ?></h1>
+            <h1 class="main__title anim-title _anim-items"><?php echo the_title() ?></h1>
           </div>
 
           <?php
@@ -60,7 +60,7 @@ $default_picture = get_field('default_picture', 'options');
           $info = get_field('info') ?? '';
           ?>
           <?php if ($info) : ?>
-            <h2 class="project__info title"><?= $info; ?></h2>
+            <h2 class="project__info title anim-title _anim-items"><?= $info; ?></h2>
           <?php endif; ?>
 
           <?php
@@ -112,7 +112,7 @@ $default_picture = get_field('default_picture', 'options');
           $project_start = get_field('project_start') ?? '';
           ?>
           <?php if ($project_start) : ?>
-            <h3 class="title">
+            <h3 class="title anim-title _anim-items">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
                 <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />
               </svg>
@@ -147,7 +147,7 @@ $default_picture = get_field('default_picture', 'options');
             $advantages_title = get_field('project_advantages_title') ?? '';
             ?>
             <?php if ($advantages_title) : ?>
-              <h3 class="title">
+              <h3 class="title anim-title _anim-items">
                 <?= $advantages_title; ?>
               </h3>
             <?php endif; ?>
@@ -179,17 +179,20 @@ $default_picture = get_field('default_picture', 'options');
         $project_others = get_field('project_others') ?? '';
         ?>
         <?php if ($project_others) : ?>
-          <h2 class="project__others title"><?= $project_others; ?></h3>
+          <h2 class="project__others title anim-title _anim-items"><?= $project_others; ?></h3>
           <?php endif; ?>
 
       </div>
     </div>
 
-    <?php get_template_part('template-parts/project-slider'); ?>
-
-    <?php get_template_part('template-parts/contact-us'); ?>
+    <div class="project__inner">
+      <?php get_template_part('template-parts/project-slider'); ?>
+    </div>
 
   </section>
+
+  <?php get_template_part('template-parts/contact-us'); ?>
+
 </main>
 
 <?php
