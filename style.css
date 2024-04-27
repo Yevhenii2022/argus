@@ -1149,14 +1149,29 @@ main {
     flex-direction: column;
   }
 }
+@media (max-width: 541px) {
+  .about-team__image {
+    margin-top: 1.143rem;
+  }
+}
 .about-team__paragraph {
   text-align: end;
+}
+@media (max-width: 541px) {
+  .about-team__paragraph {
+    text-align: start;
+  }
 }
 .about-team__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 54%;
+}
+@media (max-width: 541px) {
+  .about-team__text {
+    width: 100%;
+  }
 }
 .about-team__top {
   display: flex;
@@ -1177,6 +1192,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+@media (max-width: 541px) {
+  .about-team__description {
+    align-items: flex-start;
+  }
 }
 .about-team__logo {
   margin-top: 0.857rem;
@@ -1318,12 +1338,23 @@ main {
   justify-content: center;
   gap: 2rem;
 }
+@media (max-width: 541px) {
+  .services-cards__last {
+    height: 17.429rem;
+  }
+}
 .services-cards__last-title {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   width: 80%;
+}
+@media (max-width: 541px) {
+  .services-cards__last-title {
+    font-size: 1.286rem;
+    width: 100%;
+  }
 }
 .services-cards__last-title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
@@ -2738,14 +2769,29 @@ main {
     flex-direction: column;
   }
 }
+@media (max-width: 541px) {
+  .about-team__image {
+    margin-top: 1.143rem;
+  }
+}
 .about-team__paragraph {
   text-align: end;
+}
+@media (max-width: 541px) {
+  .about-team__paragraph {
+    text-align: start;
+  }
 }
 .about-team__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 54%;
+}
+@media (max-width: 541px) {
+  .about-team__text {
+    width: 100%;
+  }
 }
 .about-team__top {
   display: flex;
@@ -2766,6 +2812,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+@media (max-width: 541px) {
+  .about-team__description {
+    align-items: flex-start;
+  }
 }
 .about-team__logo {
   margin-top: 0.857rem;
@@ -3254,12 +3305,23 @@ main {
   justify-content: center;
   gap: 2rem;
 }
+@media (max-width: 541px) {
+  .services-cards__last {
+    height: 17.429rem;
+  }
+}
 .services-cards__last-title {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   width: 80%;
+}
+@media (max-width: 541px) {
+  .services-cards__last-title {
+    font-size: 1.286rem;
+    width: 100%;
+  }
 }
 .services-cards__last-title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
@@ -3449,6 +3511,11 @@ main {
   font-size: 4.286rem;
 }
 
+.contacts {
+  padding-top: 11.571rem;
+  padding-bottom: 8.571rem;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -3505,7 +3572,7 @@ main {
     opacity: 0;
     position: fixed;
     width: 100%;
-    top: -250%;
+    top: -350%;
     left: 0;
     z-index: -1;
     overflow: auto;
@@ -3805,6 +3872,7 @@ main {
     border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
     width: 100%;
     gap: 1.143rem;
+    border-radius: 0 !important;
   }
 }
 .nav .menu-item-has-children .sub-menu a {
@@ -5629,12 +5697,12 @@ body {
 .form__input input {
   border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
   font-size: 0.786rem;
-  text-transform: uppercase;
   background-color: #ffffff;
   padding-bottom: 1.143rem;
   width: 100%;
   line-height: 109%;
   transition: all 0.3s ease-in-out;
+  border-radius: 0 !important;
 }
 @media (max-width: 541px) {
   .form__input input {
@@ -5658,6 +5726,7 @@ body {
 }
 .form__input input:invalid {
   border-bottom: 0.071rem solid #f41b1b;
+  border-radius: 0 !important;
 }
 .form__input-text {
   margin-bottom: 1.143rem;
@@ -5665,7 +5734,6 @@ body {
 .form textarea {
   border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
   font-size: 0.786rem;
-  text-transform: uppercase;
   background-color: #ffffff;
   height: 5.8rem;
   font-family: "HelveticaNeueCyr-Roman", "sans-serif";
@@ -5673,6 +5741,8 @@ body {
   width: 100%;
   transition: all 0.3s ease-in-out;
   resize: none;
+  border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 @media (max-width: 541px) {
   .form textarea {
@@ -5683,6 +5753,7 @@ body {
 }
 .form textarea:invalid {
   border-bottom: 0.071rem solid #f41b1b;
+  border-radius: 0 !important;
 }
 .form textarea::placeholder {
   color: rgba(24, 24, 24, 0.4);
@@ -5694,6 +5765,7 @@ body {
 }
 .form textarea:hover, .form textarea:focus, .form textarea:active {
   border-bottom: 0.071rem solid #181818;
+  border-radius: 0 !important;
 }
 .form__submit {
   margin-top: 2.5rem;
