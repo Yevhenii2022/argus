@@ -1,17 +1,8 @@
 .single-news {
-	padding: 11.571rem 0 8.571rem 0;
-
-	&:has(.form__input) {
-		.form__input input,
-		.form__input textarea {
-			@include media(mobile) {
-				width: fit-content;
-			}
-		}
-	}
+	padding: 11.571rem 0 0 0;
 
 	@include media(mobile) {
-		padding: 7.3rem 0 8.571rem 0;
+		padding: 7.3rem 0 0 0;
 	}
 
 	&__container {

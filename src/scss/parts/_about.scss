@@ -218,8 +218,12 @@
 	cursor: pointer;
 
 	svg {
+		margin-bottom: 0.25rem;
 		width: 0.857rem;
 		height: 1.071rem;
+		@include media(mobile) {
+			margin-bottom: 0.1rem;
+		}
 	}
 }
 

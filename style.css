@@ -120,10 +120,12 @@ button {
   overflow: hidden;
 }
 
-body.home {
+body.home,
+body.single-services {
   overflow-x: hidden;
 }
-body.home main {
+body.home main,
+body.single-services main {
   overflow-x: hidden;
 }
 
@@ -1361,12 +1363,22 @@ main {
   line-height: 100%;
 }
 .service-work__video {
+  height: 49.786rem;
   overflow: hidden;
   max-width: 100%;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+@media (max-width: 541px) {
+  .service-work__video {
+    height: 12.929rem;
+  }
 }
 .service-work__video video {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .service-cards {
@@ -1967,6 +1979,9 @@ main {
   overflow: hidden;
   max-width: 100%;
   height: 49.8rem;
+  display: block;
+  position: relative;
+  cursor: pointer;
 }
 @media (max-width: 541px) {
   .about-mission__video {
@@ -2523,17 +2538,11 @@ main {
 }
 
 .single-news {
-  padding: 11.571rem 0 8.571rem 0;
-}
-@media (max-width: 541px) {
-  .single-news:has(.form__input) .form__input input,
-  .single-news:has(.form__input) .form__input textarea {
-    width: fit-content;
-  }
+  padding: 11.571rem 0 0 0;
 }
 @media (max-width: 541px) {
   .single-news {
-    padding: 7.3rem 0 8.571rem 0;
+    padding: 7.3rem 0 0 0;
   }
 }
 .single-news__container {
@@ -4277,8 +4286,14 @@ main {
   cursor: pointer;
 }
 .video__play svg {
+  margin-bottom: 0.25rem;
   width: 0.857rem;
   height: 1.071rem;
+}
+@media (max-width: 541px) {
+  .video__play svg {
+    margin-bottom: 0.1rem;
+  }
 }
 
 .services {
@@ -5549,7 +5564,7 @@ main {
 @media (max-width: 541px) {
   .news-card__title {
     margin: 0 0 0.5rem 0;
-    height: 4.79rem;
+    height: 4.78rem;
     font-size: 1.571rem;
   }
 }
@@ -5869,6 +5884,11 @@ main {
     width: 10.286rem;
     height: 15.5rem;
   }
+}
+.contact-us__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .contact-us__video::before {
   content: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzMgMzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTYuNSAzM0MyNS42MTI3IDMzIDMzIDI1LjYxMjcgMzMgMTYuNUMzMyA3LjM4NzMgMjUuNjEyNyAwIDE2LjUgMEM3LjM4NzMgMCAwIDcuMzg3MyAwIDE2LjVDMCAyNS42MTI3IDcuMzg3MyAzMyAxNi41IDMzWk0yMiAxNi41TDE0IDExVjIyTDIyIDE2LjVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");

@@ -67,11 +67,12 @@ get_header();
 
 				<?php get_template_part('template-parts/news-slider'); ?>
 
-				<?php get_template_part('template-parts/contact-us'); ?>
-
 			</div>
 		</div>
 	</section>
+
+	<?php get_template_part('template-parts/contact-us'); ?>
+
 </main>
 
 <?php
