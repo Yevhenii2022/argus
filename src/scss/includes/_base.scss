@@ -95,9 +95,18 @@ button {
 	overflow: hidden;
 }
 
+body.home {
+	overflow-x: hidden;
+	main {
+		overflow-x: hidden;
+	}
+}
+
 body,
 main {
-	overflow-x: hidden;
+	@include media(mobile) {
+		overflow-x: hidden;
+	}
 }
 
 main {

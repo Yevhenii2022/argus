@@ -2,13 +2,17 @@ jQuery(function ($) {
 	var page = 1;
 	var canLoad = true;
 	var ajaxUrl = MyAjaxProjects.ajaxurl;
+	var loadMoreButton = $('#load-more-button');
 	var projectsContainer = $('#projects-list');
 	var preloader = $('.ajax-preloader');
+
+	loadMoreButton.hide();
 
 	function loadBlogs(category, option, page) {
 		if (canLoad) {
 			canLoad = false;
 			preloader.show();
+			loadMoreButton.hide();
 
 			var data = {
 				action: 'load_more_projects',
@@ -23,10 +27,58 @@ jQuery(function ($) {
 				if (response !== 'no_posts') {
 					projectsContainer.append(response);
 					canLoad = true;
+
+					var projectsCount = projectsContainer.children().length;
+
+					if (projectsCount % 2 !== 0) {
+						loadMoreButton.hide();
+					} else {
+						loadMoreButton.show();
+					}
+				} else {
+					loadMoreButton.hide();
 				}
 			});
 		}
 	}
+
+	// Delegate the click event to the body for dynamically added elements
+	$('body').on('click', '#load-more-button', function () {
+		if (canLoad) {
+			canLoad = false;
+			preloader.show();
+			loadMoreButton.hide();
+
+			var category = $('#category-filter li.active').data('category');
+			var option = $('#blogs__select').val();
+			var nextPage = page + 1;
+
+			var data = {
+				action: 'load_more_projects',
+				page: nextPage,
+				category: category,
+				option: option,
+			};
+
+			$.post(ajaxUrl, data, function (response) {
+				preloader.hide();
+
+				if (response !== 'no_posts') {
+					projectsContainer.append(response);
+					canLoad = true;
+					var projectsCount = projectsContainer.children().length;
+					if (projectsCount % 2 !== 0) {
+						loadMoreButton.hide();
+					} else {
+						loadMoreButton.show();
+					}
+				} else {
+					loadMoreButton.hide();
+				}
+			});
+			page = nextPage;
+		}
+	});
 
 	$(document).on('click', '#category-filter li', function () {
 		$('#category-filter li').removeClass('active');
