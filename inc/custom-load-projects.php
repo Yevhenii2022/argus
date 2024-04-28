@@ -14,7 +14,7 @@ function load_more_projects()
   $category = isset($_POST['category']) ? $_POST['category'] : 'all';
   $option = isset($_POST['option']) ? $_POST['option'] : 'all';
   $paged = isset($_POST['page']) ? $_POST['page'] : 1;
-  $posts_per_page = 6;
+  $posts_per_page = 2;
 
 
   if ($category === 'all') {
