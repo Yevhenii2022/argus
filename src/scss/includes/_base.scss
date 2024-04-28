@@ -102,6 +102,13 @@ body.home {
 	}
 }
 
+body,
+main {
+	@include media(mobile) {
+		overflow-x: hidden;
+	}
+}
+
 main {
 	transition: 0.45s linear;
 	z-index: 1;

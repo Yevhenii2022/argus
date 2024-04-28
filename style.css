@@ -127,6 +127,13 @@ body.home main {
   overflow-x: hidden;
 }
 
+@media (max-width: 541px) {
+  body,
+  main {
+    overflow-x: hidden;
+  }
+}
+
 main {
   transition: 0.45s linear;
   z-index: 1;
@@ -2518,6 +2525,12 @@ main {
   padding: 11.571rem 0 8.571rem 0;
 }
 @media (max-width: 541px) {
+  .single-news:has(.form__input) .form__input input,
+  .single-news:has(.form__input) .form__input textarea {
+    width: fit-content;
+  }
+}
+@media (max-width: 541px) {
   .single-news {
     padding: 7.3rem 0 8.571rem 0;
   }
@@ -3273,7 +3286,6 @@ main {
 @media (max-width: 541px) {
   .contacts__grid {
     padding: 0 1.143rem 0 1.143rem;
-    margin-top: 5.714rem;
   }
 }
 .contacts__image {
