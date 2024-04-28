@@ -25,6 +25,10 @@
       margin-top: 5rem;
     }
 
+    &--vacancy{
+      margin-top: 6.5rem;
+    }
+
   }
 
   &__title {
@@ -34,6 +38,15 @@
 
     @include media(mobile) {
       font-size: 2.857rem;
+    }
+
+    &--vacancy{
+
+      em{
+        display: flex;
+        justify-content: center;
+        padding-left: 7rem;
+      }
     }
   }
 
@@ -110,9 +123,12 @@
       display: none;
     }
 
-   
+    &--vacancy{
+      width: 80%;
+      line-height: 100%;
+    }
 
-    em {
+   em {
       font-family: $italic;
     }
   }
@@ -155,3 +171,4 @@
     }
   }
 }
+
