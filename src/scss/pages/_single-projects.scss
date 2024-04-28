@@ -389,3 +389,39 @@
 		}
 	}
 }
+
+//dddddddddddddhhhhhhhhhhhhhhhhhhhhh
+.activities {
+	height: calc(100vh - var(--offset));
+	position: relative;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@include media(mobile) {
+		}
+	}
+}
+
+.content {
+	&--sticky {
+		display: flex;
+		flex-direction: column;
+
+		padding: 0;
+
+		width: 100%;
+		position: sticky;
+		top: 0;
+		--offset: 0px;
+		top: var(--offset);
+		height: calc(100vh - var(--offset));
+
+		@include media(mobile) {
+			flex-direction: column-reverse;
+			--offset: none;
+			top: 0;
+		}
+	}
+}

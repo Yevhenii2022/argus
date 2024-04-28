@@ -3255,6 +3255,33 @@ main {
   }
 }
 
+.activities {
+  height: calc(100vh - var(--offset));
+  position: relative;
+}
+.activities__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.content--sticky {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  --offset: 0px;
+  top: var(--offset);
+  height: calc(100vh - var(--offset));
+}
+@media (max-width: 541px) {
+  .content--sticky {
+    flex-direction: column-reverse;
+    --offset: none;
+    top: 0;
+  }
+}
+
 .contacts {
   padding-top: 11.571rem;
   padding-bottom: 8.571rem;
