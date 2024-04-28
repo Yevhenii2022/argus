@@ -177,13 +177,13 @@
     @include media(mobile) {
       display: block;
       width: 67%;
-      transform: translate(-55%, -50%);
+      transform: translate(-54%, -50%);
       top: 33.4rem;
     }
   }
 
   .swiper-button-prev {
-    left: 0;
+    left: 0.857rem;
   }
 
   .swiper-button-next {
@@ -634,6 +634,7 @@
       }
       .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal{
         top: 0.3rem;
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -766,7 +767,7 @@
   &__title {
     margin-top: 2.286rem;
     padding-right: 12.5rem;
-
+    
     @include media(mobile) {
       margin-top: 0;
       padding-right: 0;
