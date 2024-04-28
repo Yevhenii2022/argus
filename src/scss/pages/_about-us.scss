@@ -173,15 +173,10 @@
   }
 
   .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
-    width: 91%;
-    height: 0.071rem;
-    left: 50%;
-    margin: 0 auto;
-    transform: translate(-50%, -50%);
-    top: initial;
-
+    display: none;
     @include media(mobile) {
-      width: 77%;
+      display: block;
+      width: 67%;
       transform: translate(-55%, -50%);
       top: 33.4rem;
     }
@@ -197,7 +192,9 @@
 
   .swiper-button-next,
   .swiper-button-prev {
+    display: none;
     @include media(mobile) {
+      display: flex;
       top: 33.4rem;
     }
   }
@@ -480,10 +477,12 @@
     padding-bottom: 13.429rem;
     padding-top: 20rem;
     gap: 7rem;
+    padding-left: 1.714rem;
 
     @include media(mobile) {
       padding-top: 5.714rem;
       padding-bottom: 5.714rem;
+      padding-left: 0;
       flex-direction: column;
       gap: 2rem;
     }
@@ -494,6 +493,7 @@
 
     @include media(mobile) {
       width: 100%;
+      padding-left: 1.143rem;
     }
   }
 
@@ -513,7 +513,6 @@
   }
 
   &__right {
-    width: 60%;
     margin-top: 14rem;
 
     @include media(mobile) {
@@ -624,13 +623,18 @@
     line-height: 120%
   }
 
-  .swiper-button-next,
-  .swiper-button-prev,
-  .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  &__pagination{
     display: none;
-
     @include media(mobile) {
+      position: relative;
       display: block;
+      .swiper-button-next,
+      .swiper-button-prev{
+        top: 0.3rem;
+      }
+      .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal{
+        top: 0.3rem;
+      }
     }
   }
 }

@@ -206,7 +206,7 @@ get_header();
 
     <?php $valuesHeading = get_field('values_title') ?? '' ;?>
     <section class="about-values">
-        <div class="container">
+        <div class="container container--slider">
             <div class="about-values__wrapper">
                 <div class="about-values__left">
                     <?php if( $valuesHeading ): ?>
