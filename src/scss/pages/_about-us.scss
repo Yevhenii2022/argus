@@ -172,54 +172,18 @@
 		@include media(mobile) {
 			display: block;
 			width: 67%;
-			transform: translate(-55%, -50%);
+			transform: translate(-54%, -50%);
 			top: 33.4rem;
 		}
 	}
 
 	.swiper-button-prev {
-		left: 0;
+		left: 0.857rem;
 	}
-
 
 	.swiper-button-next {
 		right: 2rem;
 	}
-
-    &-text {
-      line-height: 120%;
-      width: 16.429rem;
-      padding-top: 1.5rem;
-    }
-  }
-
-  .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
-    display: none;
-    @include media(mobile) {
-      display: block;
-      width: 67%;
-      transform: translate(-54%, -50%);
-      top: 33.4rem;
-    }
-  }
-
-  .swiper-button-prev {
-    left: 0.857rem;
-  }
-
-  .swiper-button-next {
-    right: 2rem;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-    @include media(mobile) {
-      display: flex;
-      top: 33.4rem;
-    }
-  }
-
 
 	.swiper-button-next,
 	.swiper-button-prev {
@@ -643,7 +607,6 @@
 		line-height: 120%;
 	}
 
-
 	&__pagination {
 		display: none;
 		@include media(mobile) {
@@ -655,44 +618,10 @@
 			}
 			.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
 				top: 0.3rem;
+				transform: translate(-50%, -50%);
 			}
 		}
 	}
-
-  &__title {
-    font-size: 0.786rem;
-    line-height: 109%;
-    text-transform: uppercase;
-    text-align: center;
-
-    @include media(mobile) {
-      font-size: 1rem;
-    }
-  }
-
-  &__description {
-    width: 13.857rem;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 120%
-  }
-
-  &__pagination{
-    display: none;
-    @include media(mobile) {
-      position: relative;
-      display: block;
-      .swiper-button-next,
-      .swiper-button-prev{
-        top: 0.3rem;
-      }
-      .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal{
-        top: 0.3rem;
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
 }
 
 .about-team {
@@ -827,27 +756,8 @@
 			width: 80%;
 		}
 
-
 		em {
 			font-family: $italic;
 		}
 	}
 }
-
-  &__title {
-    margin-top: 2.286rem;
-    padding-right: 12.5rem;
-    
-    @include media(mobile) {
-      margin-top: 0;
-      padding-right: 0;
-      width: 80%;
-    }
-
-    em {
-      font-family: $italic;
-    }
-  }
-
-}
-
