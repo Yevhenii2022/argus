@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (window.innerWidth < 542) {
 		const values = new Swiper('.about-values__right', {
 			watchSlidesProgress: true,
-			slidesPerView: 1.15,
+			slidesPerView: 1.21,
 			spaceBetween: 8,
 			centeredSlides: true,
 			navigation: {
@@ -81,12 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				el: '.swiper-pagination',
 				type: 'progressbar',
 			},
-			// breakpoints: {
-			// 	541: {
-			// 		spaceBetween: 0,
-			// 		slidesPerView: 0,
-			// 	},
-			// },
 		});
 	}
 
@@ -163,6 +157,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		centeredSlides: true,
 		mousewheel: true,
 		freeMode: true,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
 		on: {
 			slideChange: function () {
 				const slides = document.querySelectorAll('.service-work__card');
