@@ -772,6 +772,11 @@ main {
 .service-information__title {
   width: 70%;
 }
+@media (max-width: 541px) {
+  .service-information__title {
+    width: 100%;
+  }
+}
 .service-information__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
@@ -1340,6 +1345,7 @@ main {
   border-radius: 100%;
   overflow: hidden;
   display: flex;
+  margin-bottom: 1.3rem;
 }
 .service-work__heading {
   font-size: 1.929rem;
@@ -1378,6 +1384,14 @@ main {
     flex-direction: column;
   }
 }
+.service-cards__title {
+  width: 50%;
+}
+@media (max-width: 541px) {
+  .service-cards__title {
+    width: 100%;
+  }
+}
 .service-cards__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
@@ -1399,6 +1413,10 @@ main {
     left: 50%;
     right: 50%;
   }
+}
+
+.swiper-scrollbar {
+  transform: 0.5s ease-out;
 }
 
 .projects {
@@ -1678,16 +1696,12 @@ main {
   padding-top: 1.5rem;
 }
 .about-banner .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
-  width: 91%;
-  height: 0.071rem;
-  left: 50%;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
-  top: initial;
+  display: none;
 }
 @media (max-width: 541px) {
   .about-banner .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
-    width: 77%;
+    display: block;
+    width: 67%;
     transform: translate(-55%, -50%);
     top: 33.4rem;
   }
@@ -1698,9 +1712,14 @@ main {
 .about-banner .swiper-button-next {
   right: 2rem;
 }
+.about-banner .swiper-button-next,
+.about-banner .swiper-button-prev {
+  display: none;
+}
 @media (max-width: 541px) {
   .about-banner .swiper-button-next,
   .about-banner .swiper-button-prev {
+    display: flex;
     top: 33.4rem;
   }
 }
@@ -1733,7 +1752,12 @@ main {
   align-items: center;
 }
 .about-stages__section-title {
-  width: 69.786rem;
+  width: 55rem;
+}
+@media (max-width: 541px) {
+  .about-stages__section-title {
+    width: 100%;
+  }
 }
 .about-stages__section-title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
@@ -1953,11 +1977,13 @@ main {
   padding-bottom: 13.429rem;
   padding-top: 20rem;
   gap: 7rem;
+  padding-left: 1.714rem;
 }
 @media (max-width: 541px) {
   .about-values__wrapper {
     padding-top: 5.714rem;
     padding-bottom: 5.714rem;
+    padding-left: 0;
     flex-direction: column;
     gap: 2rem;
   }
@@ -1968,6 +1994,7 @@ main {
 @media (max-width: 541px) {
   .about-values__left {
     width: 100%;
+    padding-left: 1.143rem;
   }
 }
 .about-values__heading {
@@ -1981,7 +2008,6 @@ main {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 .about-values__right {
-  width: 60%;
   margin-top: 14rem;
 }
 @media (max-width: 541px) {
@@ -2085,16 +2111,20 @@ main {
   font-size: 1rem;
   line-height: 120%;
 }
-.about-values .swiper-button-next,
-.about-values .swiper-button-prev,
-.about-values .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+.about-values__pagination {
   display: none;
 }
 @media (max-width: 541px) {
-  .about-values .swiper-button-next,
-  .about-values .swiper-button-prev,
-  .about-values .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  .about-values__pagination {
+    position: relative;
     display: block;
+  }
+  .about-values__pagination .swiper-button-next,
+  .about-values__pagination .swiper-button-prev {
+    top: 0.3rem;
+  }
+  .about-values__pagination .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    top: 0.3rem;
   }
 }
 
@@ -3229,8 +3259,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 14rem;
-  row-gap: 14rem;
-  align-items: end;
+  align-items: start;
 }
 @media (max-width: 541px) {
   .contacts__wrapper {
@@ -3286,6 +3315,9 @@ main {
 .contacts__phone-inner, .contacts__email-inner {
   margin-bottom: 3.429rem;
 }
+.contacts__phone, .contacts__email {
+  width: fit-content;
+}
 .contacts__phone, .contacts__email, .contacts__address-text {
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-size: 2rem;
@@ -3311,6 +3343,11 @@ main {
 .contacts__address-text {
   width: 31.5rem;
   margin-bottom: 2.857rem;
+}
+@media (max-width: 541px) {
+  .contacts__address-text {
+    width: 100%;
+  }
 }
 
 .header {
@@ -4956,7 +4993,7 @@ main {
 @media (max-width: 541px) {
   .footer {
     padding-top: 4rem;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -206,7 +206,7 @@ get_header();
 
     <?php $valuesHeading = get_field('values_title') ?? '' ;?>
     <section class="about-values">
-        <div class="container">
+        <div class="container container--slider">
             <div class="about-values__wrapper">
                 <div class="about-values__left">
                     <?php if( $valuesHeading ): ?>
@@ -237,10 +237,13 @@ get_header();
                     </li>
                     <? endwhile ?>
                 </ul>
-                  <div class="swiper-pagination"></div>
+                  <div class="about-values__pagination">
+                    <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                </div>
+                  </div>
+                    
+              </div>
                
             </div>
         </div>

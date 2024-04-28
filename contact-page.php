@@ -6,18 +6,18 @@ Template Name: Контакти
 get_header();
 ?>
 <?php $contactsTitle = get_field('contacts_title') ?? '' ;
-      $phone = get_field('phone', 'options');
+      $phone = get_field('phones');
       $contactsText = get_field('contacts_text') ?? '' ;
-      $contactsfirstPhone = $phone['phone_number'] ?? ''; ;
+      $contactsfirstPhone = $phone['first_phone_number'] ?? ''; ;
       $contactsSecondPhone =$phone['phone_second_number'] ?? '';
       $contactsImage =  get_field('contact_image') ;
       $cleanedNumber = preg_replace('/\s+/', '', $contactsfirstPhone);
 			$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
       $cleanedSecondNumber = preg_replace('/\s+/', '', $contactsSecondPhone);
 			$cleanedSecondNumber = preg_replace('/\D/', '', $cleanedSecondNumber);
-      $email = get_field('email', 'options');
-      $emailFirst = $email['second_email'] ?? '';
-      $emailSecond = $email['third_email'] ?? '';
+      $email = get_field('emails');
+      $emailFirst = $email['first_email'] ?? '';
+      $emailSecond = $email['second_email'] ?? '';
       $phoneBlockName = get_field('phone_title') ?? '' ;
       $emailBlockName = get_field('email_title') ?? '' ;
       
@@ -109,9 +109,9 @@ get_header();
             </p>
             <?php endif; ?>
             <?php if ($addressContent) : ?>   
-            <p class="contacts__address-text">
+            <div class="contacts__address-text">
               <?= $addressContent ;?>
-            </p>
+            </div>
             <?php endif; ?>
             <a href="<?= $addressButtonLink ?>" target="_blank" class="contacts__address-button button">
                 <div class="button__wrapper">
