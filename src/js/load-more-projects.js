@@ -45,39 +45,38 @@ jQuery(function ($) {
 	// Delegate the click event to the body for dynamically added elements
 	$('body').on('click', '#load-more-button', function () {
 		if (canLoad) {
-			canLoad = false; // Встановлюємо прапорець canLoad в false перед виконанням запиту AJAX, щоб уникнути паралельних запитів
-			preloader.show(); // Показуємо прелоадер перед виконанням запиту AJAX
+			canLoad = false;
+			preloader.show();
 			loadMoreButton.hide();
 
-			var category = $('#category-filter li.active').data('category'); // Отримуємо активну категорію
-			var option = $('#blogs__select').val(); // Отримуємо значення опції
-			var nextPage = page + 1; // Збільшуємо номер сторінки для завантаження наступної сторінки
+			var category = $('#category-filter li.active').data('category');
+			var option = $('#blogs__select').val();
+			var nextPage = page + 1;
 
 			var data = {
 				action: 'load_more_projects',
-				page: nextPage, // Використовуємо збільшене значення сторінки
+				page: nextPage,
 				category: category,
 				option: option,
 			};
 
 			$.post(ajaxUrl, data, function (response) {
-				preloader.hide(); // Приховуємо прелоадер після отримання відповіді від сервера
+				preloader.hide();
 
 				if (response !== 'no_posts') {
-					projectsContainer.append(response); // Додаємо отримані пости на сторінку
-					canLoad = true; // Встановлюємо canLoad в true, дозволяючи наступні запити
-
+					projectsContainer.append(response);
+					canLoad = true;
 					var projectsCount = projectsContainer.children().length;
 					if (projectsCount % 2 !== 0) {
-						loadMoreButton.hide(); // Приховуємо кнопку, якщо кількість постів не кратна 6
+						loadMoreButton.hide();
 					} else {
-						loadMoreButton.show(); // Показуємо кнопку, якщо кількість постів кратна 6
+						loadMoreButton.show();
 					}
 				} else {
-					loadMoreButton.hide(); // Приховуємо кнопку, якщо немає більше постів
+					loadMoreButton.hide();
 				}
 			});
-			page = nextPage; // Оновлюємо значення сторінки після успішного завантаження
+			page = nextPage;
 		}
 	});
 
