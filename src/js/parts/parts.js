@@ -1,5 +1,5 @@
 import './header';
-import './home-video';
+import './video';
 import './svg';
 import './custom-select';
 import './custom-cursor';
