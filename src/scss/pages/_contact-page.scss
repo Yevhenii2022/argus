@@ -69,7 +69,12 @@
       margin-top: 0.1rem;
     }
   }
-
+  
+  &__phone-inner{
+    @include media(mobile) {
+      margin-top: 5.714rem;
+    }
+}
   &__phone-inner,
   &__email-inner{
     margin-bottom: 3.429rem;
