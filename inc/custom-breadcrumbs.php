@@ -85,6 +85,3 @@ function custom_save_post_parent($post_id)
   }
 }
 add_action('save_post', 'custom_save_post_parent');
-
-
-// <?php echo do_shortcode('[pointer_breadcrumbs]');
