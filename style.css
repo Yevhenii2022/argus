@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -149,6 +149,10 @@ main {
   line-height: 0.988;
   font-weight: 550;
   text-transform: uppercase;
+}
+.main__title em {
+  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  font-weight: 300;
 }
 @media (max-width: 541px) {
   .main__title {
@@ -2041,8 +2045,6 @@ main {
 .about-values__list {
   counter-reset: item;
   list-style-type: none;
-  counter-reset: item;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
 }
@@ -2756,112 +2758,100 @@ main {
   z-index: 0 !important;
 }
 
-.our-services {
-  margin-top: 5.857rem;
-  padding-top: 5.714rem;
-  padding-bottom: 8.571rem;
-  background-repeat: no-repeat;
+.vacancies {
+  padding-bottom: 10rem;
+  padding-top: 11.571rem;
 }
-@media (max-width: 541px) {
-  .our-services {
-    padding-top: 7.571rem;
-    margin-top: 0;
-  }
-}
-.our-services__wrapper {
+.vacancies__banner {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 @media (max-width: 541px) {
-  .our-services__wrapper {
+  .vacancies__banner {
     flex-direction: column;
+    gap: 2.857rem;
   }
 }
-.our-services__left {
-  flex: 1;
-  padding-left: 1.143rem;
+.vacancies__title {
+  width: 70%;
 }
-.our-services__content {
+.vacancies__text {
+  padding-top: 2rem;
+  margin-bottom: 1.1rem;
+  width: 24rem;
+  line-height: 120%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
-@media (max-width: 541px) {
-  .our-services__title {
-    margin-bottom: 1.714rem;
-  }
+.vacancies__text::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  height: 0.786rem;
+  width: 0.643rem;
+  flex-shrink: 0;
 }
-.our-services__title em {
-  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+.vacancies__heading {
+  margin-top: 5.714rem;
+  margin-bottom: 1.714rem;
+  text-align: center;
 }
-.our-services__description {
-  padding-left: 18.5rem;
-  padding-right: 4.786rem;
+.vacancies__number {
+  margin-bottom: 4.571rem;
+  text-align: center;
   line-height: 120%;
 }
-@media (max-width: 541px) {
-  .our-services__description {
-    padding-left: 0rem;
-    padding-right: 2rem;
-    margin-bottom: 2.857rem;
-  }
+.vacancies__list {
+  counter-reset: item;
+  list-style-type: none;
+  border-bottom: 0.05rem solid black;
+  border-radius: 0 !important;
 }
-@media (max-width: 541px) {
-  .our-services__arrow {
-    display: none;
-  }
+.vacancies__item {
+  counter-increment: item;
+  border-top: 0.05rem solid #181818;
+  padding: 1.143rem 0 1.714rem 0;
+  position: relative;
 }
-.our-services__arrow svg {
-  width: 1.143rem;
-  height: 1.143rem;
+.vacancies__item::before {
+  content: counter(item, decimal-leading-zero) ". ";
+  position: absolute;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #181818;
 }
-.our-services__right {
-  flex: 1;
+.vacancies__item:hover img, .vacancies__item:focus img {
+  width: 8.143rem;
+  height: 5.071rem;
 }
-
-.services-cards {
-  padding-bottom: 8.571rem;
-}
-.services-cards__wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.143rem;
-  row-gap: 4.4rem;
-}
-@media (max-width: 541px) {
-  .services-cards__wrapper {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-.services-cards__last {
-  height: 35rem;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-}
-@media (max-width: 541px) {
-  .services-cards__last {
-    height: 17.429rem;
-  }
-}
-.services-cards__last-title {
-  font-size: 2rem;
-  text-transform: uppercase;
+.vacancies__location {
   text-align: center;
-  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
-  width: 80%;
+  line-height: 120%;
+}
+.vacancies__name {
+  width: 75%;
+  margin: 1.714rem auto 0 auto;
 }
 @media (max-width: 541px) {
-  .services-cards__last-title {
-    font-size: 1.286rem;
+  .vacancies__name {
     width: 100%;
   }
 }
-.services-cards__last-title em {
-  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+.vacancies__name p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.vacancies__name img {
+  width: 0rem;
+  height: 5.071rem;
+  transition: all 1s ease;
 }
 
 .project {
@@ -5751,11 +5741,16 @@ main {
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 28rem;
-  overflow: hidden;
+  width: 38rem;
   color: rgba(24, 24, 24, 0.4);
   text-transform: uppercase;
   font-size: 0.786rem;
+}
+.form__file label p span {
+  overflow: hidden;
+}
+.form__file label p img {
+  flex-shrink: 0;
 }
 .form__file label:hover, .form__file label:focus, .form__file label:active {
   border-bottom: 0.071rem solid #181818;
@@ -5763,6 +5758,10 @@ main {
 }
 .form__file input[type=file] {
   display: none;
+}
+.form .form__file:has(.wpcf7-not-valid-tip) .wpcf7-not-valid-tip {
+  width: 14rem;
+  bottom: 0.05rem;
 }
 .form span.wpcf7-spinner {
   display: none;
@@ -5851,6 +5850,9 @@ main {
     margin-top: 5rem;
   }
 }
+.contact-us__content--vacancy {
+  margin-top: 6.5rem;
+}
 .contact-us__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
@@ -5858,6 +5860,11 @@ main {
   .contact-us__title {
     font-size: 2.857rem;
   }
+}
+.contact-us__title--vacancy em {
+  display: flex;
+  justify-content: center;
+  padding-left: 7rem;
 }
 .contact-us__left {
   display: flex;
@@ -5938,6 +5945,10 @@ main {
   .contact-us__heading {
     display: none;
   }
+}
+.contact-us__heading--vacancy {
+  width: 80%;
+  line-height: 100%;
 }
 .contact-us__heading em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";

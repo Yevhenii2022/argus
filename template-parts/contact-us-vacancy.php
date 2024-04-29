@@ -1,21 +1,20 @@
-<section class="contact-us" id="contact-us">
-  <?php $sectionTitle = get_field('contact-us_title', 'options') ?? '' ;
-        $sectionImage = get_field('contact-us_img', 'options') ?? '' ; 
-        $sectionVideo = get_field('contact-us_video', 'options') ?? '' ; 
-        $sectionHeading = get_field('contact-us_heading', 'options') ?? '' ;
-        $sectionName = get_field('contact_name', 'options') ?? '' ;
-        $sectionPosition = get_field('contact_position', 'options') ?? '' ;
+<section class="contact-us" id="contact-us-vacancies">
+  <?php $sectionTitle = get_field('contact-us-vacancy_title', 'options') ?? '' ;
+        $sectionVideo = get_field('contact-us-vacancy_video', 'options') ?? '' ; 
+        $sectionHeading = get_field('contact-us-vacancy_heading', 'options') ?? '' ;
+        $sectionName = get_field('contact-vacancy_name', 'options') ?? '' ;
+        $sectionPosition = get_field('contact-vacancy_position', 'options') ?? '' ;
 
         if ($sectionTitle || $sectionImage || $sectionVideo || $sectionHeading || $sectionName || $sectionPosition) :
         ?>
   <div class="container">
     <div class="contact-us__wrapper">
     <?php if ($sectionTitle): ?>
-      <div class="contact-us__title main__title anim-title _anim-items">
+      <div class="contact-us__title contact-us__title--vacancy main__title anim-title _anim-items">
         <?= $sectionTitle ;?>
       </div>
       <?php endif ?>
-      <div class="contact-us__content">
+      <div class="contact-us__content contact-us__content--vacancy">
       <?php if ($sectionHeading): ?>
       <h2 class="contact-us__heading-mobile anim-title _anim-items">
           <?= $sectionHeading ;?>
@@ -32,7 +31,7 @@
           <?php endif ?>
           <div class="contact-us__text">
           <?php if ($sectionHeading): ?>
-            <h2 class="contact-us__heading anim-title _anim-items">
+            <h2 class="contact-us__heading contact-us__heading--vacancy anim-title _anim-items">
               <?= $sectionHeading ;?>
             </h2>
             <?php endif ?>

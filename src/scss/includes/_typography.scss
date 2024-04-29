@@ -5,6 +5,11 @@
 	font-weight: 550;
 	text-transform: uppercase;
 
+	em{
+		font-family: $italic;
+		font-weight: 300;
+	}
+
 	@include media(mobile) {
 		font-size: 2.857rem;
 	}
