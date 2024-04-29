@@ -29,4 +29,28 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (playPauseButton) {
 		playPauseButton.addEventListener('click', togglePlayPause);
 	}
+
+	//form-video
+	const formVideo = document.getElementById('form-video');
+
+	const handleScroll = () => {
+		const rect = formVideo.getBoundingClientRect();
+		const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+		if (rect.top >= 0 && rect.bottom <= viewportHeight) {
+			// Video is in the viewport
+			if (formVideo.paused) {
+				formVideo.play();
+			}
+		} else {
+			// Video is out of the viewport
+			if (!formVideo.paused) {
+				formVideo.pause();
+			}
+		}
+	};
+
+	if (formVideo) {
+		window.addEventListener('scroll', handleScroll);
+	}
 });
