@@ -1,0 +1,58 @@
+.vacancies{
+
+  &__heading {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 3.214rem;
+		@include media(mobile) {
+			flex-direction: column;
+			gap: 2.857rem;
+		}
+	}
+
+	&__title {
+		width: 50%;
+
+		em {
+			font-family: $italic;
+		}
+	}
+
+	&__text {
+		padding-top: 2rem;
+		margin-right: 3.429rem;
+		width: 19.786rem;
+		line-height: 120%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 0.5rem;
+
+		&::before {
+			content: '';
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			height: 0.786rem;
+			width: 0.643rem;
+			flex-shrink: 0;
+		}
+	}
+
+	&__location{
+		text-align: center;
+	}
+
+	&__name{
+		p{
+			display: flex;
+			align-items: center;
+      justify-content: center;
+		}
+
+		img{
+			width: 8.143rem;
+			height: 5.071rem;
+		}
+	}
+
+}

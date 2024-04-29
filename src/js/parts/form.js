@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let fileNameDisplay = document.querySelector(".form__file-text");
 //   let inputClear = document.querySelector('.form__delete');
   let icons = {
-      pdf: "/wp-content/themes/argus/src/img/pdf.jpg",
-      doc: "/wp-content/themes/argus/src/img/doc.jpg",
-      img: "/wp-content/themes/argus/src/img/img.jpg",
+      pdf: "/wp-content/themes/pointer-theme/src/img/pdf.jpg",
+      doc: "/wp-content/themes/pointer-theme/src/img/doc.jpg",
+      img: "/wp-content/themes/pointer-theme/src/img/img.jpg",
   };
 
 

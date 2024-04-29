@@ -1,4 +1,4 @@
-<section class="contact-us" id="contact-us">
+<section class="contact-us" id="contact-us-vacancies">
   <?php $sectionTitle = get_field('contact-us-vacancy_title', 'options') ?? '' ;
         $sectionVideo = get_field('contact-us-vacancy_video', 'options') ?? '' ; 
         $sectionHeading = get_field('contact-us-vacancy_heading', 'options') ?? '' ;
