@@ -16,28 +16,14 @@ function load_more_projects()
   $paged = isset($_POST['page']) ? $_POST['page'] : 1;
   $posts_per_page = 2;
 
-
-  if ($category === 'all') {
-    $tax_query = null;
-  } else {
-    $tax_query = array(
-      array(
-        'taxonomy' => 'project-type',
-        'field' => 'slug',
-        'terms' => $category,
-      ),
-    );
-  }
   $args = array(
     'post_type' => 'projects',
     'posts_per_page' => $posts_per_page,
     'paged' => $paged,
     'orderby' => 'date',
     'order' => 'DESC',
-    'tax_query' => $tax_query,
   );
 
-  $query = new WP_Query($args);
   if ($category !== 'all') {
     $args['tax_query'] = array(
       array(
@@ -47,6 +33,16 @@ function load_more_projects()
       ),
     );
   }
+
+  if ($option !== 'all') {
+    $args['tax_query'][] = array(
+      'taxonomy' => 'project-type',
+      'field' => 'slug',
+      'terms' => $option,
+    );
+  }
+
+  $query = new WP_Query($args);
 
   if ($query->have_posts()) :
     while ($query->have_posts()) :

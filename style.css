@@ -550,10 +550,9 @@ main {
   transition: width 0.5s;
 }
 .projects__nothing {
+  margin: 6.5rem auto 0 -7rem;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-size: 1.857rem;
   text-transform: uppercase;
@@ -573,6 +572,7 @@ main {
 @media (max-width: 541px) {
   .projects__selects {
     margin: 0 1.143rem 0.9rem 0;
+    gap: 12.65rem;
   }
 }
 .projects #category-filter .active,
@@ -594,8 +594,8 @@ main {
 
 .ajax-preloader {
   margin: 0 auto;
-  width: 20rem;
-  height: 20rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .our-services {
@@ -1508,10 +1508,9 @@ main {
   transition: width 0.5s;
 }
 .projects__nothing {
+  margin: 6.5rem auto 0 -7rem;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-size: 1.857rem;
   text-transform: uppercase;
@@ -1531,6 +1530,7 @@ main {
 @media (max-width: 541px) {
   .projects__selects {
     margin: 0 1.143rem 0.9rem 0;
+    gap: 12.65rem;
   }
 }
 .projects #category-filter .active,
@@ -1552,8 +1552,8 @@ main {
 
 .ajax-preloader {
   margin: 0 auto;
-  width: 20rem;
-  height: 20rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .about-banner {

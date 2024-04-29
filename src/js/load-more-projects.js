@@ -20,23 +20,30 @@ jQuery(function ($) {
 				category: category,
 				option: option,
 			};
-
+			var dataButton = {
+				action: 'load_more_projects',
+				page: page + 1,
+				category: category,
+				option: option,
+			};
 			$.post(ajaxUrl, data, function (response) {
 				preloader.hide();
 
 				if (response !== 'no_posts') {
 					projectsContainer.append(response);
 					canLoad = true;
+				}
+			});
 
-					var projectsCount = projectsContainer.children().length;
+			$.post(ajaxUrl, dataButton, function (response) {
+				var $response = $(response);
 
-					if (projectsCount % 2 !== 0) {
-						loadMoreButton.hide();
-					} else {
-						loadMoreButton.show();
-					}
-				} else {
+				var projectsCount = $response.filter('a.projects-card').length;
+
+				if (projectsCount == 0) {
 					loadMoreButton.hide();
+				} else {
+					loadMoreButton.show();
 				}
 			});
 		}
@@ -50,12 +57,18 @@ jQuery(function ($) {
 			loadMoreButton.hide();
 
 			var category = $('#category-filter li.active').data('category');
-			var option = $('#blogs__select').val();
+			var option = $('#category-filter-right li.active2').data('category');
 			var nextPage = page + 1;
 
 			var data = {
 				action: 'load_more_projects',
 				page: nextPage,
+				category: category,
+				option: option,
+			};
+			var dataButton = {
+				action: 'load_more_projects',
+				page: nextPage + 1,
 				category: category,
 				option: option,
 			};
@@ -66,14 +79,15 @@ jQuery(function ($) {
 				if (response !== 'no_posts') {
 					projectsContainer.append(response);
 					canLoad = true;
-					var projectsCount = projectsContainer.children().length;
-					if (projectsCount % 2 !== 0) {
-						loadMoreButton.hide();
-					} else {
-						loadMoreButton.show();
-					}
-				} else {
+				}
+			});
+			$.post(ajaxUrl, dataButton, function (response) {
+				var $response = $(response);
+				var projectsCount = $response.filter('a.projects-card').length;
+				if (projectsCount == 0) {
 					loadMoreButton.hide();
+				} else {
+					loadMoreButton.show();
 				}
 			});
 			page = nextPage;
@@ -83,29 +97,30 @@ jQuery(function ($) {
 	$(document).on('click', '#category-filter li', function () {
 		$('#category-filter li').removeClass('active');
 		$(this).addClass('active');
-		var category = $(this).data('category');
-		var option = $('#blogs__select').val();
+		var category = $('#category-filter li.active').data('category');
+		var option = $('#category-filter-right li.active2').data('category');
+
 		page = 1;
 		projectsContainer.empty();
-		loadBlogs(category, option);
+		loadBlogs(category, option, page);
 	});
 
 	$(document).on('click', '#category-filter-right li', function () {
 		$('#category-filter-right li').removeClass('active2');
 		$(this).addClass('active2');
-		var category = $(this).data('category');
-		var option = $('#blogs__select').val();
-		page = 1;
+		var category = $('#category-filter li.active').data('category');
+		var option = $('#category-filter-right li.active2').data('category');
+
 		projectsContainer.empty();
-		loadBlogs(category, option);
+		loadBlogs(category, option, page);
 	});
 
 	$(document).on('change', '#projects-select, #projects-select2', function () {
-		var option = $('#blogs__select').val();
-		var category = $(this).val();
+		var category = $('#projects-select').val();
+		var option = $('#projects-select2').val();
 		page = 1;
 		projectsContainer.empty();
-		loadBlogs(category, option);
+		loadBlogs(category, option, page);
 	});
 
 	loadBlogs('all');

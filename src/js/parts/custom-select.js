@@ -133,27 +133,31 @@ document.addEventListener('DOMContentLoaded', function () {
 				/* For each element, create a new DIV that will act as the selected item: */
 				a = document.createElement('DIV');
 				a.setAttribute('class', 'select-selected');
-				a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+
+				//----------------------SELECT PLACEHOLDER-------------------------------------
+				let lang = document.documentElement.getAttribute('lang');
+				if (lang == 'uk') {
+					a.innerHTML = 'Фільтри'; // Placeholder text
+				} else if (lang == 'en-GB') {
+					a.innerHTML = 'Filters';
+				}
+				//-----------------------------------------------------------
 				x[i].appendChild(a);
 
 				/* For each element, create a new DIV that will contain the option list: */
 				b = document.createElement('DIV');
 				b.setAttribute('class', 'select-items select-hide');
 
-				for (j = 0; j < ll; j++) {
+				for (j = 1; j < ll; j++) {
 					/* For each option in the original select element,
-  create a new DIV that will act as an option item: */
-					if (selElmnt.options[j].value !== selElmnt.value || selElmnt.selectedIndex === j) {
+                create a new DIV that will act as an option item: */
+					if (!selElmnt.options[j].disabled) {
 						c = document.createElement('DIV');
 						c.innerHTML = selElmnt.options[j].innerHTML;
 
-						if (selElmnt.selectedIndex === j) {
-							c.classList.add('same-as-selected');
-						}
-
 						c.addEventListener('click', function (e) {
 							/* When an item is clicked, update the original select box,
-          and the selected item: */
+                        and the selected item: */
 							var y, i, k, s, h, sl, yl;
 							s = this.parentNode.parentNode.getElementsByTagName('select')[0];
 							sl = s.length;
@@ -175,21 +179,31 @@ document.addEventListener('DOMContentLoaded', function () {
 							}
 							h.click();
 
-							// Добавьте эту строку для генерации события change:
+							// Trigger the 'change' event
 							var changeEvent = new Event('change', {
 								bubbles: true,
 							});
 							s.dispatchEvent(changeEvent);
+
+							// Remove placeholder text
+							if (s.selectedIndex !== -1) {
+								h.innerHTML = s.options[s.selectedIndex].innerHTML;
+							}
 						});
 						b.appendChild(c);
 					}
 				}
-
 				x[i].appendChild(b);
+
+				/* Add a div with class 'select__gap' and text '---' after creating the initial elements */
+				var gapDiv = document.createElement('div');
+				gapDiv.className = 'select__gap';
+
+				x[i].appendChild(gapDiv);
 
 				a.addEventListener('click', function (e) {
 					/* When the select box is clicked, close any other select boxes,
-                  and open/close the current select box: */
+                and open/close the current select box: */
 					e.stopPropagation();
 					closeAllSelect(this);
 					this.nextSibling.classList.toggle('select-hide');
@@ -200,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		function closeAllSelect(elmnt) {
 			/* A function that will close all select boxes in the document,
-          except the current select box: */
+        except the current select box: */
 			var x,
 				y,
 				i,
@@ -227,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		/* If the user clicks anywhere outside the select box,
-      then close all select boxes: */
+    then close all select boxes: */
 		document.addEventListener('click', function (event) {
 			var target = event.target;
 			if (!target.classList.contains('select-selected')) {

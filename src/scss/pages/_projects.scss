@@ -69,10 +69,11 @@
 	}
 
 	&__nothing {
+		margin: 6.5rem auto 0 -7rem;
 		position: absolute;
-		top: 50%;
+		// top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		// transform: translate(-50%, -50%);
 		font-family: $medium;
 		font-size: 1.857rem;
 		text-transform: uppercase;
@@ -91,6 +92,7 @@
 
 		@include media(mobile) {
 			margin: 0 1.143rem 0.9rem 0;
+			gap: 12.65rem;
 		}
 	}
 
@@ -113,6 +115,6 @@
 
 .ajax-preloader {
 	margin: 0 auto;
-	width: 20rem;
-	height: 20rem;
+	width: 5rem;
+	height: 5rem;
 }
