@@ -43,9 +43,15 @@ get_header(); ?>
         <?php endif ?>
         <p class="vacancies__number">
         <?php
-          $total_posts = wp_count_posts()->publish;
-          if ($total_posts > 0) {
-             echo $total_posts . pll__(' позиція');
+          $total_posts = (int) wp_count_posts('vacancies')->publish;
+          if ($total_posts === 0) {
+              echo 'Немає доступних вакансій';
+          } else if ($total_posts === 1) {
+              echo '1 позиція';
+            } else if ($total_posts < 5) {
+              echo $total_posts . ' позиції';;
+          } else {
+              echo $total_posts . ' позицій';
           }
           ?>
         </p>
@@ -58,6 +64,7 @@ get_header(); ?>
           $vacancies_query = new WP_Query($args);
           if ($vacancies_query->have_posts()) :
           ?>
+          
           <?php
               while ($vacancies_query->have_posts()) : $vacancies_query->the_post();
               $vacancyName = get_field('vacancy_name') ?? '';
@@ -77,16 +84,13 @@ get_header(); ?>
               </a>
               <?php endwhile;
               wp_reset_postdata();
-          else : ?>
-              <p>Немає доступних вакансій</p>
+           ?>
           <?php endif; ?>
         </div>
       </div>
     </div>
   </section>
   <?php endif ?>
-
-
 
 <?php get_template_part('template-parts/contact-us-vacancy'); ?>
 </main>

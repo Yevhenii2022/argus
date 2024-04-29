@@ -2765,7 +2765,7 @@ main {
 .vacancies__banner {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3.214rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 541px) {
   .vacancies__banner {
@@ -2778,8 +2778,8 @@ main {
 }
 .vacancies__text {
   padding-top: 2rem;
-  margin-right: 3.429rem;
-  width: 19.786rem;
+  margin-bottom: 1.1rem;
+  width: 24rem;
   line-height: 120%;
   display: flex;
   flex-direction: column;
