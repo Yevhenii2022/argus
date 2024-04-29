@@ -2312,16 +2312,40 @@ main {
   gap: 0.571rem;
   position: absolute;
   bottom: 2.286rem;
-  right: 4.786rem;
+  right: 0;
 }
 @media (max-width: 541px) {
   .years {
     top: 2.286rem;
-    left: 1.143rem;
+    left: 0;
+  }
+}
+.years > div {
+  display: flex;
+  gap: 0.357rem;
+  align-items: center;
+}
+@media (max-width: 541px) {
+  .years > div {
+    width: 2.929rem;
+    flex-direction: row-reverse;
   }
 }
 .years p {
+  display: flex;
   font-size: 0.786rem;
+}
+
+.line {
+  width: 4.429rem;
+  height: 0.071rem;
+  background-color: #181818;
+}
+@media (max-width: 541px) {
+  .line {
+    margin-bottom: 0.15rem;
+    width: 100%;
+  }
 }
 
 .news {

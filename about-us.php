@@ -158,13 +158,24 @@ get_header();
                                         foreach ($stages as $stage) {
                                             $end_date = $stage['end_date'];
                                     ?>
-                                            <p>20<?= $end_date; ?></p>
+
+                                            <div>
+                                                <p>20<?= $end_date; ?></p>
+
+                                                <?php
+                                                if ($end_date == $endDate) {
+                                                ?>
+                                                    <div class="line"></div>
+                                                <?php
+                                                }
+                                                ?>
+                                            </div>
                                     <?php
                                         }
                                     }
                                     ?>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
                     <? endwhile; ?>

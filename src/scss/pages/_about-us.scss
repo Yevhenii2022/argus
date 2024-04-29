@@ -795,13 +795,35 @@
 	gap: 0.571rem;
 	position: absolute;
 	bottom: 2.286rem;
-	right: 4.786rem;
+	right: 0;
 	@include media(mobile) {
 		top: 2.286rem;
-		left: 1.143rem;
+		left: 0;
+	}
+
+	& > div {
+		display: flex;
+		gap: 0.357rem;
+		align-items: center;
+		@include media(mobile) {
+			width: 2.929rem;
+			flex-direction: row-reverse;
+		}
 	}
 
 	p {
+		display: flex;
 		font-size: 0.786rem;
+	}
+}
+
+.line {
+	width: 4.429rem;
+	height: 0.071rem;
+	background-color: $black;
+
+	@include media(mobile) {
+		margin-bottom: 0.15rem;
+		width: 100%;
 	}
 }
