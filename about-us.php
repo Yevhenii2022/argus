@@ -105,6 +105,7 @@ get_header();
                     </div>
                 <?php endif ?>
 
+                <!-- scroll -->
                 <div class="about-stage__item">
                     <?php while (have_rows('stages')) :
                         the_row();
@@ -113,40 +114,45 @@ get_header();
                         $stageHeading = get_sub_field('stage_title');
                         $stageDescription = get_sub_field('stage_description');
                         $stageImg = get_sub_field('stage_img'); ?>
-                        <div class="about-stages__item-inner">
-                            <div class="about-stages__bg" style="background-image: url('<?php echo esc_url($stageBackground); ?>')">
-                            </div>
 
-                            <div class="about-stages__text">
-                                <?php if ($stageHeading) : ?>
-                                    <div class="about-stages__title">
-                                        <?= $stageHeading; ?>
-                                    </div>
-                                <?php endif ?>
-                                <?php if ($stageDescription) : ?>
-                                    <div class="about-stages__description">
-                                        <?= $stageDescription; ?>
-                                    </div>
-                                <?php endif ?>
-                            </div>
-                            <?php if ($stageImg) : ?>
-                                <div class="about-stages__img" data-image-wrap>
-                                    <img src='<?php echo $stageImg['url']; ?>' alt='<?php echo $stageImg['alt']; ?>' />
-                                    <?php if ($startDate) : ?>
-                                        <div class="about-stages__year-first">
-                                            <?= $startDate; ?>
+                        <div class="content--sticky">
+
+                            <div class="about-stages__item-inner">
+                                <div class="about-stages__bg" style="background-image: url('<?php echo esc_url($stageBackground); ?>')">
+                                </div>
+
+                                <div class="about-stages__text">
+                                    <?php if ($stageHeading) : ?>
+                                        <div class="about-stages__title">
+                                            <?= $stageHeading; ?>
                                         </div>
                                     <?php endif ?>
-                                    <?php if ($endDate) : ?>
-                                        <div class="about-stages__year-last">
-                                            <?= $endDate; ?>
+                                    <?php if ($stageDescription) : ?>
+                                        <div class="about-stages__description">
+                                            <?= $stageDescription; ?>
                                         </div>
                                     <?php endif ?>
                                 </div>
-                            <?php endif ?>
+                                <?php if ($stageImg) : ?>
+                                    <div class="about-stages__img" data-image-wrap>
+                                        <img src='<?php echo $stageImg['url']; ?>' alt='<?php echo $stageImg['alt']; ?>' />
+                                        <?php if ($startDate) : ?>
+                                            <div class="about-stages__year-first">
+                                                <?= $startDate; ?>
+                                            </div>
+                                        <?php endif ?>
+                                        <?php if ($endDate) : ?>
+                                            <div class="about-stages__year-last">
+                                                <?= $endDate; ?>
+                                            </div>
+                                        <?php endif ?>
+                                    </div>
+                                <?php endif ?>
+                            </div>
                         </div>
                     <? endwhile; ?>
                 </div>
+                <!-- scroll -->
 
             </div>
         </div>

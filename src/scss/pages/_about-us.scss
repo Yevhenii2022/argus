@@ -211,7 +211,6 @@
 
 .about-stages {
 	padding-top: 7.143rem;
-
 	@include media(mobile) {
 		padding-top: 13.5rem;
 	}
@@ -258,6 +257,8 @@
 		align-items: flex-end;
 		padding: 12.071rem 6.4rem;
 		gap: 1.143rem;
+		background-color: $bg;
+		z-index: -1;
 
 		@include media(mobile) {
 			padding: 0 1.143rem;
@@ -276,16 +277,21 @@
 		height: 100%;
 		bottom: 0;
 		left: 0;
-		z-index: -1;
-		mix-blend-mode: soft-light;
+		opacity: 0.1;
+		// z-index: -1;
+		// mix-blend-mode: soft-light;
 	}
 
 	&__img {
 		position: relative;
 		width: 40.714rem;
-
+		height: 29rem;
 		@include media(mobile) {
 			width: 24.5rem;
+			height: 17.429rem;
+		}
+		img {
+			height: 100%;
 		}
 	}
 
@@ -760,4 +766,24 @@
 			font-family: $italic;
 		}
 	}
+}
+
+//scroll
+.about-stage__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.content--sticky {
+	display: flex;
+	flex-direction: column;
+
+	padding: 0;
+
+	width: 100%;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	top: var(--offset);
+	// height: calc(100vh - var(--offset));
 }

@@ -1804,6 +1804,8 @@ main {
   align-items: flex-end;
   padding: 12.071rem 6.4rem;
   gap: 1.143rem;
+  background-color: #ededed;
+  z-index: -1;
 }
 @media (max-width: 541px) {
   .about-stages__item-inner {
@@ -1822,17 +1824,21 @@ main {
   height: 100%;
   bottom: 0;
   left: 0;
-  z-index: -1;
-  mix-blend-mode: soft-light;
+  opacity: 0.1;
 }
 .about-stages__img {
   position: relative;
   width: 40.714rem;
+  height: 29rem;
 }
 @media (max-width: 541px) {
   .about-stages__img {
     width: 24.5rem;
+    height: 17.429rem;
   }
+}
+.about-stages__img img {
+  height: 100%;
 }
 .about-stages__text {
   width: 26%;
@@ -2283,6 +2289,22 @@ main {
 }
 .about-team__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+
+.about-stage__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.content--sticky {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  --offset: 0px;
+  top: var(--offset);
 }
 
 .news {

@@ -1,5 +1,5 @@
 <?php
-// Функция для вывода кастомных хлебных крошек
+
 function custom_breadcrumbs()
 {
   // Получаем информацию о текущей странице
@@ -81,10 +81,10 @@ function custom_post_parent_metabox_callback($post)
 function custom_save_post_parent($post_id)
 {
   if (isset($_POST['parent_id'])) {
-    update_post_meta($post_id, '_wp_page_template', $_POST['parent_id']);
+    update_post_meta($post_id, '_parent_id', $_POST['parent_id']);
   }
 }
 add_action('save_post', 'custom_save_post_parent');
 
 
-// <?php echo do_shortcode('[pointer_breadcrumbs]'); 
+// <?php echo do_shortcode('[pointer_breadcrumbs]');
