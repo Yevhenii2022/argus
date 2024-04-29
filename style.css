@@ -1809,9 +1809,8 @@ main {
 }
 @media (max-width: 541px) {
   .about-stages__item-inner {
-    padding: 0 1.143rem;
+    padding: 0 1.143rem 8.571rem 1.143rem;
     flex-direction: column-reverse;
-    margin-bottom: 8.571rem;
     gap: 9.2rem;
     padding-top: 20rem;
   }
@@ -2305,6 +2304,24 @@ main {
   top: 0;
   --offset: 0px;
   top: var(--offset);
+}
+
+.years {
+  display: flex;
+  flex-direction: column;
+  gap: 0.571rem;
+  position: absolute;
+  bottom: 2.286rem;
+  right: 4.786rem;
+}
+@media (max-width: 541px) {
+  .years {
+    top: 2.286rem;
+    left: 1.143rem;
+  }
+}
+.years p {
+  font-size: 0.786rem;
 }
 
 .news {

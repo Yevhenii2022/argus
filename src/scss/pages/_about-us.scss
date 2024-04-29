@@ -261,9 +261,10 @@
 		z-index: -1;
 
 		@include media(mobile) {
-			padding: 0 1.143rem;
+			// padding: 0 1.143rem;
+			padding: 0 1.143rem 8.571rem 1.143rem;
 			flex-direction: column-reverse;
-			margin-bottom: 8.571rem;
+			// margin-bottom: 8.571rem;
 			gap: 9.2rem;
 			padding-top: 20rem;
 		}
@@ -786,4 +787,21 @@
 	--offset: 0px;
 	top: var(--offset);
 	// height: calc(100vh - var(--offset));
+}
+
+.years {
+	display: flex;
+	flex-direction: column;
+	gap: 0.571rem;
+	position: absolute;
+	bottom: 2.286rem;
+	right: 4.786rem;
+	@include media(mobile) {
+		top: 2.286rem;
+		left: 1.143rem;
+	}
+
+	p {
+		font-size: 0.786rem;
+	}
 }

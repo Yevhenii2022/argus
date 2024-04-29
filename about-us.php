@@ -148,15 +148,31 @@ get_header();
                                         <?php endif ?>
                                     </div>
                                 <?php endif ?>
+
+                                <?php
+                                $stages = get_field('stages');
+                                ?>
+                                <div class="years">
+                                    <?php
+                                    if ($stages) {
+                                        foreach ($stages as $stage) {
+                                            $end_date = $stage['end_date'];
+                                    ?>
+                                            <p>20<?= $end_date; ?></p>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
+
                             </div>
                         </div>
                     <? endwhile; ?>
+
                 </div>
                 <!-- scroll -->
-
             </div>
         </div>
-
     </section>
 
     <?php $missionBackground = get_field('mission_bg') ?? '';
