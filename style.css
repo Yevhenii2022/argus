@@ -2045,8 +2045,6 @@ main {
 .about-values__list {
   counter-reset: item;
   list-style-type: none;
-  counter-reset: item;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
 }
@@ -2760,22 +2758,23 @@ main {
   z-index: 0 !important;
 }
 
-.vacancies__heading {
+.vacancies {
+  padding-bottom: 10rem;
+  padding-top: 11.571rem;
+}
+.vacancies__banner {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3.214rem;
 }
 @media (max-width: 541px) {
-  .vacancies__heading {
+  .vacancies__banner {
     flex-direction: column;
     gap: 2.857rem;
   }
 }
 .vacancies__title {
-  width: 50%;
-}
-.vacancies__title em {
-  font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+  width: 70%;
 }
 .vacancies__text {
   padding-top: 2rem;
@@ -2795,17 +2794,64 @@ main {
   width: 0.643rem;
   flex-shrink: 0;
 }
+.vacancies__heading {
+  margin-top: 5.714rem;
+  margin-bottom: 1.714rem;
+  text-align: center;
+}
+.vacancies__number {
+  margin-bottom: 4.571rem;
+  text-align: center;
+  line-height: 120%;
+}
+.vacancies__list {
+  counter-reset: item;
+  list-style-type: none;
+  border-bottom: 0.05rem solid black;
+  border-radius: 0 !important;
+}
+.vacancies__item {
+  counter-increment: item;
+  border-top: 0.05rem solid #181818;
+  padding: 1.143rem 0 1.714rem 0;
+  position: relative;
+}
+.vacancies__item::before {
+  content: counter(item, decimal-leading-zero) ". ";
+  position: absolute;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #181818;
+}
+.vacancies__item:hover img, .vacancies__item:focus img {
+  width: 8.143rem;
+  height: 5.071rem;
+}
 .vacancies__location {
   text-align: center;
+  line-height: 120%;
+}
+.vacancies__name {
+  width: 75%;
+  margin: 1.714rem auto 0 auto;
+}
+@media (max-width: 541px) {
+  .vacancies__name {
+    width: 100%;
+  }
 }
 .vacancies__name p {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 .vacancies__name img {
-  width: 8.143rem;
+  width: 0rem;
   height: 5.071rem;
+  transition: all 1s ease;
 }
 
 .project {

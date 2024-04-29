@@ -21,14 +21,14 @@ get_header(); ?>
             yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
           } ?>
         </div>
-        <div class="service-hero__heading">
+        <div class="vacancies__banner">
           <?php if ($vacanciesTitle) : ?>
-            <h1 class="service-hero__title main__title anim-title _anim-items">
+            <h1 class="vacancies__title main__title anim-title _anim-items">
               <?= $vacanciesTitle; ?>
             </h1>
           <?php endif ?>
           <?php if ($vacanciesDescription) : ?>
-            <p class="service-hero__text">
+            <p class="vacancies__text">
               <?= $vacanciesDescription; ?>
             </p>
           <?php endif ?>
@@ -37,17 +37,21 @@ get_header(); ?>
         
       <div class="vacancies__content">
       <?php if ($vacanciesBlockTitle) : ?>
-        <h1 class="vacancies__title main__title main__title--sm">
+        <h1 class="vacancies__heading main__title main__title--sm">
             <?= $vacanciesBlockTitle ;?>
         </h1>
         <?php endif ?>
-        <p class="vacancies__number"></p>
-        <ul class="vacancies__list"> 
-          <li class="vacancies__item">
+        <p class="vacancies__number">
         <?php
-            
-
-          $args = array(
+          $total_posts = wp_count_posts()->publish;
+          if ($total_posts > 0) {
+             echo $total_posts . pll__(' позиція');
+          }
+          ?>
+        </p>
+        <div class="vacancies__list"> 
+        <?php
+            $args = array(
               'post_type' => 'vacancies',
               'posts_per_page' => -1,
           );
@@ -59,24 +63,24 @@ get_header(); ?>
               $vacancyName = get_field('vacancy_name') ?? '';
               $vacancyLocation = get_field('vacancy_location') ?? '';
               ?>
-           
+            <a href="<?php the_permalink() ?>" class="vacancies__item">
             <?php if ($vacancyLocation) : ?>
               <p class="vacancies__location">
                 <?= $vacancyLocation ;?>
               </p>
               <?php endif; ?>
               <?php if ($vacancyName) : ?>
-              <h2 class="vacancies__name">
+              <h2 class="vacancies__name main__title main__title--sm">
                  <?= $vacancyName ;?>
               </h2>
               <?php endif; ?>
-            
-            <?php endwhile;
-            wp_reset_postdata();
-            ?>
+              </a>
+              <?php endwhile;
+              wp_reset_postdata();
+          else : ?>
+              <p>Немає доступних вакансій</p>
           <?php endif; ?>
-        </li>
-        </ul>
+        </div>
       </div>
     </div>
   </section>

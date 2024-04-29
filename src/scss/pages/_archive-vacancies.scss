@@ -1,6 +1,8 @@
 .vacancies{
+ padding-bottom: 10rem;
+	padding-top: 11.571rem;
 
-  &__heading {
+  &__banner {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 3.214rem;
@@ -11,11 +13,7 @@
 	}
 
 	&__title {
-		width: 50%;
-
-		em {
-			font-family: $italic;
-		}
+		width: 70%;
 	}
 
 	&__text {
@@ -38,20 +36,72 @@
 		}
 	}
 
-	&__location{
+	&__heading{
+		margin-top: 5.714rem;
+		margin-bottom: 1.714rem;
 		text-align: center;
 	}
 
+	&__number{
+		margin-bottom: 4.571rem;
+		text-align: center;
+		line-height: 120%;
+	}
+
+  &__list{
+	  counter-reset: item;
+		list-style-type: none;
+		border-bottom: 0.05rem solid black;
+		border-radius: 0 !important;
+}
+	&__item{
+		counter-increment: item;
+		border-top: 0.05rem solid $black;
+    padding: 1.143rem 0 1.714rem 0;
+		position: relative;
+		&::before {
+			content: counter(item, decimal-leading-zero) '. ';
+			position: absolute;
+			margin: 0 auto;
+			font-size: 1rem;
+			line-height: 120%;
+			color: $black;
+		}
+		&:hover,
+		&:focus{
+			
+			img{
+				// transform: scale(1);
+				width: 8.143rem;
+				height: 5.071rem;
+			}
+		}
+	}
+	&__location{
+		text-align: center;
+	  line-height: 120%;
+	}
+
 	&__name{
+		width: 75%;
+		margin: 1.714rem auto 0 auto;
+	
+		@include media(mobile) {
+			width: 100%;
+		}
+
 		p{
 			display: flex;
 			align-items: center;
       justify-content: center;
+			gap: 0.5rem;
+			flex-wrap: wrap;
 		}
-
 		img{
-			width: 8.143rem;
-			height: 5.071rem;
+			  width: 0rem;
+			  height: 5.071rem;
+				// transform: scale(0);
+				transition: all 1s ease;
 		}
 	}
 
