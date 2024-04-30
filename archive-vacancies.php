@@ -33,8 +33,9 @@ get_header(); ?>
             </p>
           <?php endif ?>
         </div>
+    </div>
         <?php get_template_part('template-parts/move-line'); ?>
-        
+    <div class="container">    
       <div class="vacancies__content">
       <?php if ($vacanciesBlockTitle) : ?>
         <h1 class="vacancies__heading main__title main__title--sm">

@@ -2795,9 +2795,29 @@ main {
   flex-shrink: 0;
 }
 .vacancies__heading {
-  margin-top: 5.714rem;
+  margin-top: 8.571rem;
   margin-bottom: 1.714rem;
   text-align: center;
+}
+.vacancies__heading p {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.vacancies__heading p::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 2.714rem;
+  height: 3.214rem;
+  margin-top: 0.15rem;
+}
+@media (max-width: 541px) {
+  .vacancies__heading p::before {
+    width: 1.714rem;
+    height: 2.143rem;
+  }
 }
 .vacancies__number {
   margin-bottom: 4.571rem;
@@ -2834,7 +2854,7 @@ main {
 }
 .vacancies__name {
   width: 75%;
-  margin: 1.714rem auto 0 auto;
+  margin: 0.8rem auto 0 auto;
 }
 @media (max-width: 541px) {
   .vacancies__name {
@@ -2843,10 +2863,11 @@ main {
 }
 .vacancies__name p {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  line-height: 100%;
 }
 .vacancies__name img {
   width: 0rem;
@@ -5745,6 +5766,11 @@ main {
   color: rgba(24, 24, 24, 0.4);
   text-transform: uppercase;
   font-size: 0.786rem;
+}
+@media (max-width: 541px) {
+  .form__file label p {
+    width: 22rem;
+  }
 }
 .form__file label p span {
   overflow: hidden;
