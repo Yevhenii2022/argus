@@ -103,6 +103,15 @@ body.single-services {
 	}
 }
 
+body.page-template-about-us {
+	@include media(mobile) {
+		body,
+		main {
+			overflow-x: initial;
+		}
+	}
+}
+
 body,
 main {
 	@include media(mobile) {

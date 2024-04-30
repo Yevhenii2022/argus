@@ -130,6 +130,13 @@ body.single-services main {
 }
 
 @media (max-width: 541px) {
+  body.page-template-about-us body,
+  body.page-template-about-us main {
+    overflow-x: initial;
+  }
+}
+
+@media (max-width: 541px) {
   body,
   main {
     overflow-x: hidden;
@@ -1813,10 +1820,11 @@ main {
 }
 @media (max-width: 541px) {
   .about-stages__item-inner {
-    padding: 0 1.143rem 8.571rem 1.143rem;
+    height: 100dvh;
+    padding: 12rem 1.143rem 2.286rem 1.143rem;
     flex-direction: column-reverse;
-    gap: 9.2rem;
-    padding-top: 20rem;
+    justify-content: space-between;
+    gap: 0.2rem;
   }
 }
 .about-stages__bg {
@@ -1828,6 +1836,11 @@ main {
   bottom: 0;
   left: 0;
   opacity: 0.1;
+}
+@media (max-width: 541px) {
+  .about-stages__bg {
+    height: 100dvh;
+  }
 }
 .about-stages__img {
   position: relative;
@@ -2318,7 +2331,7 @@ main {
 }
 @media (max-width: 541px) {
   .years {
-    top: 2.286rem;
+    top: 1.5rem;
     left: 0;
   }
 }

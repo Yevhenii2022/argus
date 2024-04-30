@@ -261,12 +261,11 @@
 		z-index: -1;
 
 		@include media(mobile) {
-			// padding: 0 1.143rem;
-			padding: 0 1.143rem 8.571rem 1.143rem;
+			height: 100dvh;
+			padding: 12rem 1.143rem 2.286rem 1.143rem;
 			flex-direction: column-reverse;
-			// margin-bottom: 8.571rem;
-			gap: 9.2rem;
-			padding-top: 20rem;
+			justify-content: space-between;
+			gap: 0.2rem;
 		}
 	}
 
@@ -279,8 +278,9 @@
 		bottom: 0;
 		left: 0;
 		opacity: 0.1;
-		// z-index: -1;
-		// mix-blend-mode: soft-light;
+		@include media(mobile) {
+			height: 100dvh;
+		}
 	}
 
 	&__img {
@@ -776,15 +776,12 @@
 .content--sticky {
 	display: flex;
 	flex-direction: column;
-
 	padding: 0;
-
 	width: 100%;
 	position: sticky;
 	top: 0;
 	--offset: 0px;
 	top: var(--offset);
-	// height: calc(100vh - var(--offset));
 }
 
 .years {
@@ -795,7 +792,7 @@
 	bottom: 2.286rem;
 	right: 0;
 	@include media(mobile) {
-		top: 2.286rem;
+		top: 1.5rem;
 		left: 0;
 	}
 
