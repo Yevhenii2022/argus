@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -2835,6 +2835,12 @@ main {
   padding-bottom: 10rem;
   padding-top: 11.571rem;
 }
+@media (max-width: 541px) {
+  .vacancies {
+    padding-top: 7.571rem;
+    padding-bottom: 5rem;
+  }
+}
 .vacancies__banner {
   display: flex;
   justify-content: space-between;
@@ -2843,7 +2849,7 @@ main {
 @media (max-width: 541px) {
   .vacancies__banner {
     flex-direction: column;
-    gap: 2.857rem;
+    gap: 0.857rem;
   }
 }
 .vacancies__title {
@@ -2867,15 +2873,60 @@ main {
   width: 0.643rem;
   flex-shrink: 0;
 }
+.vacancies__content {
+  margin-top: 8.571rem;
+}
+@media (max-width: 541px) {
+  .vacancies__content {
+    margin-top: 5.571rem;
+  }
+}
 .vacancies__heading {
-  margin-top: 5.714rem;
   margin-bottom: 1.714rem;
   text-align: center;
+}
+@media (max-width: 541px) {
+  .vacancies__heading {
+    margin-bottom: 1.1rem;
+  }
+}
+.vacancies__heading p {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+@media (max-width: 541px) {
+  .vacancies__heading p {
+    gap: 0;
+  }
+}
+.vacancies__heading p em {
+  line-height: 96%;
+}
+.vacancies__heading p::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 2.714rem;
+  height: 3.214rem;
+  margin-top: 0.15rem;
+}
+@media (max-width: 541px) {
+  .vacancies__heading p::before {
+    width: 1.714rem;
+    height: 2.143rem;
+  }
 }
 .vacancies__number {
   margin-bottom: 4.571rem;
   text-align: center;
   line-height: 120%;
+}
+@media (max-width: 541px) {
+  .vacancies__number {
+    margin-bottom: 2.8rem;
+  }
 }
 .vacancies__list {
   counter-reset: item;
@@ -2905,9 +2956,14 @@ main {
   text-align: center;
   line-height: 120%;
 }
+@media (max-width: 541px) {
+  .vacancies__location {
+    text-align: end;
+  }
+}
 .vacancies__name {
   width: 75%;
-  margin: 1.714rem auto 0 auto;
+  margin: 0.8rem auto 0 auto;
 }
 @media (max-width: 541px) {
   .vacancies__name {
@@ -2916,15 +2972,30 @@ main {
 }
 .vacancies__name p {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  gap: 0.5rem;
+  column-gap: 0.5rem;
   flex-wrap: wrap;
+  line-height: 100%;
+}
+@media (max-width: 541px) {
+  .vacancies__name p {
+    align-items: flex-start;
+    text-align: center;
+    line-height: 97%;
+    gap: 0;
+  }
 }
 .vacancies__name img {
   width: 0rem;
   height: 5.071rem;
   transition: all 1s ease;
+}
+@media (max-width: 541px) {
+  .vacancies__name img {
+    display: none;
+    height: 0rem;
+  }
 }
 
 .project {
@@ -5716,6 +5787,11 @@ main {
 .form__input-text--vacancy {
   margin-bottom: 1.6rem;
 }
+@media (max-width: 541px) {
+  .form__input-text--vacancy {
+    margin-bottom: 0.5rem;
+  }
+}
 .form textarea {
   border-bottom: 0.071rem solid rgba(24, 24, 24, 0.1);
   font-size: 0.786rem;
@@ -5818,6 +5894,11 @@ main {
   color: rgba(24, 24, 24, 0.4);
   text-transform: uppercase;
   font-size: 0.786rem;
+}
+@media (max-width: 541px) {
+  .form__file label p {
+    width: 22rem;
+  }
 }
 .form__file label p span {
   overflow: hidden;
@@ -5926,6 +6007,11 @@ main {
 .contact-us__content--vacancy {
   margin-top: 6.5rem;
 }
+@media (max-width: 541px) {
+  .contact-us__content--vacancy {
+    margin-top: 1.3rem;
+  }
+}
 .contact-us__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
@@ -5934,10 +6020,21 @@ main {
     font-size: 2.857rem;
   }
 }
+@media (max-width: 541px) {
+  .contact-us__title--vacancy p {
+    line-height: 85%;
+  }
+}
 .contact-us__title--vacancy em {
   display: flex;
   justify-content: center;
   padding-left: 7rem;
+}
+@media (max-width: 541px) {
+  .contact-us__title--vacancy em {
+    padding-left: 0;
+    line-height: 100%;
+  }
 }
 .contact-us__left {
   display: flex;
