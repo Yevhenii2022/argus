@@ -62,6 +62,9 @@
 
         &--vacancy{
           margin-bottom: 1.6rem;
+          @include media(mobile) {
+            margin-bottom: 0.5rem;
+          }
         }
     }
          

@@ -16,7 +16,7 @@ get_header(); ?>
   ?>
   <section class="vacancies">
     <div class="container">
-        <div class="service-hero__breadcrumps">
+        <div class="vacancies__breadcrumps">
           <?php if (function_exists('yoast_breadcrumb')) {
             yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
           } ?>
