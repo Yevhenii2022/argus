@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -550,10 +550,9 @@ main {
   transition: width 0.5s;
 }
 .projects__nothing {
+  margin: 6.5rem auto 0 -7rem;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-size: 1.857rem;
   text-transform: uppercase;
@@ -573,6 +572,7 @@ main {
 @media (max-width: 541px) {
   .projects__selects {
     margin: 0 1.143rem 0.9rem 0;
+    gap: 12.65rem;
   }
 }
 .projects #category-filter .active,
@@ -594,8 +594,8 @@ main {
 
 .ajax-preloader {
   margin: 0 auto;
-  width: 20rem;
-  height: 20rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .our-services {
@@ -1508,10 +1508,9 @@ main {
   transition: width 0.5s;
 }
 .projects__nothing {
+  margin: 6.5rem auto 0 -7rem;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-size: 1.857rem;
   text-transform: uppercase;
@@ -1531,6 +1530,7 @@ main {
 @media (max-width: 541px) {
   .projects__selects {
     margin: 0 1.143rem 0.9rem 0;
+    gap: 12.65rem;
   }
 }
 .projects #category-filter .active,
@@ -1552,8 +1552,8 @@ main {
 
 .ajax-preloader {
   margin: 0 auto;
-  width: 20rem;
-  height: 20rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .about-banner {
@@ -1808,12 +1808,13 @@ main {
   align-items: flex-end;
   padding: 12.071rem 6.4rem;
   gap: 1.143rem;
+  background-color: #ededed;
+  z-index: -1;
 }
 @media (max-width: 541px) {
   .about-stages__item-inner {
-    padding: 0 1.143rem;
+    padding: 0 1.143rem 8.571rem 1.143rem;
     flex-direction: column-reverse;
-    margin-bottom: 8.571rem;
     gap: 9.2rem;
     padding-top: 20rem;
   }
@@ -1826,17 +1827,21 @@ main {
   height: 100%;
   bottom: 0;
   left: 0;
-  z-index: -1;
-  mix-blend-mode: soft-light;
+  opacity: 0.1;
 }
 .about-stages__img {
   position: relative;
   width: 40.714rem;
+  height: 29rem;
 }
 @media (max-width: 541px) {
   .about-stages__img {
     width: 24.5rem;
+    height: 17.429rem;
   }
+}
+.about-stages__img img {
+  height: 100%;
 }
 .about-stages__text {
   width: 26%;
@@ -2285,6 +2290,64 @@ main {
 }
 .about-team__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
+}
+
+.about-stage__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.content--sticky {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  --offset: 0px;
+  top: var(--offset);
+}
+
+.years {
+  display: flex;
+  flex-direction: column;
+  gap: 0.571rem;
+  position: absolute;
+  bottom: 2.286rem;
+  right: 0;
+}
+@media (max-width: 541px) {
+  .years {
+    top: 2.286rem;
+    left: 0;
+  }
+}
+.years > div {
+  display: flex;
+  gap: 0.357rem;
+  align-items: center;
+}
+@media (max-width: 541px) {
+  .years > div {
+    width: 2.929rem;
+    flex-direction: row-reverse;
+  }
+}
+.years p {
+  display: flex;
+  font-size: 0.786rem;
+}
+
+.line {
+  width: 4.429rem;
+  height: 0.071rem;
+  background-color: #181818;
+}
+@media (max-width: 541px) {
+  .line {
+    margin-bottom: 0.15rem;
+    width: 100%;
+  }
 }
 
 .news {
