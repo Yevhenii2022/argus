@@ -163,6 +163,9 @@
               color: rgba(24, 24, 24, 0.4);
               text-transform: uppercase;
               font-size: 0.786rem;
+              @include media(mobile){
+                width: 22rem;
+            }
 
               span{
                 overflow: hidden;
