@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -127,6 +127,13 @@ body.single-services {
 body.home main,
 body.single-services main {
   overflow-x: hidden;
+}
+
+@media (max-width: 541px) {
+  body.page-template-about-us body,
+  body.page-template-about-us main {
+    overflow-x: initial;
+  }
 }
 
 @media (max-width: 541px) {
@@ -1803,20 +1810,21 @@ main {
   width: 0.643rem;
 }
 .about-stages__item-inner {
+  height: 100dvh;
   position: relative;
   display: flex;
-  align-items: flex-end;
-  padding: 12.071rem 6.4rem;
+  align-items: center;
+  padding: 1rem 1.143rem 1rem 5.643rem;
   gap: 1.143rem;
   background-color: #ededed;
   z-index: -1;
 }
 @media (max-width: 541px) {
   .about-stages__item-inner {
-    padding: 0 1.143rem 8.571rem 1.143rem;
+    padding: 12rem 1.143rem 2.286rem 1.143rem;
     flex-direction: column-reverse;
-    gap: 9.2rem;
-    padding-top: 20rem;
+    justify-content: space-between;
+    gap: 0.2rem;
   }
 }
 .about-stages__bg {
@@ -1824,7 +1832,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   bottom: 0;
   left: 0;
   opacity: 0.1;
@@ -1844,11 +1852,13 @@ main {
   height: 100%;
 }
 .about-stages__text {
-  width: 26%;
+  margin-top: 8rem;
+  width: 25%;
   text-align: end;
 }
 @media (max-width: 541px) {
   .about-stages__text {
+    margin-top: 0;
     width: 100%;
     text-align: start;
   }
@@ -2313,12 +2323,12 @@ main {
   flex-direction: column;
   gap: 0.571rem;
   position: absolute;
-  bottom: 2.286rem;
+  bottom: 4.786rem;
   right: 0;
 }
 @media (max-width: 541px) {
   .years {
-    top: 2.286rem;
+    top: 1.5rem;
     left: 0;
   }
 }
