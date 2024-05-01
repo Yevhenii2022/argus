@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -2808,6 +2808,7 @@ main {
   margin-bottom: 4.571rem;
   text-align: center;
   line-height: 120%;
+  display: block;
 }
 @media (max-width: 541px) {
   .vacancies__number {
@@ -3794,6 +3795,16 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.143rem;
+  width: 85%;
+}
+@media (max-width: 541px) {
+  .vacancy__candidate-list {
+    width: 100%;
+  }
+}
+.vacancy__candidate-list li {
+  display: flex;
+  gap: 1rem;
 }
 .vacancy__candidate-list li::before {
   counter-increment: item;
@@ -3883,7 +3894,6 @@ main {
   position: relative;
   gap: 3rem;
   align-items: center;
-  padding-top: 6.2rem;
   transition: all 0.3s ease-in-out;
   margin-top: 2rem;
   color: #181818;
@@ -3907,7 +3917,7 @@ main {
 }
 .vacancy__responsibilities-item:nth-child(even) {
   transform: rotate(5deg);
-  margin-left: 20rem;
+  margin-left: 15rem;
   margin-bottom: -7rem;
 }
 @media (max-width: 541px) {
@@ -3928,12 +3938,20 @@ main {
 .vacancy__responsibilities-item:last-child {
   margin-bottom: 0;
 }
-.vacancy__responsibilities-item:nth-child(4) {
+.vacancy__responsibilities-item:nth-child(4), .vacancy__responsibilities-item:nth-child(8) {
   background-color: #f41b1b;
 }
-.vacancy__responsibilities-item:nth-child(4) .about-values__title,
-.vacancy__responsibilities-item:nth-child(4) .about-values__description {
+.vacancy__responsibilities-item:nth-child(4) .vacancy__responsibilities-description, .vacancy__responsibilities-item:nth-child(8) .vacancy__responsibilities-description {
   color: #ffffff;
+}
+.vacancy__responsibilities-item:nth-child(1)::after, .vacancy__responsibilities-item:nth-child(5)::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  height: 0.786rem;
+  width: 0.643rem;
+  margin-top: 0.4rem;
+  flex-shrink: 0;
 }
 .vacancy__responsibilities-title {
   font-size: 0.786rem;
@@ -3968,6 +3986,89 @@ main {
     top: 0.3rem;
     transform: translate(-50%, -50%);
   }
+}
+.vacancy__proposition {
+  padding: 8.571rem 1.714rem;
+  background-color: #f41b1b;
+  color: #ffffff;
+  border-top: 1.429rem;
+}
+@media (max-width: 541px) {
+  .vacancy__proposition {
+    padding: 5.714rem 1.143rem;
+  }
+}
+.vacancy__proposition-heading {
+  display: flex;
+}
+.vacancy__proposition-title {
+  width: 50%;
+}
+@media (max-width: 541px) {
+  .vacancy__proposition-title {
+    width: 100%;
+  }
+}
+.vacancy__proposition-image {
+  height: 22.071rem;
+  width: 22.071rem;
+  margin-top: -13rem;
+  z-index: 1;
+}
+.vacancy__proposition h3 {
+  margin-bottom: 3.1rem;
+}
+@media (max-width: 541px) {
+  .vacancy__proposition h3 {
+    margin-bottom: 2.5rem;
+  }
+}
+.vacancy__proposition h3 p,
+.vacancy__proposition h3 em {
+  font-size: 4.286rem;
+}
+@media (max-width: 541px) {
+  .vacancy__proposition h3 p,
+  .vacancy__proposition h3 em {
+    font-size: 2.857rem;
+  }
+}
+.vacancy__proposition ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1.143rem;
+  row-gap: 4.6rem;
+}
+@media (max-width: 541px) {
+  .vacancy__proposition ul {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2.38rem;
+  }
+}
+.vacancy__proposition ul p {
+  width: 44.929rem;
+  font-size: 1.929rem;
+}
+@media (max-width: 541px) {
+  .vacancy__proposition ul p {
+    width: 100%;
+  }
+}
+.vacancy__line {
+  margin-bottom: 1.143rem;
+  display: flex;
+  align-items: center;
+}
+.vacancy__line svg {
+  width: 0.714rem;
+  height: 0.857rem;
+  fill: #ffffff;
+}
+.vacancy__line div {
+  width: 100%;
+  height: 0.071rem;
+  background-color: #ffffff;
 }
 
 .header {
@@ -6419,6 +6520,7 @@ main {
   height: 3.214rem;
   width: 2.714rem;
   margin-right: 1rem;
+  transform: rotate(180deg);
 }
 @media (max-width: 541px) {
   .move-line__item::before {
@@ -6428,11 +6530,11 @@ main {
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 }
 .contact-us {

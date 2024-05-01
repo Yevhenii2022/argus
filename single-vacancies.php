@@ -232,6 +232,45 @@
              </div>
          </div>   
     </div>
+    <?php
+        $proposition_list = get_field('proposition_list') ?? '';
+        if ($proposition_list) : ?>
+          <div class="vacancy__proposition">
+            <?php
+            $proposition_title = get_field('vacancy_proposition_title') ?? '';
+            $proposition_image =  get_field('proposition_img') ?? '';
+            ?>
+            <div class="vacancy__proposition-heading">
+              <?php if ($proposition_title) : ?>
+              <h3 class="vacancy__proposition-title main__title main__title-sm anim-title _anim-items">
+                <?= $proposition_title; ?>
+              </h3>
+            <?php endif; ?>
+            <div class="vacancy__proposition-image">
+              <img src='<?php echo $proposition_image['url']; ?>' alt='<?php echo $proposition_image['alt']; ?>' />
+            </div>
+            </div>
+            
+            <ul>
+              <?php
+              while (have_rows('proposition_list')) : the_row();
+                  $proposition_text = get_sub_field('proposition_text') ?? '';
+              ?>
+                <?php if ($proposition_text) : ?>
+                  <li>
+                    <div class="vacancy__line">
+                      <svg viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.71698 12H0L5.28302 6L0 0H4.71698L10 6L4.71698 12Z" fill="white" />
+                      </svg>
+                        <div></div>
+                      </div>
+                      <p><?= $proposition_text; ?></p>
+                  </li>
+                <?php endif; ?>
+              <?php endwhile; ?>
+            </ul>
+          </div>
+        <?php endif; ?>
 </section>
 <?php get_template_part('template-parts/contact-us'); ?>
 </main>
