@@ -42,20 +42,7 @@ get_header(); ?>
             <?= $vacanciesBlockTitle ;?>
         </h1>
         <?php endif ?>
-        <p class="vacancies__number">
-        <?php
-          $total_posts = (int) wp_count_posts('vacancies')->publish;
-          if ($total_posts === 0) {
-              echo 'Немає доступних вакансій';
-          } else if ($total_posts === 1) {
-              echo '1 позиція';
-            } else if ($total_posts < 5) {
-              echo $total_posts . ' позиції';;
-          } else {
-              echo $total_posts . ' позицій';
-          }
-          ?>
-        </p>
+      
         <div class="vacancies__list"> 
         <?php
             $args = array(
@@ -65,12 +52,17 @@ get_header(); ?>
           $vacancies_query = new WP_Query($args);
           if ($vacancies_query->have_posts()) :
           ?>
-          
+           
           <?php
               while ($vacancies_query->have_posts()) : $vacancies_query->the_post();
               $vacancyName = get_field('vacancy_name') ?? '';
               $vacancyLocation = get_field('vacancy_location') ?? '';
-              ?>
+              $total_posts = $vacancies_query->found_posts;
+              echo '<script>document.getElementById("vacancies_count-total").innerText = ' . $total_posts . ';</script>';
+              echo '<span class="vacancies__number" id="vacancies_count-total"></span>';
+                ?>
+              
+              
             <a href="<?php the_permalink() ?>" class="vacancies__item">
             <?php if ($vacancyLocation) : ?>
               <p class="vacancies__location">

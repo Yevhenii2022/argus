@@ -89,6 +89,7 @@
 		margin-bottom: 4.571rem;
 		text-align: center;
 		line-height: 120%;
+		display: block;
 		@include media(mobile) {
 			margin-bottom: 2.8rem;
 		}
