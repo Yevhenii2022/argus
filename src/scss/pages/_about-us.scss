@@ -730,7 +730,6 @@
 	}
 
 	&__link {
-		height: 4rem;
 		display: flex;
 		margin-left: 6.5rem;
 
@@ -742,7 +741,8 @@
 		span {
 			width: 9.5rem;
 			font-size: 0.786rem;
-			line-height: 90%;
+			line-height: 100%;
+			margin-bottom: 1.5rem;
 
 			&::before {
 				width: 1.143rem;

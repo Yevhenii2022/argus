@@ -329,7 +329,7 @@ get_header();
                             </div>
                             <div class="about-team__bottom">
 
-                                <a href="<?= get_home_url() . '/career' ?>" class="about-team__link link">
+                                <a href="<?= get_home_url() . '/vacancy' ?>" class="about-team__link link">
                                     <span>
                                         <?php pll_e('view_vacancies_link') ?>
                                     </span>
