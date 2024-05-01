@@ -96,6 +96,9 @@
 
 .reviews {
 	.pagination {
-		bottom: 1rem;
+		bottom: 8.5rem;
+		@include media(mobile) {
+			bottom: 5.7rem;
+		}
 	}
 }
