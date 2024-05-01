@@ -228,12 +228,9 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-
                 </div>
-
              </div>
-          
-        </div>   
+         </div>   
     </div>
 </section>
 <?php get_template_part('template-parts/contact-us'); ?>
