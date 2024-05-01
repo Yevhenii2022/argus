@@ -491,6 +491,58 @@ main {
   transform: translateX(-15%);
 }
 
+.news .pagination,
+.reviews .pagination {
+  display: flex;
+  position: absolute;
+  bottom: -7.7rem;
+  left: 50%;
+  gap: 0.45rem;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+@media (max-width: 541px) {
+  .news .pagination,
+  .reviews .pagination {
+    bottom: -6.8rem;
+  }
+}
+.news .pagination span,
+.reviews .pagination span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.643rem;
+  height: 1.643rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0.071rem solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.news .pagination span:hover,
+.reviews .pagination span:hover {
+  border: 0.071rem solid #262626;
+}
+.news .pagination span.pagination_active,
+.reviews .pagination span.pagination_active {
+  background-color: #262626;
+  border-radius: 50%;
+  border: 0.071rem solid #262626;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.reviews .pagination {
+  bottom: 1rem;
+}
+
 .projects {
   padding: 11.45rem 0 8.571rem 0;
 }
@@ -2436,48 +2488,6 @@ main {
     margin-bottom: 0.05rem;
   }
 }
-.news .pagination {
-  display: flex;
-  position: absolute;
-  bottom: -7.7rem;
-  left: 50%;
-  gap: 0.45rem;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-}
-@media (max-width: 541px) {
-  .news .pagination {
-    bottom: -6.8rem;
-  }
-}
-.news .pagination span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1.643rem;
-  height: 1.643rem;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 0.071rem solid transparent;
-  transition: all 0.3s ease-in-out;
-}
-.news .pagination span:hover {
-  border: 0.071rem solid #262626;
-}
-.news .pagination span.pagination_active {
-  background-color: #262626;
-  border-radius: 50%;
-  border: 0.071rem solid #262626;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  overflow: hidden;
-  color: #ffffff;
-}
 
 .blog__nothing {
   position: absolute;
@@ -3532,7 +3542,7 @@ main {
     font-size: 1.286rem;
   }
 }
-.reviews__inner {
+.reviews__wrapper {
   padding: 8.571rem 1.714rem;
   border-radius: 1.429rem;
   background-color: #ffffff;
@@ -3587,6 +3597,13 @@ main {
 .reviews__position {
   margin-top: 0.357rem;
   opacity: 0.3;
+}
+.reviews__nothing {
+  margin: 5rem auto 0 auto;
+  width: fit-content;
+  font-size: 1.786rem;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .vacancy {

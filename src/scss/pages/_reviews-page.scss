@@ -141,7 +141,7 @@
 		}
 	}
 
-	&__inner {
+	&__wrapper {
 		padding: 8.571rem 1.714rem;
 		border-radius: 1.429rem;
 		background-color: $white;
@@ -201,5 +201,13 @@
 	&__position {
 		margin-top: 0.357rem;
 		opacity: 0.3;
+	}
+
+	&__nothing {
+		margin: 5rem auto 0 auto;
+		width: fit-content;
+		font-size: 1.786rem;
+		line-height: 1;
+		text-transform: uppercase;
 	}
 }

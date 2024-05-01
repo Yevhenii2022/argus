@@ -196,3 +196,4 @@ require get_template_directory() . '/inc/custom-breadcrumbs.php';
 // ajax
 require get_template_directory() . '/inc/custom-load-projects.php';
 require get_template_directory() . '/inc/custom-load-news.php';
+require get_template_directory() . '/inc/custom-load-reviews.php';
