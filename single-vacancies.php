@@ -34,7 +34,7 @@
                       <?php endif ?>
                       <div class="vacancy__bottom">
                           <?php if ($vacancyText): ?>
-                          <p class="vacancy__">
+                          <p class="vacancy__date">
                               <?= $vacancyText ;?><?= ' ' . get_the_date('j F Y') ?>
                           </p>
                           <?php endif ?>
@@ -51,13 +51,13 @@
                     <img src='<?php echo $vacancyImage['url']; ?>' alt='<?php echo $vacancyImage['alt']; ?>' />
                   <?php endif ?>
                   <div class="vacancy__block">
-                    <div class="vacancy__info">
+                    
                       <?php while (have_rows('vacancy_characteristics')) :
                         the_row();
                         $vacancyFieldName = get_sub_field('vacancy_field-name');
-                        $vacancyFieldInfo = get_sub_field('vacancy_information'); 
-                        
-                        if ($vacancyFieldInfo): ?>
+                        $vacancyFieldInfo = get_sub_field('vacancy_information'); ?>
+                        <div class="vacancy__info">
+                        <?php if ($vacancyFieldInfo): ?>
                         <p class="vacancy__characteristic">
                           <?= $vacancyFieldInfo?>
                         </p>
@@ -67,25 +67,26 @@
                           <?= $vacancyFieldName?>
                         </p>
                         <?php endif ?>
-                      <?php endwhile ;?>
                       </div>
+                      <?php endwhile ;?>
+                    
                       <a href="<?php echo esc_url(get_home_url() . '/contacts/'); ?>" class="vacancy__button button">
-                            <div class="button__wrapper">
-                                <p><?php pll_e('відгукнутися') ?></p>
-                            </div>
+                        <div class="button__wrapper">
+                            <p><?php pll_e('відгукнутися') ?></p>
+                        </div>
                       </a>
                   </div>
               </div>    
             </div>
             <?php endif ?>
-          </div>
+          
 
           <?php $vacancyMainHeading = get_field('vacancy_main-heading') ?? '' ;
                 $vacancyMainImg = get_field('vacancy_main-img') ?? '' ;
             if($vacancyMainHeading || $vacancyMainImg ) : ?>
             <div class="vacancy__main">
               <div class="vacancy__heading">
-              <?php if ($vacancyMainHeading): ?>
+                <?php if ($vacancyMainHeading): ?>
                 <h2 class="vacancy__heading-title main__title anim-title _anim-items">
                   <?= $vacancyMainHeading ;?>
                 </h2>
@@ -97,7 +98,7 @@
                 <?php endif ?>
               </div>
               <div class="vacancy__advantages">
-              <?php while (have_rows('advantages')) :
+                <?php while (have_rows('advantages')) :
                         the_row();
                         $advantagesTitle = get_sub_field('advantages_title');
                         $advantagesText = get_sub_field('advantages_text'); 
@@ -123,11 +124,10 @@
                   <?php endif ?>
                 </div>
                 <?php endwhile ;?>
-              </div>
-              
+               </div>
             </div>
           <?php endif ?>
-       </div>
+       
 
        <?php $candidateHeading = get_field('requirements_heading') ?? '' ;
              $requirementsFirstTitle = get_field('requirements_prof_title');
@@ -190,52 +190,89 @@
             </div>
           </div>  
         </div>
-    <?php $responsibilitiesTitle = get_field('responsibilities_title') ?? '';
-          $responsibilitiesSubTitle = get_field('responsibilities_subtitle') ?? ''; ?>
-    <div class="vacancy__responsibilities">
-        <div class="vacancy__responsibilities-wrapper">
-           <div class="vacancy__responsibilities-left">
+
+
+        <?php $responsibilitiesTitle = get_field('responsibilities_title') ?? '';
+              $responsibilitiesSubTitle = get_field('responsibilities_subtitle') ?? ''; ?>
+        <div class="vacancy__responsibilities">
+              <div class="vacancy__responsibilities-wrapper">
+                <div class="vacancy__responsibilities-left">
                     <?php if ($responsibilitiesTitle) : ?>
-                        <h2 class="vacancy__responsibilities-heading main__title">
-                            <?= $responsibilitiesTitle; ?>
-                        </h2>
+                    <h2 class="vacancy__responsibilities-heading main__title">
+                        <?= $responsibilitiesTitle; ?>
+                    </h2>
                     <?php endif ?>
                     <?php if ($responsibilitiesSubTitle) : ?>
-                        <p class="vacancy__responsibilities-subtitle">
-                            <?= $responsibilitiesSubTitle; ?>
-                       </p>
+                    <p class="vacancy__responsibilities-subtitle">
+                        <?= $responsibilitiesSubTitle; ?>
+                    </p>
                     <?php endif ?>
                 </div>
                 <div class="vacancy__responsibilities-right swiper">
-                    <ul class="vacancy__responsibilities-list swiper-wrapper">
-                        <?php while (have_rows('responsibilities_list')) :
-                            the_row();
-                           
-                            $responsibilitiesItem = get_sub_field('responsibilities_item') ?? ''; ?>
-                            <li class="vacancy__responsibilities-item swiper-slide">
-
-                               <?php if ($responsibilitiesItem) : ?>
-                                    <p class="vacancy__responsibilities-description">
-                                        <?= $responsibilitiesItem; ?>
-                                    </p>
-                                <?php endif ?>
-
-                            </li>
-                        <? endwhile ?>
-                    </ul>
-                    <div class="vacancy__responsibilities-pagination">
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-
+                  <ul class="vacancy__responsibilities-list swiper-wrapper">
+                    <?php while (have_rows('responsibilities_list')) :
+                        the_row();
+                            
+                  $responsibilitiesItem = get_sub_field('responsibilities_item') ?? ''; ?>
+                    <li class="vacancy__responsibilities-item swiper-slide">
+                      <?php if ($responsibilitiesItem) : ?>
+                          <p class="vacancy__responsibilities-description">
+                            <?= $responsibilitiesItem; ?>
+                          </p>
+                        <?php endif ?>
+                    </li>
+                    <? endwhile ?>
+                  </ul>
+                        <div class="vacancy__responsibilities-pagination">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                 </div>
-
-             </div>
-          
+              </div>
         </div>   
-    </div>
-</section>
-<?php get_template_part('template-parts/contact-us'); ?>
+          
+          <?php
+            $proposition_list = get_field('proposition_list') ?? '';
+            if ($proposition_list) : ?>
+              <div class="vacancy__proposition">
+                <?php
+                $proposition_title = get_field('vacancy_proposition_title') ?? '';
+                $proposition_image =  get_field('proposition_img') ?? '';
+                ?>
+                <div class="vacancy__proposition-heading">
+                  <?php if ($proposition_title) : ?>
+                  <h3 class="vacancy__proposition-title main__title main__title-sm anim-title _anim-items">
+                    <?= $proposition_title; ?>
+                  </h3>
+                  <?php endif; ?>
+                  <div class="vacancy__proposition-image">
+                    <img src='<?php echo $proposition_image['url']; ?>' alt='<?php echo $proposition_image['alt']; ?>' />
+                  </div>
+                </div>
+                <ul>
+                  <?php
+                  while (have_rows('proposition_list')) : the_row();
+                      $proposition_text = get_sub_field('proposition_text') ?? '';
+                  ?>
+                    <?php if ($proposition_text) : ?>
+                      <li>
+                        <div class="vacancy__line">
+                          <svg viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.71698 12H0L5.28302 6L0 0H4.71698L10 6L4.71698 12Z" fill="white" />
+                          </svg>
+                            <div></div>
+                          </div>
+                          <p><?= $proposition_text; ?></p>
+                      </li>
+                    <?php endif; ?>
+                  <?php endwhile; ?>
+                </ul>
+              </div>
+            <?php endif; ?>
+      </div>
+    </div>  
+  </section>
+      <?php get_template_part('template-parts/contact-us'); ?>
 </main>
 <?php get_footer(); ?>
