@@ -210,6 +210,22 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
+	const reviewsSlider = new Swiper('.reviews__slider', {
+		loop: true,
+		watchSlidesProgress: true,
+		slidesPerView: 1,
+		spaceBetween: 16,
+		centeredSlides: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+		},
+	});
+
 	//fancy Box
 	Fancybox.bind('[data-fancybox]', {
 		Html: {

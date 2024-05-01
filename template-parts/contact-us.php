@@ -24,7 +24,6 @@
           <div class="contact-us__left">
             <?php if ($sectionVideo) : ?>
               <div class="contact-us__video">
-                <!-- <video preload="auto" no-controls autoplay loop playsinline muted> -->
                 <video id="form-video" preload="auto" no-controls loop playsinline muted>
                   <source src="<?php echo $sectionVideo['url']; ?>" type="<?php echo $sectionVideo['mime_type']; ?>">
                   Your browser does not support the video tag.

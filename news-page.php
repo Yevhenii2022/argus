@@ -78,44 +78,11 @@ get_header(); ?>
 
         <div class="ajax-preloader">
 
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="shape-rendering: auto; display: block; background: rgba(255, 255, 255, 0);" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="200" height="200" style="shape-rendering: auto; display: block; background: rgba(255, 255, 255, 0);" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g>
-              <rect x="19" y="19" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="36" y="19" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.07936507936507936s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="53" y="19" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.15873015873015872s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="70" y="19" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.23809523809523808s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="19" y="36" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.8730158730158729s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="70" y="36" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.31746031746031744s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="19" y="53" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.7936507936507936s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="70" y="53" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.3968253968253968s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="19" y="70" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.7142857142857142s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="36" y="70" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.6349206349206349s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="53" y="70" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.5555555555555555s" calcMode="discrete"></animate>
-              </rect>
-              <rect x="70" y="70" width="11" height="11" fill="#181818">
-                <animate attributeName="fill" values="#f41b1b;#181818;#181818" keyTimes="0;0.08333333333333333;1" dur="0.9523809523809523s" repeatCount="indefinite" begin="0.47619047619047616s" calcMode="discrete"></animate>
-              </rect>
+              <circle cx="50" cy="50" fill="none" stroke="#f41b1b" stroke-width="3" r="18" stroke-dasharray="84.82300164692441 30.274333882308138">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1.1764705882352942s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+              </circle>
               <g></g>
             </g>
           </svg>
