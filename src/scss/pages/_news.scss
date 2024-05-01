@@ -208,50 +208,6 @@
 			}
 		}
 	}
-
-	.pagination {
-		display: flex;
-		position: absolute;
-		bottom: -7.7rem;
-		left: 50%;
-		gap: 0.45rem;
-		transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
-		-moz-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-o-transform: translateX(-50%);
-		@include media(mobile) {
-			bottom: -6.8rem;
-		}
-
-		span {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 1.643rem;
-			height: 1.643rem;
-			border-radius: 50%;
-			cursor: pointer;
-			border: 0.071rem solid transparent;
-			transition: $transition;
-
-			&:hover {
-				border: 0.071rem solid #262626;
-			}
-
-			&.pagination_active {
-				background-color: #262626;
-				border-radius: 50%;
-				border: 0.071rem solid #262626;
-				-webkit-border-radius: 50%;
-				-moz-border-radius: 50%;
-				-ms-border-radius: 50%;
-				-o-border-radius: 50%;
-				overflow: hidden;
-				color: $white;
-			}
-		}
-	}
 }
 
 .blog__nothing {

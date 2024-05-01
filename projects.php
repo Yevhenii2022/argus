@@ -137,8 +137,7 @@ get_header();
                 </button>
 
                 <div class="ajax-preloader">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="200" height="200" style="shape-rendering: auto; display: block; background: rgba(255, 255, 255, 0);" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" preserveAspectRatio="xMidYMid" style="shape-rendering: auto; display: block; background: rgba(255, 255, 255, 0);" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
                             <circle cx="50" cy="50" fill="none" stroke="#f41b1b" stroke-width="3" r="18" stroke-dasharray="84.82300164692441 30.274333882308138">
                                 <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1.1764705882352942s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
