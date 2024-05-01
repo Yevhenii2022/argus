@@ -82,6 +82,21 @@ document.addEventListener('DOMContentLoaded', function () {
 				type: 'progressbar',
 			},
 		});
+
+		const responsibilities = new Swiper('.vacancy__responsibilities-list', {
+			watchSlidesProgress: true,
+			slidesPerView: 1.21,
+			spaceBetween: 8,
+			centeredSlides: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'progressbar',
+			},
+		});
 	}
 
 	const projectsSingle = new Swiper('.project__slider', {
