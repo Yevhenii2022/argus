@@ -218,7 +218,13 @@
           @include media(mobile) {
             margin-bottom: 2rem;
           }
-          
+        }
+        .vacancy__advantages-image{
+          width: 45.286rem;
+          height: 31.214rem;
+          img{
+            height: 100%;
+          }
         }
       }
   }  
@@ -279,6 +285,8 @@
     
   &__advantages-image{
       flex-shrink: 0;
+      width: 51.429rem;
+      height: 35.5rem;
   } 
 
   &__line {
