@@ -1,17 +1,28 @@
 .hero {
+	padding: 5.857rem 1.714rem 0 1.714rem;
+	@include media(mobile) {
+		padding: 4.714rem 0.571rem 0 0.571rem;
+	}
+
 	&__wrapper {
 		margin-bottom: 8.571rem;
-		height: 100dvh;
+		height: calc(100dvh - 5.857rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		position: relative;
 		overflow: hidden;
+		background-color: $light;
+		border-radius: 1.429rem;
+
+		@include media(tablet) {
+			height: 48.714rem;
+		}
 
 		@include media(mobile) {
 			margin-bottom: 4.85rem;
 			justify-content: initial;
-			height: 54.01rem;
+			height: 52.714rem;
 		}
 	}
 
@@ -43,10 +54,15 @@
 			display: flex;
 			align-items: end;
 
+			@include media(tablet) {
+				width: 30rem;
+				bottom: 8rem;
+			}
+
 			@include media(mobile) {
-				width: 17.5rem;
-				bottom: 3rem;
-				left: -7rem;
+				width: 17.6rem;
+				bottom: 4rem;
+				left: -7.5rem;
 			}
 
 			svg {
@@ -80,10 +96,15 @@
 			height: 100%;
 			width: 36.5rem;
 
+			@include media(tablet) {
+				width: 30rem;
+				bottom: 8rem;
+			}
+
 			@include media(mobile) {
-				width: 17.5rem;
-				bottom: 3rem;
-				right: -7rem;
+				width: 17.6rem;
+				bottom: 4rem;
+				right: -7.5rem;
 			}
 
 			svg {
@@ -115,7 +136,10 @@
 			right: 0;
 			pointer-events: all !important;
 			@include media(mobile) {
+				width: 130%;
 				height: 30.8rem;
+				left: -3.88rem;
+				bottom: 1.2rem;
 				img {
 					object-fit: contain;
 				}
@@ -144,6 +168,10 @@
 		justify-content: space-between;
 		z-index: 9;
 
+		@include media(tablet) {
+			height: 42rem;
+		}
+
 		@include media(mobile) {
 			height: auto;
 		}
@@ -152,7 +180,7 @@
 	&__logo {
 		display: none;
 		@include media(mobile) {
-			margin-top: 7.6rem;
+			margin-top: 2.95rem;
 			display: flex;
 			svg {
 				margin: 0 auto;
@@ -167,6 +195,11 @@
 		margin: 8rem auto 1.39rem auto;
 		text-align: center;
 
+		@include media(tablet) {
+			width: 40.5rem;
+			margin: 3.5rem auto 1.39rem auto;
+		}
+
 		@include media(mobile) {
 			width: 100%;
 			margin: 1.5rem auto 1.3rem auto;
@@ -176,6 +209,10 @@
 		strong,
 		em {
 			font-size: 4.286rem;
+
+			@include media(tablet) {
+				font-size: 3.286rem;
+			}
 
 			@include media(mobile) {
 				font-size: 2.857rem;
@@ -201,11 +238,12 @@
 
 		@include media(mobile) {
 			width: 83%;
-			margin: 8.6rem auto 0 auto;
+			margin: 10.6rem auto 0 auto;
 		}
 	}
 
 	&__phone {
+		margin-bottom: 0.3rem;
 		padding-right: 0.2rem;
 		width: 3.071rem;
 		height: 3.071rem;
@@ -214,6 +252,10 @@
 		bottom: 12.5dvh;
 		z-index: 9;
 		display: none;
+
+		@include media(tablet) {
+			bottom: 8dvh;
+		}
 
 		svg {
 			transition: $transition;
