@@ -23,6 +23,10 @@
 		overflow: hidden;
 		background: $img_not_found;
 
+		@include media(tablet) {
+			height: 29rem;
+		}
+
 		@include media(mobile) {
 			height: 17.571rem;
 		}
