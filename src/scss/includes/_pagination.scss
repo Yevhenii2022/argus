@@ -9,6 +9,9 @@
 	margin: 0 auto;
 	transform: translate(-50%, -50%);
 	top: initial;
+	@include media(tablet) {
+		width: 89%;
+	}
 	@include media(mobile) {
 		width: 75%;
 		transform: translate(-52%, -50%);
