@@ -29,6 +29,7 @@ function reviews_custom_post()
     'show_in_nav_menus' => true,
     'rewrite' => array('slug' => 'reviews'),
     'menu_icon' => 'dashicons-thumbs-up',
+    'publicly_queryable' => false,
     'query_var' => true,
   );
 
