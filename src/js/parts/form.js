@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let inputFile = document.querySelector("input[type='file']");
   let fileNameDisplay = document.querySelector(".form__file-text");
-  let submitBtnVacancy = document.querySelector('.form__submit--vacancy');
-  let submitBtn = document.querySelector('.form__submit');
-  let popup = document.querySelector('.popup');
   let icons = {
       pdf: "/wp-content/themes/pointer-theme/src/img/pdf.jpg",
       doc: "/wp-content/themes/pointer-theme/src/img/doc.jpg",
@@ -32,29 +29,22 @@ document.addEventListener("DOMContentLoaded", function () {
       })
   }
 
-  //form
-  if (submitBtn) {
-    submitBtn.addEventListener("click", function () {
-          popup.classList.add("popup--show");
-              setTimeout(function () {
-                popup.classList.remove("popup--show");
-            }, 2000);
-        });
-    }
-
-  //popup form-vacancy + clear file
-  if (submitBtnVacancy) {
-    submitBtnVacancy.addEventListener("click", function () {
-          if (inputFile.files.length > 0) {
-              inputFile.value = '';
-              fileNameDisplay.innerText = "Прикріпити файл";
-              popup.classList.add("popup--show");
-
-              setTimeout(function () {
-                popup.classList.remove("popup--show");
-            }, 2000);
-
-          }
-      });
-    }
+  
 });
+document.addEventListener(
+	'DOMContentLoaded',
+	function () {
+		const wpcf7Elm = document.querySelector('.wpcf7',);
+		let popupSuccess = document.querySelector('.popup',);
+
+			wpcf7Elm.addEventListener(
+				'wpcf7mailsent',
+				
+				event => {
+					popupSuccess.classList.add('popup--show',);
+					const form = event.target;
+					form.reset();
+				},
+				false,
+			);
+    });
