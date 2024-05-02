@@ -21,7 +21,7 @@ $title_section = get_field('reviews_title_section') ?? '';
       } ?>
 
       <div class="reviews__top">
-        <h1 class="reviews__title title"><?= $title; ?></h1>
+        <h1 class="reviews__title title anim-title _anim-items"><?= $title; ?></h1>
         <div class="reviews__box">
           <ul>
             <?php if ($gallery) {
@@ -74,7 +74,7 @@ $title_section = get_field('reviews_title_section') ?? '';
     </div>
 
     <div class="reviews__wrapper">
-      <h2 class="reviews__title-section title">
+      <h2 class="reviews__title-section title anim-title _anim-items">
         <?= $title_section; ?>
       </h2>
 
