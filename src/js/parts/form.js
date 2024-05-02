@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   let inputFile = document.querySelector("input[type='file']");
   let fileNameDisplay = document.querySelector(".form__file-text");
-//   let inputClear = document.querySelector('.form__delete');
+  let submitBtnVacancy = document.querySelector('.form__submit--vacancy');
+  let submitBtn = document.querySelector('.form__submit');
+  let popup = document.querySelector('.popup');
   let icons = {
       pdf: "/wp-content/themes/pointer-theme/src/img/pdf.jpg",
       doc: "/wp-content/themes/pointer-theme/src/img/doc.jpg",
@@ -30,14 +32,29 @@ document.addEventListener("DOMContentLoaded", function () {
       })
   }
 
+  //form
+  if (submitBtn) {
+    submitBtn.addEventListener("click", function () {
+          popup.classList.add("popup--show");
+              setTimeout(function () {
+                popup.classList.remove("popup--show");
+            }, 2000);
+        });
+    }
 
-  //clear input
-//   if (inputClear) {
-//       inputClear.addEventListener("click", function () {
-//           if (inputFile.files.length > 0) {
-//               inputFile.value = '';
-//               fileNameDisplay.innerText = "Прикріпити файл";
-//           }
-//       });
-//   }
+  //popup form-vacancy + clear file
+  if (submitBtnVacancy) {
+    submitBtnVacancy.addEventListener("click", function () {
+          if (inputFile.files.length > 0) {
+              inputFile.value = '';
+              fileNameDisplay.innerText = "Прикріпити файл";
+              popup.classList.add("popup--show");
+
+              setTimeout(function () {
+                popup.classList.remove("popup--show");
+            }, 2000);
+
+          }
+      });
+    }
 });

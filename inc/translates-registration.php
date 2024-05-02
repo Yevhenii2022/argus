@@ -31,4 +31,6 @@ if (function_exists('pll_register_string')) {
     pll_register_string('pointer_theme', 'Позиції');
     pll_register_string('pointer_theme', 'Позицій');
     pll_register_string('pointer_theme', 'reviews_nothing');
+    pll_register_string('pointer_theme', 'на головну сторінку');
+    pll_register_string('pointer_theme', 'сторінку не знайдено');
 }
