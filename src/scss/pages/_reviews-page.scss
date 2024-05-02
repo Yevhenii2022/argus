@@ -3,12 +3,12 @@
 	background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 1151 1187' fill='none' xmlns='http://www.w3.org/2000/svg' id='about-svg'%3E%3Cg opacity='0.15'%3E%3Cpath d='M370.51 211.163L271.701 1H748.492C935.131 1 1140.59 115.492 1140.59 393.097C1140.59 615.182 981.659 732.393 902.194 763.238L1150 1186.7H913.173L561.853 590.715H748.492C801.817 590.715 935.13 562.484 935.13 393.097C935.13 257.588 810.705 215.346 748.492 211.163H370.51Z' stroke='black' /%3E%3Cpath d='M414.356 779.778L20.213 15.9863L-587.703 1185.06H-336.075L20.213 474.707L171.635 779.778H414.356Z' stroke='black' /%3E%3Cpath d='M512.327 982.47H278.205L379.712 1190.4H622.02L512.327 982.47Z' stroke='black' /%3E%3C/g%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	background-position: -0.9rem 11.5rem;
-	background-size: auto 58.6%;
+	background-size: auto 85rem;
 
 	@include media(mobile) {
 		padding: 7.3rem 0 0 0;
 		background-position: -17.6rem 7.4rem;
-		background-size: auto 33.7%;
+		background-size: auto 52.3rem;
 	}
 
 	&__top {
