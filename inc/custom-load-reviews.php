@@ -10,7 +10,7 @@ add_action('wp_enqueue_scripts', 'my_custom_scripts_reviews');
 function load_more_reviews()
 {
   $paged = isset($_POST['page']) ? $_POST['page'] : 1;
-  $posts_per_page = 3;
+  $posts_per_page = 6;
 
   $args = array(
     'post_type' => 'reviews',
