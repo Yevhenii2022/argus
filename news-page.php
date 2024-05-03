@@ -57,9 +57,8 @@ get_header(); ?>
             </select>
           </div>
 
-          <div class="news__select blog-select">
+          <div class="news__select news-select">
             <select id="blogs__select" class="tabs-select">
-              <option value="">Placeholder</option>
               <option value="new">
                 <?php pll_e('newest'); ?>
               </option>

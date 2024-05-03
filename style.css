@@ -362,17 +362,23 @@ main {
   transform: translateX(-100%);
 }
 
-.blog-select {
+.blog-select,
+.news-select,
+.projects-select {
   display: none;
   position: relative;
 }
 @media (max-width: 541px) {
-  .blog-select {
+  .blog-select,
+  .news-select,
+  .projects-select {
     display: block;
   }
 }
 
-.blog-select select {
+.blog-select select,
+.news-select select,
+.projects-select select {
   display: none;
 }
 

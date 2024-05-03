@@ -100,9 +100,8 @@ get_header();
                         </select>
                     </div>
 
-                    <div class="projects__select blog-select">
+                    <div class="projects__select projects-select">
                         <select id="projects-select2" class="tabs-select">
-                            <option value="">Placeholder</option>
                             <option value="all"><?php pll_e('all_projects'); ?></option>
                             <?php
                             $real_estate_category = get_term_by('slug', 'operations', 'project-type');
