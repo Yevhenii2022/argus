@@ -150,6 +150,9 @@
             height: 0.857rem;
             position: relative;
             transition: $transition;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 
             &::before {
                 content: "";
@@ -177,9 +180,31 @@
 		align-items: center;
 		gap: 0.6rem;
 		display: none;
+		cursor: pointer;
 		@include media(mobile) {
 			display: flex;
 			align-items: center;
+		}
+
+		&.active{
+			.header__burger{
+				span{
+					transform: scale(0);
+				}
+				&::before {
+					top: 50%;
+					transform: rotate(-45deg) translate(0, -50%);
+					width: 100%;
+					max-width: 1rem;
+			}
+				&::after {
+					bottom: 50%;
+					transform: rotate(45deg) translate(0, 50%);
+					width: 100%;
+					max-width: 1rem;
+				}
+
+			}
 		}
 
 		span {
@@ -228,24 +253,6 @@
 		&::after {
 			bottom: 0;
 			width: 45%;
-		}
-
-		&.active span {
-			transform: scale(0);
-		}
-
-		&.active::before {
-			top: 50%;
-			transform: rotate(-45deg) translate(0, -50%);
-			width: 100%;
-			max-width: 1rem;
-		}
-
-		&.active::after {
-			bottom: 50%;
-			transform: rotate(45deg) translate(0, 50%);
-			width: 100%;
-			max-width: 1rem;
 		}
 	}
 }

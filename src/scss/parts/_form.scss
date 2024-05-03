@@ -79,7 +79,7 @@
       transition: $transition;
       resize: none;
       border-radius: 0 !important;
-      border-radius: 0 !important;
+      padding-bottom: 1.143rem;
       @include media(mobile) {
         font-size: 1rem;
         padding-bottom: 1rem;
@@ -208,10 +208,18 @@
   position: absolute;
   font-size: 0.786rem;
   display: none;
-}
+ }
 
-input[type="submit"]{
+ input[type="submit"]{
   cursor: pointer;
-}
+ }
 
+  .wpcf7-form-control.wpcf7-textarea::-webkit-scrollbar {
+    width: 0.5rem; 
+  }
+
+  .wpcf7-form-control.wpcf7-textarea::-webkit-scrollbar-thumb {
+    background-color: $red;
+    border-radius: 0.571rem;
+  }
 }

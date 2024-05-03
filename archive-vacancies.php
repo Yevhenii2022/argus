@@ -52,17 +52,17 @@ get_header(); ?>
             $total_posts = $vacancies_query->found_posts;
           ?>
         <p class="vacancies__number">
-          <?php
-           if ($total_posts === 0) {
-              echo pll_e('Немає доступних вакансій');
-          } else if ($total_posts === 1) {
-              echo pll_e('1 позиція');
+        <?php  
+            if ($total_posts === 0) {
+                echo pll__('Немає доступних вакансій');
+            } else if ($total_posts === 1) {
+                echo $total_posts . ' ' . pll__('Позиція');
             } else if ($total_posts < 5) {
-              echo $total_posts . ' ' . pll_e('позиції');
-          } else {
-              echo $total_posts . ' ' . pll_e('позицій');
-          }
-          ?>
+                echo $total_posts . ' ' . pll__('Позиції');
+            } else {
+                echo $total_posts . ' ' . pll__('Позицій');
+            }
+    ?>
         </p>
 
         <div class="vacancies__list"> 
@@ -90,7 +90,10 @@ get_header(); ?>
               wp_reset_postdata();
            ?>
            </div>
-
+           <?php else: ?>
+            <p class="vacancies__number">
+                <?php echo pll__('Немає доступних вакансій'); ?>
+            </p>
           <?php endif; ?>
         
       </div>
