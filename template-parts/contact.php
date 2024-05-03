@@ -38,6 +38,12 @@ $img = get_field('contact_img');
                                 </h2>
                             <?php endif; ?>
                         </div>
+
+                        <div class="contact__button button">
+                            <div class="button__wrapper">
+                                <p> <?php pll_e('contact_with_us'); ?></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="contact__bottom">
@@ -66,9 +72,4 @@ $img = get_field('contact_img');
         </section>
     </a>
 
-    <a href="#contact-us" class="contact__button button">
-        <div class="button__wrapper">
-            <p> <?php pll_e('contact_with_us'); ?></p>
-        </div>
-    </a>
 </div>

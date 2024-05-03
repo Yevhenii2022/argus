@@ -185,12 +185,13 @@ $bg = get_field('hero_bg');
                 <?php if ($desc) : ?>
                     <p class="hero__desc anim-title _anim-items"><?= $desc ?></p>
                 <?php endif; ?>
-
-                <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="hero__button button anim-title _anim-items">
-                    <div class="button__wrapper">
-                        <p><?php pll_e('look_services_button') ?></p>
-                    </div>
-                </a>
+                <div class="anim-title _anim-items">
+                    <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="hero__button button">
+                        <div class="button__wrapper">
+                            <p><?php pll_e('look_services_button') ?></p>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div>
