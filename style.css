@@ -549,6 +549,7 @@ main {
 }
 .news .pagination span,
 .reviews .pagination span {
+  padding-top: 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -561,13 +562,13 @@ main {
 }
 .news .pagination span:hover,
 .reviews .pagination span:hover {
-  border: 0.071rem solid #262626;
+  border: 0.071rem solid #181818;
 }
 .news .pagination span.pagination_active,
 .reviews .pagination span.pagination_active {
-  background-color: #262626;
+  background-color: #181818;
   border-radius: 50%;
-  border: 0.071rem solid #262626;
+  border: 0.071rem solid #181818;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -6787,8 +6788,8 @@ main {
 }
 @media (max-width: 541px) {
   .news-card__title {
-    margin: 0 0 0.5rem 0;
-    height: 4.78rem;
+    margin: 0 0 0.58rem 0;
+    height: 4.7rem;
     font-size: 1.571rem;
   }
 }

@@ -69,6 +69,7 @@
 		}
 
 		span {
+			padding-top: 0.1rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -80,13 +81,13 @@
 			transition: $transition;
 
 			&:hover {
-				border: 0.071rem solid #262626;
+				border: 0.071rem solid $black;
 			}
 
 			&.pagination_active {
-				background-color: #262626;
+				background-color: $black;
 				border-radius: 50%;
-				border: 0.071rem solid #262626;
+				border: 0.071rem solid $black;
 				-webkit-border-radius: 50%;
 				-moz-border-radius: 50%;
 				-ms-border-radius: 50%;
