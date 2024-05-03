@@ -832,6 +832,7 @@ main {
   .service-hero__heading {
     flex-direction: column;
     gap: 2.857rem;
+    margin-bottom: 2.857rem;
   }
 }
 .service-hero__title {
@@ -849,6 +850,11 @@ main {
   flex-direction: column;
   justify-content: flex-end;
   gap: 0.5rem;
+}
+@media (max-width: 541px) {
+  .service-hero__text {
+    padding-top: 0;
+  }
 }
 .service-hero__text::before {
   content: "";
@@ -905,7 +911,7 @@ main {
 .service-information__top-image, .service-information__bottom-image {
   height: 15.571rem;
   width: 15.571rem;
-  border-radius: 100%;
+  border-radius: 100% !important;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -959,6 +965,7 @@ main {
     width: 100%;
     margin-bottom: 2.857rem;
     margin-top: 1.714rem;
+    line-height: 100%;
   }
 }
 .service-information__answers {
@@ -973,7 +980,7 @@ main {
   .service-information__answers {
     font-size: 1.143rem;
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 2.286rem;
+    row-gap: 2rem;
   }
 }
 .service-information__answers li {
@@ -1013,7 +1020,7 @@ main {
 @media (max-width: 541px) {
   .service-banner {
     padding-top: 4.286rem;
-    padding-bottom: 6.857rem;
+    padding-bottom: 4.286rem;
   }
 }
 .service-banner__bg {
@@ -1127,7 +1134,7 @@ main {
 
 @media (max-width: 541px) {
   .service-advantages {
-    padding-top: 6.857rem;
+    padding-top: 4.286rem;
     padding-bottom: 25rem;
   }
 }
@@ -1202,7 +1209,7 @@ main {
     color: #ffffff;
     width: 25.643rem;
     height: 41.071rem;
-    top: 65%;
+    top: 67%;
   }
 }
 .service-advantages__item {
@@ -1351,7 +1358,7 @@ main {
 }
 
 .service-projects {
-  padding-top: 8.571rem;
+  padding-top: 9.571rem;
 }
 .service-projects__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
@@ -1528,13 +1535,14 @@ main {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 .service-cards__box {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.143rem;
 }
 @media (max-width: 541px) {
   .service-cards__box {
-    flex-direction: column;
-    gap: 4rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3.429rem;
   }
 }
 @media (max-width: 541px) {
@@ -1561,7 +1569,7 @@ main {
   .about-banner {
     padding-top: 7.3571rem;
     margin-top: 0;
-    padding-bottom: 5.5rem;
+    padding-bottom: 2.857rem;
   }
 }
 .about-banner__bg {
@@ -1640,7 +1648,6 @@ main {
   .about-banner__slider {
     margin-top: 4rem;
     width: calc(100% + 2.286rem);
-    padding-bottom: 4rem;
     margin-left: -1.143rem;
   }
 }
@@ -6559,6 +6566,11 @@ main {
 
 .projects-slider {
   padding: 2.857rem 0 7.929rem 0;
+}
+@media (max-width: 541px) {
+  .projects-slider {
+    padding: 2.857rem 0 5.929rem 0;
+  }
 }
 .projects-slider__title {
   margin-bottom: 2.857rem;
