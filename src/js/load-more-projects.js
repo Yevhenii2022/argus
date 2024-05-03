@@ -117,6 +117,11 @@ jQuery(function ($) {
 
 	$(document).on('change', '#projects-select, #projects-select2', function () {
 		var category = $('#projects-select').val();
+
+		if (category == '') {
+			category = 'all';
+		}
+
 		var option = $('#projects-select2').val();
 		page = 1;
 		projectsContainer.empty();

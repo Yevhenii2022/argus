@@ -49,7 +49,7 @@ $video = get_field('project_video');
         <div class="project__image">
           <?php
           if (has_post_thumbnail()) : ?>
-            <img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+            <img class="thumbnail" src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
           <?php else : ?>
             <img src="<?php echo esc_url($default_picture); ?>" alt="<?php the_title(); ?>" class="project__img--error">
           <?php endif; ?>
