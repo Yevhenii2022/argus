@@ -1,4 +1,6 @@
-.blog-select {
+.blog-select,
+.news-select,
+.projects-select {
 	display: none;
 	position: relative;
 
@@ -7,7 +9,9 @@
 	}
 }
 
-.blog-select select {
+.blog-select select,
+.news-select select,
+.projects-select select {
 	display: none;
 }
 
