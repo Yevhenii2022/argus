@@ -7,7 +7,7 @@
 	@include media(mobile) {
 		padding-top: 7.3571rem;
 		margin-top: 0;
-		padding-bottom: 5.5rem;
+		padding-bottom: 2.857rem;
 	}
 
 	&__bg {
@@ -89,7 +89,6 @@
 		@include media(mobile) {
 			margin-top: 4rem;
 			width: calc(100% + 2.286rem);
-			padding-bottom: 4rem;
 			margin-left: -1.143rem;
 		}
 	}

@@ -157,7 +157,12 @@
               <?php while (have_rows('advantages_list')) :
                 the_row();
                 $advantagesHeading = get_sub_field('advantages_card_heading') ?? '';
-                $advantagesDescription = get_sub_field('advantages_card_desc') ?? ''; ?>
+                $advantagesDescription = get_sub_field('advantages_card_desc') ?? ''; 
+                
+                $maxLength = 335;
+                $trimmedText = mb_substr($advantagesDescription, 0, $maxLength, 'UTF-8');
+                
+                ?>
                 <div class="service-advantages__item swiper-slide">
                   <div class="service-advantages__text">
                     <?php if ($advantagesHeading) : ?>
@@ -165,9 +170,9 @@
                         <?= $advantagesHeading ?>
                       </div>
                     <?php endif ?>
-                    <?php if ($advantagesDescription) : ?>
+                    <?php if ($trimmedText) : ?>
                       <div class="service-advantages__description">
-                        <?= $advantagesDescription ?>
+                        <?= $trimmedText ?>
                       </div>
                     <?php endif ?>
                   </div>
