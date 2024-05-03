@@ -256,6 +256,7 @@
 			transition: $transition;
 
 			@include media(mobile) {
+				padding-bottom: 0.1rem;
 				width: 2.714rem;
 				height: 2.714rem;
 			}
@@ -280,6 +281,7 @@
 			transition: $transition;
 
 			@include media(mobile) {
+				padding-bottom: 0.1rem;
 				width: 2.714rem;
 				height: 2.714rem;
 			}
