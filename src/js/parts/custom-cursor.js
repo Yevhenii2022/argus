@@ -90,8 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	//contact button scroll
 	var contactButton = document.querySelector('.contact__button');
 
-	contactButton.addEventListener('click', function () {
-		var contactSection = document.getElementById('contact-us');
-		contactSection.scrollIntoView({ behavior: 'smooth' });
-	});
+	if (contactButton) {
+		contactButton.addEventListener('click', function () {
+			var contactSection = document.getElementById('contact-us');
+			contactSection.scrollIntoView({ behavior: 'smooth' });
+		});
+	}
 });
