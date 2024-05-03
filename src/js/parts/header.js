@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //burger-menu
   const menu = document.querySelector('.header__content');
-  const menuButton = document.querySelector('.header__burger');
+  const menuButton = document.querySelector('.header__mobile-menu');
  
   menuButton.addEventListener('click', function () {
       this.classList.toggle('active');

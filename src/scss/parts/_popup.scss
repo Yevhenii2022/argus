@@ -11,13 +11,18 @@
   align-items: center;
   opacity: 0;
   transition: all 1s ease;
+  z-index: -1;
+
+  @include media(mobile) {
+    top: 100dvh;
+  }
 
   &--show{
     opacity: 1;
+    z-index: 10;
   }
 
   p{
     font-size: 2rem;
-
   }
 }

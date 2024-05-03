@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -351,7 +351,7 @@ main {
   content: "";
   display: block;
   width: 100%;
-  height: 0.071rem;
+  height: 0.05rem;
   background: #181818;
   transition: all 0.3s ease-in-out;
 }
@@ -708,6 +708,7 @@ main {
 @media (max-width: 541px) {
   .our-services {
     padding-top: 7.571rem;
+    padding-bottom: 5.714rem;
     margin-top: 0;
   }
 }
@@ -2925,7 +2926,7 @@ main {
   justify-content: center;
   column-gap: 0.5rem;
   flex-wrap: wrap;
-  line-height: 100%;
+  line-height: 120%;
 }
 @media (max-width: 541px) {
   .vacancies__name p {
@@ -4481,6 +4482,7 @@ main {
 }
 .not-found__title {
   font-size: 4rem;
+  text-align: center;
 }
 
 .header {
@@ -4621,6 +4623,9 @@ main {
   height: 0.857rem;
   position: relative;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__phone-img::before {
   content: "";
@@ -4644,12 +4649,28 @@ main {
   align-items: center;
   gap: 0.6rem;
   display: none;
+  cursor: pointer;
 }
 @media (max-width: 541px) {
   .header__mobile-menu {
     display: flex;
     align-items: center;
   }
+}
+.header__mobile-menu.active .header__burger span {
+  transform: scale(0);
+}
+.header__mobile-menu.active .header__burger::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+  width: 100%;
+  max-width: 1rem;
+}
+.header__mobile-menu.active .header__burger::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+  width: 100%;
+  max-width: 1rem;
 }
 .header__mobile-menu span {
   text-transform: uppercase;
@@ -4691,21 +4712,6 @@ main {
 .header__burger::after {
   bottom: 0;
   width: 45%;
-}
-.header__burger.active span {
-  transform: scale(0);
-}
-.header__burger.active::before {
-  top: 50%;
-  transform: rotate(-45deg) translate(0, -50%);
-  width: 100%;
-  max-width: 1rem;
-}
-.header__burger.active::after {
-  bottom: 50%;
-  transform: rotate(45deg) translate(0, 50%);
-  width: 100%;
-  max-width: 1rem;
 }
 
 @keyframes burgerAnimation {
@@ -6280,13 +6286,12 @@ main {
 .footer__menu {
   display: flex;
   gap: 5.714rem;
-  padding-right: 4rem;
 }
 @media (max-width: 541px) {
   .footer__menu {
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 2.2rem;
+    column-gap: 6.214rem;
   }
 }
 @media (max-width: 541px) {
@@ -6490,6 +6495,39 @@ main {
 }
 .footer__email {
   text-transform: uppercase;
+}
+.footer__email a, .footer__contacts a, .footer__menu-privacy-policy li {
+  position: relative;
+}
+.footer__email a:after, .footer__contacts a:after, .footer__menu-privacy-policy li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0.05rem;
+  background-color: #181818;
+  transition: width 0.5s;
+}
+@media (max-width: 541px) {
+  .footer__email a:after, .footer__contacts a:after, .footer__menu-privacy-policy li:after {
+    content: none;
+  }
+}
+.footer__email a:hover:after, .footer__contacts a:hover:after, .footer__menu-privacy-policy li:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 0.05rem;
+  background-color: #181818;
+  transition: width 0.5s;
+}
+@media (max-width: 541px) {
+  .footer__email a:hover:after, .footer__contacts a:hover:after, .footer__menu-privacy-policy li:hover:after {
+    content: none;
+  }
 }
 
 .projects-slider {
@@ -6835,7 +6873,7 @@ main {
   transition: all 0.3s ease-in-out;
   resize: none;
   border-radius: 0 !important;
-  border-radius: 0 !important;
+  padding-bottom: 1.143rem;
 }
 @media (max-width: 541px) {
   .form textarea {
@@ -6962,6 +7000,13 @@ main {
 }
 .form input[type=submit] {
   cursor: pointer;
+}
+.form .wpcf7-form-control.wpcf7-textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.form .wpcf7-form-control.wpcf7-textarea::-webkit-scrollbar-thumb {
+  background-color: #f41b1b;
+  border-radius: 0.571rem;
 }
 
 .move-line {
@@ -7267,10 +7312,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 49.143rem;
   height: 35rem;
   overflow: hidden;
   background: #dddddd;
+}
+@media (max-width: 1025px) {
+  .service-card__image {
+    height: 24rem;
+  }
 }
 @media (max-width: 541px) {
   .service-card__image {
@@ -7302,9 +7351,16 @@ main {
   align-items: center;
   opacity: 0;
   transition: all 1s ease;
+  z-index: -1;
+}
+@media (max-width: 541px) {
+  .popup {
+    top: 100dvh;
+  }
 }
 .popup--show {
   opacity: 1;
+  z-index: 10;
 }
 .popup p {
   font-size: 2rem;

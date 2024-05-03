@@ -75,10 +75,11 @@
               <?php while (have_rows('information_main')) :
                 the_row();
                 $informationParagraph = get_sub_field('information_paragraph'); ?>
-
+               <?php if ($informationParagraph) : ?>
                 <li>
                   <?= $informationParagraph; ?>
                 </li>
+                <?php endif ?>
               <?php endwhile ?>
             </ul>
             <?php if ($informationBottomImg) : ?>

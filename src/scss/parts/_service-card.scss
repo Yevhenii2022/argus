@@ -76,10 +76,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 49.143rem;
       height: 35rem;
       overflow: hidden;
       background: $img_not_found;
+      @include media(tablet) {
+        height: 24rem;
+      }
       @include media(mobile) {
         width: 24.5rem;
         height: 17.429rem
