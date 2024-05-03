@@ -25,23 +25,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			fileNameDisplay.innerHTML = iconName
 				? `<img class="form__file-icon" src=${iconName} style="width:20px;height:20px" /><span> ${fileName}</span>`
-				: 'Прикріпити файл';
+				: '';
 		});
 	}
-});
 
-document.addEventListener('DOMContentLoaded', function () {
 	const wpcf7Elm = document.querySelector('.wpcf7');
-	let popupSuccess = document.querySelector('.popup');
+	const popup = document.querySelector('.popup');
+	const currentLanguage = document.documentElement.lang;
 
-	wpcf7Elm.addEventListener(
-		'wpcf7mailsent',
+	let inputFileText = '';
 
-		event => {
-			popupSuccess.classList.add('popup--show');
-			const form = event.target;
-			form.reset();
-		},
-		false,
-	);
+	if (currentLanguage === 'uk') {
+		inputFileText = 'Прикріпити резюме';
+	} else if (currentLanguage === 'en-GB') {
+		inputFileText = 'Attach resume';
+	}
+
+	if (wpcf7Elm) {
+		wpcf7Elm.addEventListener(
+			'wpcf7mailsent',
+
+			event => {
+				popup.classList.add('popup--show');
+				setTimeout(function () {
+					popup.classList.remove('popup--show');
+				}, 2000);
+
+				const form = event.target;
+				form.reset();
+
+				if (fileNameDisplay) {
+					fileNameDisplay.innerHTML = inputFileText;
+				}
+			},
+			false,
+		);
+	}
 });
