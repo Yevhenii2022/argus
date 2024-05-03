@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				iconName = icons.pdf;
 			} else if (fileType.includes('doc')) {
 				iconName = icons.doc;
-			} else if (fileType.includes('png') || fileType.includes('jpeg')) {
+			} else if (fileType.includes('png') || fileType.includes('jpeg')||fileType.includes('gif')||fileType.includes('jpg')) {
 				iconName = icons.img;
 			} else {
 				iconName = '';

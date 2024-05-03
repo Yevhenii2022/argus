@@ -11,6 +11,7 @@
 		@include media(mobile) {
 			flex-direction: column;
 			gap: 2.857rem;
+			margin-bottom: 2.857rem;
 		}
 	}
 
@@ -31,6 +32,9 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		gap: 0.5rem;
+		@include media(mobile) {
+			padding-top: 0;
+		}
 
 		&::before {
 			content: '';
@@ -88,7 +92,7 @@
 	&__bottom-image {
 		height: 15.571rem;
 		width: 15.571rem;
-		border-radius: 100%;
+		border-radius: 100% !important;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
@@ -140,6 +144,7 @@
 			width: 100%;
 			margin-bottom: 2.857rem;
 			margin-top: 1.714rem;
+			line-height: 100%;
 		}
 	}
 
@@ -153,7 +158,7 @@
 		@include media(mobile) {
 			font-size: 1.143rem;
 			grid-template-columns: repeat(1, 1fr);
-			row-gap: 2.286rem;
+			row-gap: 2rem;
 		}
 
 		li {
@@ -195,7 +200,7 @@
 	position: relative;
 	@include media(mobile) {
 		padding-top: 4.286rem;
-		padding-bottom: 6.857rem;
+		padding-bottom: 4.286rem;
 	}
 
 	&__bg {
@@ -311,7 +316,7 @@
 
 .service-advantages {
 	@include media(mobile) {
-		padding-top: 6.857rem;
+		padding-top: 4.286rem;
 		padding-bottom: 25rem;
 	}
 
@@ -382,7 +387,7 @@
 			color: #ffffff;
 			width: 25.643rem;
 			height: 41.071rem;
-			top: 65%;
+			top: 67%;
 		}
 	}
 
@@ -532,7 +537,7 @@
 }
 
 .service-projects {
-	padding-top: 8.571rem;
+	padding-top: 9.571rem;
 
 	&__title {
 		em {
@@ -732,11 +737,12 @@
 	}
 
 	&__box {
-		display: flex;
-		gap: 1.143rem;
+		display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.143rem;
 		@include media(mobile) {
-			flex-direction: column;
-			gap: 4rem;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 3.429rem;
 		}
 	}
 
