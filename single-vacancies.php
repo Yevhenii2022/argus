@@ -93,7 +93,7 @@
                 <?php endif ?>
                 <?php if ($vacancyMainImg): ?>
                 <div class="vacancy__heading-image">
-                  <img src='<?php echo $vacancyMainImg['url']; ?>' alt='<?php echo $vacancyMainImg['alt']; ?>' />
+                  <img class="thumbnail" src='<?php echo $vacancyMainImg['url']; ?>' alt='<?php echo $vacancyMainImg['alt']; ?>' />
                 </div>
                 <?php endif ?>
               </div>

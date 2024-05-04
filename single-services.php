@@ -60,7 +60,7 @@
           <?php endif ?>
           <?php if ($informationTopImg) : ?>
             <div class="service-information__top-image">
-              <img src='<?php echo $informationTopImg['url']; ?>' alt='<?php echo $informationTopImg['alt']; ?>' />
+              <img class="thumbnail" src='<?php echo $informationTopImg['url']; ?>' alt='<?php echo $informationTopImg['alt']; ?>' />
             </div>
           <?php endif ?>
         </div>
@@ -84,13 +84,13 @@
             </ul>
             <?php if ($informationBottomImg) : ?>
               <div class="service-information__bottom-image">
-                <img src='<?php echo $informationBottomImg['url']; ?>' alt='<?php echo $informationBottomImg['alt']; ?>' />
+                <img class="thumbnail" src='<?php echo $informationBottomImg['url']; ?>' alt='<?php echo $informationBottomImg['alt']; ?>' />
               </div>
             <?php endif ?>
           </div>
           <?php if ($informationMainImg) : ?>
             <div class="service-information__img">
-              <img src='<?php echo $informationMainImg['url']; ?>' alt='<?php echo $informationMainImg['alt']; ?>' />
+              <img class="thumbnail" src='<?php echo $informationMainImg['url']; ?>' alt='<?php echo $informationMainImg['alt']; ?>' />
             </div>
           <?php endif ?>
         </div>

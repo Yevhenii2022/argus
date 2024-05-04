@@ -44,7 +44,7 @@ get_header(); ?>
                     
                <?php if ($servicesImage): ?>
                 <div class="our-services__right">
-                        <img src='<?php echo $servicesImage['url']; ?>' alt='<?php echo $servicesImage['alt']; ?>' />
+                        <img class="thumbnail" src='<?php echo $servicesImage['url']; ?>' alt='<?php echo $servicesImage['alt']; ?>' />
                 </div>
                <?php endif ?>
             </div>
