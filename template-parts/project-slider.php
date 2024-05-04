@@ -70,7 +70,7 @@
             <div class="swiper-button-prev"></div>
         </div>
 
-        <a href="<?php echo esc_url(get_home_url() . '/projects/'); ?>" class="projects-slider__button button">
+        <a href="<?php echo esc_url(get_home_url() . '/projects/'); ?>" class="projects-slider__button button anim-title _anim-items">
             <div class="button__wrapper">
                 <p> <?php pll_e('more_projects'); ?></p>
             </div>
