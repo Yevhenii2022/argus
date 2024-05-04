@@ -647,7 +647,7 @@
 		min-height: 29.643rem;
 		padding: 1.621rem 1.393rem 1.821rem 1.821rem;
 		counter-increment: item;
-		transition: all 1s ease-in-out;
+		transition: all 0.5s ease-in-out;
 		width: 24rem;
 		flex-shrink: 0;
 		@include media(mobile) {

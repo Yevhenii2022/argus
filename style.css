@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -1494,7 +1494,7 @@ br .select-items:-webkit-scrollbar {
   min-height: 29.643rem;
   padding: 1.621rem 1.393rem 1.821rem 1.821rem;
   counter-increment: item;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   width: 24rem;
   flex-shrink: 0;
 }
