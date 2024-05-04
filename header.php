@@ -56,7 +56,7 @@
 
 							$phone = get_field('phone', 'options');
 							$number = $phone['phone_number'] ?? '';
-							$phoneIcon = $phone['phone_icon'] ?? '';
+							$phoneIcon = $phone['phone_icon_header'] ?? '';
 							$file_path = get_attached_file($phoneIcon);
 							$cleanedNumber = preg_replace('/\s+/', '', $number);
 							$cleanedNumber = preg_replace('/\D/', '', $cleanedNumber);
