@@ -32,11 +32,13 @@ $title = get_field('projects-part_title');
                 </div>
             <?php endif; ?>
 
-            <a href="<?php echo esc_url(get_home_url() . '/projects/'); ?>" class="projects-part__button button">
-                <div class="button__wrapper">
-                    <p> <?php pll_e('more_projects'); ?></p>
-                </div>
-            </a>
+            <div class="anim-title _anim-items">
+                <a href="<?php echo esc_url(get_home_url() . '/projects/'); ?>" class="projects-part__button button">
+                    <div class="button__wrapper">
+                        <p> <?php pll_e('more_projects'); ?></p>
+                    </div>
+                </a>
+            </div>
 
         </div>
     </div>

@@ -1,12 +1,14 @@
 .hero {
-	padding: 5.857rem 1.714rem 0 1.714rem;
+	margin-bottom: 8.545rem;
+	padding: 5.857rem 0 0;
+	height: 100dvh;
 	@include media(mobile) {
-		padding: 4.714rem 0.571rem 0 0.571rem;
+		margin-bottom: 4.85rem;
+		padding: 4.714rem 0 0;
 	}
 
 	&__wrapper {
-		margin-bottom: 8.571rem;
-		height: calc(100dvh - 5.857rem);
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -16,13 +18,12 @@
 		border-radius: 1.429rem;
 
 		@include media(tablet) {
-			height: 48.714rem;
+			// height: 48.714rem;
 		}
 
 		@include media(mobile) {
-			margin-bottom: 4.85rem;
 			justify-content: initial;
-			height: 52.714rem;
+			// height: 52.714rem;
 		}
 	}
 
@@ -50,7 +51,7 @@
 			bottom: 0;
 			left: 0;
 			height: 100%;
-			width: 36.5rem;
+			width: 35.5rem;
 			display: flex;
 			align-items: end;
 
@@ -94,7 +95,7 @@
 			right: 0;
 			bottom: 0;
 			height: 100%;
-			width: 36.5rem;
+			width: 35.5rem;
 
 			@include media(tablet) {
 				width: 30rem;
@@ -162,18 +163,18 @@
 	}
 
 	&__box {
-		height: 89dvh;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		z-index: 9;
 
 		@include media(tablet) {
-			height: 42rem;
+			// height: 42rem;
 		}
 
 		@include media(mobile) {
-			height: auto;
+			// height: auto;
 		}
 	}
 
@@ -238,7 +239,7 @@
 
 		@include media(mobile) {
 			width: 83%;
-			margin: 10.6rem auto 0 auto;
+			margin: 0 auto;
 		}
 	}
 

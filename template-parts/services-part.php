@@ -57,11 +57,14 @@ $title = get_field('services-part_title');
             </div>
         <?php endif; ?>
 
-        <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="services__button button">
-            <div class="button__wrapper">
-                <p><?php pll_e('look_services_button') ?></p>
-            </div>
-        </a>
+        <div class="anim-title _anim-items">
+            <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="services__button button">
+                <div class="button__wrapper">
+                    <p><?php pll_e('look_services_button') ?></p>
+                </div>
+            </a>
+        </div>
+
     </div>
 
     <?php get_template_part('template-parts/move-line'); ?>

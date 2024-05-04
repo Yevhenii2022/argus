@@ -6,4 +6,5 @@ import './custom-cursor';
 import './animation-on-scroll';
 import './hero';
 import './form';
+import './parallax';
 import './about-us';
