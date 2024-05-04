@@ -70,7 +70,7 @@
                       </div>
                       <?php endwhile ;?>
                     
-                      <a href="<?php echo esc_url(get_home_url() . '/contacts/'); ?>" class="vacancy__button button">
+                      <a href="#contact-us-vacancy" class="vacancy__button button">
                         <div class="button__wrapper">
                             <p><?php pll_e('відгукнутися') ?></p>
                         </div>
@@ -93,7 +93,7 @@
                 <?php endif ?>
                 <?php if ($vacancyMainImg): ?>
                 <div class="vacancy__heading-image">
-                  <img src='<?php echo $vacancyMainImg['url']; ?>' alt='<?php echo $vacancyMainImg['alt']; ?>' />
+                  <img class="thumbnail" src='<?php echo $vacancyMainImg['url']; ?>' alt='<?php echo $vacancyMainImg['alt']; ?>' />
                 </div>
                 <?php endif ?>
               </div>
@@ -273,6 +273,6 @@
       </div>
     </div>  
   </section>
-      <?php get_template_part('template-parts/contact-us'); ?>
+      <?php get_template_part('template-parts/contact-us-vacancy'); ?>
 </main>
 <?php get_footer(); ?>

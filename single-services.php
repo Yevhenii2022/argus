@@ -60,7 +60,7 @@
           <?php endif ?>
           <?php if ($informationTopImg) : ?>
             <div class="service-information__top-image">
-              <img src='<?php echo $informationTopImg['url']; ?>' alt='<?php echo $informationTopImg['alt']; ?>' />
+              <img class="thumbnail" src='<?php echo $informationTopImg['url']; ?>' alt='<?php echo $informationTopImg['alt']; ?>' />
             </div>
           <?php endif ?>
         </div>
@@ -84,13 +84,13 @@
             </ul>
             <?php if ($informationBottomImg) : ?>
               <div class="service-information__bottom-image">
-                <img src='<?php echo $informationBottomImg['url']; ?>' alt='<?php echo $informationBottomImg['alt']; ?>' />
+                <img class="thumbnail" src='<?php echo $informationBottomImg['url']; ?>' alt='<?php echo $informationBottomImg['alt']; ?>' />
               </div>
             <?php endif ?>
           </div>
           <?php if ($informationMainImg) : ?>
             <div class="service-information__img">
-              <img src='<?php echo $informationMainImg['url']; ?>' alt='<?php echo $informationMainImg['alt']; ?>' />
+              <img class="thumbnail" src='<?php echo $informationMainImg['url']; ?>' alt='<?php echo $informationMainImg['alt']; ?>' />
             </div>
           <?php endif ?>
         </div>
@@ -214,11 +214,11 @@
               <?= $workTitle; ?>
             </h2>
           <?php endif; ?>
-          <div class="service-work__swiper swiper">
-            <div class="service-work__inner swiper-wrapper">
+          <div class="service-work__swiper ">
+            <div class="service-work__inner ">
               <?php while (have_rows('cards')) :
                 the_row(); ?>
-                <div class="service-work__card swiper-slide">
+                <div class="service-work__card ">
 
                   <?php $cardTitle = get_sub_field('card_title') ?? '';
                   $cardImage = get_sub_field('card_image') ?? '';

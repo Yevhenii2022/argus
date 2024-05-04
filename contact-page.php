@@ -27,74 +27,77 @@ get_header();
   <section class="contacts">
     <div class="container container--slider">
       <div class="contacts__wrapper">
-        <div class="contacts___heading contacts__grid">
-          <div class="contacts__breadcrumps">
-              <?php if ( function_exists('yoast_breadcrumb') ) {
+        <div class="contacts__left">
+            <div class="contacts__heading ">
+               <div class="contacts__breadcrumps">
+                  <?php if ( function_exists('yoast_breadcrumb') ) {
                   yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' );
-              }?>
-          </div>
-          <?php if ($contactsTitle) : ?>
-          <h1 class="contacts__title main__title main__title--sm">
-              <?= $contactsTitle ;?>
-          </h1>
-          <?php endif; ?>
-          <?php if ($contactsText) : ?>
-          <p class="contacts__text contacts__red-arrow">
-            <?= $contactsText?>
-          </p>
-          <?php endif; ?>
-        </div>
-        <?php if ($contactsImage) : ?>
-        <div class="contacts__image">
-            <img src='<?php echo $contactsImage['url']; ?>' alt='<?php echo $contactsImage['alt']; ?>' />
-        </div>
-        <?php endif; ?>
-        <div class="contacts__grid">
-              <div class="contacts__phone-inner">
-            <?php if ($phoneBlockName) : ?>
-              <p class="contacts__block-name contacts__red-arrow">
-                <?= $phoneBlockName ;?>
+                }?>
+               </div>
+            <?php if ($contactsTitle) : ?>
+              <h1 class="contacts__title main__title main__title--sm">
+                  <?= $contactsTitle ;?>
+              </h1>
+              <?php endif; ?>
+              <?php if ($contactsText) : ?>
+              <p class="contacts__text contacts__red-arrow">
+                <?= $contactsText?>
               </p>
-            <?php endif; ?>
-            <?php if ($contactsfirstPhone) : ?>
-                <a href="tel:+<?= $cleanedNumber ?>" class="contacts__phone">
-                  <span>
-                      <?= $contactsfirstPhone ;?>
+              <?php endif; ?>
+                </div>
+
+              <?php if ($contactsImage) : ?>
+              <div class="contacts__image-mobile">
+                  <img src='<?php echo $contactsImage['url']; ?>' alt='<?php echo $contactsImage['alt']; ?>' />
+              </div>
+              <?php endif; ?>
+          
+              <div class="contacts__grid">
+                <div class="contacts__phone-inner">
+              <?php if ($phoneBlockName) : ?>
+                <p class="contacts__block-name contacts__red-arrow">
+                  <?= $phoneBlockName ;?>
+                </p>
+              <?php endif; ?>
+              <?php if ($contactsfirstPhone) : ?>
+                  <a href="tel:+<?= $cleanedNumber ?>" class="contacts__phone">
+                    <span>
+                        <?= $contactsfirstPhone ;?>
+                      </span>
+                  </a>
+                  <?php endif; ?>
+                  <?php if ($contactsSecondPhone) : ?>
+                  <a href="tel:+<?=($cleanedSecondNumber) ?>" class="contacts__phone">
+                    <span>
+                        <?= $contactsSecondPhone ;?>
+                      </span>
+                  </a>
+                  <?php endif; ?>
+              </div>
+              <div class="contacts__email-inner">
+              <?php if ($emailBlockName) : ?>
+                <p class="contacts__block-name contacts__red-arrow">
+                  <?= $emailBlockName ;?>
+                </p>
+              <?php endif; ?>
+              <?php if ($emailFirst) : ?>
+                <a href="mailto:<?= $emailFirst ;?>" class="contacts__email">
+                    <span>
+                        <?= $emailFirst; ?>
                     </span>
                 </a>
-                <?php endif; ?>
-                <?php if ($contactsSecondPhone) : ?>
-                <a href="tel:+<?=($cleanedSecondNumber) ?>" class="contacts__phone">
-                  <span>
-                      <?= $contactsSecondPhone ;?>
+              <?php endif; ?>
+              <?php if ($emailSecond) : ?>
+                <a href="mailto:<?= $emailSecond?>" class="contacts__email">
+                    <span>
+                        <?= $emailSecond; ?>
                     </span>
                 </a>
-                <?php endif; ?>
-            </div>
-            <div class="contacts__email-inner">
-            <?php if ($emailBlockName) : ?>
-              <p class="contacts__block-name contacts__red-arrow">
-                <?= $emailBlockName ;?>
-              </p>
             <?php endif; ?>
-            <?php if ($emailFirst) : ?>
-              <a href="mailto:<?= $emailFirst ;?>" class="contacts__email">
-                  <span>
-                      <?= $emailFirst; ?>
-                  </span>
-              </a>
-            <?php endif; ?>
-            <?php if ($emailSecond) : ?>
-              <a href="mailto:<?= $emailSecond?>" class="contacts__email">
-                  <span>
-                      <?= $emailSecond; ?>
-                  </span>
-              </a>
-          <?php endif; ?>
+              </div>
             </div>
-        </div>
        
-       </div>
+          
         
         <div class="contacts__address-inner">
         <?php while (have_rows('address')):
@@ -121,7 +124,19 @@ get_header();
           </div>               
          <? endwhile ?>
         </div>
+       </div>
+     
+   
+
+      <div class="contacts__right">
+          <?php if ($contactsImage) : ?>
+          <div class="contacts__image">
+              <img src='<?php echo $contactsImage['url']; ?>' alt='<?php echo $contactsImage['alt']; ?>' />
+          </div>
+          <?php endif; ?>
+      </div> 
     </div>
+   </div>
   </section>
   <?php get_template_part('template-parts/contact-us'); ?>
 </main>

@@ -8,3 +8,7 @@ import './hero';
 import './form';
 import './parallax';
 import './about-us';
+import './single-service';
+
+
+
