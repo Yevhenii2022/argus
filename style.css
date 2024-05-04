@@ -4688,7 +4688,7 @@ br .select-items:-webkit-scrollbar {
     width: 22rem;
   }
 }
-@media (max-width: 1025px) {
+@media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(3) {
     margin-top: auto;
   }

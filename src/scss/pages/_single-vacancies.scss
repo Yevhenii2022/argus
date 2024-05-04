@@ -646,7 +646,7 @@
       }
 
       &:nth-child(3) {
-        @include media(tablet) {
+        @include media(mobile) {
           margin-top: auto;
         }
       }
