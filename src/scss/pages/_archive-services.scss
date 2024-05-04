@@ -1,5 +1,5 @@
 .our-services {
-  margin-top: 5.857rem;
+    margin-top: 5.857rem;
     padding-top: 5.714rem;
     padding-bottom: 8.571rem;
     background-repeat: no-repeat;
@@ -80,14 +80,18 @@
   }
 }
 
-.services-cards{
+.services-block{
   padding-bottom: 8.571rem;
+
+  @include media(mobile) {
+    padding-bottom: 5.714rem;
+  }
 
   &__wrapper{
     display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.143rem;
-		row-gap: 4.571rem;
+		row-gap: 4.5rem;
     @include media(mobile) {
       grid-template-columns: repeat(1, 1fr);
     }
