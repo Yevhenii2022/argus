@@ -1,6 +1,6 @@
 .our-services {
-  margin-top: 5.857rem;
-  padding-top: 5.714rem;
+  margin-top: 6.857rem;
+  padding-top: 4.714rem;
   padding-bottom: 8.571rem;
   background-repeat: no-repeat;
   @include media(mobile) {
@@ -42,10 +42,14 @@
     padding-left: 18.5rem;
     padding-right: 4.786rem;
     line-height: 120%;
+
     @include media(mobile) {
-    padding-left: 0rem;
-    padding-right: 2rem;
-    margin-bottom: 2.857rem;
+      padding-left: 11.5rem;
+    }
+    @include media(mobile) {
+      padding-left: 0rem;
+      padding-right: 2rem;
+      margin-bottom: 2.857rem;
    }
   }
 
@@ -86,6 +90,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    @include media(tablet) {
+      height: 24rem;
+    }
     @include media(mobile) {
        height: 17.429rem;
     }

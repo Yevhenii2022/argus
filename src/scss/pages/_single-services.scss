@@ -51,7 +51,7 @@
 		max-height: 40.071rem;
 
 		@include media(mobile) {
-			height: 34.143rem;
+			height: 20.5rem;
 
 			img {
 				height: 100%;
@@ -110,6 +110,10 @@
 	&__bottom-image {
 		margin-left: 46rem;
 		margin-top: -3rem;
+		transform: translateZ(0);
+		@include media(tablet) {
+			margin-left: 31rem;
+		};
 		img {
 			z-index: 1;
 		}
@@ -139,6 +143,10 @@
 		margin-bottom: 18.429rem;
 		font-family: $medium;
 		width: 50%;
+		@include media(tablet) {
+			width: 70%;
+			margin-bottom: 7rem;
+		}
 		@include media(mobile) {
 			font-size: 1.571rem;
 			width: 100%;
@@ -155,10 +163,15 @@
 		row-gap: 4rem;
 		line-height: 120%;
 		font-size: 1.429rem;
+
+		@include media(tablet) {
+			grid-template-columns: repeat(1, 1fr);
+			padding-right: 2rem;
+		}
 		@include media(mobile) {
 			font-size: 1.143rem;
-			grid-template-columns: repeat(1, 1fr);
 			row-gap: 2rem;
+			padding-right: 0;
 		}
 
 		li {
@@ -237,6 +250,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include media(tablet) {
+			padding-bottom: 9rem;
+		}
 		@include media(mobile) {
 			padding-bottom: 0;
 		}
@@ -382,6 +398,10 @@
 		color: $white;
 		width: 55.071rem;
 		height: 41.214rem;
+		@include media(tablet) {
+			width: 45.071rem;
+			height: 29.214rem;
+		}
 		@include media(mobile) {
 			right: 0.571rem;
 			color: #ffffff;

@@ -62,7 +62,9 @@
 		text-align: center;
 		display: block;
 		width: 50%;
-
+		@include media(tablet) {
+			width: 60%;
+		}
 		@include media(mobile) {
 			width: 100%;
 			text-align: start;
@@ -505,7 +507,11 @@
 
 	&__right {
 		margin-top: 14rem;
+		flex-shrink: 0;
 
+		@include media(tablet) {
+			padding-right: 3rem;
+		}
 		@include media(mobile) {
 			margin-top: 0;
 			width: 100%;
@@ -540,6 +546,12 @@
 		transition: $transition;
 		margin-top: 2rem;
 		color: $black;
+		opacity: 0;
+	  transition: opacity 2s ease;
+
+		&.is-visible {
+			opacity: 1;
+	}
 
 		@include media(mobile) {
 			width: 22rem;
