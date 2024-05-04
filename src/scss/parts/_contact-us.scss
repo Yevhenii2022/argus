@@ -76,13 +76,14 @@
 
 	&__video {
 		height: 27.071rem;
-		max-width: 17.929rem;
+		width: 17.929rem;
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
+		flex-shrink: 0;
 
 		@include media(mobile) {
 			width: 10.286rem;

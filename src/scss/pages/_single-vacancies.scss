@@ -71,6 +71,11 @@
     padding-right: 12.786rem;
     line-height: 120%;
 
+    @include media(tablet) {
+        padding-left: 9.7rem;
+        padding-right: 9.7rem;
+    }
+
     @include media(mobile) {
       padding-left: 0rem;
       padding-right: 2rem;
@@ -113,6 +118,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include media(tablet) {
+      width: 31.7rem;
+    }
 
     @include media(mobile) {
       width: 24.5rem;
@@ -177,6 +186,11 @@
     &-image{
       flex-shrink: 0;
       margin-top: 2rem;
+
+      @include media(tablet) {
+        padding-bottom: 1rem;
+        margin-top: 0;
+      }
       @include media(mobile) {
       display: none;
 
@@ -222,6 +236,10 @@
         .vacancy__advantages-image{
           width: 45.286rem;
           height: 31.214rem;
+          @include media(tablet) {
+            height: 23rem;
+            width: 33rem;
+          }
           img{
             height: 100%;
           }
@@ -287,6 +305,9 @@
       flex-shrink: 0;
       width: 51.429rem;
       height: 35.5rem;
+      @include media(tablet) {
+        width: 39.5rem;
+      }
   } 
 
   &__line {
@@ -466,6 +487,12 @@
       transition: $transition;
       margin-top: 2rem;
       color: $black;
+      opacity: 0;
+      transition: opacity 2s ease;
+  
+      &.is-visible {
+        opacity: 1;
+    }
   
       @include media(mobile) {
         width: 22rem;
@@ -593,6 +620,12 @@
       width: 22.071rem;
       margin-top: -14rem;
       z-index: 1;
+      border-radius: 100% !important;
+      overflow: hidden;
+      transform: translateZ(0);
+}
+
+* {
       @include media(mobile) {
         display: none;
       }
@@ -627,9 +660,12 @@
 				width: 44.929rem;
         font-size: 1.929rem;
         line-height: 100%;
+        @include media(tablet) {
+          width: 100%;
+          font-size: 1.7rem;
+        }
 				@include media(mobile) {
-					width: 100%;
-          font-size: 1.571rem;
+		      font-size: 1.571rem;
 				}
 			}
 		}

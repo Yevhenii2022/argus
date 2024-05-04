@@ -1,7 +1,9 @@
 .form {
   &__wrapper{
   width: 40.786rem;
-
+  @include media(tablet) {
+    width: 32rem;
+  }
   @include media(mobile) {
     width: 24.5rem;
     margin-top: 2.857rem;
@@ -124,6 +126,10 @@
     line-height: 109%;
     font-size: 0.786rem;
     color: rgba(24, 24, 24, 0.4);
+
+    @include media(mobile) {
+      width: 71%;
+    }
     @include media(mobile) {
       font-size: 1rem;
       width: 100%;

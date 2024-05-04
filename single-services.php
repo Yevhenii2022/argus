@@ -67,7 +67,7 @@
         <div class="service-information__content">
           <div class="service-information__text">
             <?php if ($informationQuestion) : ?>
-              <p class="service-information__question">
+              <p class="service-information__question anim-title _anim-items">
                 <?= $informationQuestion; ?>
               </p>
             <?php endif ?>
