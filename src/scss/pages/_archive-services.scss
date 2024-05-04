@@ -1,8 +1,10 @@
 .our-services {
-  margin-top: 6.857rem;
-  padding-top: 4.714rem;
-  padding-bottom: 8.571rem;
-  background-repeat: no-repeat;
+    margin-top: 5.857rem;
+    padding-top: 5.714rem;
+    padding-bottom: 8.571rem;
+    background-repeat: no-repeat;
+    background-position: 4% 0%;
+
   @include media(mobile) {
       padding-top: 7.571rem; 
       padding-bottom: 5.714rem; 
@@ -26,7 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 97%;
   }
 
   &__title {
@@ -39,7 +41,7 @@
   }
 
   &__description {
-    padding-left: 18.5rem;
+    padding-left: 17.3rem;
     padding-right: 4.786rem;
     line-height: 120%;
 
@@ -65,17 +67,31 @@
 
   &__right {
     flex: 1;
+
+    img{
+      height: 53.143rem;
+      width: 51.429rem;
+      @include media(mobile) {
+        height:26.786rem;
+        width: 27.714rem;
+      }
+
+    }
   }
 }
 
-.services-cards{
+.services-block{
   padding-bottom: 8.571rem;
+
+  @include media(mobile) {
+    padding-bottom: 5.714rem;
+  }
 
   &__wrapper{
     display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.143rem;
-		row-gap: 4.4rem;
+		row-gap: 4.5rem;
     @include media(mobile) {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -103,6 +119,7 @@
       text-align: center;
       font-family: $medium;
       width: 80%;
+      line-height: 100%;
       @include media(mobile) {
         font-size: 1.286rem;
         width: 100%;

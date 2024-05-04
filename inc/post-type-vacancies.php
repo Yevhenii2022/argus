@@ -24,7 +24,7 @@ function vacancies_custom_post()
     'menu_position' => 16,
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
-    'has_archive' => true,
+    'has_archive' => false,
     'show_in_admin_bar' => true,
     'show_in_nav_menus' => true,
     'rewrite' => array('slug' => 'vacancies'),

@@ -44,14 +44,14 @@ get_header(); ?>
                     
                <?php if ($servicesImage): ?>
                 <div class="our-services__right">
-                        <img src='<?php echo $servicesImage['url']; ?>' alt='<?php echo $servicesImage['alt']; ?>' />
+                        <img class="thumbnail" src='<?php echo $servicesImage['url']; ?>' alt='<?php echo $servicesImage['alt']; ?>' />
                 </div>
                <?php endif ?>
             </div>
     </section>
-    <section class="services-cards">
+    <section class="services-block">
         <div class="container">
-            <div class="services-cards__wrapper">
+            <div class="services-block__wrapper">
                 <?php
                 $args = array(
                     'post_type' => 'services',
@@ -68,15 +68,15 @@ get_header(); ?>
                     wp_reset_postdata();
                     ?>
                 <?php endif; ?>
-                    <div class="services-cards__last">
+                    <div class="services-block__last">
                     <?php $lastCard = get_field('last_title') ?? '' ;
                     if ($lastCard) : ?>
-                        <h2 class="services-cards__last-title">
+                        <h2 class="services-block__last-title">
                             <?= $lastCard ;?>
                         </h2>
                       <?php endif ?>  
 
-                        <a href="<?php echo esc_url(get_home_url() . '/contacts/'); ?>" class="services-cards__button button">
+                        <a href="<?php echo esc_url(get_home_url() . '/contacts/'); ?>" class="services-block__button button">
                             <div class="button__wrapper">
                                 <p><?php pll_e('contact_button') ?></p>
                             </div>

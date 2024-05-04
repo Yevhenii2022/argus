@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (window.innerWidth < 542) {
 		const values = new Swiper('.about-values__right', {
 			watchSlidesProgress: true,
-			slidesPerView: 1.21,
+			slidesPerView: 1.1,
 			spaceBetween: 8,
 			centeredSlides: true,
 			navigation: {
@@ -82,8 +82,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				type: 'progressbar',
 			},
 		});
+	}
 
-		const responsibilities = new Swiper('.vacancy__responsibilities-list', {
+	if (window.innerWidth < 542) {
+		const responsibilities = new Swiper('.vacancy__responsibilities-right', {
 			watchSlidesProgress: true,
 			slidesPerView: 1.21,
 			spaceBetween: 8,
@@ -164,33 +166,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		navigation: {
 			nextEl: '.service-advantages__arrow--next',
 			prevEl: '.service-advantages__arrow--prev',
-		},
-	});
-
-	const workSwiper = new Swiper('.service-work__swiper', {
-		slidesPerView: 1.22,
-		centeredSlides: true,
-		mousewheel: true,
-		freeMode: true,
-		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
-		on: {
-			slideChange: function () {
-				const slides = document.querySelectorAll('.service-work__card');
-				slides.forEach((slide, index) => {
-					if (index === this.activeIndex) {
-						slide.style.transform = 'rotate(5deg) translateY(-10%)';
-					} else {
-						slide.style.transform = 'rotate(-5deg) translateY(0)';
-					}
-				});
-			},
-		},
-		breakpoints: {
-			541: {
-				slidesPerView: 4.285,
-			},
 		},
 	});
 

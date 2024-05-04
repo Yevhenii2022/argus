@@ -515,6 +515,7 @@
 		@include media(mobile) {
 			margin-top: 0;
 			width: 100%;
+			padding-right: 0;
 		}
 	}
 
@@ -534,7 +535,7 @@
 		counter-increment: item;
 		background-color: $white;
 		border-radius: 50%;
-		width: 22rem;
+		width: 22rem !important;
 		height: 22rem;
 		display: flex;
 		flex-direction: column;
