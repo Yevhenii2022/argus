@@ -43,6 +43,10 @@ jQuery(function ($) {
 			var category = $('#category-filter li.active').data('category');
 		} else {
 			var category = $('#news__select-filters').val();
+
+			if (category == '') {
+				category = 'all';
+			}
 		}
 
 		var option = $(this).val();

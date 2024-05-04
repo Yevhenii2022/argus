@@ -21,6 +21,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script src="https://unpkg.com/imask"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 

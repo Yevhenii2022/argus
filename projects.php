@@ -129,11 +129,13 @@ get_header();
 
                 <div class="projects-part__list" id="projects-list"></div>
 
-                <button type='button' class="projects__button button" id="load-more-button">
-                    <div class="button__wrapper">
-                        <p><?php pll_e('download_more'); ?></p>
-                    </div>
-                </button>
+                <div class="anim-title _anim-items">
+                    <button type='button' class="projects__button button" id="load-more-button">
+                        <div class="button__wrapper">
+                            <p><?php pll_e('download_more'); ?></p>
+                        </div>
+                    </button>
+                </div>
 
                 <div class="ajax-preloader">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" preserveAspectRatio="xMidYMid" style="shape-rendering: auto; display: block; background: rgba(255, 255, 255, 0);" xmlns:xlink="http://www.w3.org/1999/xlink">

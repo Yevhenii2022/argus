@@ -38,7 +38,7 @@ get_header();
 					$default_picture = get_field('default_picture', 'options');
 
 					if (has_post_thumbnail()) : ?>
-						<img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+						<img class="thumbnail" src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 					<?php else : ?>
 						<img src="<?php echo esc_url($default_picture); ?>" alt="<?php the_title(); ?>" class="single-news__img--error">
 					<?php endif; ?>
