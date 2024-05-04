@@ -40,7 +40,7 @@ get_header();
                                     $number = get_sub_field('number');
                                     $title = get_sub_field('title');
                                     $text = get_sub_field('text'); ?>
-                                    <div class="about-banner__item swiper-slide">
+                                    <div class="about-banner__item swiper-slide anim-title _anim-items">
                                         <?php if ($number) : ?>
                                             <p class="about-banner__item-number">
                                                 <?= $number; ?>

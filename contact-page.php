@@ -35,7 +35,7 @@ get_header();
                 }?>
                </div>
             <?php if ($contactsTitle) : ?>
-              <h1 class="contacts__title main__title main__title--sm">
+              <h1 class="contacts__title main__title main__title--sm anim-title _anim-items">
                   <?= $contactsTitle ;?>
               </h1>
               <?php endif; ?>
