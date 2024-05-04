@@ -1,20 +1,49 @@
 .contact {
 	position: relative;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-radius: 1.25rem;
+	border-radius: 1.429rem;
+	overflow: hidden;
+
+	&__bg {
+		height: 76.071rem;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		border-radius: 1.429rem;
+		overflow: hidden;
+
+		@include media(tablet) {
+			height: 55.071rem;
+		}
+		@include media(mobile) {
+			height: 58rem;
+		}
+
+		img {
+			height: 76.071rem;
+			border-radius: 1.429rem;
+			overflow: hidden;
+			@include media(tablet) {
+				height: 55.071rem;
+			}
+			@include media(mobile) {
+				height: 58rem;
+			}
+		}
+	}
 
 	&__wrapper {
-		margin-bottom: 8.3rem;
 		padding: 2.7rem 0 2.9rem 0;
 		height: 76.05rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 
+		@include media(tablet) {
+			height: 55.071rem;
+		}
 		@include media(mobile) {
-			margin-bottom: 5.65rem;
 			height: 58rem;
 		}
 
@@ -29,6 +58,11 @@
 		margin-bottom: 11.25rem;
 		display: flex;
 		gap: 29.7rem;
+
+		@include media(tablet) {
+			margin-bottom: 6.25rem;
+			gap: 19.7rem;
+		}
 
 		@include media(mobile) {
 			margin-bottom: 2.857rem;
