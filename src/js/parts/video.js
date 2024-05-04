@@ -32,25 +32,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	//form-video
 	const formVideo = document.getElementById('form-video');
+	const formIcon = document.getElementById('form-icon');
+	let videoEnded = false;
 
 	const handleScroll = () => {
 		const rect = formVideo.getBoundingClientRect();
 		const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
-		if (rect.top >= 0 && rect.bottom <= viewportHeight) {
-			// Video is in the viewport
+		if (!videoEnded && rect.top >= 0 && rect.bottom <= viewportHeight) {
+			// Відео в видимій області і ще не відтворено до кінця
 			if (formVideo.paused) {
 				formVideo.play();
 			}
-		} else {
-			// Video is out of the viewport
+		} else if (!videoEnded) {
+			// Відео поза видимою областю і ще не відтворено до кінця
 			if (!formVideo.paused) {
 				formVideo.pause();
 			}
 		}
 	};
 
+	const handleVideoEnd = () => {
+		formIcon.style.opacity = 1;
+		formVideo.style.cursor = 'pointer';
+		videoEnded = true;
+	};
+
+	const handleVideoClick = () => {
+		formVideo.play();
+		formIcon.style.opacity = 0;
+		formVideo.style.cursor = 'default';
+	};
+
 	if (formVideo) {
+		formVideo.addEventListener('ended', handleVideoEnd);
+		formVideo.addEventListener('click', handleVideoClick);
 		window.addEventListener('scroll', handleScroll);
 	}
 });
