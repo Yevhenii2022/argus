@@ -3462,10 +3462,21 @@ main {
   height: 53.143rem;
   width: 51.429rem;
 }
+@media (max-width: 1025px) {
+  .contacts__image {
+    height: 54.143rem;
+    width: 42.429rem;
+  }
+}
 @media (max-width: 541px) {
   .contacts__image {
     width: 26.786rem;
     height: 27.714rem;
+  }
+}
+@media (max-width: 1025px) {
+  .contacts__image img {
+    height: 100%;
   }
 }
 .contacts__text {
