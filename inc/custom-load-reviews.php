@@ -72,14 +72,14 @@ function load_more_reviews()
     $pagination_html .= '<div class="pagination">';
 
     if ($paged > 1) {
-      $pagination_html .= '<span data-page="' . ($paged - 1) . '"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.4"><path d="M7.15056 1.86345L3.51401 5.5L7.15056 9.13655" stroke="#202020" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span>';
+      $pagination_html .= '<span data-page="' . ($paged - 1) . '"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M7.15056 1.86345L3.51401 5.5L7.15056 9.13655" stroke="#181818" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span>';
     }
     for ($i = 1; $i <= $total_pages; $i++) {
       $pagination_html .= '<span  data-page="' . $i . '"' . ($paged == $i ? ' class="pagination_active"' : '') . '>' . $i . '</span>';
     }
     if ($paged < $total_pages) {
-      $pagination_html .= '<span href="#" data-page="' . ($paged + 1) . '"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3.84749 9.13655L7.48404 5.5L3.84749 1.86345" stroke="#202020" stroke-linecap="round" stroke-linejoin="round"/>
+      $pagination_html .= '<span href="#" data-page="' . ($paged + 1) . '"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.84749 9.13655L7.48404 5.5L3.84749 1.86345" stroke="#181818" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       </span>';
     }
