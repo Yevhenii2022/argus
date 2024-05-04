@@ -51,6 +51,10 @@
 			text-align: start;
 			font-size: 4.286rem;
 
+			@include media(tablet) {
+				font-size: 3.4rem;
+			}
+
 			@include media(mobile) {
 				font-size: 2.857rem;
 			}
@@ -95,6 +99,9 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
+		@include media(tablet) {
+			height: 40rem;
+		}
 		@include media(mobile) {
 			margin: 0 -1.143rem;
 			height: 14rem;
@@ -103,6 +110,9 @@
 		img {
 			width: 102.857rem;
 			height: 52rem;
+			@include media(tablet) {
+				height: 40rem;
+			}
 			@include media(mobile) {
 				width: 26.786rem;
 				height: 14rem;
@@ -123,6 +133,9 @@
 
 	&__content {
 		padding: 5.714rem 16.786rem 6.15rem 16.786rem;
+		@include media(tablet) {
+			padding: 5rem 7rem 6rem 7rem;
+		}
 		@include media(mobile) {
 			padding: 4.571rem 0 4.1rem 0;
 		}
@@ -130,7 +143,10 @@
 		img {
 			margin: 5.714rem 0;
 			height: 35.143rem;
-
+			@include media(tablet) {
+				margin: 5rem 0;
+				height: 30rem;
+			}
 			@include media(mobile) {
 				margin: 4.571rem 0;
 				height: 12.857rem;
