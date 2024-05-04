@@ -159,6 +159,10 @@
 					height: 42.714rem;
 					border-radius: 1.429rem;
 
+					@include media(tablet) {
+						height: 36.7rem;
+					}
+
 					&__image {
 						width: 49.4%;
 						height: 100%;
@@ -175,6 +179,10 @@
 						flex-direction: column;
 						justify-content: space-between;
 						gap: 0;
+
+						@include media(tablet) {
+							padding: 0 5rem 0 4rem;
+						}
 
 						p {
 							display: block;

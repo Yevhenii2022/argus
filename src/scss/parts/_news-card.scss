@@ -45,6 +45,9 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
+		@include media(tablet) {
+			height: 26rem;
+		}
 		@include media(mobile) {
 			height: 17.9rem;
 		}

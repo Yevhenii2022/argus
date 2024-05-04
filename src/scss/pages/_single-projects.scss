@@ -69,6 +69,10 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
+		@include media(tablet) {
+			height: 43rem;
+			margin: 0 -1.714rem 9.2rem -1.714rem;
+		}
 		@include media(mobile) {
 			margin: 0 -1.143rem 0 -1.143rem;
 			height: 13.5rem;
@@ -76,6 +80,9 @@
 		img {
 			width: 102.857rem;
 			height: 52rem;
+			@include media(tablet) {
+				height: 43rem;
+			}
 			@include media(mobile) {
 				width: 26.786rem;
 				height: 13.5rem;
@@ -111,6 +118,10 @@
 			gap: 1.6rem;
 			background-color: $white;
 			z-index: 1;
+			@include media(tablet) {
+				margin: -25.2rem 0 1.2rem 0;
+				width: 34.2rem;
+			}
 			@include media(mobile) {
 				margin: -2.85rem 0 3.2rem 0;
 				width: 100%;
@@ -129,9 +140,7 @@
 
 			li:last-of-type {
 				p {
-					// @include media(mobile) {
 					margin-bottom: 0;
-					// }
 				}
 			}
 
@@ -145,6 +154,9 @@
 		p,
 		em {
 			font-size: 4.286rem;
+			@include media(tablet) {
+				font-size: 3.2rem;
+			}
 			@include media(mobile) {
 				text-align: start;
 				font-size: 2.857rem;
@@ -188,6 +200,10 @@
 	&__slider {
 		margin-bottom: 10.3rem;
 		height: 41.9rem;
+		@include media(tablet) {
+			margin-bottom: 7.3rem;
+			height: 35.9rem;
+		}
 		@include media(mobile) {
 			margin-right: -1.143rem;
 			margin-bottom: 5rem;
@@ -210,6 +226,9 @@
 		}
 		img {
 			height: 35.429rem;
+			@include media(tablet) {
+				height: 28.4rem;
+			}
 			@include media(mobile) {
 				height: 16.7rem;
 			}
@@ -239,6 +258,9 @@
 				width: 45.6rem;
 				font-size: 4.286rem;
 				text-align: start;
+				@include media(tablet) {
+					width: 34.8rem;
+				}
 				@include media(mobile) {
 					width: 100%;
 					font-size: 2.857rem;
@@ -279,6 +301,10 @@
 		display: block;
 		position: relative;
 		cursor: pointer;
+
+		@include media(tablet) {
+			height: 39.786rem;
+		}
 
 		@include media(mobile) {
 			margin: 0 -1.143rem 5.45rem -1.143rem;
