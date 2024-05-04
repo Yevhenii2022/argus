@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				iconName = icons.pdf;
 			} else if (fileType.includes('doc')) {
 				iconName = icons.doc;
-			} else if (fileType.includes('png') || fileType.includes('jpeg')||fileType.includes('gif')||fileType.includes('jpg')) {
+			} else if (fileType.includes('png') || fileType.includes('jpeg') || fileType.includes('gif') || fileType.includes('jpg')) {
 				iconName = icons.img;
 			} else {
 				iconName = '';
@@ -61,4 +61,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			false,
 		);
 	}
+});
+
+jQuery(document).ready(function($) {
+	$('.vacancy__button').on('click', function(e) {
+			e.preventDefault();
+			var target = $(this).attr('href');
+			$('html, body').animate({
+					scrollTop: $(target).offset().top
+			}, 1000);
+	});
 });

@@ -944,6 +944,11 @@ br .select-items:-webkit-scrollbar {
 .service-information__top-image {
   margin-left: -11rem;
   margin-top: 3rem;
+  z-index: -1;
+}
+.service-information__top-image img {
+  height: 15.571rem;
+  width: 15.571rem;
 }
 .service-information__bottom-image {
   margin-left: 46rem;
@@ -956,6 +961,11 @@ br .select-items:-webkit-scrollbar {
 @media (max-width: 1025px) {
   .service-information__bottom-image {
     margin-left: 31rem;
+  }
+}
+@media (max-width: 541px) {
+  .service-information__bottom-image {
+    display: none;
   }
 }
 .service-information__bottom-image img {
@@ -1464,6 +1474,11 @@ br .select-items:-webkit-scrollbar {
 .service-work__inner {
   padding: 7rem 0;
   margin-left: 4rem;
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-left: 50vw;
+  flex-wrap: nowrap;
 }
 @media (max-width: 541px) {
   .service-work__inner {
@@ -1471,6 +1486,7 @@ br .select-items:-webkit-scrollbar {
   }
 }
 .service-work__card {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1479,6 +1495,8 @@ br .select-items:-webkit-scrollbar {
   padding: 1.621rem 1.393rem 1.821rem 1.821rem;
   counter-increment: item;
   transition: all 1s ease-in-out;
+  width: 24rem;
+  flex-shrink: 0;
 }
 .service-work__card::after {
   content: counter(item, decimal-leading-zero) ". ";
@@ -4169,6 +4187,13 @@ br .select-items:-webkit-scrollbar {
     width: 33rem;
   }
 }
+@media (max-width: 541px) {
+  .vacancy__advantages-item:nth-child(even) .vacancy__advantages-image {
+    width: 24.5rem;
+    height: 16.929rem;
+    margin: 0 auto;
+  }
+}
 .vacancy__advantages-item:nth-child(even) .vacancy__advantages-image img {
   height: 100%;
 }
@@ -4231,9 +4256,19 @@ br .select-items:-webkit-scrollbar {
   width: 51.429rem;
   height: 35.5rem;
 }
+.vacancy__advantages-image img {
+  height: 100%;
+}
 @media (max-width: 1025px) {
   .vacancy__advantages-image {
     width: 39.5rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__advantages-image {
+    width: 24.5rem;
+    height: 16.929rem;
+    margin: 0 auto;
   }
 }
 .vacancy__line {

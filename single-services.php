@@ -214,11 +214,11 @@
               <?= $workTitle; ?>
             </h2>
           <?php endif; ?>
-          <div class="service-work__swiper swiper">
-            <div class="service-work__inner swiper-wrapper">
+          <div class="service-work__swiper ">
+            <div class="service-work__inner ">
               <?php while (have_rows('cards')) :
                 the_row(); ?>
-                <div class="service-work__card swiper-slide">
+                <div class="service-work__card ">
 
                   <?php $cardTitle = get_sub_field('card_title') ?? '';
                   $cardImage = get_sub_field('card_image') ?? '';

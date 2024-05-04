@@ -167,33 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
-	const workSwiper = new Swiper('.service-work__swiper', {
-		slidesPerView: 1.22,
-		centeredSlides: true,
-		mousewheel: true,
-		freeMode: true,
-		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
-		on: {
-			slideChange: function () {
-				const slides = document.querySelectorAll('.service-work__card');
-				slides.forEach((slide, index) => {
-					if (index === this.activeIndex) {
-						slide.style.transform = 'rotate(5deg) translateY(-10%)';
-					} else {
-						slide.style.transform = 'rotate(-5deg) translateY(0)';
-					}
-				});
-			},
-		},
-		breakpoints: {
-			541: {
-				slidesPerView: 4.285,
-			},
-		},
-	});
-
 	if (window.innerWidth < 542) {
 		const aboutSlider = new Swiper('.about-banner__slider', {
 			slidesPerView: 1.148,

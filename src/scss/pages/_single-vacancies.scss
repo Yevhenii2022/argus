@@ -261,6 +261,11 @@
           height: 23rem;
           width: 33rem;
         }
+        @include media(mobile) {
+          width: 24.5rem;
+          height: 16.929rem;
+          margin: 0 auto;
+        }
 
         img {
           height: 100%;
@@ -332,10 +337,19 @@
     width: 51.429rem;
     height: 35.5rem;
 
+    img{
+      height: 100%;
+    }
+
     @include media(tablet) {
       width: 39.5rem;
     }
-  }
+    @include media(mobile) {
+      width: 24.5rem;
+      height: 16.929rem;
+      margin: 0 auto;
+    }
+   }
 
   &__line {
     margin-bottom: 1.143rem;

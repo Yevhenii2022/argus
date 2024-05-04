@@ -105,6 +105,11 @@
 	&__top-image {
 		margin-left: -11rem;
 		margin-top: 3rem;
+		z-index: -1;
+		img {
+		  height: 15.571rem;
+			width: 15.571rem;
+		}
 	}
 
 	&__bottom-image {
@@ -118,6 +123,9 @@
 			@include media(tablet) {
 				margin-left: 31rem;
 			}
+			@include media(mobile) {
+				display: none
+			};
 			img {
 				z-index: 1;
 				height: 15.571rem;
@@ -620,12 +628,18 @@
 	&__inner {
 		padding: 7rem 0;
 		margin-left: 4rem;
+		display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+		padding-left: 50vw;
+		flex-wrap: nowrap;
 		@include media(mobile) {
 			margin-left: 0;
 		}
 	}
 
 	&__card {
+		flex: 0 0 auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -634,6 +648,8 @@
 		padding: 1.621rem 1.393rem 1.821rem 1.821rem;
 		counter-increment: item;
 		transition: all 1s ease-in-out;
+		width: 24rem;
+		flex-shrink: 0;
 
 		&::after {
 			content: counter(item, decimal-leading-zero) '. ';
