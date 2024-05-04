@@ -2670,8 +2670,14 @@ br .select-items:-webkit-scrollbar {
   }
 }
 .single-news__image img {
-  width: 100%;
-  height: 100%;
+  width: 102.857rem;
+  height: 52rem;
+}
+@media (max-width: 541px) {
+  .single-news__image img {
+    width: 26.786rem;
+    height: 14rem;
+  }
 }
 .single-news__img--error {
   width: 40rem !important;
@@ -4962,16 +4968,18 @@ br .select-items:-webkit-scrollbar {
 }
 
 .hero {
-  padding: 5.857rem 1.714rem 0 1.714rem;
+  margin-bottom: 8.545rem;
+  padding: 5.857rem 0 0;
+  height: 100dvh;
 }
 @media (max-width: 541px) {
   .hero {
-    padding: 4.714rem 0.571rem 0 0.571rem;
+    margin-bottom: 4.85rem;
+    padding: 4.714rem 0 0;
   }
 }
 .hero__wrapper {
-  margin-bottom: 8.571rem;
-  height: calc(100dvh - 5.857rem);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4980,16 +4988,9 @@ br .select-items:-webkit-scrollbar {
   background-color: #f9f9f9;
   border-radius: 1.429rem;
 }
-@media (max-width: 1025px) {
-  .hero__wrapper {
-    height: 48.714rem;
-  }
-}
 @media (max-width: 541px) {
   .hero__wrapper {
-    margin-bottom: 4.85rem;
     justify-content: initial;
-    height: 52.714rem;
   }
 }
 .hero__background {
@@ -5012,7 +5013,7 @@ br .select-items:-webkit-scrollbar {
   bottom: 0;
   left: 0;
   height: 100%;
-  width: 36.5rem;
+  width: 35.5rem;
   display: flex;
   align-items: end;
 }
@@ -5053,7 +5054,7 @@ br .select-items:-webkit-scrollbar {
   right: 0;
   bottom: 0;
   height: 100%;
-  width: 36.5rem;
+  width: 35.5rem;
 }
 @media (max-width: 1025px) {
   .hero__background-right {
@@ -5121,21 +5122,11 @@ br .select-items:-webkit-scrollbar {
   }
 }
 .hero__box {
-  height: 89dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 9;
-}
-@media (max-width: 1025px) {
-  .hero__box {
-    height: 42rem;
-  }
-}
-@media (max-width: 541px) {
-  .hero__box {
-    height: auto;
-  }
 }
 .hero__logo {
   display: none;
@@ -5204,7 +5195,7 @@ br .select-items:-webkit-scrollbar {
 @media (max-width: 541px) {
   .hero__text {
     width: 83%;
-    margin: 10.6rem auto 0 auto;
+    margin: 0 auto;
   }
 }
 .hero__phone {
@@ -5773,6 +5764,11 @@ br .select-items:-webkit-scrollbar {
   left: 40.2rem;
   z-index: 8;
 }
+@media (max-width: 1025px) {
+  .services__navigation {
+    left: 28.4rem;
+  }
+}
 @media (max-width: 541px) {
   .services__navigation {
     width: 91.5%;
@@ -5786,6 +5782,11 @@ br .select-items:-webkit-scrollbar {
   bottom: 2.8rem;
   right: 18.3rem;
   z-index: 1;
+}
+@media (max-width: 1025px) {
+  .services__button {
+    right: 10.8rem;
+  }
 }
 @media (max-width: 541px) {
   .services__button {
@@ -6150,6 +6151,11 @@ br .select-items:-webkit-scrollbar {
   line-height: 1;
   position: relative;
   color: #ffffff;
+}
+@media (max-width: 1025px) {
+  .contact__title > * {
+    font-size: 5.9rem;
+  }
 }
 @media (max-width: 541px) {
   .contact__title > * {

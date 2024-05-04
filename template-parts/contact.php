@@ -39,9 +39,11 @@ $img = get_field('contact_img');
                             <?php endif; ?>
                         </div>
 
-                        <div class="contact__button button">
-                            <div class="button__wrapper">
-                                <p> <?php pll_e('contact_with_us'); ?></p>
+                        <div class="anim-title _anim-items">
+                            <div class="contact__button button">
+                                <div class="button__wrapper">
+                                    <p> <?php pll_e('contact_with_us'); ?></p>
+                                </div>
                             </div>
                         </div>
                     </div>
