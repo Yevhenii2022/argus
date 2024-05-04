@@ -8,17 +8,15 @@ $img = get_field('contact_img');
 <div class="image-container" cursor-class="arrow">
     <a href="#contact-us" id="contact-link">
         <section class="contact">
-            <?php if ($img) : ?>
-                <style>
-                    .contact {
-                        background-image: url('<?= $img ?>');
-                    }
-                </style>
-            <?php endif; ?>
+
+            <div class="contact__bg">
+                <?php if ($img) : ?>
+                    <img class="thumbnail" src="<?= $img ?>" alt="фонове зображення">
+                <?php endif; ?>
+            </div>
 
             <div class="container">
                 <div class="contact__wrapper">
-
                     <div>
                         <div class="contact__top">
                             <?php if ($desc) : ?>

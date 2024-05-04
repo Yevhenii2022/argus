@@ -2641,6 +2641,7 @@ br .select-items:-webkit-scrollbar {
   }
 }
 .single-news__container {
+  margin-top: 8.3rem;
   position: relative;
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 1151 1187' fill='none' xmlns='http://www.w3.org/2000/svg' id='about-svg'%3E%3Cg opacity='0.15'%3E%3Cpath d='M370.51 211.163L271.701 1H748.492C935.131 1 1140.59 115.492 1140.59 393.097C1140.59 615.182 981.659 732.393 902.194 763.238L1150 1186.7H913.173L561.853 590.715H748.492C801.817 590.715 935.13 562.484 935.13 393.097C935.13 257.588 810.705 215.346 748.492 211.163H370.51Z' stroke='black' /%3E%3Cpath d='M414.356 779.778L20.213 15.9863L-587.703 1185.06H-336.075L20.213 474.707L171.635 779.778H414.356Z' stroke='black' /%3E%3Cpath d='M512.327 982.47H278.205L379.712 1190.4H622.02L512.327 982.47Z' stroke='black' /%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -2649,6 +2650,7 @@ br .select-items:-webkit-scrollbar {
 }
 @media (max-width: 541px) {
   .single-news__container {
+    margin-top: 5.65rem;
     background-position: -18rem 0;
     background-size: auto 53rem;
   }
@@ -6273,22 +6275,58 @@ br .select-items:-webkit-scrollbar {
 
 .contact {
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 1.25rem;
+  border-radius: 1.429rem;
+  overflow: hidden;
+}
+.contact__bg {
+  height: 76.071rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 1.429rem;
+  overflow: hidden;
+}
+@media (max-width: 1025px) {
+  .contact__bg {
+    height: 55.071rem;
+  }
+}
+@media (max-width: 541px) {
+  .contact__bg {
+    height: 58rem;
+  }
+}
+.contact__bg img {
+  height: 76.071rem;
+  border-radius: 1.429rem;
+  overflow: hidden;
+}
+@media (max-width: 1025px) {
+  .contact__bg img {
+    height: 55.071rem;
+  }
+}
+@media (max-width: 541px) {
+  .contact__bg img {
+    height: 58rem;
+  }
 }
 .contact__wrapper {
-  margin-bottom: 8.3rem;
   padding: 2.7rem 0 2.9rem 0;
   height: 76.05rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 1025px) {
+  .contact__wrapper {
+    height: 55.071rem;
+  }
+}
 @media (max-width: 541px) {
   .contact__wrapper {
-    margin-bottom: 5.65rem;
     height: 58rem;
   }
 }
@@ -6299,6 +6337,12 @@ br .select-items:-webkit-scrollbar {
   margin-bottom: 11.25rem;
   display: flex;
   gap: 29.7rem;
+}
+@media (max-width: 1025px) {
+  .contact__top {
+    margin-bottom: 6.25rem;
+    gap: 19.7rem;
+  }
 }
 @media (max-width: 541px) {
   .contact__top {
