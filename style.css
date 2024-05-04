@@ -7496,6 +7496,11 @@ br .select-items:-webkit-scrollbar {
   text-transform: uppercase;
   font-size: 0.786rem;
 }
+@media (max-width: 1025px) {
+  .form__file label p {
+    width: 30rem;
+  }
+}
 @media (max-width: 541px) {
   .form__file label p {
     width: 22rem;
