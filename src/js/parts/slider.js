@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (window.innerWidth < 542) {
 		const values = new Swiper('.about-values__right', {
 			watchSlidesProgress: true,
-			slidesPerView: 1.21,
+			slidesPerView: 1.1,
 			spaceBetween: 8,
 			centeredSlides: true,
 			navigation: {
@@ -82,8 +82,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				type: 'progressbar',
 			},
 		});
+	}
 
-		const responsibilities = new Swiper('.vacancy__responsibilities-list', {
+	if (window.innerWidth < 542) {
+		const responsibilities = new Swiper('.vacancy__responsibilities-right', {
 			watchSlidesProgress: true,
 			slidesPerView: 1.21,
 			spaceBetween: 8,

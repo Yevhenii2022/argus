@@ -2143,6 +2143,7 @@ br .select-items:-webkit-scrollbar {
   .about-values__right {
     margin-top: 0;
     width: 100%;
+    padding-right: 0;
   }
 }
 .about-values__list {
@@ -2161,7 +2162,7 @@ br .select-items:-webkit-scrollbar {
   counter-increment: item;
   background-color: #ffffff;
   border-radius: 50%;
-  width: 22rem;
+  width: 22rem !important;
   height: 22rem;
   display: flex;
   flex-direction: column;
@@ -4408,9 +4409,6 @@ br .select-items:-webkit-scrollbar {
   font-size: 1.929rem;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
 }
-.vacancy__responsibilities-right {
-  margin-top: 14rem;
-}
 @media (max-width: 541px) {
   .vacancy__responsibilities-right {
     margin-top: 0;
@@ -4422,11 +4420,13 @@ br .select-items:-webkit-scrollbar {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  padding-top: 12rem;
 }
 @media (max-width: 541px) {
   .vacancy__responsibilities-list {
     margin-bottom: 6.3rem;
-    flex-direction: initial;
+    flex-direction: row;
+    padding-top: 0;
   }
 }
 .vacancy__responsibilities-item {
@@ -4469,7 +4469,7 @@ br .select-items:-webkit-scrollbar {
 }
 .vacancy__responsibilities-item:nth-child(even) {
   transform: rotate(5deg);
-  margin-left: 15rem;
+  margin-left: 26rem;
   margin-bottom: -7rem;
 }
 @media (max-width: 541px) {
@@ -4481,10 +4481,12 @@ br .select-items:-webkit-scrollbar {
 .vacancy__responsibilities-item:nth-child(odd) {
   transform: rotate(-5deg);
   margin-bottom: -7rem;
+  margin-left: 10rem;
 }
 @media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(odd) {
     margin-bottom: 0;
+    margin-left: 0;
   }
 }
 .vacancy__responsibilities-item:last-child {
@@ -4496,14 +4498,59 @@ br .select-items:-webkit-scrollbar {
 .vacancy__responsibilities-item:nth-child(4) .vacancy__responsibilities-description, .vacancy__responsibilities-item:nth-child(8) .vacancy__responsibilities-description {
   color: #ffffff;
 }
-.vacancy__responsibilities-item:nth-child(1)::after, .vacancy__responsibilities-item:nth-child(5)::after {
+.vacancy__responsibilities-item:nth-child(1)::after {
   content: "";
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+  background-image: url("/wp-content/themes/pointer-theme/src/img/work-1.png");
   background-repeat: no-repeat;
-  height: 0.786rem;
-  width: 0.643rem;
-  margin-top: 0.4rem;
-  flex-shrink: 0;
+  height: 22rem;
+  width: 22rem;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 11rem;
+  left: 16rem;
+  z-index: -1;
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(1)::after {
+    bottom: 0;
+    content: none;
+  }
+}
+.vacancy__responsibilities-item:nth-child(5)::after {
+  content: "";
+  background-image: url("/wp-content/themes/pointer-theme/src/img/work-2.png");
+  background-repeat: no-repeat;
+  height: 22rem;
+  width: 22rem;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 17rem;
+  right: 8rem;
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(5)::after {
+    bottom: 0;
+    content: none;
+  }
+}
+.vacancy__responsibilities-item:nth-child(7) {
+  margin-top: -11rem;
+  margin-left: 1rem;
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(7) {
+    margin-top: auto;
+    margin-left: 0;
+  }
+}
+.vacancy__responsibilities-item:nth-child(8) {
+  margin-left: 15rem;
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(8) {
+    margin-left: 0;
+  }
 }
 .vacancy__responsibilities-title {
   font-size: 0.786rem;

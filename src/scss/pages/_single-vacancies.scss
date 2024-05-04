@@ -501,7 +501,7 @@
     }
 
     &-right {
-      margin-top: 14rem;
+     
 
       @include media(mobile) {
         margin-top: 0;
@@ -514,10 +514,12 @@
       list-style-type: none;
       display: flex;
       flex-direction: column;
+      padding-top: 12rem;
 
       @include media(mobile) {
         margin-bottom: 6.3rem;
-        flex-direction: initial;
+        flex-direction: row;
+        padding-top: 0;
       }
     }
 
@@ -562,7 +564,7 @@
 
       &:nth-child(even) {
         transform: rotate(5deg);
-        margin-left: 15rem;
+        margin-left: 26rem;
         margin-bottom: -7rem;
 
         @include media(mobile) {
@@ -574,9 +576,11 @@
       &:nth-child(odd) {
         transform: rotate(-5deg);
         margin-bottom: -7rem;
+        margin-left: 10rem;
 
         @include media(mobile) {
           margin-bottom: 0;
+          margin-left: 0;
         }
       }
 
@@ -593,16 +597,56 @@
         }
       }
 
-      &:nth-child(1),
-      &:nth-child(5) {
+     &:nth-child(1) {
         &::after {
           content: "";
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 43'%3E%3Cpath d='M16.9811 43H0L19.0189 21.5L0 0H16.9811L36 21.5L16.9811 43Z' fill='%23F41B1B' /%3E%3C/svg%3E");
+          background-image: url("/wp-content/themes/pointer-theme/src/img/work-1.png");
           background-repeat: no-repeat;
-          height: 0.786rem;
-          width: 0.643rem;
-          margin-top: 0.4rem;
-          flex-shrink: 0;
+          height: 22rem;
+          width: 22rem;
+          border-radius: 100%;
+          position: absolute;
+          bottom: 11rem;
+          left: 16rem;
+          z-index: -1;
+          @include media(mobile) {
+            bottom: 0;
+            content: none;
+          }
+        }
+      }
+      &:nth-child(5){
+        &::after {
+          content: "";
+          background-image: url("/wp-content/themes/pointer-theme/src/img/work-2.png");
+          background-repeat: no-repeat;
+          height: 22rem;
+          width: 22rem;
+          border-radius: 100%;
+          position: absolute;
+          z-index: -1;
+          bottom: 17rem;
+          right: 8rem;
+          @include media(mobile) {
+            bottom: 0;
+            content: none;
+          }
+        }
+      }
+
+      &:nth-child(7){
+        margin-top: -11rem;
+        margin-left: 1rem;
+        @include media(mobile) {
+          margin-top: auto;
+          margin-left: 0;
+        }
+      }
+
+      &:nth-child(8){
+        margin-left: 15rem;
+        @include media(mobile) {
+          margin-left: 0;
         }
       }
     }

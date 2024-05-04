@@ -650,6 +650,9 @@
 		transition: all 1s ease-in-out;
 		width: 24rem;
 		flex-shrink: 0;
+		@include media(mobile) {
+		
+		}
 
 		&::after {
 			content: counter(item, decimal-leading-zero) '. ';
