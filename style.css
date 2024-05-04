@@ -4102,6 +4102,8 @@ br .select-items:-webkit-scrollbar {
   .vacancy__heading-image {
     padding-bottom: 1rem;
     margin-top: 0;
+    height: 13rem;
+    width: 13rem;
   }
 }
 @media (max-width: 541px) {
@@ -4112,9 +4114,15 @@ br .select-items:-webkit-scrollbar {
 .vacancy__heading-title {
   margin-bottom: 1.286rem;
 }
+@media (max-width: 1025px) {
+  .vacancy__heading-title {
+    width: 72%;
+  }
+}
 @media (max-width: 541px) {
   .vacancy__heading-title {
     margin-bottom: 0;
+    width: 100%;
   }
 }
 .vacancy__advantages-item {
