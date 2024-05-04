@@ -3688,6 +3688,7 @@ br .select-items:-webkit-scrollbar {
 .contacts__phone, .contacts__email {
   width: fit-content;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .contacts__phone span, .contacts__email span {
   line-height: 125%;
@@ -4508,6 +4509,11 @@ br .select-items:-webkit-scrollbar {
   gap: 7rem;
   padding-left: 1.714rem;
 }
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-wrapper {
+    gap: 1rem;
+  }
+}
 @media (max-width: 541px) {
   .vacancy__responsibilities-wrapper {
     padding-top: 5.714rem;
@@ -4589,14 +4595,20 @@ br .select-items:-webkit-scrollbar {
   opacity: 0;
   transition: opacity 2s ease;
 }
-.vacancy__responsibilities-item.is-visible {
-  opacity: 1;
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item {
+    width: 18rem;
+    height: 18rem;
+  }
 }
 @media (max-width: 541px) {
   .vacancy__responsibilities-item {
     width: 22rem;
     height: 22rem;
   }
+}
+.vacancy__responsibilities-item.is-visible {
+  opacity: 1;
 }
 .vacancy__responsibilities-item::before {
   content: counter(item, decimal-leading-zero) ". ";
@@ -4614,6 +4626,11 @@ br .select-items:-webkit-scrollbar {
   margin-left: 26rem;
   margin-bottom: -7rem;
 }
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(even) {
+    margin-left: 15rem;
+  }
+}
 @media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(even) {
     margin-left: 0;
@@ -4624,6 +4641,11 @@ br .select-items:-webkit-scrollbar {
   transform: rotate(-5deg);
   margin-bottom: -7rem;
   margin-left: 10rem;
+}
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(odd) {
+    margin-left: 2rem;
+  }
 }
 @media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(odd) {
@@ -4651,11 +4673,50 @@ br .select-items:-webkit-scrollbar {
   bottom: 11rem;
   left: 16rem;
   z-index: -1;
+  background-size: cover;
+}
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(1)::after {
+    height: 18rem;
+    width: 18rem;
+    left: 12rem;
+  }
 }
 @media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(1)::after {
     bottom: 0;
     content: none;
+    height: 22rem;
+    width: 22rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(3) {
+    margin-top: auto;
+  }
+}
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(4) {
+    margin-left: 25rem;
+    margin-top: -5rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(4) {
+    margin-left: 0rem;
+    margin-top: auto;
+  }
+}
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(5) {
+    margin-left: 14rem;
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(5) {
+    margin-left: 0rem;
+    margin-top: auto;
   }
 }
 .vacancy__responsibilities-item:nth-child(5)::after {
@@ -4669,16 +4730,44 @@ br .select-items:-webkit-scrollbar {
   z-index: -1;
   bottom: 17rem;
   right: 8rem;
+  background-size: cover;
+}
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(5)::after {
+    height: 18rem;
+    width: 18rem;
+    bottom: 13rem;
+  }
 }
 @media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(5)::after {
     bottom: 0;
     content: none;
+    height: 22rem;
+    width: 22rem;
+  }
+}
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(6) {
+    margin-left: 25rem;
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-item:nth-child(6) {
+    margin-top: auto;
+    margin-left: 0;
   }
 }
 .vacancy__responsibilities-item:nth-child(7) {
   margin-top: -11rem;
   margin-left: 1rem;
+}
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(7) {
+    margin-top: -12rem;
+    margin-left: 0rem;
+  }
 }
 @media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(7) {
@@ -4689,9 +4778,16 @@ br .select-items:-webkit-scrollbar {
 .vacancy__responsibilities-item:nth-child(8) {
   margin-left: 15rem;
 }
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-item:nth-child(8) {
+    margin-left: 11rem;
+    margin-top: 1rem;
+  }
+}
 @media (max-width: 541px) {
   .vacancy__responsibilities-item:nth-child(8) {
     margin-left: 0;
+    margin-top: auto;
   }
 }
 .vacancy__responsibilities-title {
@@ -4761,7 +4857,7 @@ br .select-items:-webkit-scrollbar {
   transform: translateZ(0);
 }
 @media (max-width: 541px) {
-  .vacancy__proposition * {
+  .vacancy__proposition-image {
     display: none;
   }
 }
@@ -4997,7 +5093,7 @@ br .select-items:-webkit-scrollbar {
   opacity: 1;
   z-index: -1;
   top: 0;
-  bottom: 0;
+  height: 100vh;
   padding-bottom: 2.286rem;
   background-color: #ededed;
   padding-top: 6.857rem;

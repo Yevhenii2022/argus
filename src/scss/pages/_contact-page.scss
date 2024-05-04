@@ -114,6 +114,7 @@
   &__email {
     width: fit-content;
     position: relative;
+    transition: $transition;
 
     span{
       line-height: 125%;
