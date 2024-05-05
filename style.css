@@ -1899,10 +1899,6 @@ br .select-items:-webkit-scrollbar {
 .about-stages__item-inner {
   height: 100dvh;
   position: relative;
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.143rem 1rem 5.643rem;
-  gap: 1.143rem;
   background-color: #ededed;
   z-index: -1;
 }
@@ -1937,6 +1933,19 @@ br .select-items:-webkit-scrollbar {
 }
 .about-stages__img img {
   height: 100%;
+}
+.about-stages__box {
+  height: 100dvh;
+  padding: 20dvh 0 4.6rem 5.643rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.about-stages__flex {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
 }
 .about-stages__text {
   margin-top: 8rem;
@@ -2421,15 +2430,6 @@ br .select-items:-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   gap: 0.571rem;
-  position: absolute;
-  bottom: 4.786rem;
-  right: 0;
-}
-@media (max-width: 541px) {
-  .years {
-    top: 1.5rem;
-    left: 0;
-  }
 }
 .years > div {
   display: flex;

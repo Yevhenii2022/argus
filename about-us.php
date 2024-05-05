@@ -121,61 +121,74 @@ get_header();
                                 <div class="about-stages__bg" style="background-image: url('<?php echo esc_url($stageBackground); ?>')">
                                 </div>
 
-                                <div class="about-stages__text">
-                                    <?php if ($stageHeading) : ?>
-                                        <div class="about-stages__title">
-                                            <?= $stageHeading; ?>
+
+                                <div class="about-stages__box">
+
+                                    <div class="about-stages__flex">
+                                        <div class="about-stages__text">
+                                            <?php if ($stageHeading) : ?>
+                                                <div class="about-stages__title">
+                                                    <?= $stageHeading; ?>
+                                                </div>
+                                            <?php endif ?>
+                                            <?php if ($stageDescription) : ?>
+                                                <div class="about-stages__description">
+                                                    <?= $stageDescription; ?>
+                                                </div>
+                                            <?php endif ?>
                                         </div>
-                                    <?php endif ?>
-                                    <?php if ($stageDescription) : ?>
-                                        <div class="about-stages__description">
-                                            <?= $stageDescription; ?>
-                                        </div>
-                                    <?php endif ?>
-                                </div>
-                                <?php if ($stageImg) : ?>
-                                    <div class="about-stages__img" data-image-wrap>
-                                        <img src='<?php echo $stageImg['url']; ?>' alt='<?php echo $stageImg['alt']; ?>' />
-                                        <?php if ($startDate) : ?>
-                                            <div class="about-stages__year-first">
-                                                <?= $startDate; ?>
+
+                                        <?php if ($stageImg) : ?>
+                                            <div class="about-stages__img" data-image-wrap>
+                                                <img src='<?php echo $stageImg['url']; ?>' alt='<?php echo $stageImg['alt']; ?>' />
+                                                <?php if ($startDate) : ?>
+                                                    <div class="about-stages__year-first">
+                                                        <?= $startDate; ?>
+                                                    </div>
+                                                <?php endif ?>
+                                                <?php if ($endDate) : ?>
+                                                    <div class="about-stages__year-last">
+                                                        <?= $endDate; ?>
+                                                    </div>
+                                                <?php endif ?>
                                             </div>
                                         <?php endif ?>
-                                        <?php if ($endDate) : ?>
-                                            <div class="about-stages__year-last">
-                                                <?= $endDate; ?>
-                                            </div>
-                                        <?php endif ?>
+
                                     </div>
-                                <?php endif ?>
 
-                                <?php
-                                $stages = get_field('stages');
-                                ?>
-                                <div class="years">
+
+
                                     <?php
-                                    if ($stages) {
-                                        foreach ($stages as $stage) {
-                                            $end_date = $stage['end_date'];
+                                    $stages = get_field('stages');
                                     ?>
+                                    <div class="years">
+                                        <?php
+                                        if ($stages) {
+                                            foreach ($stages as $stage) {
+                                                $end_date = $stage['end_date'];
+                                        ?>
 
-                                            <div>
-                                                <p>20<?= $end_date; ?></p>
+                                                <div>
+                                                    <p>20<?= $end_date; ?></p>
 
-                                                <?php
-                                                if ($end_date == $endDate) {
-                                                ?>
-                                                    <div class="line"></div>
-                                                <?php
-                                                }
-                                                ?>
-                                            </div>
-                                    <?php
+                                                    <?php
+                                                    if ($end_date == $endDate) {
+                                                    ?>
+                                                        <div class="line"></div>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </div>
+                                        <?php
+                                            }
                                         }
-                                    }
-                                    ?>
+                                        ?>
+
+                                    </div>
 
                                 </div>
+
+
                             </div>
                         </div>
                     <? endwhile; ?>
