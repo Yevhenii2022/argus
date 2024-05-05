@@ -194,15 +194,26 @@
 	}
 
 	&__wrapper {
+		min-height: 53rem;
 		padding: 8.2rem 1.714rem;
 		border-radius: 1.429rem;
 		background-color: $white;
+		transition: $transition;
+
+		@include media(tablet) {
+			min-height: 55rem;
+			padding: 5.8rem 1.714rem;
+		}
 		@include media(mobile) {
+			min-height: 42rem;
 			padding: 5.5rem 1.143rem;
 		}
 
 		&:has(.pagination) {
 			padding: 8.2rem 1.714rem 16.5rem 1.714rem;
+			@include media(tablet) {
+				padding: 5.8rem 1.714rem 12.5rem 1.714rem;
+			}
 			@include media(mobile) {
 				padding: 5.5rem 1.143rem 10.3rem 1.143rem;
 			}

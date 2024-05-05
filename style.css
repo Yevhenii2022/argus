@@ -1,6 +1,6 @@
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -587,6 +587,11 @@ br .select-items:-webkit-scrollbar {
 
 .reviews .pagination {
   bottom: 8.5rem;
+}
+@media (max-width: 1025px) {
+  .reviews .pagination {
+    bottom: 6.5rem;
+  }
 }
 @media (max-width: 541px) {
   .reviews .pagination {
@@ -4029,17 +4034,31 @@ br .select-items:-webkit-scrollbar {
   color: rgba(24, 24, 24, 0.3);
 }
 .reviews__wrapper {
+  min-height: 53rem;
   padding: 8.2rem 1.714rem;
   border-radius: 1.429rem;
   background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1025px) {
+  .reviews__wrapper {
+    min-height: 55rem;
+    padding: 5.8rem 1.714rem;
+  }
 }
 @media (max-width: 541px) {
   .reviews__wrapper {
+    min-height: 42rem;
     padding: 5.5rem 1.143rem;
   }
 }
 .reviews__wrapper:has(.pagination) {
   padding: 8.2rem 1.714rem 16.5rem 1.714rem;
+}
+@media (max-width: 1025px) {
+  .reviews__wrapper:has(.pagination) {
+    padding: 5.8rem 1.714rem 12.5rem 1.714rem;
+  }
 }
 @media (max-width: 541px) {
   .reviews__wrapper:has(.pagination) {
