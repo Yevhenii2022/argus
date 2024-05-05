@@ -257,13 +257,6 @@
 		position: relative;
 		background-color: $bg;
 		z-index: -1;
-
-		@include media(mobile) {
-			padding: 12rem 1.143rem 2.286rem 1.143rem;
-			flex-direction: column-reverse;
-			justify-content: space-between;
-			gap: 0.2rem;
-		}
 	}
 
 	&__bg {
@@ -297,12 +290,24 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-end;
+
+		@include media(mobile) {
+			padding: 2.286rem 1.143rem 2.286rem 0;
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			gap: 3rem;
+		}
 	}
 
 	&__flex {
 		display: flex;
 		gap: 1rem;
 		align-items: flex-end;
+
+		@include media(mobile) {
+			padding-left: 1.143rem;
+			flex-direction: column-reverse;
+		}
 	}
 
 	&__text {

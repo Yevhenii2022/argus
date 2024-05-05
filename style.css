@@ -1902,14 +1902,6 @@ br .select-items:-webkit-scrollbar {
   background-color: #ededed;
   z-index: -1;
 }
-@media (max-width: 541px) {
-  .about-stages__item-inner {
-    padding: 12rem 1.143rem 2.286rem 1.143rem;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    gap: 0.2rem;
-  }
-}
 .about-stages__bg {
   position: absolute;
   background-size: cover;
@@ -1942,10 +1934,24 @@ br .select-items:-webkit-scrollbar {
   justify-content: space-between;
   align-items: flex-end;
 }
+@media (max-width: 541px) {
+  .about-stages__box {
+    padding: 2.286rem 1.143rem 2.286rem 0;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
 .about-stages__flex {
   display: flex;
   gap: 1rem;
   align-items: flex-end;
+}
+@media (max-width: 541px) {
+  .about-stages__flex {
+    padding-left: 1.143rem;
+    flex-direction: column-reverse;
+  }
 }
 .about-stages__text {
   margin-top: 8rem;
