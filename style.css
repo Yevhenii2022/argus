@@ -1481,8 +1481,8 @@ br .select-items:-webkit-scrollbar {
   margin-bottom: 1.571rem;
 }
 .service-work__inner {
-  padding: 7rem 0;
-  margin-left: 4rem;
+  padding: 3rem 0 2rem 0;
+  margin: 4rem 0 5rem 0;
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -1730,7 +1730,7 @@ br .select-items:-webkit-scrollbar {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 .about-banner__description {
-  margin: 1.143rem auto 23.857rem auto;
+  margin: 1.143rem auto 5.857rem auto;
   text-align: center;
   width: 18rem;
 }
@@ -1853,7 +1853,7 @@ br .select-items:-webkit-scrollbar {
 }
 
 .about-projects {
-  padding-top: 9rem;
+  padding-top: 3rem;
 }
 @media (max-width: 541px) {
   .about-projects {
