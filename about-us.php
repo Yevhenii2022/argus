@@ -121,9 +121,7 @@ get_header();
                                 <div class="about-stages__bg" style="background-image: url('<?php echo esc_url($stageBackground); ?>')">
                                 </div>
 
-
                                 <div class="about-stages__box">
-
                                     <div class="about-stages__flex">
                                         <div class="about-stages__text">
                                             <?php if ($stageHeading) : ?>
@@ -153,10 +151,7 @@ get_header();
                                                 <?php endif ?>
                                             </div>
                                         <?php endif ?>
-
                                     </div>
-
-
 
                                     <?php
                                     $stages = get_field('stages');
@@ -167,7 +162,6 @@ get_header();
                                             foreach ($stages as $stage) {
                                                 $end_date = $stage['end_date'];
                                         ?>
-
                                                 <div>
                                                     <p>20<?= $end_date; ?></p>
 
@@ -183,11 +177,8 @@ get_header();
                                             }
                                         }
                                         ?>
-
                                     </div>
-
                                 </div>
-
 
                             </div>
                         </div>
