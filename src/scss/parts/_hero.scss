@@ -250,13 +250,9 @@
 		height: 3.071rem;
 		position: fixed;
 		right: 1.514rem;
-		bottom: 12.5dvh;
+		bottom: 10rem;
 		z-index: 9;
 		display: none;
-
-		@include media(tablet) {
-			bottom: 8dvh;
-		}
 
 		svg {
 			transition: $transition;

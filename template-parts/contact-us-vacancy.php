@@ -23,10 +23,13 @@
           <div class="contact-us__left">
             <?php if ($sectionVideo) : ?>
               <div class="contact-us__video">
-                <video id="form-video" preload="auto" no-controls autoplay loop playsinline muted>
+                <video id="form-video" preload="auto" no-controls autoplay playsinline muted>
                   <source src="<?php echo $sectionVideo['url']; ?>" type="<?php echo $sectionVideo['mime_type']; ?>">
                   Your browser does not support the video tag.
                 </video>
+                <svg id="form-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" fill="none">
+                  <path fill="#fff" fill-rule="evenodd" d="M16.5 33C25.613 33 33 25.613 33 16.5S25.613 0 16.5 0 0 7.387 0 16.5 7.387 33 16.5 33ZM22 16.5 14 11v11l8-5.5Z" clip-rule="evenodd" />
+                </svg>
               </div>
             <?php endif ?>
             <div class="contact-us__text">

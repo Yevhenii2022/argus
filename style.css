@@ -5710,14 +5710,9 @@ br .select-items:-webkit-scrollbar {
   height: 3.071rem;
   position: fixed;
   right: 1.514rem;
-  bottom: 12.5dvh;
+  bottom: 10rem;
   z-index: 9;
   display: none;
-}
-@media (max-width: 1025px) {
-  .hero__phone {
-    bottom: 8dvh;
-  }
 }
 .hero__phone svg {
   transition: all 0.3s ease-in-out;
@@ -7604,6 +7599,11 @@ br .select-items:-webkit-scrollbar {
   text-transform: uppercase;
   font-size: 0.786rem;
 }
+@media (max-width: 1025px) {
+  .form__file label p {
+    width: 30rem;
+  }
+}
 @media (max-width: 541px) {
   .form__file label p {
     width: 22rem;
@@ -7771,8 +7771,6 @@ br .select-items:-webkit-scrollbar {
 .contact-us__video {
   height: 27.071rem;
   width: 17.929rem;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -7785,24 +7783,27 @@ br .select-items:-webkit-scrollbar {
     height: 15.5rem;
   }
 }
+.contact-us__video svg {
+  width: 2.357rem;
+  height: 2.357rem;
+  position: absolute;
+  right: 0.6rem;
+  top: 0.6rem;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  pointer-events: none;
+}
+@media (max-width: 541px) {
+  .contact-us__video svg {
+    width: 1.643rem;
+    height: 1.643rem;
+  }
+}
 .contact-us__video video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.contact-us__video::before {
-  content: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzMgMzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTYuNSAzM0MyNS42MTI3IDMzIDMzIDI1LjYxMjcgMzMgMTYuNUMzMyA3LjM4NzMgMjUuNjEyNyAwIDE2LjUgMEM3LjM4NzMgMCAwIDcuMzg3MyAwIDE2LjVDMCAyNS42MTI3IDcuMzg3MyAzMyAxNi41IDMzWk0yMiAxNi41TDE0IDExVjIyTDIyIDE2LjVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
-  position: absolute;
-  right: 0.6rem;
-  top: 0.6rem;
-  height: 2.357rem;
-  width: 2.357rem;
-}
-@media (max-width: 541px) {
-  .contact-us__video::before {
-    width: 1.643rem;
-    height: 1.643rem;
-  }
 }
 .contact-us__text {
   display: flex;
