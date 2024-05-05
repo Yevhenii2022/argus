@@ -5129,10 +5129,10 @@ br .select-items:-webkit-scrollbar {
   opacity: 1;
   z-index: -1;
   top: 0;
-  height: 100vh;
   padding-bottom: 2.286rem;
   background-color: #ededed;
   padding-top: 6.857rem;
+  bottom: 0;
 }
 .header__left {
   display: flex;
