@@ -76,7 +76,7 @@
 	}
 
 	&__description {
-		margin: 1.143rem auto 23.857rem auto;
+		margin: 1.143rem auto 5.857rem auto;
 		text-align: center;
 		width: 18rem;
 
@@ -206,7 +206,7 @@
 }
 
 .about-projects {
-	padding-top: 9rem;
+	padding-top: 3rem;
 
 	@include media(mobile) {
 		padding-top: 0;

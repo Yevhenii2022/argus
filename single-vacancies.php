@@ -111,7 +111,7 @@
                     </h3>
                    <div class="vacancy__advantages-inner">
                       <?php if ($advantagesText): ?>
-                      <div class="vacancy__advantages-description">
+                      <div class="vacancy__advantages-description anim-title _anim-items">
                         <?= $advantagesText?>
                       </div>
                       <?php endif ?>
@@ -198,7 +198,7 @@
               <div class="vacancy__responsibilities-wrapper">
                 <div class="vacancy__responsibilities-left">
                     <?php if ($responsibilitiesTitle) : ?>
-                    <h2 class="vacancy__responsibilities-heading main__title">
+                    <h2 class="vacancy__responsibilities-heading main__title ">
                         <?= $responsibilitiesTitle; ?>
                     </h2>
                     <?php endif ?>

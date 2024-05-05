@@ -53,7 +53,7 @@ get_header();
               <?php endif; ?>
           
               <div class="contacts__grid">
-                <div class="contacts__phone-inner">
+                <div class="contacts__phone-inner anim-title _anim-items">
               <?php if ($phoneBlockName) : ?>
                 <p class="contacts__block-name contacts__red-arrow">
                   <?= $phoneBlockName ;?>
@@ -74,7 +74,7 @@ get_header();
                   </a>
                   <?php endif; ?>
               </div>
-              <div class="contacts__email-inner">
+              <div class="contacts__email-inner anim-title _anim-items">
               <?php if ($emailBlockName) : ?>
                 <p class="contacts__block-name contacts__red-arrow">
                   <?= $emailBlockName ;?>
@@ -96,16 +96,14 @@ get_header();
             <?php endif; ?>
               </div>
             </div>
-       
-          
-        
-        <div class="contacts__address-inner">
+               
+        <div class="contacts__address-inner ">
         <?php while (have_rows('address')):
                             the_row();
                 $addressName =  get_sub_field('address_type') ?? '' ;
                 $addressContent = get_sub_field('address_text') ?? '' ;
                 $addressButtonLink =  get_sub_field('address_link') ?? '' ; ?>
-          <div class="contacts__address-item">
+          <div class="contacts__address-item anim-title _anim-items">
             <?php if ($addressName) : ?>   
             <p class="contacts__address-type contacts__red-arrow">
               <?= $addressName ;?>
@@ -126,8 +124,6 @@ get_header();
         </div>
        </div>
      
-   
-
       <div class="contacts__right">
           <?php if ($contactsImage) : ?>
           <div class="contacts__image">

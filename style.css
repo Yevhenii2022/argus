@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -150,6 +150,10 @@ main {
   z-index: 1;
   position: relative;
   background-color: #ededed;
+}
+
+body.scroll-lock {
+  overflow: hidden;
 }
 
 .main__title {
@@ -1482,8 +1486,8 @@ br .select-items:-webkit-scrollbar {
   margin-bottom: 1.571rem;
 }
 .service-work__inner {
-  padding: 7rem 0;
-  margin-left: 4rem;
+  padding: 3rem 0 2rem 0;
+  margin: 4rem 0 5rem 0;
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -1731,7 +1735,7 @@ br .select-items:-webkit-scrollbar {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 .about-banner__description {
-  margin: 1.143rem auto 23.857rem auto;
+  margin: 1.143rem auto 5.857rem auto;
   text-align: center;
   width: 18rem;
 }
@@ -1854,7 +1858,7 @@ br .select-items:-webkit-scrollbar {
 }
 
 .about-projects {
-  padding-top: 9rem;
+  padding-top: 3rem;
 }
 @media (max-width: 541px) {
   .about-projects {
@@ -5110,11 +5114,6 @@ br .select-items:-webkit-scrollbar {
   width: 7.071rem;
   height: 2.357rem;
 }
-@media (max-width: 541px) {
-  .header__logo {
-    opacity: 0.65;
-  }
-}
 .header__logo img {
   min-width: 100%;
   object-fit: contain;
@@ -5130,28 +5129,29 @@ br .select-items:-webkit-scrollbar {
 }
 @media (max-width: 541px) {
   .header__content {
-    opacity: 0;
     position: fixed;
     width: 100%;
-    top: -350%;
-    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -100%;
     z-index: -1;
     overflow: auto;
-    padding: 0 1.143rem;
+    padding: 6.857rem 1.143rem 2.286rem 1.143rem;
     transition: all 0.7s ease;
     flex-direction: column;
     width: 100%;
+    background-color: #ededed;
   }
 }
 .header__content.open {
   display: flex;
-  opacity: 1;
   z-index: -1;
   top: 0;
-  height: 100vh;
-  padding-bottom: 2.286rem;
+  right: 0;
   background-color: #ededed;
   padding-top: 6.857rem;
+  padding: 6.857rem 1.143rem 2.286rem 1.143rem;
+  bottom: 0;
 }
 .header__left {
   display: flex;

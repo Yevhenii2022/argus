@@ -29,7 +29,7 @@ get_header();
                             </h1>
                         <?php endif ?>
                         <?php if ($description) : ?>
-                            <p class="about-banner__description">
+                            <p class="about-banner__description anim-title _anim-items">
                                 <?= $description; ?>
                             </p>
                         <?php endif ?>
@@ -95,7 +95,7 @@ get_header();
                             </h2>
                         <?php endif ?>
                         <?php if ($stageSubtitle) : ?>
-                            <p class="about-stages__subtitle">
+                            <p class="about-stages__subtitle anim-title _anim-items">
                                 <svg viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.24528 11H0L4.75472 5.5L0 0H4.24528L9 5.5L4.24528 11Z" fill="#F41B1B" />
                                 </svg>
@@ -314,13 +314,13 @@ get_header();
                         <div class="about-team__text">
                             <div class="about-team__top">
                                 <?php if ($teamName) : ?>
-                                    <div class="about-team__name">
+                                    <div class="about-team__name anim-title _anim-items">
                                         <?= $teamName; ?>
                                     </div>
                                 <?php endif ?>
                                 <div class="about-team__description">
                                     <?php if ($teamDescription) : ?>
-                                        <div class="about-team__paragraph">
+                                        <div class="about-team__paragraph anim-title _anim-items">
                                             <?= $teamDescription; ?>
                                         </div>
                                     <?php endif ?>
