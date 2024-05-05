@@ -122,3 +122,7 @@ main {
 	position: relative;
 	background-color: $bg;
 }
+
+body.scroll-lock {
+	overflow: hidden;
+}
