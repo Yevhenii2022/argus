@@ -22,7 +22,7 @@ $title_section = get_field('reviews_title_section') ?? '';
 
       <div class="reviews__top">
         <h1 class="reviews__title title anim-title _anim-items"><?= $title; ?></h1>
-        <div class="reviews__box">
+        <div class="reviews__box anim-title _anim-items">
           <ul>
             <?php if ($gallery) {
               foreach ($gallery as $image) {
