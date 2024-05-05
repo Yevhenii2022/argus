@@ -635,6 +635,7 @@
 		flex-wrap: nowrap;
 		@include media(mobile) {
 			margin-left: 0;
+			padding-left: 3rem;
 		}
 	}
 
