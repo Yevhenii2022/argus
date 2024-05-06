@@ -93,6 +93,13 @@
 	&__desc {
 		color: $white;
 		max-width: 18.5rem;
+		@include media(tablet) {
+			max-width: 20.5rem;
+			font-size: 1.143rem;
+		}
+		@include media(mobile) {
+			font-size: 1rem;
+		}
 	}
 
 	&__link {
@@ -178,6 +185,13 @@
 	&__text {
 		color: $white;
 		max-width: 26rem;
+
+		@include media(tablet) {
+			font-size: 1.143rem;
+		}
+		@include media(mobile) {
+			font-size: 1rem;
+		}
 	}
 }
 

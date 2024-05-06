@@ -25,7 +25,7 @@ get_header();
 					$title = get_field('single_news_title');
 					?>
 					<?php if ($title) : ?>
-						<h1 class="single-news__title title">
+						<h1 class="single-news__title title anim-title _anim-items">
 							<?= $title; ?>
 						</h1>
 					<?php endif; ?>
@@ -53,7 +53,7 @@ get_header();
 					$slider_title = get_field('single_news_slider_title');
 					?>
 					<?php if ($slider_title) : ?>
-						<h2 class="single-news__title title">
+						<h2 class="single-news__title title anim-title _anim-items">
 							<?= $slider_title; ?>
 						</h2>
 					<?php endif; ?>
