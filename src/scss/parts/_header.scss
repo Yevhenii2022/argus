@@ -49,7 +49,6 @@
     justify-content: space-between;
 
     @include media(mobile) {
-        // opacity: 0;
         position: fixed;
         width: 100%;
         top: 0;
@@ -66,7 +65,6 @@
 
     &.open {
         display: flex;
-        // opacity: 1;
         z-index: -1;
         top: 0;
         right: 0; 
@@ -129,7 +127,7 @@
 						
 						.header__phone-img {
 							&::before {
-							// transform: scale(1.2);
+						
 							background: rgba(18, 18, 18, 0.15);
 							}
 						}
@@ -300,7 +298,11 @@
 				height: 0.071rem;
 				background-color: $black;
 				transition: width 0.5s;
+
+				@include media(mobile) {
+					content: initial;
 			}
+		}
 
 			&:hover:after {
 				content: '';
@@ -311,6 +313,10 @@
 				height: 0.071rem;
 				background-color: $black;
 				transition: width 0.5s;
+				
+				@include media(mobile) {
+					content: initial;
+			  }
 			}
 
 			@include media(mobile) {
@@ -337,7 +343,7 @@
 				content: none;
 			}
 			@include media(mobile) {
-				font-size: 0.786rem;
+				font-size: 1rem;
 			}
 		}
 
