@@ -90,6 +90,9 @@
 		display: flex;
 		align-items: center;
 		gap: 12.7rem;
+		@include media(mobile) {
+			gap: 10.7rem;
+		}
 	}
 
 	&__contacts {
@@ -103,6 +106,9 @@
         align-items: center;
         gap: 1.5rem;
 				transition: $transition;
+				@include media(mobile) {
+				padding-left: 1rem;
+				}
 				
 
         span {
@@ -110,6 +116,9 @@
             line-height: 0.75rem;
             text-transform: uppercase;
             position: relative;
+						@include media(mobile) {
+							font-size: 1rem;
+						}
             &:after {
 							content: '';
 							display: block;
@@ -183,6 +192,18 @@
 		gap: 0.6rem;
 		display: none;
 		cursor: pointer;
+		-webkit-tap-highlight-color: transparent; 
+		-webkit-touch-callout: none; 
+		-webkit-user-select: none; 
+		-khtml-user-select: none; 
+		-moz-user-select: none; 
+		-ms-user-select: none; 
+		user-select: none;
+		touch-action: none;
+
+   &:focus { 
+    outline: none !important; 
+  }
 		@include media(mobile) {
 			display: flex;
 			align-items: center;

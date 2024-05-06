@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -5169,6 +5169,11 @@ br .select-items:-webkit-scrollbar {
   align-items: center;
   gap: 12.7rem;
 }
+@media (max-width: 541px) {
+  .header__right {
+    gap: 10.7rem;
+  }
+}
 .header__contacts {
   display: flex;
   align-items: center;
@@ -5180,11 +5185,21 @@ br .select-items:-webkit-scrollbar {
   gap: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 541px) {
+  .header__phone {
+    padding-left: 1rem;
+  }
+}
 .header__phone span {
   font-size: 0.786rem;
   line-height: 0.75rem;
   text-transform: uppercase;
   position: relative;
+}
+@media (max-width: 541px) {
+  .header__phone span {
+    font-size: 1rem;
+  }
 }
 .header__phone span:after {
   content: "";
@@ -5242,6 +5257,17 @@ br .select-items:-webkit-scrollbar {
   gap: 0.6rem;
   display: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+.header__mobile-menu:focus {
+  outline: none !important;
 }
 @media (max-width: 541px) {
   .header__mobile-menu {
