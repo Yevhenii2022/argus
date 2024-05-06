@@ -332,8 +332,8 @@ get_header();
                                 </div>
                             </div>
                             <div class="about-team__bottom">
-
-                                <a href="<?= get_home_url() . '/vacancies' ?>" class="about-team__link link">
+                            
+                                <a href="<?php echo esc_url(get_home_url() . '/vacancies/'); ?>" class="about-team__link link">
                                     <span>
                                         <?php pll_e('view_vacancies_link') ?>
                                     </span>

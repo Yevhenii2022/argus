@@ -1739,6 +1739,12 @@ br .select-items:-webkit-scrollbar {
   text-align: center;
   width: 18rem;
 }
+@media (max-width: 1025px) {
+  .about-banner__description {
+    width: 29rem;
+    font-size: 1.286rem;
+  }
+}
 @media (max-width: 541px) {
   .about-banner__description {
     text-align: start;
@@ -1828,6 +1834,11 @@ br .select-items:-webkit-scrollbar {
   width: 16.429rem;
   padding-top: 1.5rem;
 }
+@media (max-width: 1025px) {
+  .about-banner__item-text {
+    font-size: 1.286rem;
+  }
+}
 .about-banner .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
   display: none;
 }
@@ -1902,6 +1913,11 @@ br .select-items:-webkit-scrollbar {
   justify-content: center;
   gap: 0.286rem;
   margin-top: 1.714rem;
+}
+@media (max-width: 1025px) {
+  .about-stages__subtitle {
+    font-size: 1.286rem;
+  }
 }
 @media (max-width: 541px) {
   .about-stages__subtitle {
@@ -2292,6 +2308,11 @@ br .select-items:-webkit-scrollbar {
   text-transform: uppercase;
   text-align: center;
 }
+@media (max-width: 1025px) {
+  .about-values__title {
+    font-size: 1.286rem;
+  }
+}
 @media (max-width: 541px) {
   .about-values__title {
     font-size: 1rem;
@@ -2302,6 +2323,11 @@ br .select-items:-webkit-scrollbar {
   text-align: center;
   font-size: 1rem;
   line-height: 120%;
+}
+@media (max-width: 1025px) {
+  .about-values__description {
+    font-size: 1.143rem;
+  }
 }
 .about-values__pagination {
   display: none;
@@ -2370,6 +2396,7 @@ br .select-items:-webkit-scrollbar {
   flex-direction: column;
   justify-content: space-between;
   width: 54%;
+  flex-shrink: 0;
 }
 @media (max-width: 541px) {
   .about-team__text {
@@ -2435,6 +2462,7 @@ br .select-items:-webkit-scrollbar {
   font-size: 0.786rem;
   line-height: 100%;
   margin-bottom: 1.5rem;
+  padding-top: 0.2rem;
 }
 .about-team__link span::before {
   width: 1.143rem;
@@ -7280,7 +7308,7 @@ br .select-items:-webkit-scrollbar {
 }
 @media (max-width: 541px) {
   .projects-slider__swiper {
-    margin-bottom: 0.714rem;
+    margin-bottom: 2.857rem;
   }
 }
 .projects-slider__list {
