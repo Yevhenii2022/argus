@@ -517,8 +517,6 @@
     }
 
     &-right {
-
-
       @include media(mobile) {
         margin-top: 0;
         width: 100%;
@@ -769,6 +767,15 @@
         text-align: center;
         font-size: 1rem;
         line-height: 120%;
+
+        @include media(tablet) {
+          font-size: 1.286rem;
+        }
+        
+        @include media(mobile) {
+          font-size: 1rem;
+        }
+
       }
 
       &-pagination {
@@ -777,6 +784,7 @@
         @include media(mobile) {
           position: relative;
           display: block;
+          margin-top: 4.286rem;
 
           .swiper-button-next,
           .swiper-button-prev {

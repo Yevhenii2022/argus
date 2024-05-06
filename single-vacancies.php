@@ -196,9 +196,9 @@
               $responsibilitiesSubTitle = get_field('responsibilities_subtitle') ?? ''; ?>
         <div class="vacancy__responsibilities">
               <div class="vacancy__responsibilities-wrapper">
-                <div class="vacancy__responsibilities-left">
+                <div class="vacancy__responsibilities-left anim-title _anim-items">
                     <?php if ($responsibilitiesTitle) : ?>
-                    <h2 class="vacancy__responsibilities-heading main__title ">
+                    <h2 class="vacancy__responsibilities-heading main__title">
                         <?= $responsibilitiesTitle; ?>
                     </h2>
                     <?php endif ?>

@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			watchSlidesProgress: true,
 			slidesPerView: 1.1,
 			spaceBetween: 8,
+			freeMode: true,
 			centeredSlides: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			watchSlidesProgress: true,
 			slidesPerView: 1.21,
 			spaceBetween: 8,
+			freeMode: true,
 			centeredSlides: true,
 			navigation: {
 				nextEl: '.swiper-button-next',

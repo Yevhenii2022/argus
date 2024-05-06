@@ -2361,6 +2361,7 @@ br .select-items:-webkit-scrollbar {
   .about-values__pagination {
     position: relative;
     display: block;
+    margin-top: 4.286rem;
   }
   .about-values__pagination .swiper-button-next,
   .about-values__pagination .swiper-button-prev {
@@ -4953,6 +4954,16 @@ br .select-items:-webkit-scrollbar {
   font-size: 1rem;
   line-height: 120%;
 }
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-description {
+    font-size: 1.286rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-description {
+    font-size: 1rem;
+  }
+}
 .vacancy__responsibilities-pagination {
   display: none;
 }
@@ -4960,6 +4971,7 @@ br .select-items:-webkit-scrollbar {
   .vacancy__responsibilities-pagination {
     position: relative;
     display: block;
+    margin-top: 4.286rem;
   }
   .vacancy__responsibilities-pagination .swiper-button-next,
   .vacancy__responsibilities-pagination .swiper-button-prev {
