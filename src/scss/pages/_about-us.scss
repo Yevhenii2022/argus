@@ -91,6 +91,7 @@
 			text-align: start;
 			width: 97%;
 			margin: 1.3rem 0 0 0;
+			font-size: 1rem;
 		}
 	}
 
@@ -185,6 +186,9 @@
 			@include media(tablet) {
 				font-size: 1.286rem;
 			}
+			@include media(mobile) {
+				font-size: 1rem;
+			}
 		}
 	}
 
@@ -273,6 +277,7 @@
 
 		@include media(mobile) {
 			margin-top: 2rem;
+			font-size: 1rem;
 		}
 
 		svg {
@@ -755,9 +760,12 @@
 
 	&__paragraph {
 		text-align: end;
-
+		@include media(tablet) {
+		font-size: 1.286rem;
+		}
 		@include media(mobile) {
 			text-align: start;
+			font-size: 1rem;
 		}
 	}
 

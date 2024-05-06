@@ -73,12 +73,14 @@
     @include media(tablet) {
       padding-left: 9.7rem;
       padding-right: 9.7rem;
+      font-size: 1.286rem;
     }
 
     @include media(mobile) {
       padding-left: 0rem;
       padding-right: 2rem;
       margin-bottom: 2.857rem;
+      font-size: 1rem;
     }
   }
 
@@ -423,6 +425,14 @@
     li {
       display: flex;
       gap: 1rem;
+
+      @include media(tablet) {
+        font-size: 1.286rem;
+      }
+
+      @include media(mobile) {
+       font-size: 1rem;
+      }
 
       &::before {
         counter-increment: item;

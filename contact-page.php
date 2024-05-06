@@ -40,7 +40,7 @@ get_header();
               </h1>
               <?php endif; ?>
               <?php if ($contactsText) : ?>
-              <p class="contacts__text contacts__red-arrow">
+              <p class="contacts__text contacts__red-arrow anim-title _anim-items">
                 <?= $contactsText?>
               </p>
               <?php endif; ?>

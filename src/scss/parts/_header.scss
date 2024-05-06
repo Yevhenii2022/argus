@@ -150,6 +150,9 @@
 								height: 0.071rem;
 								background-color: $black;
 								transition: width 0.5s;
+								@include media(mobile) {
+									content: none;
+								}
 							}
 						}	
 					}
