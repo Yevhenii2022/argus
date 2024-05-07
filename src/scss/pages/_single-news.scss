@@ -23,6 +23,9 @@
 		&:has(.news-slider) {
 			.news-slider {
 				padding-bottom: 9rem;
+				@include media(mobile) {
+					padding-bottom: 0.4rem;
+				}
 			}
 		}
 	}
@@ -229,14 +232,19 @@
 	}
 
 	&__button {
-		align-self: center;
+		&--show {
+			align-self: center;
+			@include media(mobile) {
+				display: none;
+			}
+		}
 
-		@include media(mobile) {
-			margin: 0 auto;
-			position: absolute;
-			bottom: -33rem;
-			left: 0;
-			right: 0;
+		&--hide {
+			display: none;
+			@include media(mobile) {
+				margin: 0 auto 5.4rem auto;
+				display: block;
+			}
 		}
 	}
 }

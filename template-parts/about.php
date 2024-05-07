@@ -69,7 +69,7 @@ $title = get_field('about_title') ?? '';
                             <p class="about__top-desc anim-title _anim-items"><?= $desc ?></p>
                         <?php endif; ?>
 
-                        <a href="<?php echo esc_url(get_home_url() . '/about/'); ?>" class="about__top-link link" style="width: <?php echo (pll_current_language() === 'en') ? '3.97rem' : '3.571rem'; ?>">
+                        <a href="<?php echo esc_url(get_home_url() . '/about/'); ?>" class="about__top-link link anim-title _anim-items" style="width: <?php echo (pll_current_language() === 'en') ? '3.97rem' : '3.571rem'; ?>">
                             <span>
                                 <?php pll_e('more_about_us') ?>
                             </span>

@@ -29,14 +29,28 @@ get_header();
         </h3>
       <?php endif; ?>
 
-      <a href="<?php echo esc_url(get_home_url() . '/news/'); ?>" class="single-news__button button">
+      <div class="single-news__button--show anim-title _anim-items">
+        <a href="<?php echo esc_url(get_home_url() . '/news/'); ?>" class="button">
+          <div class="button__wrapper">
+            <p> <?php pll_e('all_news'); ?></p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <?php get_template_part('template-parts/news-slider'); ?>
+
+
+
+    <div class="anim-title _anim-items">
+      <a href="<?php echo esc_url(get_home_url() . '/news/'); ?>" class="single-news__button--hide button">
         <div class="button__wrapper">
           <p> <?php pll_e('all_news'); ?></p>
         </div>
       </a>
     </div>
 
-    <?php get_template_part('template-parts/news-slider'); ?>
+
   </div>
 
   <?php get_template_part('template-parts/contact-us'); ?>
