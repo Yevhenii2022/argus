@@ -120,16 +120,40 @@ function smoothScale(element, targetScale, currentScale, step) {
 
 function handleScroll() {
 	var footer = document.querySelector('.footer--additional');
-	var main = document.querySelector('main');
-
-	if (isElementInViewport(footer)) {
-		var footerHeightInView = Math.max(0, window.innerHeight - footer.getBoundingClientRect().top);
-		var targetScale = 1 - footerHeightInView * 0.00002;
-		var currentScale = parseFloat(main.style.transform.replace('scale(', '').replace(')', '')) || 1;
-		smoothScale(main, targetScale, currentScale, 0.0005);
-	} else {
-		smoothScale(main, 1, 1, 0.0005);
+	var main = document.querySelector('.contact-us');
+	var reviews = document.querySelector('.reviews__wrapper');
+	var aboutTeam = document.querySelector('.about-team');
+	if (main) {
+		if (isElementInViewport(footer)) {
+			var footerHeightInView = Math.max(0, window.innerHeight - footer.getBoundingClientRect().top);
+			var targetScale = 1 - footerHeightInView * 0.00004;
+			var currentScale = parseFloat(main.style.transform.replace('scale(', '').replace(')', '')) || 1;
+			smoothScale(main, targetScale, currentScale, 0.0005);
+		} else {
+			smoothScale(main, 1, 1, 0.0005);
+		}
 	}
+	if (reviews) {
+		if (isElementInViewport(footer)) {
+			var footerHeightInView = Math.max(0, window.innerHeight - footer.getBoundingClientRect().top);
+			var targetScale = 1 - footerHeightInView * 0.00004;
+			var currentScale = parseFloat(reviews.style.transform.replace('scale(', '').replace(')', '')) || 1;
+			smoothScale(reviews, targetScale, currentScale, 0.0005);
+		} else {
+			smoothScale(reviews, 1, 1, 0.0005);
+		}
+	}
+	if (aboutTeam) {
+		if (isElementInViewport(footer)) {
+			var footerHeightInView = Math.max(0, window.innerHeight - footer.getBoundingClientRect().top);
+			var targetScale = 1 - footerHeightInView * 0.00004;
+			var currentScale = parseFloat(aboutTeam.style.transform.replace('scale(', '').replace(')', '')) || 1;
+			smoothScale(aboutTeam, targetScale, currentScale, 0.0005);
+		} else {
+			smoothScale(aboutTeam, 1, 1, 0.0005);
+		}
+	}
+
 }
 
 window.addEventListener('scroll', handleScroll);

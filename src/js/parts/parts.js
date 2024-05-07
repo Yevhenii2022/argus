@@ -9,6 +9,7 @@ import './form';
 import './parallax';
 import './about-us';
 import './single-service';
+import './locomotive';
 
 
 
