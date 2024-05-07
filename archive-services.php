@@ -71,17 +71,18 @@ get_header(); ?>
                     <div class="services-block__last">
                     <?php $lastCard = get_field('last_title') ?? '' ;
                     if ($lastCard) : ?>
-                        <h2 class="services-block__last-title">
+                        <h2 class="services-block__last-title anim-title _anim-items">
                             <?= $lastCard ;?>
                         </h2>
                       <?php endif ?>  
-
-                        <a href="<?php echo esc_url(get_home_url() . '/contacts/'); ?>" class="services-block__button button">
+                        <div class="anim-title _anim-items">
+                        <a href="<?php echo esc_url(get_home_url() . '/contacts/'); ?>" class="services-block__button button ">
                             <div class="button__wrapper">
                                 <p><?php pll_e('contact_button') ?></p>
                             </div>
                         </a>
-                    </div>
+                     </div>
+                </div>
             </div>
         </div>
     </section>

@@ -17,6 +17,10 @@
     height: 85rem;
     top: 5.857rem;
     z-index: -1;
+   
+    @include media(mobile) {
+      background-image: initial !important;
+    }
   }
 
   &__wrapper {}
