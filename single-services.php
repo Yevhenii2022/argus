@@ -25,7 +25,7 @@
             </h1>
           <?php endif ?>
           <?php if ($serviceDescription) : ?>
-            <p class="service-hero__text">
+            <p class="service-hero__text anim-title _anim-items">
               <?= $serviceDescription; ?>
             </p>
           <?php endif ?>
@@ -159,7 +159,7 @@
                 $advantagesHeading = get_sub_field('advantages_card_heading') ?? '';
                 $advantagesDescription = get_sub_field('advantages_card_desc') ?? ''; 
                 
-                $maxLength = 335;
+                $maxLength = 320;
                 $trimmedText = mb_substr($advantagesDescription, 0, $maxLength, 'UTF-8');
                 
                 ?>
@@ -277,7 +277,7 @@
               <?= $otherTitle; ?>
             </h2>
           <?php endif; ?>
-          <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="service-cards__button button">
+          <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="service-cards__button button anim-title _anim-items">
             <div class="button__wrapper">
               <p><?php pll_e('all_services') ?></p>
             </div>

@@ -28,7 +28,7 @@ get_header(); ?>
             </h1>
           <?php endif ?>
           <?php if ($vacanciesDescription) : ?>
-            <p class="vacancies__text">
+            <p class="vacancies__text anim-title _anim-items">
               <?= $vacanciesDescription; ?>
             </p>
           <?php endif ?>

@@ -250,9 +250,12 @@
           position: absolute;
           right: 0;
           width: 0;
-          height: 0.071rem;
+          height: 0.05rem;
           background-color: $black;
           transition: width 0.5s;
+          @include media(mobile) {
+            content: none;
+          }
         }
           &:hover,
           &:focus{
@@ -262,9 +265,12 @@
                 display: block;
                 position: absolute;
                 left: 0;
-                height: 0.071rem;
+                height: 0.05rem;
                 background-color: $black;
                 transition: width 0.5s;
+                @include media(mobile) {
+                  content: none;
+                }
               }
             }
           }

@@ -139,7 +139,7 @@
           </h2>
           <?php endif ?>
           <div class="vacancy__candidate-block">
-             <div class="vacancy__candidate-inner">
+             <div class="vacancy__candidate-inner anim-title _anim-items">
                  <div class="vacancy__line">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
                       <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />
@@ -163,7 +163,7 @@
                   <?php endwhile?>
                  </ul>     
              </div>
-             <div class="vacancy__candidate-inner">
+             <div class="vacancy__candidate-inner anim-title _anim-items">
               <div class="vacancy__line">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
                   <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />
@@ -196,9 +196,9 @@
               $responsibilitiesSubTitle = get_field('responsibilities_subtitle') ?? ''; ?>
         <div class="vacancy__responsibilities">
               <div class="vacancy__responsibilities-wrapper">
-                <div class="vacancy__responsibilities-left">
+                <div class="vacancy__responsibilities-left anim-title _anim-items">
                     <?php if ($responsibilitiesTitle) : ?>
-                    <h2 class="vacancy__responsibilities-heading main__title ">
+                    <h2 class="vacancy__responsibilities-heading main__title">
                         <?= $responsibilitiesTitle; ?>
                     </h2>
                     <?php endif ?>
@@ -250,7 +250,7 @@
                     <img src='<?php echo $proposition_image['url']; ?>' alt='<?php echo $proposition_image['alt']; ?>' />
                   </div>
                 </div>
-                <ul>
+                <ul class="anim-title _anim-items">
                   <?php
                   while (have_rows('proposition_list')) : the_row();
                       $proposition_text = get_sub_field('proposition_text') ?? '';
