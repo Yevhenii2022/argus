@@ -92,11 +92,11 @@
 
 	&__title {
 		margin: 0.8rem 0 0.5rem 0;
-		height: 5.9rem;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 3;
-		overflow: hidden;
+		height: 5.9rem !important;
+		display: -webkit-box !important;
+		-webkit-box-orient: vertical !important;
+		-webkit-line-clamp: 3 !important;
+		overflow: hidden !important;
 		font-family: $medium;
 		font-weight: 550;
 		font-size: 1.929rem;
@@ -104,7 +104,7 @@
 
 		@include media(mobile) {
 			margin: 0 0 0.6rem 0;
-			height: 4.66rem;
+			height: 4.66rem !important;
 			font-size: 1.571rem;
 		}
 	}
