@@ -23,15 +23,6 @@ jQuery(function ($) {
 				if (response !== 'no_posts') {
 					blogsContainer.append(response);
 					canLoad = true;
-
-					var newsTop = document.querySelector('.news__top');
-					if (newsTop) {
-						var scrollOptions = {
-							top: newsTop.offsetTop,
-							behavior: 'smooth',
-						};
-						window.scrollTo(scrollOptions);
-					}
 				}
 			});
 		}
@@ -81,6 +72,15 @@ jQuery(function ($) {
 		var option = $('#blogs__select').val();
 		blogsContainer.empty();
 		loadBlogs(category, option, page);
+
+		var newsTop = document.querySelector('.news__top');
+		if (newsTop) {
+			var scrollOptions = {
+				top: newsTop.offsetTop,
+				behavior: 'smooth',
+			};
+			window.scrollTo(scrollOptions);
+		}
 	});
 
 	loadBlogs('all');

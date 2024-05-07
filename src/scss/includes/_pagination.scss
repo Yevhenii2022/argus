@@ -80,6 +80,10 @@
 			border: 0.071rem solid transparent;
 			transition: $transition;
 
+			svg {
+				padding-left: 0.1rem;
+			}
+
 			&:hover {
 				border: 0.071rem solid $black;
 			}

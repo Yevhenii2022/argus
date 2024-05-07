@@ -201,14 +201,14 @@
 	}
 
 	&__wrapper {
-		min-height: 53rem;
+		min-height: 53.85rem;
 		padding: 8.2rem 1.714rem;
 		border-radius: 1.429rem;
 		background-color: $white;
 		transition: $transition;
 
 		@include media(tablet) {
-			min-height: 55rem;
+			min-height: 52.9rem;
 			padding: 5.8rem 1.714rem;
 		}
 		@include media(mobile) {
