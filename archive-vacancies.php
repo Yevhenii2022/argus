@@ -74,7 +74,7 @@ get_header(); ?>
              
               ?>
                           
-            <a href="<?php the_permalink() ?>" class="vacancies__item">
+            <a href="<?php the_permalink() ?>" class="vacancies__item anim-title _anim-items">
             <?php if ($vacancyLocation) : ?>
               <p class="vacancies__location">
                 <?= $vacancyLocation ;?>
