@@ -22,15 +22,6 @@ jQuery(function ($) {
 					if (reviewsContainer) {
 						reviewsContainer.append(response);
 						canLoad = true;
-
-						var reviewsWrapper = document.querySelector('.reviews__wrapper');
-						if (reviewsWrapper) {
-							var scrollOptions = {
-								top: reviewsWrapper.offsetTop,
-								behavior: 'smooth',
-							};
-							window.scrollTo(scrollOptions);
-						}
 					}
 				}
 			});
@@ -42,6 +33,15 @@ jQuery(function ($) {
 		var page = $(this).data('page');
 		reviewsContainer.empty();
 		loadReviews(page);
+
+		var reviewsWrapper = document.querySelector('.reviews__wrapper');
+		if (reviewsWrapper) {
+			var scrollOptions = {
+				top: reviewsWrapper.offsetTop,
+				behavior: 'smooth',
+			};
+			window.scrollTo(scrollOptions);
+		}
 	});
 
 	loadReviews(page);
