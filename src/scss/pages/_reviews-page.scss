@@ -313,3 +313,11 @@
 		}
 	}
 }
+
+.page-template-reviews-page {
+	.footer {
+		@include media(mobile) {
+			padding-top: 2rem;
+		}
+	}
+}

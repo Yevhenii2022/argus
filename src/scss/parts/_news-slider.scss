@@ -79,9 +79,13 @@
 		line-height: 1;
 		overflow: hidden;
 
+		@include media(tablet) {
+			margin: 2.283rem 0;
+			height: 3.92rem;
+		}
 		@include media(mobile) {
-			margin: 1.765rem 0;
-			height: 3.13rem;
+			margin: 1.775rem 0;
+			height: 3.11rem;
 			font-size: 1.571rem;
 		}
 	}

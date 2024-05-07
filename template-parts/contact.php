@@ -58,7 +58,9 @@ $img = get_field('contact_img');
                         }
                         ?>
                         <?php if ($svg_content !== false) : ?>
-                            <?php echo $svg_content; ?>
+                            <div class="anim-title _anim-items">
+                                <?php echo $svg_content; ?>
+                            </div>
                         <?php endif; ?>
 
                         <?php if ($text) : ?>
