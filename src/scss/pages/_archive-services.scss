@@ -45,13 +45,15 @@
     padding-right: 4.786rem;
     line-height: 120%;
 
-    @include media(mobile) {
+    @include media(tablet) {
       padding-left: 11.5rem;
+      font-size: 1.286rem;
     }
     @include media(mobile) {
       padding-left: 0rem;
       padding-right: 2rem;
       margin-bottom: 2.857rem;
+      font-size: 1rem;
    }
   }
 

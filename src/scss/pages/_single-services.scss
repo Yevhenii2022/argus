@@ -32,8 +32,14 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 0.5rem;
+
+		
+		@include media(tablet) {
+      font-size: 1.286rem;
+		}
 		@include media(mobile) {
 			padding-top: 0;
+			font-size: 1rem;
 		}
 
 		&::before {
@@ -466,6 +472,10 @@
 		line-height: 100%;
 		margin-bottom: 11.143rem;
 		max-width: 33.714rem;
+
+		@include media(tablet) {
+			margin-bottom: 5.143rem;
+		}
 		@include media(mobile) {
 			font-size: 1.571rem;
 			margin-bottom: 9.214rem;
@@ -480,6 +490,9 @@
 		max-width: 37.929rem;
 		line-height: 120%;
 		font-size: 1.429rem;
+		@include media(tablet) {
+			font-size: 1.286rem;
+		}
 		@include media(mobile) {
 			font-size: 1.143rem;
 			margin-bottom: 9.214rem;

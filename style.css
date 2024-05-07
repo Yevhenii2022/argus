@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -758,9 +758,10 @@ br .select-items:-webkit-scrollbar {
   padding-right: 4.786rem;
   line-height: 120%;
 }
-@media (max-width: 541px) {
+@media (max-width: 1025px) {
   .our-services__description {
     padding-left: 11.5rem;
+    font-size: 1.286rem;
   }
 }
 @media (max-width: 541px) {
@@ -768,6 +769,7 @@ br .select-items:-webkit-scrollbar {
     padding-left: 0rem;
     padding-right: 2rem;
     margin-bottom: 2.857rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 541px) {
@@ -885,9 +887,15 @@ br .select-items:-webkit-scrollbar {
   justify-content: center;
   gap: 0.5rem;
 }
+@media (max-width: 1025px) {
+  .service-hero__text {
+    font-size: 1.286rem;
+  }
+}
 @media (max-width: 541px) {
   .service-hero__text {
     padding-top: 0;
+    font-size: 1rem;
   }
 }
 .service-hero__text::before {
@@ -1334,6 +1342,11 @@ br .select-items:-webkit-scrollbar {
   margin-bottom: 11.143rem;
   max-width: 33.714rem;
 }
+@media (max-width: 1025px) {
+  .service-advantages__heading {
+    margin-bottom: 5.143rem;
+  }
+}
 @media (max-width: 541px) {
   .service-advantages__heading {
     font-size: 1.571rem;
@@ -1347,6 +1360,11 @@ br .select-items:-webkit-scrollbar {
   max-width: 37.929rem;
   line-height: 120%;
   font-size: 1.429rem;
+}
+@media (max-width: 1025px) {
+  .service-advantages__description {
+    font-size: 1.286rem;
+  }
 }
 @media (max-width: 541px) {
   .service-advantages__description {
@@ -1739,11 +1757,18 @@ br .select-items:-webkit-scrollbar {
   text-align: center;
   width: 18rem;
 }
+@media (max-width: 1025px) {
+  .about-banner__description {
+    width: 29rem;
+    font-size: 1.286rem;
+  }
+}
 @media (max-width: 541px) {
   .about-banner__description {
     text-align: start;
     width: 97%;
     margin: 1.3rem 0 0 0;
+    font-size: 1rem;
   }
 }
 @media (max-width: 541px) {
@@ -1828,6 +1853,16 @@ br .select-items:-webkit-scrollbar {
   width: 16.429rem;
   padding-top: 1.5rem;
 }
+@media (max-width: 1025px) {
+  .about-banner__item-text {
+    font-size: 1.286rem;
+  }
+}
+@media (max-width: 541px) {
+  .about-banner__item-text {
+    font-size: 1rem;
+  }
+}
 .about-banner .swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
   display: none;
 }
@@ -1903,9 +1938,15 @@ br .select-items:-webkit-scrollbar {
   gap: 0.286rem;
   margin-top: 1.714rem;
 }
+@media (max-width: 1025px) {
+  .about-stages__subtitle {
+    font-size: 1.286rem;
+  }
+}
 @media (max-width: 541px) {
   .about-stages__subtitle {
     margin-top: 2rem;
+    font-size: 1rem;
   }
 }
 .about-stages__subtitle svg {
@@ -2292,6 +2333,11 @@ br .select-items:-webkit-scrollbar {
   text-transform: uppercase;
   text-align: center;
 }
+@media (max-width: 1025px) {
+  .about-values__title {
+    font-size: 1.286rem;
+  }
+}
 @media (max-width: 541px) {
   .about-values__title {
     font-size: 1rem;
@@ -2303,6 +2349,11 @@ br .select-items:-webkit-scrollbar {
   font-size: 1rem;
   line-height: 120%;
 }
+@media (max-width: 1025px) {
+  .about-values__description {
+    font-size: 1.143rem;
+  }
+}
 .about-values__pagination {
   display: none;
 }
@@ -2310,6 +2361,7 @@ br .select-items:-webkit-scrollbar {
   .about-values__pagination {
     position: relative;
     display: block;
+    margin-top: 4.286rem;
   }
   .about-values__pagination .swiper-button-next,
   .about-values__pagination .swiper-button-prev {
@@ -2360,9 +2412,15 @@ br .select-items:-webkit-scrollbar {
 .about-team__paragraph {
   text-align: end;
 }
+@media (max-width: 1025px) {
+  .about-team__paragraph {
+    font-size: 1.286rem;
+  }
+}
 @media (max-width: 541px) {
   .about-team__paragraph {
     text-align: start;
+    font-size: 1rem;
   }
 }
 .about-team__text {
@@ -2370,6 +2428,7 @@ br .select-items:-webkit-scrollbar {
   flex-direction: column;
   justify-content: space-between;
   width: 54%;
+  flex-shrink: 0;
 }
 @media (max-width: 541px) {
   .about-team__text {
@@ -2435,6 +2494,7 @@ br .select-items:-webkit-scrollbar {
   font-size: 0.786rem;
   line-height: 100%;
   margin-bottom: 1.5rem;
+  padding-top: 0.2rem;
 }
 .about-team__link span::before {
   width: 1.143rem;
@@ -3029,6 +3089,20 @@ br .select-items:-webkit-scrollbar {
   flex-direction: column;
   justify-content: flex-end;
   gap: 0.5rem;
+}
+@media (max-width: 1025px) {
+  .vacancies__text {
+    font-size: 1.286rem;
+    padding-top: 0rem;
+    width: 31rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancies__text {
+    font-size: 1rem;
+    padding-top: 2rem;
+    width: 100%;
+  }
 }
 .vacancies__text::before {
   content: "";
@@ -3702,12 +3776,14 @@ br .select-items:-webkit-scrollbar {
 @media (max-width: 1025px) {
   .contacts__text {
     margin: 2.286rem 2rem 0 7rem;
+    font-size: 1.286rem;
   }
 }
 @media (max-width: 541px) {
   .contacts__text {
     margin: 2.857rem 0 2.857rem 0;
     flex-direction: column;
+    font-size: 1rem;
   }
 }
 .contacts__address-type, .contacts__block-name {
@@ -4239,6 +4315,7 @@ br .select-items:-webkit-scrollbar {
   .vacancy__description {
     padding-left: 9.7rem;
     padding-right: 9.7rem;
+    font-size: 1.286rem;
   }
 }
 @media (max-width: 541px) {
@@ -4246,6 +4323,7 @@ br .select-items:-webkit-scrollbar {
     padding-left: 0rem;
     padding-right: 2rem;
     margin-bottom: 2.857rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 541px) {
@@ -4570,6 +4648,16 @@ br .select-items:-webkit-scrollbar {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 1025px) {
+  .vacancy__candidate-list li {
+    font-size: 1.286rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__candidate-list li {
+    font-size: 1rem;
+  }
+}
 .vacancy__candidate-list li::before {
   counter-increment: item;
   content: counter(item, decimal-leading-zero) ". ";
@@ -4893,6 +4981,16 @@ br .select-items:-webkit-scrollbar {
   font-size: 1rem;
   line-height: 120%;
 }
+@media (max-width: 1025px) {
+  .vacancy__responsibilities-description {
+    font-size: 1.286rem;
+  }
+}
+@media (max-width: 541px) {
+  .vacancy__responsibilities-description {
+    font-size: 1rem;
+  }
+}
 .vacancy__responsibilities-pagination {
   display: none;
 }
@@ -4900,6 +4998,7 @@ br .select-items:-webkit-scrollbar {
   .vacancy__responsibilities-pagination {
     position: relative;
     display: block;
+    margin-top: 4.286rem;
   }
   .vacancy__responsibilities-pagination .swiper-button-next,
   .vacancy__responsibilities-pagination .swiper-button-prev {
@@ -5196,6 +5295,11 @@ br .select-items:-webkit-scrollbar {
   align-items: center;
   gap: 12.7rem;
 }
+@media (max-width: 541px) {
+  .header__right {
+    gap: 10.7rem;
+  }
+}
 .header__contacts {
   display: flex;
   align-items: center;
@@ -5207,11 +5311,21 @@ br .select-items:-webkit-scrollbar {
   gap: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 541px) {
+  .header__phone {
+    padding-left: 1rem;
+  }
+}
 .header__phone span {
   font-size: 0.786rem;
   line-height: 0.75rem;
   text-transform: uppercase;
   position: relative;
+}
+@media (max-width: 541px) {
+  .header__phone span {
+    font-size: 1rem;
+  }
 }
 .header__phone span:after {
   content: "";
@@ -5235,6 +5349,11 @@ br .select-items:-webkit-scrollbar {
   height: 0.071rem;
   background-color: #181818;
   transition: width 0.5s;
+}
+@media (max-width: 541px) {
+  .header__phone:hover span:after, .header__phone:focus span:after {
+    content: none;
+  }
 }
 .header__phone-img {
   display: inline-block;
@@ -5269,6 +5388,17 @@ br .select-items:-webkit-scrollbar {
   gap: 0.6rem;
   display: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+.header__mobile-menu:focus {
+  outline: none !important;
 }
 @media (max-width: 541px) {
   .header__mobile-menu {
@@ -7155,9 +7285,14 @@ br .select-items:-webkit-scrollbar {
   position: absolute;
   right: 0;
   width: 0;
-  height: 0.071rem;
+  height: 0.05rem;
   background-color: #181818;
   transition: width 0.5s;
+}
+@media (max-width: 541px) {
+  .footer__menu-menu li:after {
+    content: none;
+  }
 }
 .footer__menu-menu li:hover:after, .footer__menu-menu li:focus:after {
   content: "";
@@ -7165,9 +7300,14 @@ br .select-items:-webkit-scrollbar {
   display: block;
   position: absolute;
   left: 0;
-  height: 0.071rem;
+  height: 0.05rem;
   background-color: #181818;
   transition: width 0.5s;
+}
+@media (max-width: 541px) {
+  .footer__menu-menu li:hover:after, .footer__menu-menu li:focus:after {
+    content: none;
+  }
 }
 .footer__bottom {
   display: flex;
@@ -7318,7 +7458,7 @@ br .select-items:-webkit-scrollbar {
 }
 @media (max-width: 541px) {
   .projects-slider__swiper {
-    margin-bottom: 0.714rem;
+    margin-bottom: 2.857rem;
   }
 }
 .projects-slider__list {
@@ -7760,6 +7900,7 @@ br .select-items:-webkit-scrollbar {
 @media (max-width: 541px) {
   .form__file label p {
     width: 22rem;
+    font-size: 1rem;
   }
 }
 .form__file label p span {
