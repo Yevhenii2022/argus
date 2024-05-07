@@ -75,7 +75,7 @@ $video = get_field('project_video');
               ?>
 
                 <?php if ($parameter) : ?>
-                  <li class="project__characteristics">
+                  <li class="project__characteristics anim-title _anim-items">
                     <h3 class="project__parameter"><?= $parameter; ?></h3>
                     <p class="project__category"><?= $category; ?></p>
                   </li>
@@ -121,7 +121,7 @@ $video = get_field('project_video');
             </h3>
           <?php endif; ?>
 
-          <div class="project__start-text">
+          <div class="project__start-text anim-title _anim-items">
             <?php
             $project_text = get_field('project_text') ?? '';
             ?>
@@ -169,7 +169,7 @@ $video = get_field('project_video');
                 $advantages_text = get_sub_field('advantages_text') ?? '';
               ?>
                 <?php if ($advantages_title) : ?>
-                  <li>
+                  <li class="anim-title _anim-items">
                     <div class="project__line">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
                         <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />

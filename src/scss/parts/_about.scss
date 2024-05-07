@@ -6,9 +6,9 @@
 
 	@include media(mobile) {
 		padding-bottom: 5.8rem;
-		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 375 731' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.08'%3E%3Cpath d='M-15.3448 129.889L-75.9423 1H216.465C330.927 1 456.932 71.216 456.932 241.466C456.932 377.667 359.463 449.55 310.728 468.467L462.703 728.171H317.461L102.003 362.662H216.465C249.169 362.662 330.927 345.348 330.927 241.466C330.927 158.361 254.619 132.455 216.465 129.889H-15.3448Z' stroke='%23181818'/%3E%3Cpath d='M11.5455 478.611L-230.176 10.1909L-603 727.161H-448.681L-230.176 291.516L-137.311 478.611H11.5455Z' stroke='%23181818'/%3E%3Cpath d='M71.6294 602.918H-71.9537L-9.70085 730.436H138.902L71.6294 602.918Z' stroke='%23181818'/%3E%3C/g%3E%3C/svg%3E%0A");
-		background-position: 0 0;
-		background-size: auto 52.4rem;
+		background-image: none;
+		// background-position: 0 0;
+		// background-size: auto 52.4rem;
 	}
 
 	&__title {
@@ -122,9 +122,13 @@
 			max-width: 22rem;
 			align-self: center;
 
+			@include media(tablet) {
+				font-size: 1.143rem;
+			}
 			@include media(mobile) {
 				margin-left: 0;
 				max-width: 100%;
+				font-size: 1rem;
 			}
 		}
 

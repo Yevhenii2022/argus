@@ -42,16 +42,16 @@
 			-o-transition: 0.3s ease-in-out;
 		}
 
-		&--error {
-			width: 20rem !important;
-			height: 20rem !important;
-			object-fit: contain !important;
+		// &--error {
+		// 	width: 20rem !important;
+		// 	height: 20rem !important;
+		// 	object-fit: contain !important;
 
-			@include media(mobile) {
-				width: 15rem !important;
-				height: 15rem !important;
-			}
-		}
+		// 	@include media(mobile) {
+		// 		width: 15rem !important;
+		// 		height: 15rem !important;
+		// 	}
+		// }
 	}
 
 	&__content {
@@ -151,7 +151,7 @@
 		text-align: left;
 
 		@include media(mobile) {
-			padding: 0.4rem 0.571rem 0.35rem 0.571rem;
+			padding: 0.45rem 0.571rem 0.35rem 0.571rem;
 		}
 	}
 }
