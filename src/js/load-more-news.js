@@ -24,12 +24,14 @@ jQuery(function ($) {
 					blogsContainer.append(response);
 					canLoad = true;
 
-					$('html, body').animate(
-						{
-							scrollTop: $('.news__top').offset().top,
-						},
-						400,
-					);
+					var newsTop = document.querySelector('.news__top');
+					if (newsTop) {
+						var scrollOptions = {
+							top: newsTop.offsetTop,
+							behavior: 'smooth',
+						};
+						window.scrollTo(scrollOptions);
+					}
 				}
 			});
 		}
