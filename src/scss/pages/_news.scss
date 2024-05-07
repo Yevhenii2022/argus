@@ -186,6 +186,12 @@
 
 						p {
 							display: block;
+							@include media(tablet) {
+								font-size: 1.143rem;
+							}
+							@include media(mobile) {
+								font-size: 1rem;
+							}
 						}
 					}
 

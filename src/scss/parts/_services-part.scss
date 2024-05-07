@@ -108,6 +108,9 @@
 		background-repeat: no-repeat !important;
 		background-size: cover !important;
 		position: relative;
+		@include media(mobile) {
+			margin-left: -0.1rem;
+		}
 
 		&::before {
 			content: '';
@@ -132,7 +135,7 @@
 			// clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
 
 			@include media(mobile) {
-				width: 100%;
+				width: 102%;
 				height: 40.5rem;
 				clip-path: polygon(
 					100% 0%,
