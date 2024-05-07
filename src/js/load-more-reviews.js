@@ -22,6 +22,15 @@ jQuery(function ($) {
 					if (reviewsContainer) {
 						reviewsContainer.append(response);
 						canLoad = true;
+
+						var reviewsWrapper = document.querySelector('.reviews__wrapper');
+						if (reviewsWrapper) {
+							var scrollOptions = {
+								top: reviewsWrapper.offsetTop,
+								behavior: 'smooth',
+							};
+							window.scrollTo(scrollOptions);
+						}
 					}
 				}
 			});

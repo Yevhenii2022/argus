@@ -1,13 +1,13 @@
 .hero {
 	margin-bottom: 8.545rem;
 	padding: 5.857rem 0 0;
-	height: 100dvh;
+	height: 100vh;
 
 	@include media(tablet) {
 		height: 48.714rem;
 	}
 	@include media(mobile) {
-		height: 100dvh;
+		height: 100vh;
 		margin-bottom: 4.85rem;
 		padding: 4.714rem 0 0;
 	}
@@ -74,6 +74,9 @@
 			svg {
 				width: 100%;
 				height: fit-content;
+				@include media(mobile) {
+					height: 18rem;
+				}
 
 				path {
 					stroke-dashoffset: 100%;
@@ -116,6 +119,9 @@
 			svg {
 				width: 100%;
 				height: fit-content;
+				@include media(mobile) {
+					height: 18rem;
+				}
 
 				path {
 					stroke-dashoffset: 100%;
