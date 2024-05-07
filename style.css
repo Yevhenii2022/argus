@@ -3952,8 +3952,7 @@ br .select-items:-webkit-scrollbar {
 @media (max-width: 541px) {
   .reviews {
     padding: 7.3rem 0 0 0;
-    background-position: -17.6rem 7.4rem;
-    background-size: auto 52.3rem;
+    background-image: none;
   }
 }
 .reviews__top {
