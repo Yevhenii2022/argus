@@ -69,23 +69,23 @@
 
 	&__title {
 		margin: 2.286rem 0;
-		height: 3.98rem;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
+		height: 3.98rem !important;
+		display: -webkit-box !important;
+		-webkit-box-orient: vertical !important;
+		-webkit-line-clamp: 2 !important;
 		font-family: $medium;
 		font-weight: 550;
 		font-size: 1.929rem;
 		line-height: 1;
-		overflow: hidden;
+		overflow: hidden !important;
 
 		@include media(tablet) {
 			margin: 2.283rem 0;
-			height: 3.92rem;
+			height: 3.92rem !important;
 		}
 		@include media(mobile) {
 			margin: 1.775rem 0;
-			height: 3.11rem;
+			height: 3.11rem !important;
 			font-size: 1.571rem;
 		}
 	}

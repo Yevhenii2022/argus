@@ -65,12 +65,16 @@
 
     @include media(mobile) {
       height: 22rem;
+    }
 
       img {
-        height: 100%;
+         height: 40.071rem;
+
+         @include media(mobile) {
+          height: 22rem;
+        }
       }
-    }
-  }
+   }
 }
 
 .service-information {
@@ -130,7 +134,7 @@
 
   &__bottom-image {
     margin-left: 46rem;
-    margin-top: -2rem;
+    margin-top: -3rem;
     transform: translateZ(0);
     display: flex;
     position: relative;

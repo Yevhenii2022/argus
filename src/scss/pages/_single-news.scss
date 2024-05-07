@@ -5,6 +5,14 @@
 		padding: 7.3rem 0 0 0;
 	}
 
+	&:has(.news-slider) {
+		.news-slider {
+			@include media(mobile) {
+				padding-bottom: 0.4rem;
+			}
+		}
+	}
+
 	&__container {
 		margin-top: 8.3rem;
 		position: relative;

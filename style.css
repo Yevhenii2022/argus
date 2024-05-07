@@ -921,8 +921,13 @@ br .select-items:-webkit-scrollbar {
   .service-hero__image {
     height: 22rem;
   }
+}
+.service-hero__image img {
+  height: 40.071rem;
+}
+@media (max-width: 541px) {
   .service-hero__image img {
-    height: 100%;
+    height: 22rem;
   }
 }
 
@@ -981,7 +986,7 @@ br .select-items:-webkit-scrollbar {
 }
 .service-information__bottom-image {
   margin-left: 46rem;
-  margin-top: -2rem;
+  margin-top: -3rem;
   transform: translateZ(0);
   display: flex;
   position: relative;
@@ -2873,6 +2878,11 @@ body.single-services .pin-wrap .service-work__card {
 @media (max-width: 541px) {
   .single-news {
     padding: 7.3rem 0 0 0;
+  }
+}
+@media (max-width: 541px) {
+  .single-news:has(.news-slider) .news-slider {
+    padding-bottom: 0.4rem;
   }
 }
 .single-news__container {
@@ -5219,6 +5229,7 @@ body.single-services .pin-wrap .service-work__card {
   .policy__bg {
     width: 100%;
     top: 17.857rem;
+    background-image: none !important;
   }
 }
 .policy__wrapper {
@@ -5778,7 +5789,7 @@ body.single-services .pin-wrap .service-work__card {
 .hero {
   margin-bottom: 8.545rem;
   padding: 5.857rem 0 0;
-  height: 100dvh;
+  height: 100vh;
 }
 @media (max-width: 1025px) {
   .hero {
@@ -5787,7 +5798,7 @@ body.single-services .pin-wrap .service-work__card {
 }
 @media (max-width: 541px) {
   .hero {
-    height: 100dvh;
+    height: 100vh;
     margin-bottom: 4.85rem;
     padding: 4.714rem 0 0;
   }
@@ -5854,6 +5865,11 @@ body.single-services .pin-wrap .service-work__card {
   width: 100%;
   height: fit-content;
 }
+@media (max-width: 541px) {
+  .hero__background-left svg {
+    height: 18rem;
+  }
+}
 .hero__background-left svg path {
   stroke-dashoffset: 100%;
   stroke-dasharray: 100%;
@@ -5892,6 +5908,11 @@ body.single-services .pin-wrap .service-work__card {
 .hero__background-right svg {
   width: 100%;
   height: fit-content;
+}
+@media (max-width: 541px) {
+  .hero__background-right svg {
+    height: 18rem;
+  }
 }
 .hero__background-right svg path {
   stroke-dashoffset: 100%;
@@ -7631,26 +7652,26 @@ body.single-services .pin-wrap .service-work__card {
 }
 .news-slider__title {
   margin: 2.286rem 0;
-  height: 3.98rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  height: 3.98rem !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-weight: 550;
   font-size: 1.929rem;
   line-height: 1;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 @media (max-width: 1025px) {
   .news-slider__title {
     margin: 2.283rem 0;
-    height: 3.92rem;
+    height: 3.92rem !important;
   }
 }
 @media (max-width: 541px) {
   .news-slider__title {
     margin: 1.775rem 0;
-    height: 3.11rem;
+    height: 3.11rem !important;
     font-size: 1.571rem;
   }
 }
@@ -7778,11 +7799,11 @@ body.single-services .pin-wrap .service-work__card {
 }
 .news-card__title {
   margin: 0.8rem 0 0.5rem 0;
-  height: 5.9rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+  height: 5.9rem !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  overflow: hidden !important;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
   font-weight: 550;
   font-size: 1.929rem;
@@ -7791,7 +7812,7 @@ body.single-services .pin-wrap .service-work__card {
 @media (max-width: 541px) {
   .news-card__title {
     margin: 0 0 0.6rem 0;
-    height: 4.66rem;
+    height: 4.66rem !important;
     font-size: 1.571rem;
   }
 }
@@ -7940,6 +7961,7 @@ body.single-services .pin-wrap .service-work__card {
   color: #ffffff;
   font-size: 0.786rem;
   text-transform: uppercase;
+  font-family: "HelveticaNeueCyr-Roman", "sans-serif";
 }
 .form__text {
   width: 60%;
@@ -8063,7 +8085,8 @@ body.single-services .pin-wrap .service-work__card {
 .move-line__item {
   animation: 10s linear infinite scroll;
   font-style: normal;
-  font-weight: 800;
+  font-family: "HelveticaNeueCyr-Medium", "sans-serif";
+  font-weight: 550;
   font-size: 1.286rem;
   display: flex;
   flex-direction: row;
