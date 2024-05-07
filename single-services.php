@@ -26,7 +26,7 @@ get_header();
             </h1>
           <?php endif ?>
           <?php if ($serviceDescription): ?>
-            <p class="service-hero__text">
+            <p class="service-hero__text anim-title _anim-items">
               <?= $serviceDescription; ?>
             </p>
           <?php endif ?>
@@ -35,7 +35,7 @@ get_header();
       <div class="container container--slider">
         <?php if ($serviceImg): ?>
           <div class="service-hero__image">
-            <img src='<?php echo $serviceImg['url']; ?>' alt='<?php echo $serviceImg['alt']; ?>' />
+            <img class="thumbnail" src='<?php echo $serviceImg['url']; ?>' alt='<?php echo $serviceImg['alt']; ?>' />
           </div>
         <?php endif ?>
         <?php get_template_part('template-parts/move-line'); ?>
@@ -62,14 +62,14 @@ get_header();
           <?php endif ?>
           <?php if ($informationTopImg): ?>
             <div class="service-information__top-image">
-              <img src='<?php echo $informationTopImg['url']; ?>' alt='<?php echo $informationTopImg['alt']; ?>' />
+              <img class="thumbnail" src='<?php echo $informationTopImg['url']; ?>' alt='<?php echo $informationTopImg['alt']; ?>' />
             </div>
           <?php endif ?>
         </div>
         <div class="service-information__content">
           <div class="service-information__text">
             <?php if ($informationQuestion): ?>
-              <p class="service-information__question">
+              <p class="service-information__question anim-title _anim-items">
                 <?= $informationQuestion; ?>
               </p>
             <?php endif ?>
@@ -86,7 +86,7 @@ get_header();
             </ul>
             <?php if ($informationBottomImg): ?>
               <div class="service-information__bottom-image">
-                <img src='<?php echo $informationBottomImg['url']; ?>' alt='<?php echo $informationBottomImg['alt']; ?>' />
+                <img class="thumbnail" src='<?php echo $informationBottomImg['url']; ?>' alt='<?php echo $informationBottomImg['alt']; ?>' />
               </div>
             <?php endif ?>
           </div>
@@ -103,7 +103,7 @@ get_header();
   <?php $bannerBg = get_field('banner_background') ?? '';
   $bannerTitle = get_field('banner_title') ?? '';
   $bannerDescription = get_field('banner_description') ?? '';
-  $icon = get_field('default_picture', 'options') ?? '';
+  $icon = get_field('sm_logo', 'options') ?? '';
   if ($bannerBg || $bannerTitle || $bannerDescription || $icon): ?>
 
     <section class="service-banner">
@@ -127,7 +127,7 @@ get_header();
             </div>
 
             <?php if ($bannerDescription): ?>
-              <div class="service-banner__description">
+              <div class="service-banner__description anim-title _anim-items">
                 <?= $bannerDescription; ?>
               </div>
             <?php endif ?>
@@ -162,7 +162,7 @@ get_header();
                 $advantagesHeading = get_sub_field('advantages_card_heading') ?? '';
                 $advantagesDescription = get_sub_field('advantages_card_desc') ?? '';
 
-                $maxLength = 335;
+                $maxLength = 320;
                 $trimmedText = mb_substr($advantagesDescription, 0, $maxLength, 'UTF-8');
 
                 ?>
@@ -287,11 +287,13 @@ get_header();
               <?= $otherTitle; ?>
             </h2>
           <?php endif; ?>
-          <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="service-cards__button button">
-            <div class="button__wrapper">
-              <p><?php pll_e('all_services') ?></p>
-            </div>
-          </a>
+          <div class="anim-title _anim-items">
+            <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="service-cards__button button ">
+              <div class="button__wrapper">
+                <p><?php pll_e('all_services') ?></p>
+              </div>
+            </a>
+          </div>
         </div>
 
         <div class="service-cards__box">
