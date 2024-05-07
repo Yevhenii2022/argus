@@ -316,6 +316,13 @@ get_header();
                         ?>
           <?php endif; ?>
         </div>
+        <div class="anim-title _anim-items">
+            <a href="<?php echo esc_url(get_home_url() . '/services/'); ?>" class="service-cards__button-mobile button ">
+              <div class="button__wrapper">
+                <p><?php pll_e('all_services') ?></p>
+              </div>
+            </a>
+          </div>
       </div>
     </div>
   </section>
