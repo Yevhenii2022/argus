@@ -23,6 +23,13 @@ jQuery(function ($) {
 				if (response !== 'no_posts') {
 					blogsContainer.append(response);
 					canLoad = true;
+
+					$('html, body').animate(
+						{
+							scrollTop: $('.news__top').offset().top,
+						},
+						400,
+					);
 				}
 			});
 		}
