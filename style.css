@@ -134,7 +134,7 @@ body.single-services main {
 @media (max-width: 541px) {
   body.page-template-about-us body,
   body.page-template-about-us main {
-    overflow-x: initial;
+    overflow-x: clip;
   }
 }
 
@@ -5334,7 +5334,8 @@ br .select-items:-webkit-scrollbar {
 }
 @media (max-width: 541px) {
   .header__right {
-    gap: 10.7rem;
+    justify-content: space-between;
+    gap: 0;
   }
 }
 .header__contacts {
@@ -5729,8 +5730,14 @@ br .select-items:-webkit-scrollbar {
   padding: 5.857rem 0 0;
   height: 100dvh;
 }
+@media (max-width: 1025px) {
+  .hero {
+    height: 48.714rem;
+  }
+}
 @media (max-width: 541px) {
   .hero {
+    height: 100dvh;
     margin-bottom: 4.85rem;
     padding: 4.714rem 0 0;
   }
@@ -5745,9 +5752,15 @@ br .select-items:-webkit-scrollbar {
   background-color: #f9f9f9;
   border-radius: 1.429rem;
 }
+@media (max-width: 1025px) {
+  .hero__wrapper {
+    height: 48.714rem;
+  }
+}
 @media (max-width: 541px) {
   .hero__wrapper {
     justify-content: initial;
+    height: 100%;
   }
 }
 .hero__background {
