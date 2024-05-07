@@ -1642,7 +1642,7 @@ br .select-items:-webkit-scrollbar {
 }
 @media (max-width: 541px) {
   .service-cards {
-    padding-bottom: 11.286;
+    padding-bottom: 5.714rem;
     padding-top: 5.714rem;
   }
 }
@@ -1668,6 +1668,20 @@ br .select-items:-webkit-scrollbar {
 .service-cards__title em {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
+@media (max-width: 541px) {
+  .service-cards__button {
+    display: none;
+  }
+}
+.service-cards__button-mobile {
+  display: none;
+}
+@media (max-width: 541px) {
+  .service-cards__button-mobile {
+    display: block;
+    margin: 2.857rem auto 0 auto;
+  }
+}
 .service-cards__box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1677,15 +1691,6 @@ br .select-items:-webkit-scrollbar {
   .service-cards__box {
     grid-template-columns: repeat(1, 1fr);
     gap: 3.429rem;
-  }
-}
-@media (max-width: 541px) {
-  .service-cards__button {
-    position: absolute;
-    bottom: 6.214rem;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    right: 50%;
   }
 }
 
@@ -1966,14 +1971,6 @@ body.single-services .pin-wrap .service-work__card {
   font-family: "HelveticaNeueCyr-LightItalic", "sans-serif";
 }
 
-.about-stages {
-  padding-top: 7.143rem;
-}
-@media (max-width: 541px) {
-  .about-stages {
-    padding-top: 13.5rem;
-  }
-}
 .about-stages__heading {
   text-align: center;
   margin-bottom: 8.571rem;
@@ -2306,7 +2303,6 @@ body.single-services .pin-wrap .service-work__card {
   .about-values__right {
     margin-top: 0;
     width: 100%;
-    padding-right: 0;
   }
 }
 .about-values__list {
@@ -2425,6 +2421,7 @@ body.single-services .pin-wrap .service-work__card {
     position: relative;
     display: block;
     margin-top: 4.286rem;
+    margin-right: -2.5rem;
   }
   .about-values__pagination .swiper-button-next,
   .about-values__pagination .swiper-button-prev {
@@ -5216,7 +5213,6 @@ body.single-services .pin-wrap .service-work__card {
   background-size: contain;
   height: 100%;
   position: absolute;
-  z-index: 2;
   top: 5.857rem;
   width: 80%;
 }

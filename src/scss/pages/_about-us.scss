@@ -237,10 +237,10 @@
 }
 
 .about-stages {
-	padding-top: 7.143rem;
+	// padding-top: 7.143rem;
 
 	@include media(mobile) {
-		padding-top: 13.5rem;
+		// padding-top: 13.5rem;
 	}
 
 	&__heading {
@@ -587,7 +587,6 @@
 		@include media(mobile) {
 			margin-top: 0;
 			width: 100%;
-			padding-right: 0;
 		}
 	}
 
@@ -710,6 +709,7 @@
 			position: relative;
 			display: block;
 			margin-top: 4.286rem;
+			margin-right: -2.5rem;
 
 			.swiper-button-next,
 			.swiper-button-prev {

@@ -11,9 +11,9 @@
     background-size: contain;
     height: 100%;
     position: absolute;
-    z-index: 2;
     top: 5.857rem;
     width: 80%;
+     
     @include media(mobile) {
       width: 100%;
       top: 17.857rem;

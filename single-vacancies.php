@@ -50,7 +50,7 @@
                   <?php if ($vacancyImage): ?>
                     <img src='<?php echo $vacancyImage['url']; ?>' alt='<?php echo $vacancyImage['alt']; ?>' />
                   <?php endif ?>
-                  <div class="vacancy__block">
+                  <div class="vacancy__block ">
                     
                       <?php while (have_rows('vacancy_characteristics')) :
                         the_row();
@@ -58,23 +58,24 @@
                         $vacancyFieldInfo = get_sub_field('vacancy_information'); ?>
                         <div class="vacancy__info">
                         <?php if ($vacancyFieldInfo): ?>
-                        <p class="vacancy__characteristic">
+                        <p class="vacancy__characteristic anim-title _anim-items">
                           <?= $vacancyFieldInfo?>
                         </p>
                         <?php endif ?>
                         <?php if ($vacancyFieldName): ?>
-                        <p class="vacancy__field-name">
+                        <p class="vacancy__field-name anim-title _anim-items">
                           <?= $vacancyFieldName?>
                         </p>
                         <?php endif ?>
                       </div>
                       <?php endwhile ;?>
-                    
+                    <div class="anim-title _anim-items">
                       <a href="#contact-us-vacancy" class="vacancy__button button">
                         <div class="button__wrapper">
                             <p><?php pll_e('відгукнутися') ?></p>
                         </div>
                       </a>
+                    </div>
                   </div>
               </div>    
             </div>
