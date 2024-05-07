@@ -23,6 +23,15 @@ jQuery(function ($) {
 				if (response !== 'no_posts') {
 					blogsContainer.append(response);
 					canLoad = true;
+
+					var newsTop = document.querySelector('.news__top');
+					if (newsTop) {
+						var scrollOptions = {
+							top: newsTop.offsetTop,
+							behavior: 'smooth',
+						};
+						window.scrollTo(scrollOptions);
+					}
 				}
 			});
 		}

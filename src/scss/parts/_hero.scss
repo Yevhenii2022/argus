@@ -2,7 +2,12 @@
 	margin-bottom: 8.545rem;
 	padding: 5.857rem 0 0;
 	height: 100dvh;
+
+	@include media(tablet) {
+		height: 48.714rem;
+	}
 	@include media(mobile) {
+		height: 100dvh;
 		margin-bottom: 4.85rem;
 		padding: 4.714rem 0 0;
 	}
@@ -18,12 +23,12 @@
 		border-radius: 1.429rem;
 
 		@include media(tablet) {
-			// height: 48.714rem;
+			height: 48.714rem;
 		}
 
 		@include media(mobile) {
 			justify-content: initial;
-			// height: 52.714rem;
+			height: 100%;
 		}
 	}
 
