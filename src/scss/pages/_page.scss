@@ -17,6 +17,7 @@
     @include media(mobile) {
       width: 100%;
       top: 17.857rem;
+      background-image: none !important;
     }
   }
 

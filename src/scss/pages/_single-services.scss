@@ -1,5 +1,6 @@
 .service-hero {
   padding-top: 11.571rem;
+
   @include media(mobile) {
     padding-top: 7.571rem;
   }
@@ -7,7 +8,8 @@
   &__heading {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3.214rem;
+    margin-bottom: 2rem;
+
     @include media(mobile) {
       flex-direction: column;
       gap: 2.857rem;
@@ -18,22 +20,33 @@
   &__title {
     width: 50%;
 
+    @include media(mobile) {
+      width: 100%;
+    }
+
     em {
       font-family: $italic;
     }
   }
 
   &__text {
-    padding-top: 2rem;
-    margin-right: 3.429rem;
+    padding-top: 7rem;
+    margin-right: 4.2rem;
     width: 19.786rem;
     line-height: 120%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 0.5rem;
+
+    @include media(tablet) {
+      font-size: 1.286rem;
+      padding-top: 4rem;
+    }
+
     @include media(mobile) {
       padding-top: 0;
+      font-size: 1rem;
     }
 
     &::before {
@@ -51,18 +64,23 @@
     max-height: 40.071rem;
 
     @include media(mobile) {
-      height: 34.143rem;
+      height: 22rem;
+    }
 
       img {
-        height: 100%;
+         height: 40.071rem;
+
+         @include media(mobile) {
+          height: 22rem;
+        }
       }
-    }
-  }
+   }
 }
 
 .service-information {
   padding-top: 8.571rem;
   padding-bottom: 6.857rem;
+
   @include media(mobile) {
     padding-top: 5.714rem;
     padding-bottom: 4.286rem;
@@ -72,6 +90,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 2.857rem;
+
     @include media(mobile) {
       margin-bottom: 1.714rem;
     }
@@ -79,6 +98,7 @@
 
   &__title {
     width: 70%;
+
     @include media(mobile) {
       width: 100%;
     }
@@ -103,15 +123,35 @@
   }
 
   &__top-image {
-    margin-left: -10rem;
+    margin-left: -11rem;
     margin-top: 3rem;
+    z-index: -1;
+		img {
+		  height: 15.571rem;
+			width: 15.571rem;
+		}
   }
 
   &__bottom-image {
     margin-left: 46rem;
     margin-top: -3rem;
+    transform: translateZ(0);
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    @include media(tablet) {
+      margin-left: 31rem;
+    }
+
+    @include media(mobile) {
+      display: none
+    }
+
     img {
       z-index: 1;
+      height: 15.571rem;
+      width: 15.571rem;
     }
   }
 
@@ -121,6 +161,7 @@
     justify-content: space-between;
     position: relative;
     margin-right: -1.714rem;
+
     @include media(mobile) {
       flex-direction: column-reverse;
       margin-right: 0;
@@ -129,6 +170,7 @@
 
   &__text {
     width: 50%;
+
     @include media(mobile) {
       width: 100%;
     }
@@ -139,6 +181,12 @@
     margin-bottom: 18.429rem;
     font-family: $medium;
     width: 50%;
+
+    @include media(tablet) {
+      width: 70%;
+      margin-bottom: 7rem;
+    }
+
     @include media(mobile) {
       font-size: 1.571rem;
       width: 100%;
@@ -155,9 +203,15 @@
     row-gap: 4rem;
     line-height: 120%;
     font-size: 1.429rem;
+
+    @include media(tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      padding-right: 2rem;
+    }
+
     @include media(mobile) {
       font-size: 1.143rem;
-      grid-template-columns: repeat(1, 1fr);
+      padding-right: 0;
       row-gap: 2rem;
     }
 
@@ -191,6 +245,13 @@
 
     img {
       height: 100%;
+      width: 47.786rem;
+      height: 53.571rem;
+
+      @include media(mobile) {
+        width: 100%;
+        height: 27.429rem;
+      }
     }
   }
 }
@@ -198,6 +259,7 @@
 .service-banner {
   padding-top: 6.857rem;
   position: relative;
+
   @include media(mobile) {
     padding-top: 4.286rem;
     padding-bottom: 4.286rem;
@@ -213,6 +275,7 @@
     left: 0;
     z-index: -1;
     mix-blend-mode: soft-light;
+
     @include media(mobile) {
       height: 56rem;
       background-position: 59%;
@@ -237,6 +300,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include media(tablet) {
+      padding-bottom: 9rem;
+    }
+
     @include media(mobile) {
       padding-bottom: 0;
     }
@@ -255,7 +323,9 @@
     transition: 0.3s;
     cursor: default;
     margin-bottom: 21.071rem;
-    @include media(mobile) {
+
+
+    @include media(tablet) {
       margin-bottom: 8.571rem;
     }
   }
@@ -294,6 +364,7 @@
     text-align: center;
     align-items: center;
     gap: 2.286rem;
+
     @include media(mobile) {
       width: 24.5rem;
     }
@@ -304,6 +375,7 @@
     text-transform: uppercase;
     font-family: $medium;
     line-height: 100%;
+
     @include media(mobile) {
       font-size: 18px;
     }
@@ -326,6 +398,7 @@
     position: relative;
     gap: 3.071rem;
     justify-content: flex-end;
+
     @include media(mobile) {
       flex-direction: column;
       gap: 2.286rem;
@@ -356,6 +429,7 @@
       background-repeat: no-repeat;
       margin-top: 0.3rem;
       flex-shrink: 0;
+
       @include media(mobile) {
         width: 1.714rem;
         height: 2rem;
@@ -366,8 +440,10 @@
   &__image {
     width: 52rem;
     height: 100%;
+
     @include media(mobile) {
       width: 26.786rem;
+
       img {
         height: 100%;
       }
@@ -382,6 +458,12 @@
     color: $white;
     width: 55.071rem;
     height: 41.214rem;
+
+    @include media(tablet) {
+      width: 45.071rem;
+      height: 29.214rem;
+    }
+
     @include media(mobile) {
       right: 0.571rem;
       color: #ffffff;
@@ -394,6 +476,7 @@
   &__item {
     counter-increment: item;
     padding: 2.857rem 1.714rem 2.857rem 2.857rem;
+
     @include media(mobile) {
       padding: 6.857rem 1.143rem 2.929rem 1.143rem;
     }
@@ -408,6 +491,7 @@
       font-size: 4.286rem;
       font-family: $italic;
       line-height: 100%;
+
       @include media(mobile) {
         left: 1.143rem;
         font-size: 2.857rem;
@@ -422,6 +506,11 @@
     line-height: 100%;
     margin-bottom: 11.143rem;
     max-width: 33.714rem;
+
+    @include media(tablet) {
+      margin-bottom: 5.143rem;
+    }
+
     @include media(mobile) {
       font-size: 1.571rem;
       margin-bottom: 9.214rem;
@@ -436,6 +525,11 @@
     max-width: 37.929rem;
     line-height: 120%;
     font-size: 1.429rem;
+
+    @include media(tablet) {
+      font-size: 1.286rem;
+    }
+
     @include media(mobile) {
       font-size: 1.143rem;
       margin-bottom: 9.214rem;
@@ -454,6 +548,7 @@
       background-position: center;
       cursor: pointer;
       transition: $transition;
+
       @include media(mobile) {
         width: 2.714rem;
         height: 2.714rem;
@@ -477,6 +572,7 @@
       background-position: center;
       cursor: pointer;
       transition: $transition;
+
       @include media(mobile) {
         width: 2.714rem;
         height: 2.714rem;
@@ -515,6 +611,7 @@
   right: 1.714rem;
   z-index: 1;
   color: $white;
+
   @include media(mobile) {
     left: 50%;
     transform: translate(-50%, 50%);
@@ -550,12 +647,18 @@
   background-repeat: no-repeat;
   background-color: $white;
   padding-top: 5.714rem;
-  
-	.empty-item{
-		display: block;
-		min-width: 80vw;
-		width: 90vw;
-	}
+  background-image: none !important;
+
+  @include media(mobile) {
+    background-image: none !important;
+  }
+
+  .empty-item {
+    display: block;
+    min-width: 80vw;
+    width: 90vw;
+  }
+
   &__title {
     width: 50%;
     padding-bottom: 2rem;
@@ -571,6 +674,7 @@
       height: 3.071rem;
       margin-top: 0.3rem;
       flex-shrink: 0;
+
       @include media(mobile) {
         width: 1.714rem;
         height: 2rem;
@@ -589,6 +693,7 @@
   &__inner {
     padding: 7rem 0;
     margin-left: 4rem;
+
     @include media(mobile) {
       margin-left: 0;
     }
@@ -605,6 +710,7 @@
     counter-increment: item;
     transition: all 1s ease-in-out;
     margin-right: 2.3rem !important;
+
     &::after {
       content: counter(item, decimal-leading-zero) ". ";
       position: absolute;
@@ -683,7 +789,7 @@
     overflow: hidden;
     display: flex;
     margin-bottom: 1.3rem;
-	
+
   }
 
   &__heading {
@@ -692,9 +798,9 @@
     font-family: $italic;
     line-height: 100%;
 
-	@include media(mobile){
-		font-size: 1.57rem;
-	}
+    @include media(mobile) {
+      font-size: 1.57rem;
+    }
   }
 
   &__video {
@@ -704,6 +810,7 @@
     display: block;
     position: relative;
     cursor: pointer;
+
     @include media(mobile) {
       height: 12.929rem;
     }
@@ -731,6 +838,7 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 2.857rem;
+
     @include media(mobile) {
       flex-direction: column;
     }
@@ -742,6 +850,7 @@
     @include media(mobile) {
       width: 100%;
     }
+
     em {
       font-family: $italic;
     }
@@ -751,6 +860,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.143rem;
+
     @include media(mobile) {
       grid-template-columns: repeat(1, 1fr);
       gap: 3.429rem;
@@ -773,38 +883,39 @@
 }
 
 body.single-services {
- 
 
 
 
-    transition: 0.3s ease-out;
-    
-    max-width: 100%;
-    width: 100%;
-    overscroll-behavior: none;
+
+  transition: 0.3s ease-out;
+
+  max-width: 100%;
+  width: 100%;
+  overscroll-behavior: none;
 
 
-  
+
   .container-scroll {
     position: relative;
     z-index: 50;
+
     img {
-      
+
       width: auto;
       object-fit: cover;
     }
   }
 
- 
+
 
   #sectionPin {
     height: 100vh !important;
     overflow: hidden;
     display: flex;
-	align-items:center;
-	flex-direction: column;
-padding-top: 6.42rem;
-align-items:flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 6.42rem;
+    align-items: flex-start;
     left: 0;
 
   }
@@ -814,19 +925,19 @@ align-items:flex-start;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-	padding-bottom: 5.71rem;
-    
+    padding-bottom: 5.71rem;
+
 
     .service-work__card {
       width: 24rem !important;
-	    min-height: 29.64rem !important;
+      min-height: 29.64rem !important;
       height: 29.64rem !important;
 
-	    @include media(mobile){
+      @include media(mobile) {
         min-height: 25.14rem !important;
         height: 25.14rem !important;
       }
     }
   }
-  
+
 }

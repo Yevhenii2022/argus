@@ -39,7 +39,7 @@
                   <?= $sectionHeading; ?>
                 </h2>
               <?php endif ?>
-              <div class="contact-us__manager">
+              <div class="contact-us__manager anim-title _anim-items">
                 <?php if ($sectionName) : ?>
                   <p class="contact-us__manager-name">
                     <?= $sectionName; ?>
