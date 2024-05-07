@@ -38,7 +38,7 @@ get_header(); ?>
     <div class="container">    
       <div class="vacancies__content">
       <?php if ($vacanciesBlockTitle) : ?>
-        <h1 class="vacancies__heading main__title main__title--sm">
+        <h1 class="vacancies__heading main__title main__title--sm anim-title _anim-items">
             <?= $vacanciesBlockTitle ;?>
         </h1>
         <?php endif ?>

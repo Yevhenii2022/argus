@@ -430,6 +430,7 @@
 
 	@include media(mobile) {
 		padding-top: 5.714rem;
+		background-image: initial !important;
 	}
 
 	&__wrapper {
@@ -731,7 +732,7 @@
 
 	@include media(mobile) {
 		position: relative;
-		padding-bottom: 8.071rem;
+		padding-bottom: 5.714rem;
 		padding-top: 7.9rem;
 	}
 
@@ -754,8 +755,16 @@
 	}
 
 	&__image {
+		width: 44.929rem;
+    height: 33.571rem;
 		@include media(mobile) {
 			margin-top: 1.143rem;
+			width: 100%;
+			height: 100%;
+		}
+
+		img{
+			height: 100%;
 		}
 	}
 

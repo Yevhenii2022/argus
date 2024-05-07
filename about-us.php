@@ -195,7 +195,7 @@ get_header();
     $missionText = get_field('mission_text') ?? '';
     $missionSubText = get_field('mission_subtext') ?? '';
     $missionVid = get_field('mission_video') ?? '';
-    $missionIcon = get_field('default_picture', 'options') ?? '';
+    $missionIcon = get_field('sm_logo', 'options') ?? '';
 
     if ($missionBackground  || $missionTitle || $missionText || $missionSubText || $missionVid || $missionIcon) :
     ?>
@@ -253,7 +253,7 @@ get_header();
     <section class="about-values">
         <div class="container container--slider">
             <div class="about-values__wrapper">
-                <div class="about-values__left">
+                <div class="about-values__left anim-title _anim-items">
                     <?php if ($valuesHeading) : ?>
                         <h2 class="about-values__heading main__title">
                             <?= $valuesHeading; ?>
@@ -298,7 +298,7 @@ get_header();
     $teamTitle = get_field('section_title') ?? '';
     $teamName = get_field('section_name') ?? '';
     $teamDescription = get_field('section_text') ?? '';
-    $teamIcon = get_field('default_picture', 'options') ?? '';
+    $teamIcon = get_field('sm_logo', 'options') ?? '';
 
     if ($teamImg || $teamTitle || $teamName || $teamDescription) :
     ?>
@@ -324,14 +324,14 @@ get_header();
                                             <?= $teamDescription; ?>
                                         </div>
                                     <?php endif ?>
-                                    <div class="about-team__logo">
+                                    <div class="about-team__logo anim-title _anim-items">
                                         <?php if ($teamIcon) :
                                             echo '<img src="' . esc_url($teamIcon) . '" alt="logo">';
                                         endif; ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="about-team__bottom">
+                            <div class="about-team__bottom anim-title _anim-items">
                             
                                 <a href="<?php echo esc_url(get_home_url() . '/vacancies/'); ?>" class="about-team__link link">
                                     <span>

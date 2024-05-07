@@ -725,6 +725,7 @@ br .select-items:-webkit-scrollbar {
     padding-top: 7.571rem;
     padding-bottom: 5.714rem;
     margin-top: 0;
+    background-image: initial !important;
   }
 }
 .our-services__wrapper {
@@ -1475,6 +1476,11 @@ br .select-items:-webkit-scrollbar {
   background-color: #ffffff;
   padding-top: 5.714rem;
 }
+@media (max-width: 541px) {
+  .service-work {
+    background-image: initial !important;
+  }
+}
 .service-work__title {
   width: 50%;
   padding-bottom: 2rem;
@@ -2099,6 +2105,7 @@ br .select-items:-webkit-scrollbar {
 @media (max-width: 541px) {
   .about-mission {
     padding-top: 5.714rem;
+    background-image: initial !important;
   }
 }
 .about-mission__wrapper {
@@ -2382,7 +2389,7 @@ br .select-items:-webkit-scrollbar {
 @media (max-width: 541px) {
   .about-team {
     position: relative;
-    padding-bottom: 8.071rem;
+    padding-bottom: 5.714rem;
     padding-top: 7.9rem;
   }
 }
@@ -2404,10 +2411,19 @@ br .select-items:-webkit-scrollbar {
     flex-direction: column;
   }
 }
+.about-team__image {
+  width: 44.929rem;
+  height: 33.571rem;
+}
 @media (max-width: 541px) {
   .about-team__image {
     margin-top: 1.143rem;
+    width: 100%;
+    height: 100%;
   }
+}
+.about-team__image img {
+  height: 100%;
 }
 .about-team__paragraph {
   text-align: end;
@@ -4238,6 +4254,11 @@ br .select-items:-webkit-scrollbar {
   height: 85rem;
   top: 5.857rem;
   z-index: -1;
+}
+@media (max-width: 541px) {
+  .vacancy__bg {
+    background-image: initial !important;
+  }
 }
 .vacancy__baner {
   display: flex;
@@ -7910,7 +7931,7 @@ br .select-items:-webkit-scrollbar {
   height: 3.214rem;
   width: 2.714rem;
   margin-right: 1rem;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 @media (max-width: 541px) {
   .move-line__item::before {
