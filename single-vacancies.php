@@ -32,7 +32,7 @@
                           <?= $vacancyDescription ;?>
                       </p>
                       <?php endif ?>
-                      <div class="vacancy__bottom">
+                      <div class="vacancy__bottom anim-title _anim-items">
                           <?php if ($vacancyText): ?>
                           <p class="vacancy__date">
                               <?= $vacancyText ;?><?= ' ' . get_the_date('j F Y') ?>

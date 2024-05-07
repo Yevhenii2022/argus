@@ -101,7 +101,7 @@
   <?php $bannerBg = get_field('banner_background') ?? '';
   $bannerTitle = get_field('banner_title') ?? '';
   $bannerDescription = get_field('banner_description') ?? '';
-  $icon = get_field('default_picture', 'options') ?? '';
+  $icon = get_field('sm_logo', 'options') ?? '';
   if ($bannerBg || $bannerTitle || $bannerDescription || $icon) : ?>
 
     <section class="service-banner">
