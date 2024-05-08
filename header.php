@@ -94,7 +94,9 @@
 							<?php pll_e('menu') ?>
 						</span>
 						<div class="header__burger">
-							<span></span>
+							<span class="header__burger-top"></span>
+							<span class="header__burger-middle"></span>
+							<span class="header__burger-bottom"></span>
 						</div>
 					</div>
 
