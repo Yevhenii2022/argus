@@ -16,9 +16,7 @@ $title_section = get_field('reviews_title_section') ?? '';
   <section class="reviews">
     <div class="container">
 
-      <?php if (function_exists('yoast_breadcrumb')) {
-        yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
-      } ?>
+      <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
 
       <div class="reviews__top">
         <h1 class="reviews__title title anim-title _anim-items"><?= $title; ?></h1>

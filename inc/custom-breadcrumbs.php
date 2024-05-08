@@ -12,9 +12,9 @@ function custom_breadcrumbs()
 
   // Добавляем ссылку на главную страницу
   $home_url = home_url();
-  $separator = '<li class="breadcrumbs__separator"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" fill="none" viewBox="0 0 16 2">
-    <path stroke="#BDBDBD" d="M.27.83h15"/>
-  </svg></li>'; // Сепаратор
+  $separator = '<li class="breadcrumbs__separator"><svg viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="1.5" cy="1.5" r="1.5" fill="#181818" />
+</svg></li>'; // Сепаратор
   $breadcrumbs .= '<li><a href="' . $home_url . ' " class="breadcrumbs__home">' . $home_text . '</a></li>' . $separator;
 
   // Получаем информацию о родительских страницах

@@ -11,9 +11,7 @@ get_header(); ?>
       <div class="news__wrapper">
 
         <div class="news__top">
-          <?php if (function_exists('yoast_breadcrumb')) {
-            yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
-          } ?>
+        <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
           <h1 class="title anim-title _anim-items"><?php the_content(); ?></h1>
         </div>
 

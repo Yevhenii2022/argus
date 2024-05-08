@@ -18,9 +18,7 @@ get_header(); ?>
             <div class="our-services__wrapper">
                <div class="our-services__left">
                     <div class="our-services__breadcrumps">
-                        <?php if ( function_exists('yoast_breadcrumb') ) {
-                            yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' );
-                        }?>
+                    <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
                     </div>
                    <div class="our-services__content">
                         <?php if ($servicesTitle): ?>

@@ -16,9 +16,7 @@ get_header();
 		<div class="single-news__wrapper">
 			<div class="container">
 
-				<?php if (function_exists('yoast_breadcrumb')) {
-					yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
-				} ?>
+		  	<?php echo do_shortcode('[pointer_breadcrumbs]'); ?> 
 
 				<div class="single-news__top">
 					<?php
