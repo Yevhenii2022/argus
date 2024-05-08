@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************!*\
-  !*** css ../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!../../../../../../node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*****************************************************************************************************************************************/
 /*
 Theme Name: Pointer theme
 Author: cursor: pointer ;
@@ -8086,7 +8086,7 @@ body.single-services .pin-wrap .service-work__card {
   animation: 10s linear infinite scroll;
   font-style: normal;
   font-family: "HelveticaNeueCyr-Medium", "sans-serif";
-  font-weight: 550;
+  font-weight: 500;
   font-size: 1.286rem;
   display: flex;
   flex-direction: row;
@@ -8403,23 +8403,25 @@ body.single-services .pin-wrap .service-work__card {
 }
 
 .popup {
-  height: 10rem;
+  width: 22rem;
+  height: 15rem;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
   padding: 2rem;
-  border: 0.05rem solid black;
+  border: 0.05rem solid #181818;
   display: flex;
   align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: all 1s ease;
   z-index: -1;
 }
 @media (max-width: 541px) {
   .popup {
-    top: 100dvh;
+    top: 100vh;
   }
 }
 .popup--show {
