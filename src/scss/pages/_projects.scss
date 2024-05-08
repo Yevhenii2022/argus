@@ -4,8 +4,10 @@
 		padding: 7.5rem 0 8.571rem 0;
 	}
 
-	&:has(.yoast-breadcrumbs) {
-		.yoast-breadcrumbs {
+	&:has(.breadcrumbs) {
+		.breadcrumbs {
+			height: fit-content;
+			flex-wrap: nowrap;
 			@include media(mobile) {
 				margin-bottom: 0.9rem;
 			}

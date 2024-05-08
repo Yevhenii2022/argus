@@ -17,9 +17,11 @@
 		}
 	}
 
-	&:has(.yoast-breadcrumbs) {
-		.yoast-breadcrumbs {
+	&:has(.breadcrumbs) {
+		.breadcrumbs {
 			margin-top: 0.5rem;
+			height: fit-content;
+			flex-wrap: nowrap;
 
 			@include media(mobile) {
 				margin: 0 0 0.9rem 0;

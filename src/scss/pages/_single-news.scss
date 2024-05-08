@@ -5,6 +5,20 @@
 		padding: 7.3rem 0 0 0;
 	}
 
+	&:has(.breadcrumbs) {
+		.breadcrumbs {
+			height: fit-content;
+			flex-wrap: nowrap;
+		}
+		.breadcrumbs__current {
+			height: 0.857rem;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 1;
+			overflow: hidden;
+		}
+	}
+
 	&:has(.news-slider) {
 		.news-slider {
 			@include media(mobile) {
