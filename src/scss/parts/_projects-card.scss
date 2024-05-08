@@ -147,8 +147,9 @@
 		border-radius: 3.857rem;
 		text-transform: uppercase;
 		font-size: 0.786rem;
-		line-height: 1;
+		line-height: 0.86;
 		text-align: left;
+		backdrop-filter: blur(8px);
 
 		@include media(mobile) {
 			padding: 0.45rem 0.571rem 0.35rem 0.571rem;

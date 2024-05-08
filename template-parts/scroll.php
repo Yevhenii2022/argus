@@ -1,4 +1,4 @@
-<div class="scroll anim-title _anim-items">
+<div class="scroll">
     <p><?php pll_e('more_info'); ?></p>
 
     <div class="scroll__animate">
