@@ -39,48 +39,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
         scrollTrigger: {
           scroller: pageContainer, //locomotive-scroll
-          scrub: 2,
+          scrub: 5,
           trigger: "#sectionPin",
           pin: true,
-          anticipatePin: 1,
+          anticipatePin: 2,
           start: "top top",
-          end: "bottom 50%",
-
+          endTrigger: ".empty-item-last",
+          end: "bottom top",
         },
-        x: -horizontalScrollLength,
+        x: -pinWrapWidth / 2,
 
       });
       let cards = document.querySelectorAll(".service-work__card");
 
       cards.forEach((card, index) => {
-        let initialRotationY = gsap.getProperty(card, "rotateY"); // Get the initial rotation on the Y axis
+        let initialRotationY = gsap.getProperty(card, "rotateY"); 
+        let r = 0; 
 
         gsap.to(card, {
           rotation: () => {
             let newRotationY;
             if (index % 2 === 0) {
-              newRotationY = initialRotationY + (scroller.scroll.instance.scroll.y / 50) + (index * 0.2); // For even indices
+              newRotationY = initialRotationY + (r + 1) + (index * 0.05);
+              r += 1;
             } else {
-              newRotationY = initialRotationY - (scroller.scroll.instance.scroll.y / 50); // For odd indices
+              newRotationY = initialRotationY - (r + 1);
+              r += 1;
             }
-            if (Math.abs(newRotationY - initialRotationY) > 10) {
-              newRotationY = initialRotationY - (newRotationY - initialRotationY); // Reverse the rotation
-            }
-            return newRotationY; // Return the new rotation value
+            
+
+            return newRotationY; 
           },
-          x: gsap.utils.random(-35, 35), // Add a random offset along the X axis
-          y: gsap.utils.random(-35, 35), // Add a random offset along the Y axis
-          z: gsap.utils.random(-35, 35), // Add a random offset along the Z axis
+          x: gsap.utils.random(-35, 35), // Случайное смещение по оси X
+          y: gsap.utils.random(-35, 35), // Случайное смещение по оси Y
+          z: gsap.utils.random(-35, 35), // Случайное смещение по оси Z
           ease: "none",
           scrollTrigger: {
             trigger: "#sectionPin",
             scroller: pageContainer,
             start: "top top",
-            end: "bottom 75%",
+            end: "bottom top",
             scrub: 0
           }
         });
-
+     
       });
       ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 

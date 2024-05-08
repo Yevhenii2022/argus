@@ -227,7 +227,11 @@ get_header();
 
                           <?php $cardTitle = get_sub_field('card_title') ?? '';
                           $cardImage = get_sub_field('card_image') ?? '';
-                          $cardText = get_sub_field('card_text') ?? ''; ?>
+                          $cardText = get_sub_field('card_text') ?? ''; 
+
+                          $maxLengthText = 160;
+                          $trimmedCardText = mb_substr($cardText, 0, $maxLengthText, 'UTF-8');?>
+
                           <?php if ($cardTitle): ?>
                             <h3 class="service-work__heading">
                               <?= $cardTitle; ?>
@@ -239,15 +243,15 @@ get_header();
                                 <img src='<?php echo $cardImage['url']; ?>' alt='<?php echo $cardImage['alt']; ?>' />
                               </div>
                             <?php endif; ?>
-                            <?php if ($cardText): ?>
+                            <?php if ($trimmedCardText): ?>
                               <p class="service-work__text">
-                                <?= $cardText ?>
+                                <?= $trimmedCardText ?>
                               </p>
                             <?php endif; ?>
                           </div>
                         </div>
                       <?php endwhile ?>
-                      <div class="empty-item"></div>
+                      <div class="empty-item-last "></div>
               </div>
             </section>
           </div>
