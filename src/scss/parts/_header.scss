@@ -209,18 +209,21 @@
 
 		&.active {
 			.header__burger {
-				span {
+				justify-content: center;
+				&-middle{
 					transform: scale(0);
 				}
-				&::before {
-					top: 50%;
-					transform: rotate(-45deg) translate(0, -50%);
+				&-top{
+					position: absolute;
+					transform: rotate(45deg);
 					width: 100%;
 					max-width: 1rem;
+					
+					
 				}
-				&::after {
-					bottom: 50%;
-					transform: rotate(45deg) translate(0, 50%);
+				&-bottom{
+					position: absolute;
+					transform: rotate(-45deg);
 					width: 100%;
 					max-width: 1rem;
 				}
@@ -236,44 +239,58 @@
 	&__burger {
 		@include media(mobile) {
 			display: flex;
-			position: relative;
-			z-index: 50;
-			align-items: center;
-			width: 1.571rem;
-			justify-content: flex-end;
-			height: 0.7rem;
-			margin-right: 0.7rem;
-			margin-bottom: 0.2rem;
-			cursor: pointer;
-		}
-
+        position: relative;
+        z-index: 50;
+        align-items: flex-end;
+        width: 1.571rem;
+        height: 0.643rem;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 0.214rem;
+					
 		span {
-			height: 0.071rem;
-			width: 64%;
+			height: 0.05rem;
 			transform: scale(1);
 			background-color: $black;
 			border-radius: 1.429rem;
-		}
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			height: 0.071rem;
-			border-radius: 1.429rem;
-			background-color: $black;
 			transition: $transition;
+			
 		}
 
-		&::before {
-			top: 0;
+		&-top{
 			width: 100%;
 		}
 
-		&::after {
-			bottom: 0;
-			width: 45%;
+		&-middle{
+			width: 66%;
 		}
+		
+		&-bottom{
+			width: 33%;
+		}
+	}
+
+
+
+		// &::before,
+		// &::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	height: 0.071rem;
+		// 	border-radius: 1.429rem;
+		// 	background-color: $black;
+		// 	transition: $transition;
+		// }
+
+		// &::before {
+		// 	top: 0;
+		// 	width: 100%;
+		// }
+
+		// &::after {
+		// 	bottom: 0;
+		// 	width: 45%;
+		// }
 	}
 }
 @keyframes burgerAnimation {

@@ -13,9 +13,7 @@ get_header();
             <div class="projects__wrapper">
 
                 <div class="projects__top">
-                    <?php if (function_exists('yoast_breadcrumb')) {
-                        yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
-                    } ?>
+                    <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
                     <h1 class="projects__title title anim-title _anim-items"><?php the_content(); ?></h1>
                 </div>
 

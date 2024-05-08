@@ -17,9 +17,7 @@
             <div class="vacancy__baner">
               <div class="vacancy__left">
                   <div class="vacancy__breadcrumps">
-                      <?php if ( function_exists('yoast_breadcrumb') ) {
-                          yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' );
-                      }?>
+                  <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
                   </div>
                   <div class="vacancy__content">
                       <?php if ($vacancyTitle): ?>

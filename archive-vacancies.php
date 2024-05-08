@@ -17,9 +17,7 @@ get_header(); ?>
   <section class="vacancies">
     <div class="container">
         <div class="vacancies__breadcrumps">
-          <?php if (function_exists('yoast_breadcrumb')) {
-            yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
-          } ?>
+        <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
         </div>
         <div class="vacancies__banner">
           <?php if ($vacanciesTitle) : ?>

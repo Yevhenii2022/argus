@@ -13,9 +13,7 @@ get_header();
         <div class="container">
             <div class="about-banner__wrapper">
                 <div class="about-banner__breadcrumps">
-                    <?php if (function_exists('yoast_breadcrumb')) {
-                        yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
-                    } ?>
+                <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
                 </div>
                 <?php
                 $title = get_field('about-us_title') ?? '';

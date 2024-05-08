@@ -30,9 +30,7 @@ get_header();
         <div class="contacts__left">
             <div class="contacts__heading ">
                <div class="contacts__breadcrumps">
-                  <?php if ( function_exists('yoast_breadcrumb') ) {
-                  yoast_breadcrumb( '<nav class="yoast-breadcrumbs">', '</nav>' );
-                }?>
+               <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
                </div>
             <?php if ($contactsTitle) : ?>
               <h1 class="contacts__title main__title main__title--sm anim-title _anim-items">

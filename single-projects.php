@@ -13,9 +13,7 @@ $video = get_field('project_video');
       <div class="project__wrapper">
 
         <div class="project__breadcrumps">
-          <?php if (function_exists('yoast_breadcrumb')) {
-            yoast_breadcrumb('<nav class="yoast-breadcrumbs">', '</nav>');
-          } ?>
+        <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
         </div>
 
         <div class="project__top">
