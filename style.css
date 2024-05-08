@@ -8403,8 +8403,8 @@ body.single-services .pin-wrap .service-work__card {
 }
 
 .popup {
-  width: 19.357rem;
-  height: 10rem;
+  width: 22rem;
+  height: 15rem;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -8414,6 +8414,7 @@ body.single-services .pin-wrap .service-work__card {
   border: 0.05rem solid #181818;
   display: flex;
   align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: all 1s ease;
   z-index: -1;
