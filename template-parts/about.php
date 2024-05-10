@@ -26,7 +26,7 @@ $title = get_field('about_title') ?? '';
             <div class="about__box">
                 <div class="about__top">
                     <?php if ($video) : ?>
-                        <div class="about__top-video">
+                        <div class="about__top-video anim-title _anim-items">
                             <video loop id="custom-video" preload="auto" muted playsinline preload="metadata">
                                 <source src="<?php echo $video; ?>#t=0.001" type="video/mp4">
                                 <source src="<?php echo $video; ?>#t=0.001" type="video/webm">

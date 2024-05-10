@@ -12,7 +12,7 @@ get_header(); ?>
 
         <div class="news__top">
         <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
-          <h1 class="title anim-title _anim-items"><?php the_content(); ?></h1>
+          <h1 class="title anim-title _anim-items"><?= the_content() ?></h1>
         </div>
 
         <div class="news__category">

@@ -20,7 +20,7 @@ get_header();
         <div class="service-hero__heading">
           <?php if ($serviceTitle): ?>
             <h1 class="service-hero__title main__title anim-title _anim-items">
-              <?= $serviceTitle; ?>
+              <?= $serviceTitle ?>
             </h1>
           <?php endif ?>
           <?php if ($serviceDescription): ?>
@@ -55,7 +55,7 @@ get_header();
         <div class="service-information__heading">
           <?php if ($informationTitle): ?>
             <h2 class="service-information__title main__title anim-title _anim-items">
-              <?= $informationTitle; ?>
+              <?= $informationTitle ?>
             </h2>
           <?php endif ?>
           <?php if ($informationTopImg): ?>
@@ -216,7 +216,7 @@ get_header();
             <section id="sectionPin">
               <?php if ($workTitle): ?>
                 <h2 class="service-work__title main__title main__title--sm anim-title _anim-items">
-                  <?= $workTitle; ?>
+                  <?= $workTitle ?>
                 </h2>
               <?php endif; ?>
               <div class="pin-wrap">
@@ -234,7 +234,7 @@ get_header();
 
                           <?php if ($cardTitle): ?>
                             <h3 class="service-work__heading">
-                              <?= $cardTitle; ?>
+                              <?= $cardTitle ?>
                             </h3>
                           <?php endif; ?>
                           <div class="service-work__card-bottom">
@@ -286,7 +286,7 @@ get_header();
         <div class="service-cards__heading">
           <?php if ($otherTitle): ?>
             <h2 class="service-cards__title main__title main__title--sm anim-title _anim-items">
-              <?= $otherTitle; ?>
+              <?= $otherTitle ?>
             </h2>
           <?php endif; ?>
           <div class="anim-title _anim-items">

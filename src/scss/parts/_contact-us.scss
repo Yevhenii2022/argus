@@ -3,7 +3,8 @@
 	border-radius: 1.429rem;
 	background-color: $white;
 	position: relative;
-
+	overflow: hidden;
+	
 	@include media(mobile) {
 		padding: 5.714rem 0 5.714rem 0;
 	}

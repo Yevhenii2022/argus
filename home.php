@@ -24,7 +24,7 @@ get_header();
       ?>
       <?php if ($slider_title) : ?>
         <h3 class="single-news__title title anim-title _anim-items">
-          <?= $slider_title; ?>
+          <?= $slider_title ?>
           <div class="single-news__counter"></div>
         </h3>
       <?php endif; ?>

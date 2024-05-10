@@ -22,7 +22,7 @@
                   <div class="vacancy__content">
                       <?php if ($vacancyTitle): ?>
                       <h1 class="vacancy__title main__title main__title--sm anim-title _anim-items">
-                          <?= $vacancyTitle ;?>
+                          <?= $vacancyTitle ?>
                       </h1>
                       <?php endif ?>
                       <?php if ($vacancyDescription): ?>
@@ -87,7 +87,7 @@
               <div class="vacancy__heading">
                 <?php if ($vacancyMainHeading): ?>
                 <h2 class="vacancy__heading-title main__title anim-title _anim-items">
-                  <?= $vacancyMainHeading ;?>
+                  <?= $vacancyMainHeading ?>
                 </h2>
                 <?php endif ?>
                 <?php if ($vacancyMainImg): ?>
@@ -106,7 +106,7 @@
                   <div class="vacancy__advantages-text">
                   
                     <h3 class="vacancy__advantages-title main__title main__title--sm anim-title _anim-items">
-                      <?= $advantagesTitle?>
+                      <?= $advantagesTitle ?>
                     </h3>
                    <div class="vacancy__advantages-inner">
                       <?php if ($advantagesText): ?>
@@ -134,7 +134,7 @@
         <div class="vacancy__candidate">
           <?php if ($candidateHeading): ?>
           <h2 class="vacancy__candidate-title main__title main__title--sm anim-title _anim-items">
-            <?= $candidateHeading ;?>
+            <?= $candidateHeading ?>
           </h2>
           <?php endif ?>
           <div class="vacancy__candidate-block">
@@ -147,7 +147,7 @@
                   </div>
                   <?php if ($requirementsFirstTitle): ?>
                   <h3 class="vacancy__candidate-heading">
-                    <?= $requirementsFirstTitle ;?>
+                    <?= $requirementsFirstTitle ?>
                   </h3>
                   <?php endif ?>
                   <ul class="vacancy__candidate-list">
@@ -171,7 +171,7 @@
               </div>
               <?php if ($requirementsSecondTitle): ?>
               <h3 class="vacancy__candidate-heading">
-                <?= $requirementsSecondTitle ;?>
+                <?= $requirementsSecondTitle ?>
               </h3>
               <?php endif ?>
               <ul class="vacancy__candidate-list">
@@ -198,7 +198,7 @@
                 <div class="vacancy__responsibilities-left anim-title _anim-items">
                     <?php if ($responsibilitiesTitle) : ?>
                     <h2 class="vacancy__responsibilities-heading main__title">
-                        <?= $responsibilitiesTitle; ?>
+                        <?= $responsibilitiesTitle ?>
                     </h2>
                     <?php endif ?>
                     <?php if ($responsibilitiesSubTitle) : ?>
@@ -242,7 +242,7 @@
                 <div class="vacancy__proposition-heading">
                   <?php if ($proposition_title) : ?>
                   <h3 class="vacancy__proposition-title main__title main__title-sm anim-title _anim-items">
-                    <?= $proposition_title; ?>
+                    <?= $proposition_title ?>
                   </h3>
                   <?php endif; ?>
                   <div class="vacancy__proposition-image">

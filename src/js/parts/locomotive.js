@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
             let newRotationY;
             if (index % 2 === 0) {
               newRotationY = initialRotationY + (r + 1) + (index * 0.05);
-              r += 1;
+              r += 2;
             } else {
               newRotationY = initialRotationY - (r + 1);
-              r += 1;
+              r += 2;
             }
             
 

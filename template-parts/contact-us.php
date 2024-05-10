@@ -18,12 +18,12 @@
         <div class="contact-us__content">
           <?php if ($sectionHeading) : ?>
             <h2 class="contact-us__heading-mobile anim-title _anim-items">
-              <?= $sectionHeading; ?>
+              <?= $sectionHeading ?>
             </h2>
           <?php endif ?>
           <div class="contact-us__left">
             <?php if ($sectionVideo) : ?>
-              <div class="contact-us__video">
+              <div class="contact-us__video anim-title _anim-items">
                 <video id="form-video" preload="auto" no-controls playsinline muted>
                   <source src="<?php echo $sectionVideo['url']; ?>" type="<?php echo $sectionVideo['mime_type']; ?>">
                   Your browser does not support the video tag.
@@ -36,7 +36,7 @@
             <div class="contact-us__text">
               <?php if ($sectionHeading) : ?>
                 <h2 class="contact-us__heading anim-title _anim-items">
-                  <?= $sectionHeading; ?>
+                <?= $sectionHeading ?>
                 </h2>
               <?php endif ?>
               <div class="contact-us__manager anim-title _anim-items">
