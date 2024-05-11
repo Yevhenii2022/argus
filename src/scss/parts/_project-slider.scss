@@ -1,5 +1,7 @@
-.projects-slider{
+.projects-slider {
 	padding: 2.857rem 0 7.929rem 0;
+	overflow: hidden;
+
 	@include media(mobile) {
 		padding: 2.857rem 0 5.929rem 0;
 	}
@@ -9,26 +11,26 @@
 		display: flex;
 		gap: 1rem;
 
-		em{
+		em {
 			font-family: $italic;
 		}
 	}
 
-	&__swiper{
+	&__swiper {
 		margin-bottom: 3.714rem;
+
 		@include media(mobile) {
-		margin-bottom: 2.857rem;
+			margin-bottom: 2.857rem;
 		}
 	}
 
-	
+
 	&__list {
 		margin-bottom: 5rem;
-		
+
 	}
 
 	&__button {
 		margin: 0 auto;
 	}
 }
-

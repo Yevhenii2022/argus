@@ -227,19 +227,25 @@
 }
 
 .blog__nothing {
-	position: absolute;
-	top: 2rem;
-	left: 50%;
-	transform: translate(-50%, 0);
-	font-family: $medium;
-	font-size: 1.857rem;
-	text-transform: uppercase;
+	margin: 6.5rem auto 0 ;
+		position: relative;
+		
+		
+		font-family: $medium;
+		font-size: 1.857rem;
+		text-transform: uppercase;
+		min-height: 50vh;
+		width: 100%;
+		position: relative;
+		grid-area: 1 / 1 / 2 / 3;
+		justify-content: center;
+		display: flex;
 
-	@include media(mobile) {
-		margin: 0 auto;
-		width: 13.6rem;
-		top: 1rem;
-		right: 0;
-		font-size: 1.157rem;
-	}
+		@include media(mobile) {
+			grid-area: 1 / 1 / 2 / 2;
+			margin: 2rem auto 0;
+			
+			transform: none;
+			font-size: 1.357rem;
+		}
 }

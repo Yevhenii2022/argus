@@ -19,7 +19,7 @@
             $default_picture = get_field('default_picture', 'options');
             ?>
 
-            <a href="<?php the_permalink(); ?>" class="news-slider__card swiper-slide" rel="nofollow noopener" aria-label="<?php the_title_attribute(); ?>">
+            <a href="<?php the_permalink(); ?>" class="news-slider__card swiper-slide anim-card _anim-items" rel="nofollow noopener" aria-label="<?php the_title_attribute(); ?>">
               <article>
                 <span class="news-slider__time">
                   <?php the_time('d.m.Y'); ?>

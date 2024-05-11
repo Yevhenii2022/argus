@@ -1,16 +1,30 @@
-.not-found{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+.not-found {
+  height: 100vh;
+  position: relative;
 
-    &__wrapper{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4rem;
-    }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    &__title{
-       font-size: 4rem;
-       text-align: center;
+    @include media(mobile) {
+      max-width: 18rem;
+      width: 100%;
+      gap: 2rem;
     }
   }
+
+  &__title {
+    font-size: 4rem;
+    text-align: center;
+
+    @include media(mobile) {
+      font-size: 2.8rem;
+    }
+  }
+}

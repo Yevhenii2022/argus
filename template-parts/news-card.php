@@ -2,7 +2,7 @@
 $default_picture = get_field('default_picture', 'options');
 ?>
 
-<a href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>">
+<a href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>" class="anim-card _anim-items">
   <article class="news-card">
     <div class="news-card__image">
       <?php if (has_post_thumbnail()) : ?>

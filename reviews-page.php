@@ -19,14 +19,14 @@ $title_section = get_field('reviews_title_section') ?? '';
       <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
 
       <div class="reviews__top">
-        <h1 class="reviews__title title anim-title _anim-items"><?= $title; ?></h1>
+        <h1 class="reviews__title title anim-title _anim-items"><?= $title ?></h1>
         <div class="reviews__box anim-title _anim-items">
           <ul>
             <?php if ($gallery) {
               foreach ($gallery as $image) {
                 $image_url = wp_get_attachment_url($image);
                 echo '<li>';
-                echo wp_get_attachment_image($image, "thumbnail", '', ['alt' => 'картинка галереї']);
+                echo wp_get_attachment_image($image, "full", '', ['alt' => 'картинка галереї']);
                 echo '</li>';
               }
             }
@@ -49,7 +49,7 @@ $title_section = get_field('reviews_title_section') ?? '';
               <div class="swiper-slide">
                 <div class="reviews__slider-item">
                   <h3 class="title">
-                    <?= $text; ?>
+                    <?= $text ?>
                   </h3>
                   <?php if ($image) : ?>
                     <img src='<?php echo $image['url']; ?>' alt='<?php echo $image['alt']; ?>' />
@@ -73,7 +73,7 @@ $title_section = get_field('reviews_title_section') ?? '';
 
     <div class="reviews__wrapper">
       <h2 class="reviews__title-section title anim-title _anim-items">
-        <?= $title_section; ?>
+        <?= $title_section ?>
       </h2>
 
       <div class="ajax-preloader">

@@ -17,7 +17,7 @@
         <div class="contact-us__content contact-us__content--vacancy">
           <?php if ($sectionHeading) : ?>
             <h2 class="contact-us__heading-mobile anim-title _anim-items">
-              <?= $sectionHeading; ?>
+              <?= $sectionHeading ?>
             </h2>
           <?php endif ?>
           <div class="contact-us__left">
@@ -35,7 +35,7 @@
             <div class="contact-us__text">
               <?php if ($sectionHeading) : ?>
                 <h2 class="contact-us__heading contact-us__heading--vacancy anim-title _anim-items">
-                  <?= $sectionHeading; ?>
+                 <?= $sectionHeading ?>
                 </h2>
               <?php endif ?>
               <div class="contact-us__manager anim-title _anim-items">

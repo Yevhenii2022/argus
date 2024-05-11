@@ -1,4 +1,4 @@
-<a href="<?php the_permalink(); ?>" class="service-card__item">
+<a href="<?php the_permalink(); ?>" class="service-card__item anim-card _anim-items">
     <div class="service-card__image">
     <?php if (has_post_thumbnail()) : ?>
         <img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">

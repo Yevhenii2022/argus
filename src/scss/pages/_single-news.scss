@@ -34,7 +34,7 @@
 		background-repeat: no-repeat;
 		background-position: -31.5rem 0;
 		background-size: auto 118rem;
-
+		overflow: hidden;
 		@include media(mobile) {
 			margin-top: 5.65rem;
 			background-image: none;

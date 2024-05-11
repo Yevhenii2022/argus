@@ -23,7 +23,7 @@ get_header();
                     <div class="about-banner__content">
                         <?php if ($title) : ?>
                             <h1 class="about-banner__title main__title main__title--sm anim-title _anim-items">
-                                <?= $title; ?>
+                            <?= $title ?>
                             </h1>
                         <?php endif ?>
                         <?php if ($description) : ?>
@@ -46,7 +46,7 @@ get_header();
                                         <?php endif ?>
                                         <?php if ($title) : ?>
                                             <h3 class="about-banner__item-title">
-                                                <?= $title; ?>
+                                                <?= $title ?>
                                             </h3>
                                         <?php endif ?>
                                         <?php if ($text) : ?>
@@ -89,7 +89,7 @@ get_header();
                     <div class="about-stages__heading">
                         <?php if ($stageTitle) : ?>
                             <h2 class="about-stages__section-title main__title main__title--sm anim-title _anim-items">
-                                <?= $stageTitle; ?>
+                                <?= $stageTitle ?>
                             </h2>
                         <?php endif ?>
                         <?php if ($stageSubtitle) : ?>
@@ -202,7 +202,7 @@ get_header();
                 <div class="about-mission__wrapper">
                     <?php if ($missionTitle) : ?>
                         <h2 class="about-mission__title main__title anim-title _anim-items">
-                            <?= $missionTitle; ?>
+                            <?= $missionTitle ?>
                         </h2>
                     <?php endif ?>
                     <div class="about-mission__text anim-title _anim-items">
@@ -254,7 +254,7 @@ get_header();
                 <div class="about-values__left anim-title _anim-items">
                     <?php if ($valuesHeading) : ?>
                         <h2 class="about-values__heading main__title">
-                            <?= $valuesHeading; ?>
+                          <?= $valuesHeading ?>
                         </h2>
                     <?php endif ?>
                 </div>
@@ -268,7 +268,7 @@ get_header();
 
                                 <?php if ($valuesItemTitle) : ?>
                                     <h3 class="about-values__title">
-                                        <?= $valuesItemTitle; ?>
+                                        <?= $valuesItemTitle ?>
                                     </h3>
                                 <?php endif ?>
                                 <?php if ($valuesItemDescription) : ?>
@@ -342,7 +342,7 @@ get_header();
                     </div>
                     <?php if ($teamDescription) : ?>
                         <h2 class="about-team__title main__title anim-title _anim-items">
-                            <?= $teamTitle; ?>
+                           <?= $teamTitle ?>
                         </h2>
                     <?php endif ?>
                 </div>

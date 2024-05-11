@@ -19,7 +19,7 @@
                         $default_picture = get_field('default_picture', 'options');
                         ?>
 
-                        <a href="<?php the_permalink() ?>" class="projects-card swiper-slide" aria-label="<?php the_title_attribute(); ?>">
+                        <a href="<?php the_permalink() ?>" class="projects-card swiper-slide " aria-label="<?php the_title_attribute(); ?>">
                             <div class="projects-card__img ">
                                 <?php if (has_post_thumbnail()) : ?>
                                     <img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">

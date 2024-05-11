@@ -97,3 +97,13 @@
 		opacity: 1;
 	}
 }
+.anim-card {
+	transform: scale(0.85);
+	opacity: 0;
+	transition: all 1s ease-in-out;
+
+	&._active {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

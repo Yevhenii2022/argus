@@ -24,7 +24,7 @@ get_header();
 					?>
 					<?php if ($title) : ?>
 						<h1 class="single-news__title title anim-title _anim-items">
-							<?= $title; ?>
+							<?= $title ?>
 						</h1>
 					<?php endif; ?>
 
@@ -52,7 +52,7 @@ get_header();
 					?>
 					<?php if ($slider_title) : ?>
 						<h2 class="single-news__title title anim-title _anim-items">
-							<?= $slider_title; ?>
+							<?= $slider_title ?>
 						</h2>
 					<?php endif; ?>
 

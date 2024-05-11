@@ -17,7 +17,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 0.071rem solid rgba(24, 24, 24, 0.15);
+
 
 		@include media(mobile) {
 			padding-bottom: 2.85rem;
@@ -39,6 +39,7 @@
 			width: 40.786rem;
 			display: flex;
 			gap: 1.1rem;
+
 			@include media(mobile) {
 				margin-bottom: 2.8rem;
 				width: 100%;
@@ -52,15 +53,18 @@
 				height: 3.071rem;
 				background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 9 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.24528 11H0L4.75472 5.5L0 0H4.24528L9 5.5L4.24528 11Z' fill='%23F41B1B' /%3E%3C/svg%3E");
 				background-repeat: no-repeat;
+
 				@include media(mobile) {
 					margin-top: 0.25rem;
 					width: 2.857rem;
 					height: 2.143rem;
 				}
 			}
+
 			p {
 				text-align: start;
 			}
+
 			p,
 			em,
 			strong {
@@ -93,6 +97,7 @@
 				margin-left: -1.35rem;
 			}
 		}
+
 		img {
 			width: 4rem;
 			height: 4rem;
@@ -106,6 +111,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+
 		&::before {
 			content: '';
 			width: 0.643rem;
@@ -113,9 +119,11 @@
 			background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 9 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.24528 11H0L4.75472 5.5L0 0H4.24528L9 5.5L4.24528 11Z' fill='%23F41B1B' /%3E%3C/svg%3E");
 			background-repeat: no-repeat;
 		}
+
 		@include media(tablet) {
 			font-size: 1.143rem;
 		}
+
 		@include media(mobile) {
 			font-size: 1rem;
 		}
@@ -123,6 +131,7 @@
 
 	&__slider {
 		padding: 8.4rem 0;
+
 		@include media(mobile) {
 			padding: 5.6rem 0 10rem 0;
 		}
@@ -130,24 +139,30 @@
 		&:has(.swiper-pagination) {
 			.swiper-pagination {
 				display: none;
+
 				@include media(mobile) {
 					display: block;
 				}
 			}
+
 			.swiper-button-prev,
 			.swiper-button-next {
 				top: 50%;
+
 				@include media(mobile) {
 					top: unset;
 					bottom: 4.6rem;
 				}
 			}
+
 			.swiper-button-prev {
 				left: 0;
 			}
+
 			.swiper-button-next {
 				right: 0;
 			}
+
 			.swiper-pagination.swiper-pagination-progressbar.swiper-pagination-horizontal {
 				@include media(mobile) {
 					top: unset;
@@ -159,6 +174,7 @@
 		&-item {
 			margin: 0 auto;
 			width: 57.571rem;
+
 			@include media(mobile) {
 				width: 100%;
 			}
@@ -171,6 +187,7 @@
 			border-radius: 50%;
 			overflow: hidden;
 		}
+
 		p {
 			margin: 0 auto;
 			width: fit-content;
@@ -180,6 +197,7 @@
 
 		h3 {
 			margin-bottom: 2.4rem;
+
 			@include media(mobile) {
 				margin-bottom: 1.8rem;
 			}
@@ -211,6 +229,7 @@
 			min-height: 52.9rem;
 			padding: 5.8rem 1.714rem;
 		}
+
 		@include media(mobile) {
 			min-height: 42rem;
 			padding: 5.5rem 1.143rem;
@@ -218,9 +237,11 @@
 
 		&:has(.pagination) {
 			padding: 8.2rem 1.714rem 16.5rem 1.714rem;
+
 			@include media(tablet) {
 				padding: 5.8rem 1.714rem 12.5rem 1.714rem;
 			}
+
 			@include media(mobile) {
 				padding: 5.5rem 1.143rem 10.3rem 1.143rem;
 			}
@@ -254,6 +275,7 @@
 			@include media(tablet) {
 				font-size: 1.143rem;
 			}
+
 			@include media(mobile) {
 				font-size: 1rem;
 			}
@@ -270,6 +292,7 @@
 		margin-bottom: 1rem;
 		display: flex;
 		align-items: center;
+
 		@include media(mobile) {
 			margin-bottom: 1.05rem;
 		}
@@ -278,6 +301,7 @@
 			width: 0.714rem;
 			height: 0.857rem;
 		}
+
 		div {
 			width: 100%;
 			height: 0.071rem;
@@ -293,6 +317,7 @@
 		font-size: 0.786rem;
 		line-height: 1;
 		text-transform: uppercase;
+
 		@include media(mobile) {
 			margin-top: 2.5rem;
 		}
@@ -304,13 +329,26 @@
 	}
 
 	&__nothing {
-		margin: 5rem auto 0 auto;
-		width: fit-content;
-		font-size: 1.786rem;
-		line-height: 1;
+		margin: 6.5rem auto 0 ;
+		position: relative;
+		
+		
+		font-family: $medium;
+		font-size: 1.857rem;
 		text-transform: uppercase;
+		min-height: 50vh;
+		width: 100%;
+		position: relative;
+		grid-area: 1 / 1 / 2 / 3;
+		justify-content: center;
+		display: flex;
+
 		@include media(mobile) {
-			font-size: 1.586rem;
+			grid-area: 1 / 1 / 2 / 2;
+			margin: 2rem auto 0;
+			
+			transform: none;
+			font-size: 1.357rem;
 		}
 	}
 }

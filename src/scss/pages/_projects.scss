@@ -71,16 +71,24 @@
 	}
 
 	&__nothing {
-		margin: 6.5rem auto 0 -7rem;
-		position: absolute;
-		left: 50%;
+		margin: 6.5rem auto 0 ;
+		position: relative;
+		
+		
 		font-family: $medium;
 		font-size: 1.857rem;
 		text-transform: uppercase;
+		min-height: 50vh;
+		width: 100%;
+		position: relative;
+		grid-area: 1 / 1 / 2 / 3;
+		justify-content: center;
+		display: flex;
 
 		@include media(mobile) {
-			margin: 2rem auto 0 auto;
-			position: unset;
+			grid-area: 1 / 1 / 2 / 2;
+			margin: 2rem auto 0;
+			
 			transform: none;
 			font-size: 1.357rem;
 		}
@@ -117,4 +125,13 @@
 	margin: 0 auto;
 	width: 5rem;
 	height: 5rem;
+	min-height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 5%;
+	img{
+		width: 5rem;
+		height: 5rem;
+	}
 }

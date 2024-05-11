@@ -18,8 +18,8 @@ $video = get_field('project_video');
 
         <div class="project__top">
           <div class="project__title">
-            <h1 class="main__title main__title--italic anim-title _anim-items"><?php echo $project_subtitle ?></h1>
-            <h1 class="main__title anim-title _anim-items"><?php echo the_title() ?></h1>
+            <h1 class="main__title  anim-title _anim-items"><span class="main__title--italic"><?php echo $project_subtitle ?></span> </br><?php echo the_title() ?></h1>
+            
           </div>
 
           <?php
@@ -59,7 +59,7 @@ $video = get_field('project_video');
           $info = get_field('info') ?? '';
           ?>
           <?php if ($info) : ?>
-            <h2 class="project__info title anim-title _anim-items"><?= $info; ?></h2>
+            <h2 class="project__info title anim-title _anim-items"><?= $info ?></h2>
           <?php endif; ?>
 
           <?php
@@ -74,7 +74,7 @@ $video = get_field('project_video');
 
                 <?php if ($parameter) : ?>
                   <li class="project__characteristics anim-title _anim-items">
-                    <h3 class="project__parameter"><?= $parameter; ?></h3>
+                    <h3 class="project__parameter"><?= $parameter ?></h3>
                     <p class="project__category"><?= $category; ?></p>
                   </li>
                 <?php endif; ?>
@@ -115,7 +115,7 @@ $video = get_field('project_video');
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 43" fill="none">
                 <path fill="#F41B1B" d="M16.981 43H0l19.019-21.5L0 0h16.981L36 21.5 16.981 43Z" />
               </svg>
-              <?= $project_start; ?>
+              <?= $project_start ?>
             </h3>
           <?php endif; ?>
 
@@ -157,7 +157,7 @@ $video = get_field('project_video');
             ?>
             <?php if ($advantages_title) : ?>
               <h3 class="title anim-title _anim-items">
-                <?= $advantages_title; ?>
+                <?= $advantages_title ?>
               </h3>
             <?php endif; ?>
             <ul>
@@ -175,7 +175,7 @@ $video = get_field('project_video');
                       <div></div>
                     </div>
 
-                    <h4><?= $advantages_title; ?></h4>
+                    <h4><?= $advantages_title ?></h4>
                     <p><?= $advantages_text; ?></p>
                   </li>
                 <?php endif; ?>
@@ -188,7 +188,7 @@ $video = get_field('project_video');
         $project_others = get_field('project_others') ?? '';
         ?>
         <?php if ($project_others) : ?>
-          <h2 class="project__others title anim-title _anim-items"><?= $project_others; ?></h3>
+          <h2 class="project__others title anim-title _anim-items"><?= $project_others ?></h3>
           <?php endif; ?>
 
       </div>
