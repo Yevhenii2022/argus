@@ -23,7 +23,7 @@ get_header(); ?>
                    <div class="our-services__content">
                         <?php if ($servicesTitle): ?>
                         <h1 class="our-services__title main__title main__title--sm anim-title _anim-items">
-                            <?= $servicesTitle ;?>
+                            <?= $servicesTitle ?>
                         </h1>
                         <?php endif ?>
                         <?php if ($servicesDescription): ?>
@@ -70,7 +70,7 @@ get_header(); ?>
                     <?php $lastCard = get_field('last_title') ?? '' ;
                     if ($lastCard) : ?>
                         <h2 class="services-block__last-title anim-title _anim-items">
-                            <?= $lastCard ;?>
+                            <?= $lastCard ?>
                         </h2>
                       <?php endif ?>  
                         <div class="anim-title _anim-items">

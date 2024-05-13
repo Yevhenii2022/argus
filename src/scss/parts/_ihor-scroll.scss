@@ -1,0 +1,82 @@
+.ihor-scroll {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+
+    &__item {
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+        height: 100vh;
+        position: relative;
+        clip-path: polygon(100% 0, 100% 100%, 0 100.05%, 0 0);
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100.05%, 0 0);
+
+        &::before {
+            content: "";
+            background: linear-gradient(360deg, #EDEDED 38%, #EDEDED 118%);
+            z-index: 1;
+            width: 100%;
+            height: 20%;
+            opacity: 0.9;
+            display: block;
+            height: 100%;
+
+        }
+
+        &-inner {
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: 50%;
+            position: fixed;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-39%, -23%);
+
+            @include media(tablet) {
+                transform: translate(-45%, -23%);
+            }
+
+            @include media(mobile) {
+                transform: translate(-46.5%, -23%);
+            }
+        }
+
+        .years {
+            position: absolute;
+            right: 11rem;
+
+            @include media(tablet) {
+                right: 4rem;
+                top: 33rem;
+            }
+
+            @include media(mobile) {
+                right: 25rem;
+                top: -12rem;
+            }
+        }
+
+        .about-stages__flex {
+            width: 80rem;
+            padding: 0 !important;
+
+            @include media(mobile) {
+                width: 25rem;
+            }
+        }
+    }
+}
