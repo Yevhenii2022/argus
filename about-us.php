@@ -13,43 +13,43 @@ get_header();
         <div class="container">
             <div class="about-banner__wrapper">
                 <div class="about-banner__breadcrumps">
-                <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
+                    <?php echo do_shortcode('[pointer_breadcrumbs]'); ?>
                 </div>
                 <?php
                 $title = get_field('about-us_title') ?? '';
                 $description = get_field('about-us_description') ?? '';
 
-                if ($title || $subTitle || $description) : ?>
+                if ($title || $subTitle || $description): ?>
                     <div class="about-banner__content">
-                        <?php if ($title) : ?>
+                        <?php if ($title): ?>
                             <h1 class="about-banner__title main__title main__title--sm anim-title _anim-items">
-                            <?= $title ?>
+                                <?= $title ?>
                             </h1>
                         <?php endif ?>
-                        <?php if ($description) : ?>
+                        <?php if ($description): ?>
                             <p class="about-banner__description anim-title _anim-items">
                                 <?= $description; ?>
                             </p>
                         <?php endif ?>
                         <div class="about-banner__slider swiper">
                             <div class="about-banner__slides swiper-wrapper">
-                                <?php while (have_rows('about-us_list')) :
+                                <?php while (have_rows('about-us_list')):
                                     the_row();
                                     $number = get_sub_field('number');
                                     $title = get_sub_field('title');
                                     $text = get_sub_field('text'); ?>
                                     <div class="about-banner__item swiper-slide anim-title _anim-items">
-                                        <?php if ($number) : ?>
+                                        <?php if ($number): ?>
                                             <p class="about-banner__item-number">
                                                 <?= $number; ?>
                                             </p>
                                         <?php endif ?>
-                                        <?php if ($title) : ?>
+                                        <?php if ($title): ?>
                                             <h3 class="about-banner__item-title">
                                                 <?= $title ?>
                                             </h3>
                                         <?php endif ?>
-                                        <?php if ($text) : ?>
+                                        <?php if ($text): ?>
                                             <div class="about-banner__item-text">
                                                 <?= $text; ?>
                                             </div>
@@ -62,14 +62,14 @@ get_header();
                             <div class="swiper-button-prev"></div>
                         </div>
                     <?php endif ?>
-                    </div>
+                </div>
             </div>
     </section>
 
     <?php $projectsTitle = get_field('slider_title') ?? ''; ?>
     <section class="about-projects">
         <div class="container">
-            <?php if ($projectsTitle) : ?>
+            <?php if ($projectsTitle): ?>
                 <div class="about-projects__title main__title main__title--sm anim-title _anim-items">
                     <?= $projectsTitle; ?>
                 </div>
@@ -79,20 +79,22 @@ get_header();
     </section>
 
 
-    <?php $stageBackground = get_field('stage_bg') ?? '';
+    <?php
     $stageTitle = get_field('stage_heading') ?? '';
-    $stageSubtitle = get_field('stage_subtitle') ?? ''; ?>
+    $stageSubtitle = get_field('stage_subtitle') ?? '';
+    $stageBackground = get_field('stage_bg');
+    ?>
     <section class="about-stages">
         <div class="container container--slider">
             <div class="about-stages__wrapper">
-                <?php if ($stageBackground || $stageTitle || $stageSubtitle) : ?>
+                <?php if ($stageTitle || $stageSubtitle): ?>
                     <div class="about-stages__heading">
-                        <?php if ($stageTitle) : ?>
+                        <?php if ($stageTitle): ?>
                             <h2 class="about-stages__section-title main__title main__title--sm anim-title _anim-items">
                                 <?= $stageTitle ?>
                             </h2>
                         <?php endif ?>
-                        <?php if ($stageSubtitle) : ?>
+                        <?php if ($stageSubtitle): ?>
                             <p class="about-stages__subtitle anim-title _anim-items">
                                 <svg viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.24528 11H0L4.75472 5.5L0 0H4.24528L9 5.5L4.24528 11Z" fill="#F41B1B" />
@@ -104,84 +106,78 @@ get_header();
                 <?php endif ?>
 
                 <!-- scroll -->
-                <div class="about-stage__item">
-                    <?php while (have_rows('stages')) :
+                <div class="ihor-scroll">
+                    <?php while (have_rows('stages')):
                         the_row();
                         $startDate = get_sub_field('start_date');
                         $endDate = get_sub_field('end_date');
                         $stageHeading = get_sub_field('stage_title');
                         $stageDescription = get_sub_field('stage_description');
-                        $stageImg = get_sub_field('stage_img'); ?>
+                        $stageImg = get_sub_field('stage_img');
+                        ?>
 
-                        <div class="content--sticky">
-
-                            <div class="about-stages__item-inner">
-                                <div class="about-stages__bg" style="background-image: url('<?php echo esc_url($stageBackground); ?>')">
-                                </div>
-
-                                <div class="about-stages__box">
-                                    <div class="about-stages__flex">
-                                        <div class="about-stages__text">
-                                            <?php if ($stageHeading) : ?>
-                                                <div class="about-stages__title">
-                                                    <?= $stageHeading; ?>
-                                                </div>
-                                            <?php endif ?>
-                                            <?php if ($stageDescription) : ?>
-                                                <div class="about-stages__description">
-                                                    <?= $stageDescription; ?>
-                                                </div>
-                                            <?php endif ?>
-                                        </div>
-
-                                        <?php if ($stageImg) : ?>
-                                            <div class="about-stages__img" data-image-wrap>
-                                                <img src='<?php echo $stageImg['url']; ?>' alt='<?php echo $stageImg['alt']; ?>' />
-                                                <?php if ($startDate) : ?>
-                                                    <div class="about-stages__year-first">
-                                                        <?= $startDate; ?>
-                                                    </div>
-                                                <?php endif ?>
-                                                <?php if ($endDate) : ?>
-                                                    <div class="about-stages__year-last">
-                                                        <?= $endDate; ?>
-                                                    </div>
-                                                <?php endif ?>
+                        <div class="ihor-scroll__item" style="background-image: url('<?php echo $stageImg['url']; ?>')">
+                            <div class="ihor-scroll__item-inner">
+                                <div class="about-stages__flex">
+                                    <div class="about-stages__text">
+                                        <?php if ($stageHeading): ?>
+                                            <div class="about-stages__title">
+                                                <?= $stageHeading; ?>
+                                            </div>
+                                        <?php endif ?>
+                                        <?php if ($stageDescription): ?>
+                                            <div class="about-stages__description">
+                                                <?= $stageDescription; ?>
                                             </div>
                                         <?php endif ?>
                                     </div>
 
-                                    <?php
-                                    $stages = get_field('stages');
-                                    ?>
-                                    <div class="years">
-                                        <?php
-                                        if ($stages) {
-                                            foreach ($stages as $stage) {
-                                                $end_date = $stage['end_date'];
-                                        ?>
-                                                <div>
-                                                    <p>20<?= $end_date; ?></p>
-
-                                                    <?php
-                                                    if ($end_date == $endDate) {
-                                                    ?>
-                                                        <div class="line"></div>
-                                                    <?php
-                                                    }
-                                                    ?>
+                                    <?php if ($stageImg): ?>
+                                        <div class="about-stages__img" data-image-wrap>
+                                            <img src='<?php echo $stageImg['url']; ?>' alt='<?php echo $stageImg['alt']; ?>' />
+                                            <?php if ($startDate): ?>
+                                                <div class="about-stages__year-first">
+                                                    <?= $startDate; ?>
                                                 </div>
-                                        <?php
-                                            }
-                                        }
-                                        ?>
-                                    </div>
+                                            <?php endif ?>
+                                            <?php if ($endDate): ?>
+                                                <div class="about-stages__year-last">
+                                                    <?= $endDate; ?>
+                                                </div>
+                                            <?php endif ?>
+                                        </div>
+                                    <?php endif ?>
                                 </div>
 
+                                <?php
+                                $stages = get_field('stages');
+                                ?>
+                                <div class="years">
+                                    <?php
+                                    if ($stages) {
+                                        foreach ($stages as $stage) {
+                                            $end_date = $stage['end_date'];
+                                            ?>
+                                            <div>
+                                                <p>20<?= $end_date; ?></p>
+
+                                                <?php
+                                                if ($end_date == $endDate) {
+                                                    ?>
+                                                    <div class="line"></div>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </div>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     <? endwhile; ?>
-
+                    <div id="last"></div>
                 </div>
                 <!-- scroll -->
             </div>
@@ -195,29 +191,29 @@ get_header();
     $missionVid = get_field('mission_video') ?? '';
     $missionIcon = get_field('sm_logo', 'options') ?? '';
 
-    if ($missionBackground  || $missionTitle || $missionText || $missionSubText || $missionVid || $missionIcon) :
-    ?>
+    if ($missionBackground || $missionTitle || $missionText || $missionSubText || $missionVid || $missionIcon):
+        ?>
         <section class="about-mission" style=" background-image: url('<?php echo esc_url($missionBackground); ?>');">
             <div class="container">
                 <div class="about-mission__wrapper">
-                    <?php if ($missionTitle) : ?>
+                    <?php if ($missionTitle): ?>
                         <h2 class="about-mission__title main__title anim-title _anim-items">
                             <?= $missionTitle ?>
                         </h2>
                     <?php endif ?>
                     <div class="about-mission__text anim-title _anim-items">
-                        <?php if ($missionText) : ?>
+                        <?php if ($missionText): ?>
                             <div class="about-mission__description">
                                 <?= $missionText; ?>
                             </div>
                         <?php endif ?>
-                        <?php if ($missionSubText) : ?>
+                        <?php if ($missionSubText): ?>
                             <p class="about-mission__paragraph">
                                 <?= $missionSubText; ?>
                             </p>
                         <?php endif ?>
                         <div class="about-mission__icon">
-                            <?php if ($missionIcon) :
+                            <?php if ($missionIcon):
                                 echo '<img src="' . esc_url($missionIcon) . '" alt="logo">';
                             endif; ?>
                         </div>
@@ -225,7 +221,7 @@ get_header();
                 </div>
             </div>
             <div class="about-mission__video">
-                <?php if ($missionVid) : ?>
+                <?php if ($missionVid): ?>
                     <video loop id="custom-video" preload="auto" muted playsinline preload="metadata">
                         <source src="<?php echo $missionVid['url']; ?>#t=0.001" type="video/mp4">
                         <source src="<?php echo $missionVid['url']; ?>#t=0.001" type="video/webm">
@@ -252,26 +248,26 @@ get_header();
         <div class="container container--slider">
             <div class="about-values__wrapper">
                 <div class="about-values__left anim-title _anim-items">
-                    <?php if ($valuesHeading) : ?>
+                    <?php if ($valuesHeading): ?>
                         <h2 class="about-values__heading main__title">
-                          <?= $valuesHeading ?>
+                            <?= $valuesHeading ?>
                         </h2>
                     <?php endif ?>
                 </div>
                 <div class="about-values__right swiper">
                     <ul class="about-values__list swiper-wrapper">
-                        <?php while (have_rows('values_list')) :
+                        <?php while (have_rows('values_list')):
                             the_row();
                             $valuesItemTitle = get_sub_field('value_heading') ?? '';
                             $valuesItemDescription = get_sub_field('value_description') ?? ''; ?>
                             <li class="about-values__item swiper-slide">
 
-                                <?php if ($valuesItemTitle) : ?>
+                                <?php if ($valuesItemTitle): ?>
                                     <h3 class="about-values__title">
                                         <?= $valuesItemTitle ?>
                                     </h3>
                                 <?php endif ?>
-                                <?php if ($valuesItemDescription) : ?>
+                                <?php if ($valuesItemDescription): ?>
                                     <p class="about-values__description">
                                         <?= $valuesItemDescription; ?>
                                     </p>
@@ -298,40 +294,41 @@ get_header();
     $teamDescription = get_field('section_text') ?? '';
     $teamIcon = get_field('sm_logo', 'options') ?? '';
 
-    if ($teamImg || $teamTitle || $teamName || $teamDescription) :
-    ?>
+    if ($teamImg || $teamTitle || $teamName || $teamDescription):
+        ?>
         <section class="about-team">
             <div class="container">
                 <div class="about-team__wrapper">
                     <div class="about-team__content">
-                        <?php if ($teamImg) : ?>
+                        <?php if ($teamImg): ?>
                             <div class="about-team__image">
                                 <img src='<?php echo $teamImg['url']; ?>' alt='<?php echo $teamImg['alt']; ?>' />
                             </div>
                         <?php endif ?>
                         <div class="about-team__text">
                             <div class="about-team__top">
-                                <?php if ($teamName) : ?>
+                                <?php if ($teamName): ?>
                                     <div class="about-team__name anim-title _anim-items">
                                         <?= $teamName; ?>
                                     </div>
                                 <?php endif ?>
                                 <div class="about-team__description">
-                                    <?php if ($teamDescription) : ?>
+                                    <?php if ($teamDescription): ?>
                                         <div class="about-team__paragraph anim-title _anim-items">
                                             <?= $teamDescription; ?>
                                         </div>
                                     <?php endif ?>
                                     <div class="about-team__logo anim-title _anim-items">
-                                        <?php if ($teamIcon) :
+                                        <?php if ($teamIcon):
                                             echo '<img src="' . esc_url($teamIcon) . '" alt="logo">';
                                         endif; ?>
                                     </div>
                                 </div>
                             </div>
                             <div class="about-team__bottom anim-title _anim-items">
-                            
-                                <a href="<?php echo esc_url(get_home_url() . '/vacancies/'); ?>" class="about-team__link link">
+
+                                <a href="<?php echo esc_url(get_home_url() . '/vacancies/'); ?>"
+                                    class="about-team__link link">
                                     <span>
                                         <?php pll_e('view_vacancies_link') ?>
                                     </span>
@@ -340,9 +337,9 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <?php if ($teamDescription) : ?>
+                    <?php if ($teamDescription): ?>
                         <h2 class="about-team__title main__title anim-title _anim-items">
-                           <?= $teamTitle ?>
+                            <?= $teamTitle ?>
                         </h2>
                     <?php endif ?>
                 </div>

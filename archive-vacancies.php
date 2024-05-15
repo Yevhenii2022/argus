@@ -22,7 +22,7 @@ get_header(); ?>
         <div class="vacancies__banner">
           <?php if ($vacanciesTitle) : ?>
             <h1 class="vacancies__title main__title anim-title _anim-items">
-              <?= $vacanciesTitle; ?>
+             <?= $vacanciesTitle ?>
             </h1>
           <?php endif ?>
           <?php if ($vacanciesDescription) : ?>
@@ -37,7 +37,7 @@ get_header(); ?>
       <div class="vacancies__content">
       <?php if ($vacanciesBlockTitle) : ?>
         <h1 class="vacancies__heading main__title main__title--sm anim-title _anim-items">
-            <?= $vacanciesBlockTitle ;?>
+            <?= $vacanciesBlockTitle ?>
         </h1>
         <?php endif ?>
        <?php
@@ -80,7 +80,7 @@ get_header(); ?>
               <?php endif; ?>
               <?php if ($vacancyName) : ?>
               <h2 class="vacancies__name main__title main__title--sm">
-                 <?= $vacancyName ;?>
+                 <?= $vacancyName ?>
               </h2>
               <?php endif; ?>
               </a>
