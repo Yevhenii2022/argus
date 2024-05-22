@@ -5,6 +5,35 @@ $text = get_field('hero_text') ?? '';
 $bg = get_field('hero_bg');
 ?>
 
+<?php
+function findNumericalPalindromes($n, $num)
+{
+    $result = [];
+    $current = $num;
+
+    while (count($result) < $n) {
+        // Перетворюємо число в рядок
+        $str = strval($current);
+
+        // Перевіряємо, чи є число паліндромом
+        if ($str === strrev($str) && strlen($str) > 1) {
+            $result[] = $current;
+        }
+
+        // Переходимо до наступного числа
+        $current++;
+    }
+
+    return $result;
+}
+
+// Приклади використання функції
+print_r(findNumericalPalindromes(4, 6)); // Повертає [11, 22, 33, 44]
+print_r(findNumericalPalindromes(1, 75)); // Повертає [77]
+print_r(findNumericalPalindromes(3, 19)); // Повертає [22, 33, 44]
+?>
+
+
 <section class="hero">
     <div class="hero__wrapper">
 
